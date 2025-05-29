@@ -68,7 +68,7 @@ export default function ContactPage() {
                 and VA.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Name *
@@ -80,6 +80,7 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={handleChange}
                     required
+                    aria-required="true"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-hub-blue focus:border-transparent"
                   />
                 </div>
@@ -95,6 +96,7 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    aria-required="true"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-hub-blue focus:border-transparent"
                   />
                 </div>
@@ -109,6 +111,7 @@ export default function ContactPage() {
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    aria-required="true"
                     rows={6}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-hub-blue focus:border-transparent"
                     placeholder="Please describe your laser engraving project including materials (wood, metal, glass), quantities, timeline, and any specific requirements..."
@@ -118,6 +121,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
+                  aria-disabled={isSubmitting}
                   className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Sending..." : "Get Free Laser Engraving Quote"}
@@ -126,6 +130,8 @@ export default function ContactPage() {
                 {submitMessage && (
                   <div
                     className={`p-4 rounded-lg ${submitMessage.includes("error") || submitMessage.includes("Error") ? "bg-red-100 text-red-700" : "bg-green-100 text-green-700"}`}
+                    role="alert"
+                    aria-live="assertive"
                   >
                     {submitMessage}
                   </div>

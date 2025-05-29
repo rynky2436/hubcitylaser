@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -6,7 +7,20 @@ export default function Footer() {
       <div className="container-max section-padding">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Hub City Laser Engraving</h3>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="relative w-12 h-12">
+                <Image
+                  src="/images/hub-city-logo-light.png"
+                  alt="Hub City Engraving Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">Hub City Laser</h3>
+                <div className="text-sm text-hub-silver">Engraving</div>
+              </div>
+            </div>
             <p className="text-hub-silver mb-4">
               Professional laser engraving and cutting services on wood, metal, glass, and all materials. Located in
               Hagerstown, Maryland serving MD, DE, VA businesses.
@@ -21,17 +35,20 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Laser Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/services" className="text-hub-silver hover:text-hub-white transition-colors">
+                <Link
+                  href="/services#wood-engraving"
+                  className="text-hub-silver hover:text-hub-white transition-colors"
+                >
                   Wood Laser Engraving
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-hub-silver hover:text-hub-white transition-colors">
+                <Link href="/services#metal-cutting" className="text-hub-silver hover:text-hub-white transition-colors">
                   Metal Laser Cutting
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-hub-silver hover:text-hub-white transition-colors">
+                <Link href="/services#glass-etching" className="text-hub-silver hover:text-hub-white transition-colors">
                   Glass Laser Etching
                 </Link>
               </li>
@@ -88,7 +105,12 @@ export default function Footer() {
               <p>&copy; {new Date().getFullYear()} Hub City Laser Engraving Hagerstown MD. All rights reserved.</p>
             </div>
             <div className="text-hub-silver md:text-right">
-              <p>Professional Laser Engraving Services | Wood, Metal, Glass & Everything</p>
+              <p>
+                Professional Laser Engraving Services |{" "}
+                <Link href="/sitemap.xml" className="hover:text-hub-white transition-colors">
+                  Sitemap
+                </Link>
+              </p>
             </div>
           </div>
         </div>

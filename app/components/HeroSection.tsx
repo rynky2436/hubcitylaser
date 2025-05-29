@@ -13,7 +13,7 @@ export default function HeroSection({ title, description, backgroundImage }: Her
       <div className="absolute inset-0 z-0">
         <Image
           src={backgroundImage || "/placeholder.svg"}
-          alt="Background"
+          alt={`${title} background image - Hub City Laser Engraving Hagerstown MD`}
           fill
           className="object-cover opacity-20"
           priority

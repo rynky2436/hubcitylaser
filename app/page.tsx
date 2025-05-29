@@ -172,11 +172,12 @@ export default function HomePage() {
                 key={industry.href}
                 href={industry.href}
                 className="bg-hub-white border border-hub-silver rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-200 group"
+                aria-label={`Learn more about ${industry.name} laser engraving services`}
               >
                 <div className="aspect-video relative">
                   <Image
                     src={industry.image || "/placeholder.svg"}
-                    alt={`${industry.name} laser engraving examples Hagerstown MD`}
+                    alt={`${industry.name} laser engraving examples - professional services in Hagerstown MD`}
                     fill
                     className="object-cover"
                   />
@@ -211,7 +212,7 @@ export default function HomePage() {
               <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
                 <Image
                   src="/images/professional.png"
-                  alt="Custom business signs laser engraved Hagerstown MD"
+                  alt="Custom business signs and professional office laser engraving services in Hagerstown MD"
                   fill
                   className="object-cover"
                 />
@@ -220,42 +221,54 @@ export default function HomePage() {
               <p className="text-gray-600">
                 Professional laser engraved signage on wood, metal, glass for MD businesses
               </p>
+              <Link href="/services#business-signs" className="text-hub-blue hover:underline mt-2 inline-block text-sm">
+                Learn more
+              </Link>
             </div>
             <div className="text-center">
               <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
                 <Image
                   src="/images/technology.png"
-                  alt="Awards and recognition plaques laser engraved Maryland"
+                  alt="Awards and recognition plaques laser engraved in Maryland for corporate and academic achievements"
                   fill
                   className="object-cover"
                 />
               </div>
               <h3 className="text-lg font-semibold text-hub-blue mb-2">Awards & Recognition Plaques</h3>
               <p className="text-gray-600">Laser engraved achievement awards and recognition items Hagerstown MD</p>
+              <Link href="/services#awards" className="text-hub-blue hover:underline mt-2 inline-block text-sm">
+                Learn more
+              </Link>
             </div>
             <div className="text-center">
               <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
                 <Image
                   src="/images/retail.png"
-                  alt="Promotional laser items and branded merchandise"
+                  alt="Promotional laser items and branded merchandise for Maryland businesses and marketing campaigns"
                   fill
                   className="object-cover"
                 />
               </div>
               <h3 className="text-lg font-semibold text-hub-blue mb-2">Promotional Laser Items</h3>
               <p className="text-gray-600">Branded merchandise and marketing materials laser cut on all materials</p>
+              <Link href="/services#promotional" className="text-hub-blue hover:underline mt-2 inline-block text-sm">
+                Learn more
+              </Link>
             </div>
             <div className="text-center">
               <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
                 <Image
                   src="/images/real-estate.png"
-                  alt="Personalized laser gifts on wood metal glass"
+                  alt="Personalized laser gifts on wood, metal, and glass for special occasions and corporate gifting"
                   fill
                   className="object-cover"
                 />
               </div>
               <h3 className="text-lg font-semibold text-hub-blue mb-2">Personalized Laser Gifts</h3>
               <p className="text-gray-600">Custom laser engraved gifts on wood, metal, glass for special occasions</p>
+              <Link href="/gifts" className="text-hub-blue hover:underline mt-2 inline-block text-sm">
+                Learn more
+              </Link>
             </div>
           </div>
 
