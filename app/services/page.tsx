@@ -1,205 +1,242 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "All Services - Hub City Laser",
+  title: "Laser Engraving Services Hagerstown MD | Wood Metal Glass Cutting | Hub City Laser",
   description:
-    "Complete list of laser cutting, engraving, and marking services including signs, plaques, nameplates, equipment tags, compliance labels, promotional items, awards, and personalized gifts.",
+    "Complete laser engraving and cutting services in Hagerstown Maryland. Custom signs, plaques, nameplates, equipment tags, promotional items on wood, metal, glass. Serving MD, DE, VA businesses.",
+  keywords:
+    "laser engraving services Hagerstown MD, laser cutting wood metal glass, custom signs Maryland, promotional items laser engraving, equipment tags MD DE VA, business signage Hagerstown",
 }
 
 export default function ServicesPage() {
-  const serviceCategories = [
+  const services = [
     {
-      title: "Signage Solutions",
-      services: [
-        "Custom business signs",
-        "Directional signage",
-        "Safety signs",
-        "Outdoor signage",
-        "Indoor displays",
-        "Wayfinding systems",
+      category: "Custom Business Signage Solutions",
+      image: "/images/professional.png",
+      alt: "Professional office signs and nameplates laser engraved Hagerstown MD",
+      items: [
+        "Custom business signs laser engraved on wood, metal, glass",
+        "Office door signs and professional nameplates",
+        "Directional signage and wayfinding displays",
+        "Safety and compliance signs for Maryland businesses",
+        "Wayfinding displays laser cut for commercial properties",
       ],
-      image: "/placeholder.svg?height=300&width=400&query=custom%20business%20signage",
     },
     {
-      title: "Professional Items",
-      services: [
-        "Nameplates",
-        "Desk signs",
-        "Door plates",
-        "Office directories",
-        "Executive plaques",
-        "Professional awards",
+      category: "Recognition & Awards Laser Engraving",
+      image: "/images/technology.png",
+      alt: "Corporate awards and achievement plaques laser engraved Maryland",
+      items: [
+        "Achievement plaques laser engraved on premium materials",
+        "Employee recognition awards for MD DE VA companies",
+        "Sports trophies and athletic awards laser cutting",
+        "Academic awards and graduation recognition",
+        "Corporate milestone recognition laser engraved plaques",
       ],
-      image: "/placeholder.svg?height=300&width=400&query=professional%20desk%20nameplate",
     },
     {
-      title: "Industrial Applications",
-      services: [
-        "Equipment tags",
-        "Asset labels",
-        "Compliance labels",
-        "Safety warnings",
-        "Data plates",
-        "Serial number marking",
+      category: "Industrial Identification & Labels",
+      image: "/images/industrial.png",
+      alt: "Industrial safety signs and equipment tags laser engraved",
+      items: [
+        "Equipment nameplates laser engraved on metal and plastic",
+        "Asset identification tags for industrial applications",
+        "Serial number laser engraving for manufacturers",
+        "Compliance labels and safety marking",
+        "Inventory management tags laser cut for durability",
       ],
-      image: "/placeholder.svg?height=300&width=400&query=industrial%20equipment%20tags",
     },
     {
-      title: "Promotional Materials",
-      services: [
-        "Marketing displays",
-        "Trade show materials",
-        "Promotional items",
-        "Brand elements",
-        "Custom logos",
-        "Event signage",
+      category: "Promotional Items & Marketing Materials",
+      image: "/images/retail.png",
+      alt: "Retail promotional items and marketing displays laser cut",
+      items: [
+        "Branded merchandise laser engraved with company logos",
+        "Trade show materials and promotional displays",
+        "Marketing displays laser cut on various materials",
+        "Customer gifts and corporate promotional products",
+        "Branded items laser engraved for Maryland businesses",
       ],
-      image: "/placeholder.svg?height=300&width=400&query=promotional%20marketing%20displays",
     },
     {
-      title: "Awards & Recognition",
-      services: [
-        "Achievement awards",
-        "Recognition plaques",
-        "Trophies",
-        "Commemorative items",
-        "Service awards",
-        "Milestone gifts",
+      category: "Personalized Gifts & Custom Items",
+      image: "/images/hospitality.png",
+      alt: "Custom personalized gifts and home items laser engraved",
+      items: [
+        "Wedding keepsakes laser engraved on wood and metal",
+        "Retirement gifts and milestone recognition",
+        "Custom home décor laser cut and engraved",
+        "Pet accessories and identification tags",
+        "Holiday ornaments and seasonal gifts",
       ],
-      image: "/placeholder.svg?height=300&width=400&query=laser%20engraved%20awards",
-    },
-    {
-      title: "Personalized Gifts",
-      services: [
-        "Custom cutting boards",
-        "Engraved tumblers",
-        "Pet tags",
-        "Home décor",
-        "Wedding favors",
-        "Memorial items",
-      ],
-      image: "/placeholder.svg?height=300&width=400&query=personalized%20laser%20gifts",
     },
   ]
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-6xl mx-auto">
-          <div className="relative h-64 w-full mb-8 rounded-lg overflow-hidden">
-            <Image
-              src="/placeholder.svg?height=400&width=1200&query=laser%20cutting%20and%20engraving%20services"
-              alt="Laser services"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-            />
-          </div>
+    <>
+      <section className="bg-hub-blue text-hub-white section-padding">
+        <div className="container-max">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Complete Laser Engraving Services Hagerstown Maryland</h1>
+          <p className="text-xl text-blue-100 max-w-3xl">
+            Comprehensive laser engraving and cutting services for businesses and individuals in Hagerstown, MD. From
+            professional signage to personalized gifts, we deliver precision laser craftsmanship on wood, metal, glass,
+            and all materials for every project throughout Maryland, Delaware, and Virginia.
+          </p>
+        </div>
+      </section>
 
-          <h1 className="text-4xl font-bold text-[#002B5C] mb-8">All Services</h1>
-
-          <div className="prose prose-lg mb-12">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Hub City Laser offers comprehensive laser cutting, engraving, and marking services across multiple
-              industries and applications. Our state-of-the-art equipment and experienced team deliver precision results
-              for projects of all sizes, from single custom pieces to large production runs.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Whether you need industrial equipment marking, professional signage, or personalized gifts, we have the
-              expertise and technology to bring your vision to life with exceptional quality and attention to detail.
+      <section className="section-padding">
+        <div className="container-max">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-hub-blue mb-4">
+              Professional Laser Engraving on Wood, Metal, Glass & Everything
+            </h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              Hub City Laser provides expert laser engraving and cutting services on all materials. Located in
+              Hagerstown, Maryland, we serve businesses throughout the tri-state area with precision laser solutions.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {serviceCategories.map((category, index) => (
-              <Card key={index} className="border-[#A5ACAF] h-full overflow-hidden">
-                <div className="relative h-48 w-full">
-                  <Image
-                    src={category.image || "/placeholder.svg"}
-                    alt={category.title}
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
+          <div className="space-y-12 mb-12">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
+              >
+                <div className={`${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
+                  <div className="aspect-video relative rounded-lg overflow-hidden">
+                    <Image src={service.image || "/placeholder.svg"} alt={service.alt} fill className="object-cover" />
+                  </div>
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-[#002B5C]">{category.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {category.services.map((service, serviceIndex) => (
-                      <li key={serviceIndex} className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-[#002B5C] rounded-full flex-shrink-0"></div>
-                        <span className="text-gray-700">{service}</span>
+                <div className={`${index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}`}>
+                  <h3 className="text-2xl font-semibold text-hub-blue mb-4">{service.category}</h3>
+                  <ul className="space-y-3">
+                    {service.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="text-gray-700 flex items-start">
+                        <span className="w-2 h-2 bg-hub-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        {item}
                       </li>
                     ))}
                   </ul>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
 
-          <Card className="mb-12 bg-gray-50 border-[#A5ACAF]">
-            <CardHeader>
-              <CardTitle className="text-[#002B5C]">Our Capabilities</CardTitle>
-              <CardDescription>Advanced laser technology for superior results</CardDescription>
-            </CardHeader>
-            <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-gray-50 p-8 rounded-lg mb-12">
+            <h3 className="text-2xl font-bold text-hub-blue mb-6 text-center">
+              Materials We Laser Engrave in Hagerstown MD
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="relative h-48 w-full mb-4 rounded-lg overflow-hidden mx-auto">
-                  <Image
-                    src="/placeholder.svg?height=300&width=400&query=laser%20cutting%20machine%20in%20action"
-                    alt="Laser Cutting"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-                <h3 className="font-semibold text-[#002B5C] mb-3">Laser Cutting</h3>
-                <p className="text-gray-700">
-                  Precision cutting through various materials including wood, acrylic, metal, and more
-                </p>
+                <h4 className="font-semibold text-hub-blue mb-2">Wood Laser Engraving</h4>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>Hardwood</li>
+                  <li>Bamboo</li>
+                  <li>Plywood</li>
+                  <li>MDF</li>
+                </ul>
               </div>
               <div className="text-center">
-                <div className="relative h-48 w-full mb-4 rounded-lg overflow-hidden mx-auto">
-                  <Image
-                    src="/placeholder.svg?height=300&width=400&query=laser%20engraving%20detail%20work"
-                    alt="Laser Engraving"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-                <h3 className="font-semibold text-[#002B5C] mb-3">Laser Engraving</h3>
-                <p className="text-gray-700">Detailed surface engraving for text, logos, and intricate designs</p>
+                <h4 className="font-semibold text-hub-blue mb-2">Metal Laser Cutting</h4>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>Stainless Steel</li>
+                  <li>Aluminum</li>
+                  <li>Brass</li>
+                  <li>Anodized Metal</li>
+                </ul>
               </div>
               <div className="text-center">
-                <div className="relative h-48 w-full mb-4 rounded-lg overflow-hidden mx-auto">
-                  <Image
-                    src="/placeholder.svg?height=300&width=400&query=laser%20marking%20on%20metal"
-                    alt="Laser Marking"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-                <h3 className="font-semibold text-[#002B5C] mb-3">Laser Marking</h3>
-                <p className="text-gray-700">Permanent marking for identification, compliance, and branding</p>
+                <h4 className="font-semibold text-hub-blue mb-2">Glass Laser Etching</h4>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>Tempered Glass</li>
+                  <li>Mirrors</li>
+                  <li>Glassware</li>
+                  <li>Windows</li>
+                </ul>
               </div>
-            </CardContent>
-          </Card>
+              <div className="text-center">
+                <h4 className="font-semibold text-hub-blue mb-2">Other Materials</h4>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>Acrylic</li>
+                  <li>Plastic</li>
+                  <li>Leather</li>
+                  <li>Everything!</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-          <div className="text-center bg-[#002B5C] text-white p-8 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">Ready to Start Your Project?</h2>
-            <p className="text-lg mb-6 text-[#A5ACAF]">
-              Contact us today to discuss your laser service needs and get a custom quote
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-hub-blue mb-8 text-center">
+              Industry-Specific Laser Engraving Examples
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white rounded-lg overflow-hidden shadow-md">
+                <div className="aspect-video relative">
+                  <Image
+                    src="/images/medical.png"
+                    alt="Medical equipment laser engraving and compliance labels Hagerstown MD"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-hub-blue mb-2">Medical Device Engraving</h4>
+                  <p className="text-sm text-gray-600">
+                    Equipment tags, compliance labels, and medical facility signage
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg overflow-hidden shadow-md">
+                <div className="aspect-video relative">
+                  <Image
+                    src="/images/restaurants.png"
+                    alt="Restaurant laser engraving menu boards table numbers Maryland"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-hub-blue mb-2">Restaurant & Food Service</h4>
+                  <p className="text-sm text-gray-600">
+                    Menu boards, table numbers, glassware, and promotional displays
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg overflow-hidden shadow-md">
+                <div className="aspect-video relative">
+                  <Image
+                    src="/images/agriculture.png"
+                    alt="Agriculture equipment tags and farm signage laser engraved"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-hub-blue mb-2">Agriculture & Farming</h4>
+                  <p className="text-sm text-gray-600">Equipment identification, farm signage, and livestock tags</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-hub-blue text-hub-white p-8 rounded-lg text-center">
+            <h3 className="text-2xl font-bold mb-4">Ready to Start Your Laser Engraving Project in Hagerstown MD?</h3>
+            <p className="text-blue-100 mb-6">
+              Contact Hub City Laser today to discuss your laser engraving needs and receive a personalized quote for
+              wood, metal, glass cutting and engraving services in Maryland, Delaware, and Virginia.
             </p>
-            <Button asChild size="lg" className="bg-[#A5ACAF] text-[#002B5C] hover:bg-white">
-              <Link href="/contact">Get Your Quote</Link>
-            </Button>
+            <Link href="/contact" className="btn-secondary">
+              Get Your Free Laser Engraving Quote
+            </Link>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   )
 }
