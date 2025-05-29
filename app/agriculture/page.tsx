@@ -95,7 +95,7 @@ export default function AgriculturePage() {
       <HeroSection
         title="Agriculture Laser Engraving Hagerstown Maryland"
         description="Durable, weather-resistant laser engraving solutions for farms, agricultural equipment manufacturers, and agribusiness in Hagerstown, MD. From farm signage to equipment identification tags, we provide precision laser marking on metal, wood, and plastic materials built to withstand outdoor conditions while maintaining clarity and professionalism. Serving Maryland, Delaware, and Virginia agricultural operations with reliable identification and tracking solutions."
-        backgroundImage="/images/agriculture-farm-signage.png"
+        backgroundImage="/images/agriculture.png"
       />
 
       {/* Overview Section */}
@@ -131,7 +131,7 @@ export default function AgriculturePage() {
             <div>
               <div className="aspect-video relative rounded-lg overflow-hidden">
                 <Image
-                  src="/images/agriculture-farm-signage.png"
+                  src="/images/agriculture.png"
                   alt="Agriculture farm signage and equipment identification laser engraved"
                   fill
                   className="object-cover"

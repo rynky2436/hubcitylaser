@@ -187,9 +187,13 @@ export default function MedicalPage() {
                   <div className="lg:col-span-1">
                     <h3 className="text-xl font-semibold text-hub-blue mb-4">{service.title}</h3>
                     <p className="text-gray-700">{service.description}</p>
-                    {/* Placeholder for additional service images */}
-                    <div className="mt-4 aspect-video bg-gray-200 rounded flex items-center justify-center text-gray-500">
-                      [Service Image Placeholder - {service.title}]
+                    <div className="mt-4 aspect-video relative rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/medical.png"
+                        alt={`Medical ${service.title} laser engraving examples`}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                   </div>
                   <div className="lg:col-span-2">

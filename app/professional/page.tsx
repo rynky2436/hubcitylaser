@@ -79,7 +79,7 @@ export default function ProfessionalPage() {
       <HeroSection
         title="Professional Office Laser Engraving Hagerstown Maryland"
         description="Elevate your professional image with custom laser-engraved office signage, awards, and accessories in Hagerstown, MD. Serving law firms, accounting practices, consulting firms, and corporate offices throughout Maryland, Delaware, and Virginia with precision laser engraving on wood, metal, glass, and premium materials."
-        backgroundImage="/images/professional-executive-office.png"
+        backgroundImage="/images/professional.png"
       />
 
       {/* Overview Section */}
@@ -115,7 +115,7 @@ export default function ProfessionalPage() {
             <div>
               <div className="aspect-video relative rounded-lg overflow-hidden">
                 <Image
-                  src="/images/professional-executive-office.png"
+                  src="/images/professional.png"
                   alt="Professional executive office signs and corporate branding laser engraved"
                   fill
                   className="object-cover"

@@ -95,7 +95,7 @@ export default function HospitalityPage() {
       <HeroSection
         title="Hospitality Laser Engraving Hagerstown Maryland"
         description="Create memorable guest experiences with custom laser-engraved signage, amenities, and promotional materials for hotels, restaurants, bars, and event venues in Hagerstown, MD. From elegant room signs to personalized guest amenities, we help Maryland, Delaware, and Virginia hospitality businesses enhance their brand and create lasting impressions with precision laser engraving on wood, glass, metal, and specialty materials that reflect your commitment to exceptional service."
-        backgroundImage="/images/hospitality-menu-boards.png"
+        backgroundImage="/images/hospitality.png"
       />
 
       {/* Overview Section */}
@@ -132,7 +132,7 @@ export default function HospitalityPage() {
             <div>
               <div className="aspect-video relative rounded-lg overflow-hidden">
                 <Image
-                  src="/images/hospitality-menu-boards.png"
+                  src="/images/hospitality.png"
                   alt="Hospitality menu boards and guest experience materials laser engraved"
                   fill
                   className="object-cover"

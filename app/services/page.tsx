@@ -15,7 +15,7 @@ export default function ServicesPage() {
   const services = [
     {
       category: "Custom Business Signage Solutions",
-      image: "/images/professional-executive-office.png",
+      image: "/images/professional.png",
       alt: "Professional office signs and nameplates laser engraved Hagerstown MD",
       items: [
         "Custom business signs laser engraved on wood, metal, glass",
@@ -27,7 +27,7 @@ export default function ServicesPage() {
     },
     {
       category: "Recognition & Awards Laser Engraving",
-      image: "/images/technology-equipment-identification.png",
+      image: "/images/technology.png",
       alt: "Corporate awards and achievement plaques laser engraved Maryland",
       items: [
         "Achievement plaques laser engraved on premium materials",
@@ -39,7 +39,7 @@ export default function ServicesPage() {
     },
     {
       category: "Industrial Identification & Labels",
-      image: "/images/industrial-safety-components.png",
+      image: "/images/industrial.png",
       alt: "Industrial safety signs and equipment tags laser engraved",
       items: [
         "Equipment nameplates laser engraved on metal and plastic",
@@ -51,7 +51,7 @@ export default function ServicesPage() {
     },
     {
       category: "Promotional Items & Marketing Materials",
-      image: "/images/retail-promotional-items.png",
+      image: "/images/retail.png",
       alt: "Retail promotional items and marketing displays laser cut",
       items: [
         "Branded merchandise laser engraved with company logos",
@@ -63,7 +63,7 @@ export default function ServicesPage() {
     },
     {
       category: "Personalized Gifts & Custom Items",
-      image: "/images/real-estate-housewarming-gifts.png",
+      image: "/images/real-estate.png",
       alt: "Custom personalized gifts and home items laser engraved",
       items: [
         "Wedding keepsakes laser engraved on wood and metal",
@@ -222,7 +222,7 @@ export default function ServicesPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="aspect-video relative">
                   <Image
-                    src="/images/restaurant-complete-branding.png"
+                    src="/images/restaurants.png"
                     alt="Restaurant laser engraving menu boards table numbers Maryland"
                     fill
                     className="object-cover"
@@ -239,7 +239,7 @@ export default function ServicesPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="aspect-video relative">
                   <Image
-                    src="/images/agriculture-farm-signage.png"
+                    src="/images/agriculture.png"
                     alt="Agriculture equipment tags and farm signage laser engraved"
                     fill
                     className="object-cover"

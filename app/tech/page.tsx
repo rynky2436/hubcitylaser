@@ -135,7 +135,7 @@ export default function TechPage() {
       <HeroSection
         title="Technology Industry Laser Engraving Hagerstown Maryland"
         description="Precision laser engraving solutions for technology companies, data centers, and IT services in Hagerstown, MD. From server identification to corporate awards, we help Maryland, Delaware, and Virginia technology businesses create professional identification systems, safety compliance marking, and corporate recognition materials with precision laser engraving on metal and specialty materials that match your innovation and technical excellence."
-        backgroundImage="/images/technology-infrastructure-labeling.png"
+        backgroundImage="/images/technology.png"
       />
 
       {/* Overview Section */}
@@ -171,7 +171,7 @@ export default function TechPage() {
             <div>
               <div className="aspect-video relative rounded-lg overflow-hidden">
                 <Image
-                  src="/images/technology-infrastructure-labeling.png"
+                  src="/images/technology.png"
                   alt="Technology infrastructure labeling including server racks and equipment identification"
                   fill
                   className="object-cover"

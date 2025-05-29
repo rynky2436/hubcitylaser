@@ -54,7 +54,7 @@ export default function ContactPage() {
       <HeroSection
         title="Contact Hub City Laser Engraving Hagerstown MD"
         description="Ready to discuss your laser engraving project? Get in touch with Hagerstown Maryland's premier laser engraving service for a personalized quote on wood, metal, glass cutting and engraving. Serving businesses throughout Maryland, Delaware, and Virginia."
-        backgroundImage="/images/professional-executive-office.png"
+        backgroundImage="/images/professional.png"
       />
 
       <section className="section-padding">

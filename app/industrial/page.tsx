@@ -139,7 +139,7 @@ export default function IndustrialPage() {
       <HeroSection
         title="Industrial Laser Engraving Hagerstown Maryland"
         description="Heavy-duty laser engraving solutions for manufacturing, industrial facilities, and equipment manufacturers in Hagerstown, MD. From safety signage to equipment identification tags, we provide durable marking that meets industry standards and regulatory requirements. Serving Maryland, Delaware, and Virginia industrial operations with precision laser engraving on metal, plastic, and specialty materials built for demanding industrial environments."
-        backgroundImage="/images/industrial-safety-components.png"
+        backgroundImage="/images/industrial.png"
       />
 
       {/* Overview Section */}
@@ -175,7 +175,7 @@ export default function IndustrialPage() {
             <div>
               <div className="aspect-video relative rounded-lg overflow-hidden">
                 <Image
-                  src="/images/industrial-safety-components.png"
+                  src="/images/industrial.png"
                   alt="Industrial safety components and compliance marking laser engraved"
                   fill
                   className="object-cover"

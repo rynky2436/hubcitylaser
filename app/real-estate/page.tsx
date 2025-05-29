@@ -94,7 +94,7 @@ export default function RealEstatePage() {
       <HeroSection
         title="Real Estate Laser Engraving Hagerstown Maryland"
         description="Professional laser engraving services for real estate agents, brokers, and property management companies in Hagerstown, MD. From custom property signage to client appreciation gifts, we help Maryland, Delaware, and Virginia real estate professionals make lasting impressions with precision laser-engraved solutions on wood, glass, and all materials that strengthen client relationships and enhance your professional brand."
-        backgroundImage="/images/real-estate-professional-branding.png"
+        backgroundImage="/images/real-estate.png"
       />
 
       {/* Overview Section */}
@@ -131,8 +131,8 @@ export default function RealEstatePage() {
             <div>
               <div className="aspect-video relative rounded-lg overflow-hidden">
                 <Image
-                  src="/images/real-estate-professional-branding.png"
-                  alt="Professional real estate branding and office materials laser engraved"
+                  src="/images/real-estate.png"
+                  alt="Professional real estate branding and client relationship materials laser engraved"
                   fill
                   className="object-cover"
                 />

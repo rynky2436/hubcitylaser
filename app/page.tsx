@@ -27,49 +27,49 @@ export default function HomePage() {
       name: "Professional Office Signs",
       href: "/professional",
       description: "Custom office signs, nameplates, awards laser engraved on wood, metal, glass",
-      image: "/images/professional-executive-office.png",
+      image: "/images/professional.png",
     },
     {
       name: "Restaurant Laser Engraving",
       href: "/restaurants",
       description: "Menu boards, table numbers, promotional signage laser cut for Maryland restaurants",
-      image: "/images/restaurant-complete-branding.png",
+      image: "/images/restaurants.png",
     },
     {
       name: "Real Estate",
       href: "/real-estate",
       description: "Property signs, office displays, and marketing materials",
-      image: "/images/real-estate-professional-branding.png",
+      image: "/images/real-estate.png",
     },
     {
       name: "Agriculture Equipment Tags",
       href: "/agriculture",
       description: "Farm equipment laser engraving, livestock tags, agricultural signage MD VA DE",
-      image: "/images/agriculture-farm-signage.png",
+      image: "/images/agriculture.png",
     },
     {
       name: "Retail Store Displays",
       href: "/retail",
       description: "Store displays, product labels, promotional items laser cut on wood metal glass",
-      image: "/images/retail-acrylic-displays.png",
+      image: "/images/retail.png",
     },
     {
       name: "Industrial Laser Marking",
       href: "/industrial",
       description: "Safety signs, equipment tags, compliance marking laser engraved in Maryland",
-      image: "/images/industrial-safety-components.png",
+      image: "/images/industrial.png",
     },
     {
       name: "Technology Laser Engraving",
       href: "/tech",
       description: "Product labels, corporate awards, tech signage laser cut in Hagerstown MD",
-      image: "/images/technology-equipment-identification.png",
+      image: "/images/technology.png",
     },
     {
       name: "Hospitality Custom Signs",
       href: "/hospitality",
       description: "Hotel room signs, guest amenities, promotional displays laser engraved MD DE VA",
-      image: "/images/hospitality-menu-boards.png",
+      image: "/images/hospitality.png",
     },
   ]
 
@@ -210,7 +210,7 @@ export default function HomePage() {
             <div className="text-center">
               <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/professional-executive-office.png"
+                  src="/images/professional.png"
                   alt="Custom business signs laser engraved Hagerstown MD"
                   fill
                   className="object-cover"
@@ -224,7 +224,7 @@ export default function HomePage() {
             <div className="text-center">
               <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/technology-equipment-identification.png"
+                  src="/images/technology.png"
                   alt="Awards and recognition plaques laser engraved Maryland"
                   fill
                   className="object-cover"
@@ -236,7 +236,7 @@ export default function HomePage() {
             <div className="text-center">
               <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/retail-promotional-items.png"
+                  src="/images/retail.png"
                   alt="Promotional laser items and branded merchandise"
                   fill
                   className="object-cover"
@@ -248,7 +248,7 @@ export default function HomePage() {
             <div className="text-center">
               <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/real-estate-housewarming-gifts.png"
+                  src="/images/real-estate.png"
                   alt="Personalized laser gifts on wood metal glass"
                   fill
                   className="object-cover"

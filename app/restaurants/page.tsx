@@ -80,7 +80,7 @@ export default function RestaurantsPage() {
       <HeroSection
         title="Restaurant Laser Engraving Hagerstown Maryland"
         description="Enhance your restaurant's atmosphere and functionality with custom laser-engraved menu boards, table numbers, glassware, and promotional materials in Hagerstown, MD. Serving restaurants, cafes, bars, and food service businesses throughout Maryland, Delaware, and Virginia with precision laser engraving on wood, glass, metal, and all materials that reflect your brand's personality and improve customer experience."
-        backgroundImage="/images/restaurant-complete-branding.png"
+        backgroundImage="/images/restaurants.png"
       />
 
       {/* Overview Section */}
@@ -116,7 +116,7 @@ export default function RestaurantsPage() {
             <div>
               <div className="aspect-video relative rounded-lg overflow-hidden">
                 <Image
-                  src="/images/restaurant-complete-branding.png"
+                  src="/images/restaurants.png"
                   alt="Restaurant complete branding and signage laser engraved"
                   fill
                   className="object-cover"

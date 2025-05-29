@@ -95,7 +95,7 @@ export default function RetailPage() {
       <HeroSection
         title="Retail Laser Engraving Hagerstown Maryland"
         description="Attract customers and enhance your retail environment with custom laser-engraved displays, signage, and promotional materials in Hagerstown, MD. From point-of-sale signage to product showcases, we help Maryland, Delaware, and Virginia retail businesses create compelling shopping experiences with precision laser engraving on wood, acrylic, metal, and specialty materials that showcase your products and brand professionally."
-        backgroundImage="/images/retail-acrylic-displays.png"
+        backgroundImage="/images/retail.png"
       />
 
       {/* Overview Section */}
@@ -132,7 +132,7 @@ export default function RetailPage() {
             <div>
               <div className="aspect-video relative rounded-lg overflow-hidden">
                 <Image
-                  src="/images/retail-acrylic-displays.png"
+                  src="/images/retail.png"
                   alt="Retail acrylic displays and modern store fixtures laser engraved"
                   fill
                   className="object-cover"
