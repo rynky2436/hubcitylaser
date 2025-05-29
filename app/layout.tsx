@@ -1,26 +1,61 @@
 import type React from "react"
 import type { Metadata } from "next"
+import { Inter } from "next/font/google"
 import "./globals.css"
-import Header from "./components/Header"
-import Footer from "./components/Footer"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Hub City Laser Engraving Hagerstown MD | Wood Metal Glass Cutting Services",
+  title: {
+    default: "Hub City Laser - Precision Laser Services for Every Industry",
+    template: "%s | Hub City Laser",
+  },
   description:
-    "Professional laser engraving and cutting services in Hagerstown, Maryland serving MD, DE, VA. Custom signs, awards, promotional items on wood, metal, glass. Industrial, medical, restaurant laser engraving.",
-  keywords:
-    "laser engraving Hagerstown MD, laser cutting Maryland, custom signs Delaware Virginia, wood metal glass engraving, business signage MD, promotional items Hagerstown, industrial laser cutting",
+    "Professional laser cutting, engraving, and marking solutions for medical, industrial, retail, and more. Custom signage, equipment tags, and personalized gifts.",
+  keywords: [
+    "laser cutting",
+    "laser engraving",
+    "laser marking",
+    "custom signage",
+    "equipment tags",
+    "personalized gifts",
+    "medical laser services",
+    "industrial marking",
+    "professional signage",
+    "precision laser",
+  ],
+  authors: [{ name: "Hub City Laser" }],
+  creator: "Hub City Laser",
+  publisher: "Hub City Laser",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://hubcitylaser.com"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Hub City Laser Engraving Hagerstown MD | Professional Laser Services",
+    title: "Hub City Laser - Precision Laser Services for Every Industry",
     description:
-      "Expert laser engraving on wood, metal, glass in Hagerstown MD. Serving Maryland, Delaware, Virginia with custom signs, awards, promotional items.",
-    type: "website",
+      "Professional laser cutting, engraving, and marking solutions for medical, industrial, retail, and more.",
+    url: "https://hubcitylaser.com",
+    siteName: "Hub City Laser",
     locale: "en_US",
+    type: "website",
   },
-  robots: {
-    index: true,
-    follow: true,
+  twitter: {
+    card: "summary_large_image",
+    title: "Hub City Laser - Precision Laser Services",
+    description: "Professional laser cutting, engraving, and marking solutions for every industry.",
   },
+  verification: {
+    google: "your-google-verification-code",
+  },
+  category: "business",
     generator: 'v0.dev'
 }
 
@@ -31,14 +66,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="geo.region" content="US-MD" />
-        <meta name="geo.placename" content="Hagerstown" />
-        <meta name="geo.position" content="39.6417;-77.7200" />
-        <meta name="ICBM" content="39.6417, -77.7200" />
-      </head>
-      <body className="bg-hub-white text-gray-900">
-        <Header />
+      <body className={inter.className}>
+        <Navigation />
         <main>{children}</main>
         <Footer />
       </body>
