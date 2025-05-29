@@ -13,79 +13,93 @@ export const metadata: Metadata = {
 export default function IndustrialPage() {
   const industrialServices = [
     {
-      title: "Equipment Asset Tracking & Identification Systems",
+      title: "Industrial Safety Components & Warning Systems",
       description:
-        "Comprehensive asset tracking and equipment identification systems that improve inventory management and operational efficiency in industrial facilities.",
+        "Comprehensive safety labeling and warning systems that protect workers and ensure regulatory compliance in manufacturing environments.",
       applications: [
-        "Equipment asset tags with barcodes and serial numbers",
-        "Machine identification plates and nameplates",
-        "Inventory tracking labels for tools and equipment",
-        "Maintenance scheduling and service history tags",
+        "Panel identification tags with equipment designations",
+        "Laser hazard warning symbols and safety triangles",
+        "General warning labels for hazardous equipment",
+        "Equipment component identification with part numbers",
+        "Safety compliance marking for industrial machinery",
+        "Gear and mechanical component identification systems",
+      ],
+      image: "/images/industrial-safety-components.png",
+      alt: "Industrial safety components including panel identification, warning symbols, and gear marking on metal surfaces",
+    },
+    {
+      title: "Regulatory Compliance & Certification Marking",
+      description:
+        "Professional regulatory compliance marking and certification labels that meet industry standards and government requirements.",
+      applications: [
+        "UL Listed certification marking with official logos",
+        "CSA US safety standard compliance labeling",
+        "CE European conformity marking for exports",
+        "Warning symbols and safety compliance indicators",
+        "Industry-specific regulatory certification marks",
+        "Quality assurance and testing compliance labels",
+      ],
+      image: "/images/industrial-compliance-marking.png",
+      alt: "Regulatory compliance markings including UL Listed, CSA US, CE marking, and warning symbols",
+    },
+    {
+      title: "Advanced Tracking & Inventory Management Systems",
+      description:
+        "Modern tracking and inventory management systems using barcodes and QR codes for efficient industrial operations.",
+      applications: [
+        "Standard barcode systems for inventory tracking",
+        "QR codes for digital asset management and information",
+        "Serial number tracking for equipment maintenance",
+        "Inventory control and warehouse management systems",
+        "Digital integration with ERP and management software",
+        "Automated scanning and tracking solutions",
+      ],
+      image: "/images/industrial-tracking-systems.png",
+      alt: "Industrial tracking systems with barcodes and QR codes laser engraved on stainless steel",
+    },
+    {
+      title: "Control Panel & Equipment Identification",
+      description:
+        "Professional control panel identification and equipment labeling systems for industrial facility organization.",
+      applications: [
+        "Control panel identification with designation numbers",
+        "Equipment specification and part number marking",
+        "Caution and safety warning labels for operators",
+        "Electrical panel and control system identification",
+        "Maintenance and service information labeling",
+        "Operational instruction and safety procedure signs",
+      ],
+      image: "/images/industrial-control-panels.png",
+      alt: "Industrial control panel identification with equipment numbers and caution warnings",
+    },
+    {
+      title: "Precision Component & Machinery Marking",
+      description: "High-precision laser marking for complex industrial components and precision machinery parts.",
+      applications: [
+        "Precision part number marking on machined components",
+        "Small component identification for assembly processes",
+        "Curved and angled surface marking capabilities",
+        "High-precision marking for aerospace and automotive parts",
         "Quality control and inspection identification",
-        "Calibration and certification tracking labels",
+        "Replacement part identification and ordering systems",
       ],
-      image: "/images/industrial-equipment-tracking.png",
-      alt: "Industrial equipment asset tracking tags with barcodes and serial numbers on precision machinery",
+      image: "/images/industrial-precision-components.png",
+      alt: "Precision component marking showing part number on machined industrial equipment",
     },
     {
-      title: "Industrial Safety Signs & Warning Labels",
+      title: "Comprehensive Part Numbering & Serial Systems",
       description:
-        "OSHA-compliant safety signage and warning labels that protect workers and ensure regulatory compliance in manufacturing environments.",
+        "Complete part numbering and serial identification systems for manufacturing and industrial operations.",
       applications: [
-        "Warning signs for authorized personnel only areas",
-        "Caution labels for hazardous equipment and processes",
-        "Hard hat area and PPE requirement signage",
-        "Emergency procedure and evacuation route signs",
-        "Lockout/tagout safety identification labels",
-        "Chemical hazard and material safety warnings",
+        "Serial number marking on cylindrical components",
+        "Part number identification tags in multiple formats",
+        "ID tags with alphanumeric tracking systems",
+        "Hexagonal and specialty component marking",
+        "Large nameplate identification for major equipment",
+        "Comprehensive inventory and asset tracking solutions",
       ],
-      image: "/images/industrial-safety-labeling.png",
-      alt: "Industrial safety warning labels including authorized personnel only and caution signage",
-    },
-    {
-      title: "Compliance & Regulatory Marking",
-      description:
-        "Regulatory compliance marking and certification labels that meet industry standards and government requirements.",
-      applications: [
-        "OSHA compliance and safety regulation marking",
-        "ISO certification and quality standard labels",
-        "Environmental compliance and emission tags",
-        "Pressure vessel and equipment certification marks",
-        "Electrical safety and code compliance labels",
-        "FDA and industry-specific regulatory marking",
-      ],
-      image: "/images/industrial-equipment-tracking.png",
-      alt: "Regulatory compliance marking and certification labels for industrial equipment",
-    },
-    {
-      title: "Machine Nameplates & Serial Number Engraving",
-      description:
-        "Permanent machine identification and serial number engraving for manufacturers and industrial equipment.",
-      applications: [
-        "Machine nameplates with model and serial numbers",
-        "Manufacturing date and specification labels",
-        "Warranty and service information tags",
-        "Custom manufacturer branding and logos",
-        "Technical specification and rating plates",
-        "Replacement part identification and ordering info",
-      ],
-      image: "/images/industrial-safety-labeling.png",
-      alt: "Machine nameplates and serial number engraving for industrial manufacturing equipment",
-    },
-    {
-      title: "Facility Wayfinding & Operational Signage",
-      description:
-        "Industrial facility navigation and operational signage that improves workflow and safety in manufacturing environments.",
-      applications: [
-        "Department and area identification signage",
-        "Production line and workflow directional signs",
-        "Emergency exit and safety route marking",
-        "Restricted access and security area signs",
-        "Loading dock and shipping area identification",
-        "Utility and infrastructure marking systems",
-      ],
-      image: "/images/industrial-equipment-tracking.png",
-      alt: "Industrial facility wayfinding and operational signage for manufacturing environments",
+      image: "/images/industrial-part-numbering.png",
+      alt: "Comprehensive part numbering system showing various industrial component identification tags",
     },
   ]
 
@@ -177,15 +191,15 @@ export default function IndustrialPage() {
             <div>
               <div className="aspect-video relative rounded-lg overflow-hidden">
                 <Image
-                  src="/images/industrial-equipment-tracking.png"
-                  alt="Industrial equipment asset tracking and identification systems laser engraved on machinery"
+                  src="/images/industrial-safety-components.png"
+                  alt="Industrial safety components and equipment identification laser engraved on metal surfaces"
                   fill
                   className="object-cover"
                 />
               </div>
               <p className="text-sm text-gray-500 mt-2 text-center">
-                Professional industrial equipment tracking and safety signage laser engraved for Maryland manufacturing
-                facilities
+                Professional industrial safety components and equipment identification laser engraved for Maryland
+                manufacturing facilities
               </p>
             </div>
           </div>
