@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { useState } from "react"
+import HeroSection from "../components/HeroSection"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -50,16 +51,11 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="bg-hub-blue text-hub-white section-padding">
-        <div className="container-max">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Hub City Laser Engraving Hagerstown MD</h1>
-          <p className="text-xl text-blue-100 max-w-3xl">
-            Ready to discuss your laser engraving project? Get in touch with Hagerstown Maryland's premier laser
-            engraving service for a personalized quote on wood, metal, glass cutting and engraving. Serving businesses
-            throughout Maryland, Delaware, and Virginia.
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="Contact Hub City Laser Engraving Hagerstown MD"
+        description="Ready to discuss your laser engraving project? Get in touch with Hagerstown Maryland's premier laser engraving service for a personalized quote on wood, metal, glass cutting and engraving. Serving businesses throughout Maryland, Delaware, and Virginia."
+        backgroundImage="/images/professional-executive-office.png"
+      />
 
       <section className="section-padding">
         <div className="container-max">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import HeroSection from "./components/HeroSection"
 
 export const metadata: Metadata = {
   title: "Laser Engraving Hagerstown MD | Wood Metal Glass Cutting | Hub City Laser",
@@ -26,73 +27,60 @@ export default function HomePage() {
       name: "Professional Office Signs",
       href: "/professional",
       description: "Custom office signs, nameplates, awards laser engraved on wood, metal, glass",
-      image: "/images/professional.png",
+      image: "/images/professional-executive-office.png",
     },
     {
       name: "Restaurant Laser Engraving",
       href: "/restaurants",
       description: "Menu boards, table numbers, promotional signage laser cut for Maryland restaurants",
-      image: "/images/restaurants.png",
+      image: "/images/restaurant-complete-branding.png",
     },
     {
       name: "Real Estate",
       href: "/real-estate",
       description: "Property signs, office displays, and marketing materials",
-      image: "/images/real-estate.png",
+      image: "/images/real-estate-professional-branding.png",
     },
     {
       name: "Agriculture Equipment Tags",
       href: "/agriculture",
       description: "Farm equipment laser engraving, livestock tags, agricultural signage MD VA DE",
-      image: "/images/agriculture.png",
+      image: "/images/agriculture-farm-signage.png",
     },
     {
       name: "Retail Store Displays",
       href: "/retail",
       description: "Store displays, product labels, promotional items laser cut on wood metal glass",
-      image: "/images/retail.png",
+      image: "/images/retail-acrylic-displays.png",
     },
     {
       name: "Industrial Laser Marking",
       href: "/industrial",
       description: "Safety signs, equipment tags, compliance marking laser engraved in Maryland",
-      image: "/images/industrial.png",
+      image: "/images/industrial-safety-components.png",
     },
     {
       name: "Technology Laser Engraving",
       href: "/tech",
       description: "Product labels, corporate awards, tech signage laser cut in Hagerstown MD",
-      image: "/images/technology.png",
+      image: "/images/technology-equipment-identification.png",
     },
     {
       name: "Hospitality Custom Signs",
       href: "/hospitality",
       description: "Hotel room signs, guest amenities, promotional displays laser engraved MD DE VA",
-      image: "/images/hospitality.png",
+      image: "/images/hospitality-menu-boards.png",
     },
   ]
 
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-hub-blue to-blue-800 text-hub-white section-padding">
-        <div className="container-max text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Professional Laser Engraving Hagerstown MD | Wood Metal Glass Cutting Services
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-blue-100">
-            Expert laser engraving and cutting on wood, metal, glass serving Maryland, Delaware, Virginia businesses
-          </p>
-          <div className="space-x-4">
-            <Link href="/contact" className="btn-primary">
-              Get Free Quote Hagerstown MD
-            </Link>
-            <Link href="/services" className="btn-secondary">
-              View Laser Services
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="Professional Laser Engraving Hagerstown MD | Wood Metal Glass Cutting Services"
+        description="Expert laser engraving and cutting on wood, metal, glass serving Maryland, Delaware, Virginia businesses"
+        backgroundImage="/images/materials-wood-glass.png"
+      />
 
       {/* About Section */}
       <section className="section-padding bg-gray-50">
@@ -111,6 +99,14 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="text-center">
+              <div className="aspect-video relative mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/materials-wood-glass.png"
+                  alt="Wood and glass laser engraving materials Hagerstown MD"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-hub-blue mb-3">Materials We Laser Engrave</h3>
               <ul className="text-gray-700 space-y-1">
                 <li>Wood laser engraving</li>
@@ -121,6 +117,14 @@ export default function HomePage() {
               </ul>
             </div>
             <div className="text-center">
+              <div className="aspect-video relative mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/materials-metal.png"
+                  alt="Metal laser cutting and engraving services Maryland"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-hub-blue mb-3">Service Areas</h3>
               <ul className="text-gray-700 space-y-1">
                 <li>Hagerstown, Maryland</li>
@@ -131,6 +135,14 @@ export default function HomePage() {
               </ul>
             </div>
             <div className="text-center">
+              <div className="aspect-video relative mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/materials-glass-etching.png"
+                  alt="Glass etching and laser engraving services Hagerstown"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-hub-blue mb-3">Business Solutions</h3>
               <ul className="text-gray-700 space-y-1">
                 <li>Custom business signs</li>
@@ -196,20 +208,52 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
+              <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/professional-executive-office.png"
+                  alt="Custom business signs laser engraved Hagerstown MD"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h3 className="text-lg font-semibold text-hub-blue mb-2">Custom Business Signs</h3>
               <p className="text-gray-600">
                 Professional laser engraved signage on wood, metal, glass for MD businesses
               </p>
             </div>
             <div className="text-center">
+              <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/technology-equipment-identification.png"
+                  alt="Awards and recognition plaques laser engraved Maryland"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h3 className="text-lg font-semibold text-hub-blue mb-2">Awards & Recognition Plaques</h3>
               <p className="text-gray-600">Laser engraved achievement awards and recognition items Hagerstown MD</p>
             </div>
             <div className="text-center">
+              <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/retail-promotional-items.png"
+                  alt="Promotional laser items and branded merchandise"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h3 className="text-lg font-semibold text-hub-blue mb-2">Promotional Laser Items</h3>
               <p className="text-gray-600">Branded merchandise and marketing materials laser cut on all materials</p>
             </div>
             <div className="text-center">
+              <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/real-estate-housewarming-gifts.png"
+                  alt="Personalized laser gifts on wood metal glass"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h3 className="text-lg font-semibold text-hub-blue mb-2">Personalized Laser Gifts</h3>
               <p className="text-gray-600">Custom laser engraved gifts on wood, metal, glass for special occasions</p>
             </div>

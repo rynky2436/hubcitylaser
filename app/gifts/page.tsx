@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
+import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
   title: "Personalized Gifts & Home Items | Hub City Laser",
@@ -11,6 +13,7 @@ export default function GiftsPage() {
   const giftCategories = [
     {
       title: "Wedding Gifts",
+      image: "/images/real-estate-housewarming-gifts.png",
       items: [
         "Custom cutting boards",
         "Personalized picture frames",
@@ -20,29 +23,28 @@ export default function GiftsPage() {
     },
     {
       title: "Retirement Gifts",
+      image: "/images/professional-executive-office.png",
       items: ["Achievement plaques", "Personalized desk accessories", "Custom photo displays", "Memory books"],
     },
     {
       title: "Home Décor",
+      image: "/images/real-estate-client-gifts.png",
       items: ["Custom wall art", "Personalized signs", "Family name displays", "Decorative plaques"],
     },
     {
       title: "Pet Accessories",
+      image: "/images/agriculture-tool-marking.png",
       items: ["Custom pet tags", "Personalized food bowls", "Pet memorial plaques", "Collar nameplates"],
     },
   ]
 
   return (
     <>
-      <section className="bg-hub-blue text-hub-white section-padding">
-        <div className="container-max">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Personalized Gifts & Home Items</h1>
-          <p className="text-xl text-blue-100 max-w-3xl">
-            Create lasting memories with custom laser-engraved gifts perfect for weddings, retirements, special
-            occasions, and everyday home use.
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="Personalized Gifts & Home Items"
+        description="Create lasting memories with custom laser-engraved gifts perfect for weddings, retirements, special occasions, and everyday home use."
+        backgroundImage="/images/real-estate-housewarming-gifts.png"
+      />
 
       <section className="section-padding">
         <div className="container-max">
@@ -50,16 +52,26 @@ export default function GiftsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {giftCategories.map((category, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-hub-blue mb-4">{category.title}</h3>
-                <ul className="space-y-2">
-                  {category.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="text-gray-700 flex items-center">
-                      <span className="w-2 h-2 bg-hub-blue rounded-full mr-3"></span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+              <div key={index} className="bg-gray-50 rounded-lg overflow-hidden">
+                <div className="aspect-video relative">
+                  <Image
+                    src={category.image || "/placeholder.svg"}
+                    alt={`${category.title} laser engraved gifts examples`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-hub-blue mb-4">{category.title}</h3>
+                  <ul className="space-y-2">
+                    {category.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="text-gray-700 flex items-center">
+                        <span className="w-2 h-2 bg-hub-blue rounded-full mr-3"></span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
@@ -68,14 +80,38 @@ export default function GiftsPage() {
             <h3 className="text-2xl font-bold mb-4">Popular Items</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               <div>
+                <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/real-estate-housewarming-gifts.png"
+                    alt="Custom cutting boards laser engraved"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <h4 className="font-semibold mb-2">Cutting Boards</h4>
                 <p className="text-blue-100">Custom engraved bamboo and hardwood cutting boards</p>
               </div>
               <div>
+                <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/hospitality-personalized-accessories.png"
+                    alt="Personalized tumblers and drinkware laser engraved"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <h4 className="font-semibold mb-2">Tumblers</h4>
                 <p className="text-blue-100">Personalized stainless steel and glass tumblers</p>
               </div>
               <div>
+                <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/agriculture-tool-marking.png"
+                    alt="Custom pet tags laser engraved"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <h4 className="font-semibold mb-2">Pet Tags</h4>
                 <p className="text-blue-100">Durable custom pet identification tags</p>
               </div>

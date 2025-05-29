@@ -1,148 +1,102 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Hospitality Laser Engraving Hagerstown MD | Hotel Restaurant Bar Custom Signs",
+  title: "Hospitality Laser Engraving Hagerstown MD | Hotel Signs Guest Amenities Restaurant Materials",
   description:
-    "Professional laser engraving for hotels, restaurants, bars, and hospitality businesses in Hagerstown Maryland. Custom room signs, menu boards, promotional displays, guest amenities laser engraved on wood, glass, metal. Serving MD, DE, VA hospitality industry.",
+    "Professional hospitality laser engraving services in Hagerstown Maryland. Hotel room signs, guest amenities, restaurant materials, promotional displays laser engraved on wood, metal, glass. Serving MD, DE, VA hotels, restaurants, bars, event venues.",
   keywords:
-    "hospitality laser engraving Hagerstown MD, hotel room signs Maryland, restaurant menu boards, bar promotional items MD DE VA, guest amenities laser cutting, hospitality branding materials",
+    "hospitality laser engraving Hagerstown MD, hotel signs Maryland, guest amenities laser cutting, restaurant materials MD DE VA, event venue signage, bar promotional displays",
 }
 
 export default function HospitalityPage() {
   const hospitalityServices = [
     {
-      title: "Custom Property & Family Branding Solutions",
+      title: "Coffee Service & Beverage Presentation",
       description:
-        "Elegant laser-engraved branding and family name displays that create memorable first impressions for hotels, resorts, and hospitality properties.",
+        "Professional coffee service and beverage presentation solutions that enhance guest experience and operational efficiency.",
       applications: [
-        "Custom family name signs with establishment dates",
-        "Hotel and resort property branding displays",
-        "Vacation rental welcome signs and property identification",
-        "Bed & breakfast family heritage and story displays",
-        "Event venue branding and milestone celebrations",
-        "Anniversary and special occasion commemorative signs",
+        "Coffee station organization and beverage service displays",
+        "Menu boards for specialty drinks and seasonal offerings",
+        "Barista station equipment identification and workflow optimization",
+        "Guest self-service coffee and beverage area signage",
+        "Promotional displays for featured beverages and specials",
+        "Coffee shop and café branding and atmosphere enhancement",
       ],
-      image: "/images/hospitality-family-branding.png",
-      alt: "The Anderson EST. 2022 custom family name sign laser engraved on premium wood for hospitality branding",
+      image: "/images/hospitality-coffee-service.png",
+      alt: "Hospitality coffee service and beverage presentation laser engraved Hagerstown MD",
     },
     {
-      title: "Restaurant & Bar Promotional Materials",
+      title: "Family Branding & Guest Experience",
       description:
-        "Comprehensive promotional and operational materials that enhance customer experience and streamline restaurant operations.",
+        "Family-friendly branding and guest experience solutions that create welcoming environments for all ages.",
       applications: [
-        "Thank you coasters and customer appreciation items",
-        "Restaurant logo displays and brand identification",
-        "Special offer promotional signs and marketing materials",
-        "Staff identification badges and operational signage",
-        "Bar glassware etching with logos and branding",
-        "Customer loyalty program materials and displays",
+        "Family dining area identification and kid-friendly signage",
+        "Children's menu displays and activity area organization",
+        "Family restroom and changing station identification",
+        "Playground and recreational area safety and information signs",
+        "Family event and celebration space branding",
+        "Multi-generational dining experience enhancement materials",
       ],
-      image: "/images/hospitality-restaurant-materials.png",
-      alt: "Restaurant promotional materials including thank you coasters, special offer signs, staff badges, and etched bar glassware",
+      image: "/images/hospitality-family-branding.png",
+      alt: "Hospitality family branding and guest experience laser engraved Maryland",
     },
     {
       title: "Menu Boards & Food Service Displays",
       description:
-        "Professional menu boards and food service displays that showcase culinary offerings with style and functionality.",
+        "Professional menu displays and food service signage that enhance dining experiences and streamline operations.",
       applications: [
-        "Elegant wooden menu boards with appetizers and entrées sections",
-        "Daily specials and seasonal menu displays",
-        "Wine and beverage menu presentation boards",
-        "Breakfast, lunch, and dinner service organization",
-        "Chef's special and featured item displays",
-        "Dietary restriction and allergen information boards",
+        "Restaurant menu boards with daily specials and pricing",
+        "Bar and cocktail menu elegant display solutions",
+        "Food allergen and dietary restriction information",
+        "Buffet and self-service area organization and labeling",
+        "Wine list and beverage selection presentation",
+        "Catering and event menu display systems",
       ],
       image: "/images/hospitality-menu-boards.png",
-      alt: "Elegant wooden menu board with appetizers and entrées sections in atmospheric restaurant setting",
+      alt: "Hospitality menu boards and food service displays laser engraved",
     },
     {
-      title: "Personalized Guest Amenities & Accessories",
+      title: "Personalized Accessories & Guest Amenities",
       description:
-        "Custom laser-engraved guest amenities and personalized accessories that create unique hospitality experiences.",
+        "Custom personalized accessories and guest amenities that create memorable experiences and encourage return visits.",
       applications: [
-        "Personalized guest room amenities and welcome items",
-        "Custom monogrammed hospitality accessories",
-        "VIP guest recognition and special service items",
-        "Wedding and event personalization services",
-        "Corporate retreat and group event customization",
-        "Luxury hospitality branding and guest gifts",
+        "Personalized guest room amenities and welcome gifts",
+        "Custom drinkware and dining accessories for special events",
+        "Guest appreciation gifts and loyalty program rewards",
+        "Wedding and special occasion personalized items",
+        "Corporate event and conference personalized materials",
+        "VIP guest experience enhancement and recognition items",
       ],
       image: "/images/hospitality-personalized-accessories.png",
-      alt: "Personalized hospitality accessory with W monogram and Celtic knot design laser engraved on premium materials",
+      alt: "Hospitality personalized accessories and guest amenities laser engraved Maryland",
     },
     {
-      title: "Coffee Service & Hospitality Amenities",
+      title: "Restaurant Materials & Dining Enhancement",
       description:
-        "Professional coffee service accessories and hospitality amenities that enhance guest experience and operational efficiency.",
+        "Comprehensive restaurant materials and dining enhancement solutions that support exceptional food service.",
       applications: [
-        "Custom coffee bar serving trays with branding",
-        "Hotel lobby and guest area coffee service displays",
-        "Conference room and meeting space amenities",
-        "Breakfast service and continental breakfast displays",
-        "Guest hospitality and welcome service accessories",
-        "Corporate hospitality and client entertainment items",
+        "Table setting accessories and dining presentation enhancement",
+        "Server station organization and operational efficiency tools",
+        "Kitchen display and order management support systems",
+        "Guest feedback and review encouragement materials",
+        "Special dietary accommodation and service information",
+        "Restaurant atmosphere and ambiance enhancement elements",
       ],
-      image: "/images/hospitality-coffee-service.png",
-      alt: "Anderson Coffee Bar wooden serving tray with coffee cup icon for hospitality service",
-    },
-  ]
-
-  const hospitalityTypes = [
-    {
-      type: "Hotels & Resorts",
-      services: "Room signs, guest amenities, lobby displays, property branding, welcome materials",
-      materials: "Premium wood finishes, elegant metal accents, luxury presentation materials",
-      image: "/images/hospitality-family-branding.png",
-    },
-    {
-      type: "Restaurants & Fine Dining",
-      services: "Menu boards, table displays, promotional materials, staff identification, wine presentations",
-      materials: "Food-safe wood finishes, elegant presentations, easy-clean surfaces",
-      image: "/images/hospitality-menu-boards.png",
-    },
-    {
-      type: "Bars & Breweries",
-      services: "Glassware etching, promotional displays, bar accessories, brand materials, special offers",
-      materials: "Glass etching, bar-quality wood, promotional displays, branded accessories",
       image: "/images/hospitality-restaurant-materials.png",
-    },
-    {
-      type: "Event Venues & Banquet Halls",
-      services: "Event signage, table markers, welcome displays, celebration materials, branded accessories",
-      materials: "Event-ready displays, portable signage, celebration finishes, elegant presentations",
-      image: "/images/hospitality-personalized-accessories.png",
-    },
-    {
-      type: "Bed & Breakfasts",
-      services: "Family heritage displays, guest room personalization, breakfast service, welcome materials",
-      materials: "Warm wood finishes, family-friendly presentations, cozy aesthetics",
-      image: "/images/hospitality-coffee-service.png",
-    },
-    {
-      type: "Corporate Hospitality",
-      services: "Client entertainment, meeting room amenities, corporate gifts, executive service materials",
-      materials: "Professional finishes, executive quality, corporate branding materials",
-      image: "/images/hospitality-family-branding.png",
+      alt: "Hospitality restaurant materials and dining enhancement laser engraved",
     },
   ]
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-hub-blue text-hub-white section-padding">
-        <div className="container-max">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Hospitality Laser Engraving Hagerstown Maryland</h1>
-          <p className="text-xl text-blue-100 max-w-4xl">
-            Create memorable guest experiences with custom laser-engraved signage, amenities, and promotional materials
-            for hotels, restaurants, bars, and event venues in Hagerstown, MD. From elegant room signs to personalized
-            guest amenities, we help Maryland, Delaware, and Virginia hospitality businesses enhance their brand and
-            create lasting impressions with precision laser engraving on wood, glass, metal, and specialty materials
-            that reflect your commitment to exceptional service.
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="Hospitality Laser Engraving Hagerstown Maryland"
+        description="Create memorable guest experiences with custom laser-engraved signage, amenities, and promotional materials for hotels, restaurants, bars, and event venues in Hagerstown, MD. From elegant room signs to personalized guest amenities, we help Maryland, Delaware, and Virginia hospitality businesses enhance their brand and create lasting impressions with precision laser engraving on wood, glass, metal, and specialty materials that reflect your commitment to exceptional service."
+        backgroundImage="/images/hospitality-menu-boards.png"
+      />
 
       {/* Overview Section */}
       <section className="section-padding">
@@ -153,23 +107,25 @@ export default function HospitalityPage() {
                 Professional Hospitality Laser Engraving Services Maryland
               </h2>
               <p className="text-gray-700 mb-6">
-                Hub City Laser specializes in creating custom laser-engraved materials that enhance the hospitality
-                experience and strengthen your brand identity. Located in Hagerstown, Maryland, we understand the
-                importance of creating memorable guest experiences that encourage return visits and positive reviews.
+                Hub City Laser understands that hospitality success is built on creating exceptional guest experiences
+                and memorable moments. Located in Hagerstown, Maryland, we specialize in custom laser engraving
+                solutions that help hotels, restaurants, bars, and event venues throughout the tri-state area enhance
+                their brand, improve guest satisfaction, and create lasting impressions that encourage return visits and
+                positive reviews.
               </p>
               <p className="text-gray-700 mb-6">
-                From luxury hotels to family restaurants, our laser engraving services help hospitality businesses
-                throughout the tri-state area create professional, welcoming environments that reflect their commitment
-                to exceptional service and attention to detail.
+                From elegant signage to personalized amenities, our laser engraving services support every aspect of the
+                hospitality experience, helping businesses create cohesive environments that reflect their commitment to
+                exceptional service and attention to detail.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-50 p-4 rounded">
-                  <h4 className="font-semibold text-hub-blue mb-2">Guest Experience Focus</h4>
-                  <p className="text-gray-600 text-sm">Memorable impressions and service</p>
+                  <h4 className="font-semibold text-hub-blue mb-2">Guest Experience</h4>
+                  <p className="text-gray-600 text-sm">Memorable impressions</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded">
                   <h4 className="font-semibold text-hub-blue mb-2">Brand Enhancement</h4>
-                  <p className="text-gray-600 text-sm">Professional hospitality identity</p>
+                  <p className="text-gray-600 text-sm">Professional presentation</p>
                 </div>
               </div>
             </div>
@@ -177,13 +133,14 @@ export default function HospitalityPage() {
               <div className="aspect-video relative rounded-lg overflow-hidden">
                 <Image
                   src="/images/hospitality-menu-boards.png"
-                  alt="Elegant hospitality menu board with appetizers and entrées sections in restaurant setting"
+                  alt="Hospitality menu boards and guest experience materials laser engraved"
                   fill
                   className="object-cover"
                 />
               </div>
               <p className="text-sm text-gray-500 mt-2 text-center">
-                Professional hospitality laser engraving solutions for Maryland hotels, restaurants, and event venues
+                Professional hospitality signage and guest experience materials laser engraved for Maryland hospitality
+                businesses
               </p>
             </div>
           </div>
@@ -230,184 +187,6 @@ export default function HospitalityPage() {
         </div>
       </section>
 
-      {/* Hospitality Types */}
-      <section className="section-padding">
-        <div className="container-max">
-          <h2 className="text-3xl font-bold text-hub-blue text-center mb-12">Hospitality Industry Specializations</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {hospitalityTypes.map((hospitality, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg overflow-hidden">
-                <div className="aspect-video relative">
-                  <Image
-                    src={hospitality.image || "/placeholder.svg"}
-                    alt={`${hospitality.type} laser engraving examples`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-hub-blue mb-3">{hospitality.type}</h3>
-                  <div className="space-y-2">
-                    <div>
-                      <span className="font-medium text-gray-900">Services: </span>
-                      <span className="text-gray-700 text-sm">{hospitality.services}</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-900">Materials: </span>
-                      <span className="text-gray-700 text-sm">{hospitality.materials}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Popular Items Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-max">
-          <h3 className="text-2xl font-bold text-hub-blue mb-8 text-center">
-            Popular Hospitality Laser Engraving Items
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <h4 className="font-semibold text-hub-blue mb-3">Guest Room Amenities</h4>
-              <ul className="text-gray-700 space-y-2 text-sm">
-                <li>• Custom room number signs</li>
-                <li>• Welcome displays</li>
-                <li>• Guest information boards</li>
-                <li>• Personalized amenities</li>
-              </ul>
-            </div>
-            <div className="text-center">
-              <h4 className="font-semibold text-hub-blue mb-3">Restaurant Materials</h4>
-              <ul className="text-gray-700 space-y-2 text-sm">
-                <li>• Menu boards and displays</li>
-                <li>• Table number systems</li>
-                <li>• Promotional signage</li>
-                <li>• Staff identification</li>
-              </ul>
-            </div>
-            <div className="text-center">
-              <h4 className="font-semibold text-hub-blue mb-3">Bar & Beverage Service</h4>
-              <ul className="text-gray-700 space-y-2 text-sm">
-                <li>• Glassware etching</li>
-                <li>• Bar coasters</li>
-                <li>• Promotional displays</li>
-                <li>• Beverage menu boards</li>
-              </ul>
-            </div>
-            <div className="text-center">
-              <h4 className="font-semibold text-hub-blue mb-3">Event & Conference</h4>
-              <ul className="text-gray-700 space-y-2 text-sm">
-                <li>• Event signage</li>
-                <li>• Table markers</li>
-                <li>• Welcome displays</li>
-                <li>• Corporate amenities</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="section-padding">
-        <div className="container-max">
-          <h2 className="text-3xl font-bold text-hub-blue text-center mb-12">
-            Why Choose Hub City Laser for Hospitality Engraving?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold text-hub-blue mb-3">Guest Experience Enhancement</h3>
-              <p className="text-gray-700">
-                Create memorable experiences that encourage positive reviews, return visits, and word-of-mouth
-                recommendations.
-              </p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold text-hub-blue mb-3">Brand Consistency</h3>
-              <p className="text-gray-700">
-                Maintain consistent branding across all hospitality materials from room signs to promotional displays
-                and guest amenities.
-              </p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold text-hub-blue mb-3">Durability & Cleanliness</h3>
-              <p className="text-gray-700">
-                Hospitality-grade materials that withstand frequent cleaning and maintain their appearance in high-use
-                environments.
-              </p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold text-hub-blue mb-3">Custom Solutions</h3>
-              <p className="text-gray-700">
-                Tailored laser engraving solutions that match your hospitality brand's unique style and service
-                philosophy.
-              </p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold text-hub-blue mb-3">Quick Service</h3>
-              <p className="text-gray-700">
-                Fast turnaround times to meet hospitality opening deadlines and seasonal updates throughout MD, DE, VA.
-              </p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold text-hub-blue mb-3">Professional Quality</h3>
-              <p className="text-gray-700">
-                Premium laser engraving that reflects your commitment to excellence and attention to detail in
-                hospitality service.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-max">
-          <h2 className="text-3xl font-bold text-hub-blue text-center mb-12">Our Hospitality Design Process</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-hub-blue text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                1
-              </div>
-              <h3 className="font-semibold text-hub-blue mb-2">Hospitality Consultation</h3>
-              <p className="text-gray-700 text-sm">
-                Discuss your hospitality brand, guest experience goals, and operational needs
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-hub-blue text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                2
-              </div>
-              <h3 className="font-semibold text-hub-blue mb-2">Brand Integration</h3>
-              <p className="text-gray-700 text-sm">
-                Create designs that enhance your hospitality brand and improve guest experience
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-hub-blue text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                3
-              </div>
-              <h3 className="font-semibold text-hub-blue mb-2">Material Selection</h3>
-              <p className="text-gray-700 text-sm">
-                Choose hospitality-appropriate materials that match your service environment
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-hub-blue text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                4
-              </div>
-              <h3 className="font-semibold text-hub-blue mb-2">Quality Production</h3>
-              <p className="text-gray-700 text-sm">
-                Precision laser engraving with quality control for hospitality-ready results
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="section-padding bg-hub-blue text-white">
         <div className="container-max text-center">
@@ -415,13 +194,13 @@ export default function HospitalityPage() {
             Ready to Enhance Your Hospitality Business with Custom Laser Engraving?
           </h2>
           <p className="text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact Hub City Laser today to discuss how we can help create memorable guest experiences with custom
-            laser-engraved signage, amenities, and promotional materials that reflect your commitment to exceptional
-            hospitality service in Hagerstown, Maryland.
+            Contact Hub City Laser today to discuss how we can help create memorable guest experiences, professional
+            signage, and personalized amenities that enhance your hospitality business and create lasting impressions in
+            Hagerstown, Maryland.
           </p>
           <div className="space-x-4">
             <Link href="/contact" className="btn-secondary">
-              Get Hospitality Laser Engraving Quote
+              Get Hospitality Laser Quote
             </Link>
             <Link href="/services" className="btn-primary bg-white text-hub-blue hover:bg-gray-100">
               View All Services

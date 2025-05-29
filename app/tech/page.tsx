@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
   title: "Technology Industry Laser Engraving Hagerstown MD | Server Equipment Labels IT Infrastructure",
@@ -131,20 +132,11 @@ export default function TechPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-hub-blue text-hub-white section-padding">
-        <div className="container-max">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Technology Industry Laser Engraving Hagerstown Maryland
-          </h1>
-          <p className="text-xl text-blue-100 max-w-4xl">
-            Precision laser engraving solutions for technology companies, data centers, and IT services in Hagerstown,
-            MD. From server identification to corporate awards, we help Maryland, Delaware, and Virginia technology
-            businesses create professional identification systems, safety compliance marking, and corporate recognition
-            materials with precision laser engraving on metal and specialty materials that match your innovation and
-            technical excellence.
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="Technology Industry Laser Engraving Hagerstown Maryland"
+        description="Precision laser engraving solutions for technology companies, data centers, and IT services in Hagerstown, MD. From server identification to corporate awards, we help Maryland, Delaware, and Virginia technology businesses create professional identification systems, safety compliance marking, and corporate recognition materials with precision laser engraving on metal and specialty materials that match your innovation and technical excellence."
+        backgroundImage="/images/technology-infrastructure-labeling.png"
+      />
 
       {/* Overview Section */}
       <section className="section-padding">

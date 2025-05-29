@@ -1,158 +1,114 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
   title: "Professional Office Laser Engraving Hagerstown MD | Custom Signs Nameplates Awards",
   description:
-    "Professional laser engraving for offices, law firms, accounting practices in Hagerstown Maryland. Custom office signs, executive nameplates, corporate awards laser engraved on wood, metal, glass. Serving MD, DE, VA professional services.",
+    "Professional office laser engraving services in Hagerstown Maryland. Custom office signs, nameplates, awards, desk accessories laser engraved on wood, metal, glass. Serving MD, DE, VA law firms, accounting, consulting, corporate offices.",
   keywords:
-    "office laser engraving Hagerstown MD, professional nameplates Maryland, law firm signage laser cutting, corporate awards MD DE VA, business office signs, executive desk accessories, professional door signs",
+    "professional office laser engraving Hagerstown MD, custom office signs Maryland, nameplates laser cutting, corporate awards MD DE VA, law firm signage, accounting office signs, consulting firm laser engraving",
 }
 
 export default function ProfessionalPage() {
   const professionalServices = [
     {
-      title: "Law Firm & Legal Office Specialties",
-      description: "Specialized laser engraving services for law firms and legal professionals throughout Maryland.",
-      applications: [
-        "Attorney office door signs with bar credentials",
-        "Legal practice area signs and specialization displays",
-        "Court reporter and paralegal identification signs",
-        "Law library organization and case law markers",
-        "Client meeting room privacy and identification signs",
-        "Legal award ceremonies and bar association recognition",
-      ],
-      image: "/images/professional-legal-services.png",
-      alt: "Law firm laser engraved signs including court reporter credentials, law library signs, and attorney meeting room markers",
-    },
-    {
-      title: "Executive Office Signage & Corporate Materials",
+      title: "Executive Office Signage & Nameplates",
       description:
-        "Premium laser-engraved office signage that projects professionalism and authority for Maryland business leaders.",
+        "Professional executive office signage that creates impressive first impressions and reinforces your corporate brand.",
       applications: [
-        "Executive office door signs with titles and names",
+        "Executive office door signs with professional titles",
+        "Custom nameplates for desks and conference rooms",
+        "Reception area company branding and logo displays",
+        "Professional directory signs for multi-office buildings",
         "Conference room identification and booking displays",
-        "Department directory signs for professional buildings",
-        "Reception area welcome signs and company branding",
-        "Professional building wayfinding and floor directories",
-        "ADA-compliant office signage with Braille options",
+        "Executive suite wayfinding and navigation signs",
       ],
       image: "/images/professional-executive-office.png",
-      alt: "Executive office laser engraved nameplates, business card holders, and meeting room signs",
+      alt: "Executive office signs and professional nameplates laser engraved Hagerstown MD",
     },
     {
-      title: "Corporate Awards & Recognition Programs",
+      title: "Legal Services & Law Firm Signage",
       description:
-        "Custom laser-engraved awards and recognition items that celebrate achievements and motivate teams across MD, DE, VA.",
+        "Sophisticated legal office signage that conveys professionalism and builds client confidence in your legal services.",
       applications: [
-        "Employee of the month awards and recognition plaques",
-        "Years of service milestone recognition awards",
-        "Sales achievement and performance awards",
-        "Professional certification and training completion awards",
-        "Retirement gifts and career milestone recognition",
-        "Corporate anniversary and company milestone awards",
+        "Law firm reception signs with partner names and specialties",
+        "Attorney office door signs with credentials and titles",
+        "Legal practice area identification and specialization signs",
+        "Court room and mediation room professional signage",
+        "Client consultation room privacy and identification signs",
+        "Legal library and research area organization signs",
       ],
-      image: "/images/corporate-awards.png",
-      alt: "Corporate recognition awards including employee of the month, retirement plaques, and service awards",
-    },
-    {
-      title: "Professional Desk Accessories & Nameplates",
-      description:
-        "Elegant laser-engraved desk accessories that enhance professional image and workspace organization.",
-      applications: [
-        "Executive desk nameplates with titles and credentials",
-        "Business card holders and desk organizers",
-        "Professional pen sets and desk accessories",
-        "Document holders and file organizers",
-        "Meeting room table tents and name displays",
-        "Professional bookends and desk decorations",
-      ],
-      image: "/images/professional-executive-office.png",
-      alt: "Professional desk accessories including executive nameplates and business card holders",
-    },
-  ]
-
-  const industries = [
-    {
-      industry: "Law Firms & Legal Services",
-      services: "Attorney door signs, legal awards, court displays, bar association recognition",
-      materials: "Premium wood, brushed metal, glass etching",
       image: "/images/professional-legal-services.png",
+      alt: "Legal services and law firm signage laser engraved Maryland",
     },
     {
-      industry: "Real Estate & Property Management",
-      services: "Realtor office signs, property displays, sales achievement awards",
-      materials: "Weather-resistant materials, professional finishes",
+      title: "Real Estate Office Branding & Client Materials",
+      description:
+        "Professional real estate office materials that enhance your brand and support client relationships.",
+      applications: [
+        "Real estate office reception and branding displays",
+        "Agent desk nameplates with contact information",
+        "Property listing displays and marketing materials",
+        "Client meeting room professional signage",
+        "Real estate achievement and sales recognition awards",
+        "Open house and property showing professional materials",
+      ],
       image: "/images/professional-real-estate.png",
+      alt: "Real estate office branding and professional materials laser engraved",
     },
     {
-      industry: "Accounting & Financial Services",
-      services: "CPA office signs, financial advisor nameplates, achievement awards",
-      materials: "Professional metal, wood, acrylic displays",
-      image: "/images/professional-executive-office.png",
-    },
-    {
-      industry: "Consulting & Business Services",
-      services: "Consultant office signage, project awards, client presentation materials",
-      materials: "Modern acrylic, metal, wood combinations",
-      image: "/images/professional-executive-office.png",
-    },
-    {
-      industry: "Medical & Healthcare Practices",
-      services: "Doctor office signs, medical practice displays, patient area signage",
-      materials: "Medical-grade materials, easy-clean surfaces",
-      image: "/images/medical.png",
-    },
-    {
-      industry: "Hospitality & Service Industries",
-      services: "Hotel room signs, guest amenities, service area identification",
-      materials: "Durable materials, hospitality finishes",
+      title: "Hospitality & Service Industry Professional Signage",
+      description: "Professional hospitality signage that enhances guest experience and operational efficiency.",
+      applications: [
+        "Hotel and restaurant management office signs",
+        "Guest services and concierge professional displays",
+        "Staff identification and department organization signs",
+        "Service area and operational facility signage",
+        "Guest amenity and facility information displays",
+        "Professional hospitality awards and recognition materials",
+      ],
       image: "/images/professional-hospitality.png",
+      alt: "Hospitality and service industry professional signage laser engraved",
     },
   ]
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-hub-blue text-hub-white section-padding">
-        <div className="container-max">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Professional Office Laser Engraving Hagerstown Maryland
-          </h1>
-          <p className="text-xl text-blue-100 max-w-4xl">
-            Elevate your professional image with custom laser-engraved office signage, awards, and accessories in
-            Hagerstown, MD. Serving law firms, accounting practices, consulting firms, and corporate offices throughout
-            Maryland, Delaware, and Virginia with precision laser engraving on wood, metal, glass, and premium
-            materials.
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="Professional Office Laser Engraving Hagerstown Maryland"
+        description="Elevate your professional image with custom laser-engraved office signage, awards, and accessories in Hagerstown, MD. Serving law firms, accounting practices, consulting firms, and corporate offices throughout Maryland, Delaware, and Virginia with precision laser engraving on wood, metal, glass, and premium materials."
+        backgroundImage="/images/professional-executive-office.png"
+      />
 
       {/* Overview Section */}
       <section className="section-padding">
         <div className="container-max">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h2 className="text-3xl font-bold text-hub-blue mb-6">Premium Professional Laser Engraving Services</h2>
+              <h2 className="text-3xl font-bold text-hub-blue mb-6">
+                Professional Office Laser Engraving Services Maryland
+              </h2>
               <p className="text-gray-700 mb-6">
-                Your professional image matters. Hub City Laser specializes in creating sophisticated, high-quality
-                laser-engraved materials that reflect the professionalism and success of your business. From executive
-                office door signs to corporate awards, we help Maryland professionals make lasting impressions.
+                Hub City Laser specializes in creating sophisticated professional office materials that enhance your
+                corporate image and support your business operations. Located in Hagerstown, Maryland, we understand the
+                importance of professional presentation in building client confidence and maintaining a polished
+                business environment.
               </p>
               <p className="text-gray-700 mb-6">
-                Located in Hagerstown, Maryland, we understand the unique needs of professional service providers
-                throughout the tri-state area. Our laser engraving services combine traditional craftsmanship with
-                modern technology to create pieces that enhance your professional environment.
+                From executive office signage to corporate awards, our laser engraving services help professional
+                businesses throughout the tri-state area create impressive environments that reflect their expertise and
+                commitment to excellence.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-50 p-4 rounded">
-                  <h4 className="font-semibold text-hub-blue mb-2">Premium Materials</h4>
-                  <p className="text-gray-600 text-sm">Wood, metal, glass, acrylic</p>
+                  <h4 className="font-semibold text-hub-blue mb-2">Professional Quality</h4>
+                  <p className="text-gray-600 text-sm">Premium materials and finishes</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded">
-                  <h4 className="font-semibold text-hub-blue mb-2">Fast Turnaround</h4>
-                  <p className="text-gray-600 text-sm">2-3 business days standard</p>
+                  <h4 className="font-semibold text-hub-blue mb-2">Corporate Branding</h4>
+                  <p className="text-gray-600 text-sm">Consistent brand representation</p>
                 </div>
               </div>
             </div>
@@ -160,13 +116,14 @@ export default function ProfessionalPage() {
               <div className="aspect-video relative rounded-lg overflow-hidden">
                 <Image
                   src="/images/professional-executive-office.png"
-                  alt="Professional office signs and nameplates laser engraved Hagerstown MD"
+                  alt="Professional executive office signs and corporate branding laser engraved"
                   fill
                   className="object-cover"
                 />
               </div>
               <p className="text-sm text-gray-500 mt-2 text-center">
-                Executive office signs, nameplates, and awards laser engraved for Maryland professionals
+                Professional executive office signage and corporate branding materials laser engraved for Maryland
+                businesses
               </p>
             </div>
           </div>
@@ -177,7 +134,7 @@ export default function ProfessionalPage() {
       <section className="section-padding bg-gray-50">
         <div className="container-max">
           <h2 className="text-3xl font-bold text-hub-blue text-center mb-12">
-            Comprehensive Professional Laser Engraving Services
+            Professional Office Laser Engraving Services
           </h2>
           <div className="space-y-12">
             {professionalServices.map((service, index) => (
@@ -213,162 +170,20 @@ export default function ProfessionalPage() {
         </div>
       </section>
 
-      {/* Industry Specializations */}
-      <section className="section-padding">
-        <div className="container-max">
-          <h2 className="text-3xl font-bold text-hub-blue text-center mb-12">Professional Industry Specializations</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg overflow-hidden">
-                <div className="aspect-video relative">
-                  <Image
-                    src={industry.image || "/placeholder.svg"}
-                    alt={`${industry.industry} laser engraving examples`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-hub-blue mb-3">{industry.industry}</h3>
-                  <div className="space-y-2">
-                    <div>
-                      <span className="font-medium text-gray-900">Services: </span>
-                      <span className="text-gray-700 text-sm">{industry.services}</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-900">Materials: </span>
-                      <span className="text-gray-700 text-sm">{industry.materials}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Material Showcase */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-max">
-          <h2 className="text-3xl font-bold text-hub-blue text-center mb-12">
-            Premium Materials for Professional Applications
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="aspect-square relative rounded-lg overflow-hidden mb-4">
-                <Image
-                  src="/images/materials-wood-glass.png"
-                  alt="Wood laser engraving and glass etching examples including real estate signs and welcome home items"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="font-semibold text-hub-blue mb-2">Premium Wood & Glass</h3>
-              <p className="text-gray-700 text-sm">
-                Hardwood engraving and precision glass etching for traditional professional settings
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="aspect-square relative rounded-lg overflow-hidden mb-4">
-                <Image
-                  src="/images/materials-metal.png"
-                  alt="Metal laser engraving examples including nameplates, serial numbers, and achievement awards"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="font-semibold text-hub-blue mb-2">Brushed Metals</h3>
-              <p className="text-gray-700 text-sm">
-                Stainless steel, aluminum, anodized finishes for modern office environments
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="aspect-square relative rounded-lg overflow-hidden mb-4">
-                <Image
-                  src="/images/materials-restaurant-hospitality.png"
-                  alt="Restaurant and hospitality laser engraving on wood, glass, and acrylic materials"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="font-semibold text-hub-blue mb-2">Multi-Material Solutions</h3>
-              <p className="text-gray-700 text-sm">
-                Wood, glass, and acrylic combinations for hospitality and service industries
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="aspect-square relative rounded-lg overflow-hidden mb-4">
-                <Image
-                  src="/images/materials-glass-etching.png"
-                  alt="Personalized glass etching for recognition gifts and milestone celebrations"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="font-semibold text-hub-blue mb-2">Precision Glass Etching</h3>
-              <p className="text-gray-700 text-sm">
-                Custom glass etching for executive recognition and milestone celebrations
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Design Process */}
-      <section className="section-padding">
-        <div className="container-max">
-          <h2 className="text-3xl font-bold text-hub-blue text-center mb-12">Our Professional Design Process</h2>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-hub-blue text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                1
-              </div>
-              <h3 className="font-semibold text-hub-blue mb-2">Consultation</h3>
-              <p className="text-gray-700 text-sm">Discuss your professional image goals and requirements</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-hub-blue text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                2
-              </div>
-              <h3 className="font-semibold text-hub-blue mb-2">Design</h3>
-              <p className="text-gray-700 text-sm">Create custom designs that reflect your brand and professionalism</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-hub-blue text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                3
-              </div>
-              <h3 className="font-semibold text-hub-blue mb-2">Material Selection</h3>
-              <p className="text-gray-700 text-sm">Choose premium materials that match your office aesthetic</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-hub-blue text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                4
-              </div>
-              <h3 className="font-semibold text-hub-blue mb-2">Precision Engraving</h3>
-              <p className="text-gray-700 text-sm">Execute flawless laser engraving with attention to detail</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-hub-blue text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                5
-              </div>
-              <h3 className="font-semibold text-hub-blue mb-2">Installation Support</h3>
-              <p className="text-gray-700 text-sm">Provide installation guidance and mounting hardware</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="section-padding bg-hub-blue text-white">
         <div className="container-max text-center">
-          <h2 className="text-3xl font-bold mb-4">Enhance Your Professional Image with Custom Laser Engraving</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Enhance Your Professional Image with Custom Office Signage?
+          </h2>
           <p className="text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact Hub City Laser today to discuss how we can help elevate your professional environment with custom
-            laser-engraved signage, awards, and accessories in Hagerstown, Maryland.
+            Contact Hub City Laser today to discuss how we can help create professional office signage, awards, and
+            accessories that reflect your business excellence and enhance your corporate environment in Hagerstown,
+            Maryland.
           </p>
           <div className="space-x-4">
             <Link href="/contact" className="btn-secondary">
-              Get Professional Laser Engraving Quote
+              Get Professional Office Quote
             </Link>
             <Link href="/services" className="btn-primary bg-white text-hub-blue hover:bg-gray-100">
               View All Services

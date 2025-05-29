@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
   title: "Medical Device Laser Engraving Hagerstown MD | FDA Compliance Labels & Equipment Tags",
@@ -120,17 +121,11 @@ export default function MedicalPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-hub-blue text-hub-white section-padding">
-        <div className="container-max">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Medical Device Laser Engraving Hagerstown Maryland</h1>
-          <p className="text-xl text-blue-100 max-w-4xl">
-            Professional medical laser engraving and marking services in Hagerstown, MD. Specializing in FDA-compliant
-            medical device marking, hospital equipment identification, and healthcare facility signage for Maryland,
-            Delaware, and Virginia medical institutions. Precision laser engraving on medical-grade materials with
-            sterilization-resistant solutions.
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="Medical Device Laser Engraving Hagerstown Maryland"
+        description="Professional medical laser engraving and marking services in Hagerstown, MD. Specializing in FDA-compliant medical device marking, hospital equipment identification, and healthcare facility signage for Maryland, Delaware, and Virginia medical institutions. Precision laser engraving on medical-grade materials with sterilization-resistant solutions."
+        backgroundImage="/images/medical.png"
+      />
 
       {/* Overview Section with Image */}
       <section className="section-padding">

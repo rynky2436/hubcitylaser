@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
   title: "Laser Engraving Services Hagerstown MD | Wood Metal Glass Cutting | Hub City Laser",
@@ -14,7 +15,7 @@ export default function ServicesPage() {
   const services = [
     {
       category: "Custom Business Signage Solutions",
-      image: "/images/professional.png",
+      image: "/images/professional-executive-office.png",
       alt: "Professional office signs and nameplates laser engraved Hagerstown MD",
       items: [
         "Custom business signs laser engraved on wood, metal, glass",
@@ -26,7 +27,7 @@ export default function ServicesPage() {
     },
     {
       category: "Recognition & Awards Laser Engraving",
-      image: "/images/technology.png",
+      image: "/images/technology-equipment-identification.png",
       alt: "Corporate awards and achievement plaques laser engraved Maryland",
       items: [
         "Achievement plaques laser engraved on premium materials",
@@ -38,7 +39,7 @@ export default function ServicesPage() {
     },
     {
       category: "Industrial Identification & Labels",
-      image: "/images/industrial.png",
+      image: "/images/industrial-safety-components.png",
       alt: "Industrial safety signs and equipment tags laser engraved",
       items: [
         "Equipment nameplates laser engraved on metal and plastic",
@@ -50,7 +51,7 @@ export default function ServicesPage() {
     },
     {
       category: "Promotional Items & Marketing Materials",
-      image: "/images/retail.png",
+      image: "/images/retail-promotional-items.png",
       alt: "Retail promotional items and marketing displays laser cut",
       items: [
         "Branded merchandise laser engraved with company logos",
@@ -62,7 +63,7 @@ export default function ServicesPage() {
     },
     {
       category: "Personalized Gifts & Custom Items",
-      image: "/images/hospitality.png",
+      image: "/images/real-estate-housewarming-gifts.png",
       alt: "Custom personalized gifts and home items laser engraved",
       items: [
         "Wedding keepsakes laser engraved on wood and metal",
@@ -76,16 +77,11 @@ export default function ServicesPage() {
 
   return (
     <>
-      <section className="bg-hub-blue text-hub-white section-padding">
-        <div className="container-max">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Complete Laser Engraving Services Hagerstown Maryland</h1>
-          <p className="text-xl text-blue-100 max-w-3xl">
-            Comprehensive laser engraving and cutting services for businesses and individuals in Hagerstown, MD. From
-            professional signage to personalized gifts, we deliver precision laser craftsmanship on wood, metal, glass,
-            and all materials for every project throughout Maryland, Delaware, and Virginia.
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="Complete Laser Engraving Services Hagerstown Maryland"
+        description="Comprehensive laser engraving and cutting services for businesses and individuals in Hagerstown, MD. From professional signage to personalized gifts, we deliver precision laser craftsmanship on wood, metal, glass, and all materials for every project throughout Maryland, Delaware, and Virginia."
+        backgroundImage="/images/materials-wood-glass.png"
+      />
 
       <section className="section-padding">
         <div className="container-max">
@@ -131,6 +127,14 @@ export default function ServicesPage() {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
+                <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/materials-wood-glass.png"
+                    alt="Wood laser engraving materials Hagerstown MD"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <h4 className="font-semibold text-hub-blue mb-2">Wood Laser Engraving</h4>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>Hardwood</li>
@@ -140,6 +144,14 @@ export default function ServicesPage() {
                 </ul>
               </div>
               <div className="text-center">
+                <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/materials-metal.png"
+                    alt="Metal laser cutting services Maryland"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <h4 className="font-semibold text-hub-blue mb-2">Metal Laser Cutting</h4>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>Stainless Steel</li>
@@ -149,6 +161,14 @@ export default function ServicesPage() {
                 </ul>
               </div>
               <div className="text-center">
+                <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/materials-glass-etching.png"
+                    alt="Glass laser etching services Hagerstown"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <h4 className="font-semibold text-hub-blue mb-2">Glass Laser Etching</h4>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>Tempered Glass</li>
@@ -158,6 +178,14 @@ export default function ServicesPage() {
                 </ul>
               </div>
               <div className="text-center">
+                <div className="aspect-square relative mb-4 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/materials-restaurant-hospitality.png"
+                    alt="Restaurant and hospitality materials laser engraved"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <h4 className="font-semibold text-hub-blue mb-2">Other Materials</h4>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>Acrylic</li>
@@ -194,7 +222,7 @@ export default function ServicesPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="aspect-video relative">
                   <Image
-                    src="/images/restaurants.png"
+                    src="/images/restaurant-complete-branding.png"
                     alt="Restaurant laser engraving menu boards table numbers Maryland"
                     fill
                     className="object-cover"
@@ -211,7 +239,7 @@ export default function ServicesPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="aspect-video relative">
                   <Image
-                    src="/images/agriculture.png"
+                    src="/images/agriculture-farm-signage.png"
                     alt="Agriculture equipment tags and farm signage laser engraved"
                     fill
                     className="object-cover"
