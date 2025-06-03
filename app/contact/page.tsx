@@ -52,7 +52,7 @@ export default function ContactPage() {
   return (
     <>
       <HeroSection
-        title="Contact Hub City Laser Engraving Hagerstown MD"
+        title="Contact Engrave Everything Hagerstown MD"
         description="Ready to discuss your laser engraving project? Get in touch with Hagerstown Maryland's premier laser engraving service for a personalized quote on wood, metal, glass cutting and engraving. Serving businesses throughout Maryland, Delaware, and Virginia."
         backgroundImage="/images/professional.png"
       />
@@ -63,7 +63,7 @@ export default function ContactPage() {
             <div>
               <h2 className="text-3xl font-bold text-hub-blue mb-6">Get Your Free Laser Engraving Quote</h2>
               <p className="text-gray-700 mb-6">
-                Contact Hub City Laser for professional laser engraving services in Hagerstown, Maryland. We provide
+                Contact Engrave Everything for professional laser engraving services in Hagerstown, Maryland. We provide
                 laser cutting and engraving on wood, metal, glass, and all materials for businesses throughout MD, DE,
                 and VA.
               </p>
@@ -140,9 +140,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-hub-blue mb-6">
-                Why Choose Hub City Laser Engraving Hagerstown MD?
-              </h3>
+              <h3 className="text-2xl font-bold text-hub-blue mb-6">Why Choose Engrave Everything Hagerstown MD?</h3>
               <div className="space-y-6">
                 <div className="flex items-start">
                   <span className="w-3 h-3 bg-hub-blue rounded-full mt-2 mr-4 flex-shrink-0"></span>

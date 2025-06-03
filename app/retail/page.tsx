@@ -107,9 +107,9 @@ export default function RetailPage() {
                 Professional Retail Laser Engraving Services Maryland
               </h2>
               <p className="text-gray-700 mb-6">
-                Hub City Laser understands that retail success depends on creating compelling shopping experiences that
-                attract customers and showcase products effectively. Located in Hagerstown, Maryland, we specialize in
-                custom laser engraving solutions that help retail businesses throughout the tri-state area create
+                Engrave Everything understands that retail success depends on creating compelling shopping experiences
+                that attract customers and showcase products effectively. Located in Hagerstown, Maryland, we specialize
+                in custom laser engraving solutions that help retail businesses throughout the tri-state area create
                 professional displays, clear signage, and attractive promotional materials that drive sales and enhance
                 brand recognition.
               </p>
@@ -193,8 +193,8 @@ export default function RetailPage() {
             Ready to Enhance Your Retail Environment with Custom Laser Engraving?
           </h2>
           <p className="text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact Hub City Laser today to discuss how we can help create attractive displays, professional signage,
-            and promotional materials that enhance your retail environment and support your sales objectives in
+            Contact Engrave Everything today to discuss how we can help create attractive displays, professional
+            signage, and promotional materials that enhance your retail environment and support your sales objectives in
             Hagerstown, Maryland.
           </p>
           <div className="space-x-4">

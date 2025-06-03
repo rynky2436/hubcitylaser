@@ -147,10 +147,10 @@ export default function TechPage() {
                 Professional Technology Laser Engraving Services Maryland
               </h2>
               <p className="text-gray-700 mb-6">
-                Hub City Laser specializes in creating precision laser-engraved materials for the technology industry.
-                Located in Hagerstown, Maryland, we understand the unique needs of tech companies, data centers, and IT
-                services that require professional identification systems, safety compliance, and corporate branding
-                that reflects their technical expertise.
+                Engrave Everything specializes in creating precision laser-engraved materials for the technology
+                industry. Located in Hagerstown, Maryland, we understand the unique needs of tech companies, data
+                centers, and IT services that require professional identification systems, safety compliance, and
+                corporate branding that reflects their technical expertise.
               </p>
               <p className="text-gray-700 mb-6">
                 From server rack identification to corporate recognition awards, our laser engraving services help
@@ -311,7 +311,7 @@ export default function TechPage() {
       <section className="section-padding">
         <div className="container-max">
           <h2 className="text-3xl font-bold text-hub-blue text-center mb-12">
-            Why Choose Hub City Laser for Technology Engraving?
+            Why Choose Engrave Everything for Technology Engraving?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 p-6 rounded-lg">
@@ -412,9 +412,9 @@ export default function TechPage() {
             Ready to Enhance Your Technology Business with Professional Laser Engraving?
           </h2>
           <p className="text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact Hub City Laser today to discuss how we can help create professional equipment identification, safety
-            compliance marking, and corporate recognition materials that support your technology operations and reflect
-            your commitment to innovation in Hagerstown, Maryland.
+            Contact Engrave Everything today to discuss how we can help create professional equipment identification,
+            safety compliance marking, and corporate recognition materials that support your technology operations and
+            reflect your commitment to innovation in Hagerstown, Maryland.
           </p>
           <div className="space-x-4">
             <Link href="/contact" className="btn-secondary">

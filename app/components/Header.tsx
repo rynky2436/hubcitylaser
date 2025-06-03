@@ -23,7 +23,7 @@ export default function Header() {
     <header className="bg-hub-blue text-hub-white shadow-lg">
       <nav className="container-max" aria-label="Main Navigation">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="flex items-center space-x-3" aria-label="Hub City Laser - Home">
+          <Link href="/" className="flex items-center space-x-3" aria-label="Engrave Everything - Home">
             <div className="relative w-12 h-12 md:w-16 md:h-16">
               <Image
                 src="/images/hub-city-logo-light.png"
@@ -34,7 +34,7 @@ export default function Header() {
               />
             </div>
             <div className="hidden sm:block">
-              <div className="text-xl md:text-2xl font-bold">Hub City Laser</div>
+              <div className="text-xl md:text-2xl font-bold">Engrave Everything</div>
               <div className="text-xs md:text-sm text-hub-silver">Engraving</div>
             </div>
           </Link>

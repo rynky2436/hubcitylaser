@@ -92,7 +92,7 @@ export default function RestaurantsPage() {
                 Professional Restaurant Laser Engraving Services Maryland
               </h2>
               <p className="text-gray-700 mb-6">
-                Hub City Laser understands that restaurants succeed through creating memorable dining experiences.
+                Engrave Everything understands that restaurants succeed through creating memorable dining experiences.
                 Located in Hagerstown, Maryland, we specialize in custom laser engraving solutions that enhance your
                 restaurant's atmosphere, improve operational efficiency, and strengthen your brand identity throughout
                 every customer touchpoint.
@@ -175,7 +175,7 @@ export default function RestaurantsPage() {
         <div className="container-max text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Enhance Your Restaurant with Custom Laser Engraving?</h2>
           <p className="text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact Hub City Laser today to discuss how we can help create menu boards, signage, and promotional
+            Contact Engrave Everything today to discuss how we can help create menu boards, signage, and promotional
             materials that enhance your restaurant's atmosphere and support your food service operations in Hagerstown,
             Maryland.
           </p>

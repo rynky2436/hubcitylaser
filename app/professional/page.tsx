@@ -91,7 +91,7 @@ export default function ProfessionalPage() {
                 Professional Office Laser Engraving Services Maryland
               </h2>
               <p className="text-gray-700 mb-6">
-                Hub City Laser specializes in creating sophisticated professional office materials that enhance your
+                Engrave Everything specializes in creating sophisticated professional office materials that enhance your
                 corporate image and support your business operations. Located in Hagerstown, Maryland, we understand the
                 importance of professional presentation in building client confidence and maintaining a polished
                 business environment.
@@ -177,7 +177,7 @@ export default function ProfessionalPage() {
             Ready to Enhance Your Professional Image with Custom Office Signage?
           </h2>
           <p className="text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact Hub City Laser today to discuss how we can help create professional office signage, awards, and
+            Contact Engrave Everything today to discuss how we can help create professional office signage, awards, and
             accessories that reflect your business excellence and enhance your corporate environment in Hagerstown,
             Maryland.
           </p>

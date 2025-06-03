@@ -5,13 +5,13 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 
 export const metadata: Metadata = {
-  title: "Professional Laser Engraving in Hagerstown, MD | Hub City Laser",
+  title: "Professional Laser Engraving in Hagerstown, MD | Engrave Everything",
   description:
     "Precision laser engraving and cutting services on wood, metal, glass for businesses in Maryland, Delaware, Virginia. Custom signs, awards, promotional items, industrial marking.",
   keywords:
     "laser engraving Hagerstown MD, laser cutting Maryland, custom signs Delaware Virginia, wood metal glass engraving, business signage MD, promotional items Hagerstown, industrial laser cutting",
   openGraph: {
-    title: "Hub City Laser Engraving Hagerstown MD | Professional Laser Services",
+    title: "Engrave Everything Hagerstown MD | Professional Laser Services",
     description:
       "Expert laser engraving on wood, metal, glass in Hagerstown MD. Serving Maryland, Delaware, Virginia with custom signs, awards, promotional items.",
     type: "website",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Professional Laser Engraving in Hagerstown, MD | Hub City Laser",
+    title: "Professional Laser Engraving in Hagerstown, MD | Engrave Everything",
     description: "Precision laser engraving and cutting services on wood, metal, glass for businesses in MD, DE, VA.",
     images: ["/images/materials-wood-glass.png"],
   },
@@ -56,7 +56,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              name: "Hub City Laser Engraving",
+              name: "Engrave Everything",
               image: "/images/materials-wood-glass.png",
               address: {
                 "@type": "PostalAddress",
@@ -69,7 +69,7 @@ export default function RootLayout({
                 latitude: 39.6417,
                 longitude: -77.72,
               },
-              url: "https://hubcitylaser.com",
+              url: "https://engraveeverything.com",
               telephone: "",
               priceRange: "$$",
               description:

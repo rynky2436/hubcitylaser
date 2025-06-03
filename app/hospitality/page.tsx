@@ -107,11 +107,11 @@ export default function HospitalityPage() {
                 Professional Hospitality Laser Engraving Services Maryland
               </h2>
               <p className="text-gray-700 mb-6">
-                Hub City Laser understands that hospitality success is built on creating exceptional guest experiences
-                and memorable moments. Located in Hagerstown, Maryland, we specialize in custom laser engraving
-                solutions that help hotels, restaurants, bars, and event venues throughout the tri-state area enhance
-                their brand, improve guest satisfaction, and create lasting impressions that encourage return visits and
-                positive reviews.
+                Engrave Everything understands that hospitality success is built on creating exceptional guest
+                experiences and memorable moments. Located in Hagerstown, Maryland, we specialize in custom laser
+                engraving solutions that help hotels, restaurants, bars, and event venues throughout the tri-state area
+                enhance their brand, improve guest satisfaction, and create lasting impressions that encourage return
+                visits and positive reviews.
               </p>
               <p className="text-gray-700 mb-6">
                 From elegant signage to personalized amenities, our laser engraving services support every aspect of the
@@ -194,7 +194,7 @@ export default function HospitalityPage() {
             Ready to Enhance Your Hospitality Business with Custom Laser Engraving?
           </h2>
           <p className="text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact Hub City Laser today to discuss how we can help create memorable guest experiences, professional
+            Contact Engrave Everything today to discuss how we can help create memorable guest experiences, professional
             signage, and personalized amenities that enhance your hospitality business and create lasting impressions in
             Hagerstown, Maryland.
           </p>

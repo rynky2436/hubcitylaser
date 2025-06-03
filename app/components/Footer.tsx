@@ -17,7 +17,7 @@ export default function Footer() {
                 />
               </div>
               <div>
-                <h3 className="text-xl font-bold">Hub City Laser</h3>
+                <h3 className="text-xl font-bold">Engrave Everything</h3>
                 <div className="text-sm text-hub-silver">Engraving</div>
               </div>
             </div>
@@ -102,7 +102,7 @@ export default function Footer() {
         <div className="border-t border-hub-silver mt-8 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="text-hub-silver">
-              <p>&copy; {new Date().getFullYear()} Hub City Laser Engraving Hagerstown MD. All rights reserved.</p>
+              <p>&copy; {new Date().getFullYear()} Engrave Everything Hagerstown MD. All rights reserved.</p>
             </div>
             <div className="text-hub-silver md:text-right">
               <p>

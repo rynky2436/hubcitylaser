@@ -4,7 +4,7 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Laser Engraving Services Hagerstown MD | Wood Metal Glass Cutting | Hub City Laser",
+  title: "Laser Engraving Services Hagerstown MD | Wood Metal Glass Cutting | Engrave Everything",
   description:
     "Complete laser engraving and cutting services in Hagerstown Maryland. Custom signs, plaques, nameplates, equipment tags, promotional items on wood, metal, glass. Serving MD, DE, VA businesses.",
   keywords:
@@ -90,7 +90,7 @@ export default function ServicesPage() {
               Professional Laser Engraving on Wood, Metal, Glass & Everything
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Hub City Laser provides expert laser engraving and cutting services on all materials. Located in
+              Engrave Everything provides expert laser engraving and cutting services on all materials. Located in
               Hagerstown, Maryland, we serve businesses throughout the tri-state area with precision laser solutions.
             </p>
           </div>
@@ -257,8 +257,8 @@ export default function ServicesPage() {
           <div className="bg-hub-blue text-hub-white p-8 rounded-lg text-center">
             <h3 className="text-2xl font-bold mb-4">Ready to Start Your Laser Engraving Project in Hagerstown MD?</h3>
             <p className="text-blue-100 mb-6">
-              Contact Hub City Laser today to discuss your laser engraving needs and receive a personalized quote for
-              wood, metal, glass cutting and engraving services in Maryland, Delaware, and Virginia.
+              Contact Engrave Everything today to discuss your laser engraving needs and receive a personalized quote
+              for wood, metal, glass cutting and engraving services in Maryland, Delaware, and Virginia.
             </p>
             <Link href="/contact" className="btn-secondary">
               Get Your Free Laser Engraving Quote

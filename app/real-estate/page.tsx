@@ -106,7 +106,7 @@ export default function RealEstatePage() {
                 Professional Real Estate Laser Engraving Services Maryland
               </h2>
               <p className="text-gray-700 mb-6">
-                Hub City Laser understands that real estate success is built on relationships, trust, and memorable
+                Engrave Everything understands that real estate success is built on relationships, trust, and memorable
                 experiences. Located in Hagerstown, Maryland, we specialize in creating custom laser-engraved materials
                 that help real estate professionals throughout the tri-state area strengthen client relationships,
                 enhance their professional image, and create lasting impressions that generate referrals and repeat
@@ -193,7 +193,7 @@ export default function RealEstatePage() {
             Ready to Strengthen Your Real Estate Business with Custom Laser Engraving?
           </h2>
           <p className="text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact Hub City Laser today to discuss how we can help create client appreciation gifts, professional
+            Contact Engrave Everything today to discuss how we can help create client appreciation gifts, professional
             office materials, and property signage that enhance your real estate business and strengthen client
             relationships in Hagerstown, Maryland.
           </p>

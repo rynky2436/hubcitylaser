@@ -107,10 +107,11 @@ export default function AgriculturePage() {
                 Professional Agriculture Laser Engraving Services Maryland
               </h2>
               <p className="text-gray-700 mb-6">
-                Hub City Laser understands the demanding conditions of agricultural operations and the need for durable,
-                weather-resistant identification solutions. Located in Hagerstown, Maryland, we specialize in creating
-                laser-engraved materials that withstand outdoor environments while providing clear, professional
-                identification for farms, equipment, and agricultural businesses throughout the tri-state area.
+                Engrave Everything understands the demanding conditions of agricultural operations and the need for
+                durable, weather-resistant identification solutions. Located in Hagerstown, Maryland, we specialize in
+                creating laser-engraved materials that withstand outdoor environments while providing clear,
+                professional identification for farms, equipment, and agricultural businesses throughout the tri-state
+                area.
               </p>
               <p className="text-gray-700 mb-6">
                 From equipment tracking to safety compliance, our laser engraving services help agricultural operations
@@ -193,9 +194,9 @@ export default function AgriculturePage() {
             Ready to Enhance Your Agricultural Operation with Durable Laser Engraving?
           </h2>
           <p className="text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact Hub City Laser today to discuss how we can help create weather-resistant equipment identification,
-            farm signage, and safety marking that supports your agricultural operations and regulatory compliance in
-            Hagerstown, Maryland.
+            Contact Engrave Everything today to discuss how we can help create weather-resistant equipment
+            identification, farm signage, and safety marking that supports your agricultural operations and regulatory
+            compliance in Hagerstown, Maryland.
           </p>
           <div className="space-x-4">
             <Link href="/contact" className="btn-secondary">

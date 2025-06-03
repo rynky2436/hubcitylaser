@@ -4,13 +4,13 @@ import Image from "next/image"
 import HeroSection from "./components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Laser Engraving Hagerstown MD | Wood Metal Glass Cutting | Hub City Laser",
+  title: "Laser Engraving Hagerstown MD | Wood Metal Glass Cutting | Engrave Everything",
   description:
     "Professional laser engraving services in Hagerstown, Maryland. Custom laser cutting on wood, metal, glass for businesses in MD, DE, VA. Signs, awards, promotional items, industrial marking.",
   keywords:
     "laser engraving Hagerstown Maryland, laser cutting wood metal glass, custom signs MD DE VA, business laser engraving, promotional items Hagerstown, industrial laser cutting Maryland, medical device engraving, restaurant signage",
   openGraph: {
-    title: "Hub City Laser Engraving Hagerstown MD | Professional Services",
+    title: "Engrave Everything Hagerstown MD | Professional Services",
     description: "Expert laser engraving on wood, metal, glass in Hagerstown MD. Serving Maryland, Delaware, Virginia.",
   },
 }
@@ -87,7 +87,7 @@ export default function HomePage() {
         <div className="container-max">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-hub-blue mb-4">
-              Hub City Laser Engraving Hagerstown Maryland
+              Engrave Everything Laser Engraving Hagerstown Maryland
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               Located in Hagerstown, Maryland, we specialize in precision laser engraving and cutting services on wood,
@@ -163,7 +163,7 @@ export default function HomePage() {
             Laser Engraving Services by Industry - Maryland Delaware Virginia
           </h2>
           <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
-            Hub City Laser provides specialized laser engraving and cutting services on wood, metal, glass for
+            Engrave Everything provides specialized laser engraving and cutting services on wood, metal, glass for
             businesses across all industries in Hagerstown MD and throughout the tri-state area.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -285,7 +285,7 @@ export default function HomePage() {
         <div className="container-max">
           <div className="bg-hub-blue text-hub-white p-8 rounded-lg">
             <h2 className="text-3xl font-bold mb-4 text-center">
-              Why Choose Hub City Laser Engraving in Hagerstown Maryland?
+              Why Choose Engrave Everything Laser Engraving in Hagerstown Maryland?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
@@ -318,8 +318,8 @@ export default function HomePage() {
             Ready for Professional Laser Engraving in Hagerstown MD?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            Contact Hub City Laser today for a free quote on laser engraving services for your Maryland, Delaware, or
-            Virginia business.
+            Contact Engrave Everything today for a free quote on laser engraving services for your Maryland, Delaware,
+            or Virginia business.
           </p>
           <Link href="/contact" className="btn-secondary">
             Get Free Laser Engraving Quote
