@@ -3,6 +3,7 @@
 import type React from "react"
 import { useState } from "react"
 import HeroSection from "../components/HeroSection"
+import { Phone } from "lucide-react"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -67,6 +68,17 @@ export default function ContactPage() {
                 laser cutting and engraving on wood, metal, glass, and all materials for businesses throughout MD, DE,
                 and VA.
               </p>
+
+              <div className="mb-8">
+                <a
+                  href="tel:"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-medium text-white bg-hub-blue rounded-lg hover:bg-opacity-90 transition-colors"
+                  aria-label="Call us now"
+                >
+                  <Phone className="w-5 h-5" />
+                  <span>Call Us Now</span>
+                </a>
+              </div>
 
               <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
                 <div>

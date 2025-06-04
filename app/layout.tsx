@@ -46,6 +46,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
         <meta name="geo.region" content="US-MD" />
         <meta name="geo.placename" content="Hagerstown" />
         <meta name="geo.position" content="39.6417;-77.7200" />

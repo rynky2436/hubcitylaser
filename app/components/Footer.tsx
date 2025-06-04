@@ -8,17 +8,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="relative w-12 h-12">
+              <div className="relative w-20 h-20">
                 <Image
-                  src="/images/hub-city-logo-light.png"
-                  alt="Hub City Engraving Logo"
+                  src="/images/engrave-everything-logo.png"
+                  alt="Engrave Everything Logo"
                   fill
                   className="object-contain"
                 />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">Engrave Everything</h3>
-                <div className="text-sm text-hub-silver">Engraving</div>
               </div>
             </div>
             <p className="text-hub-silver mb-4">
