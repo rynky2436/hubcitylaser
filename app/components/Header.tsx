@@ -63,7 +63,7 @@ export default function Header() {
                 ))}
               </div>
             </div>
-            <Link href="/gifts" className="hover:text-hub-silver transition-colors">
+            <Link href="https://engraveeverything.us/shop/" className="hover:text-hub-silver transition-colors">
               Gifts
             </Link>
             <Link href="/services" className="hover:text-hub-silver transition-colors">
@@ -133,7 +133,11 @@ export default function Header() {
                 {industry.name}
               </Link>
             ))}
-            <Link href="/gifts" className="block py-2 hover:text-hub-silver" role="menuitem">
+            <Link
+              href="https://engraveeverything.us/shop/"
+              className="block py-2 hover:text-hub-silver"
+              role="menuitem"
+            >
               Gifts
             </Link>
             <Link href="/services" className="block py-2 hover:text-hub-silver" role="menuitem">
