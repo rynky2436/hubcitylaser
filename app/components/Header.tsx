@@ -66,6 +66,9 @@ export default function Header() {
             <Link href="https://engraveeverything.us/shop/" className="hover:text-hub-silver transition-colors">
               Gifts
             </Link>
+            <Link href="https://www.barrelvinedesigns.com/" className="hover:text-hub-silver transition-colors">
+              Breweries Winery
+            </Link>
             <Link href="/services" className="hover:text-hub-silver transition-colors">
               Services
             </Link>
@@ -139,6 +142,13 @@ export default function Header() {
               role="menuitem"
             >
               Gifts
+            </Link>
+            <Link
+              href="https://www.barrelvinedesigns.com/"
+              className="block py-2 hover:text-hub-silver"
+              role="menuitem"
+            >
+              Breweries Winery
             </Link>
             <Link href="/services" className="block py-2 hover:text-hub-silver" role="menuitem">
               Services
