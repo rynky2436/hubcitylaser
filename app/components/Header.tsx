@@ -6,6 +6,8 @@ import { useState } from "react"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isIndustriesDropdownOpen, setIsIndustriesDropdownOpen] = useState(false)
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false)
 
   const industries = [
     { name: "Medical", href: "/medical" },
@@ -17,6 +19,14 @@ export default function Header() {
     { name: "Industrial", href: "/industrial" },
     { name: "Technology", href: "/tech" },
     { name: "Hospitality", href: "/hospitality" },
+  ]
+
+  const materialServices = [
+    { name: "Wood Engraving", href: "/services/wood-engraving" },
+    { name: "Metal Cutting & Marking", href: "/services/metal-cutting" },
+    { name: "Glass Etching", href: "/services/glass-etching" },
+    { name: "Acrylic Signs & Displays", href: "/services/acrylic-signs" },
+    { name: "All Services", href: "/services" },
   ]
 
   return (
@@ -42,13 +52,16 @@ export default function Header() {
             <div className="relative group">
               <button
                 className="hover:text-hub-silver transition-colors"
-                aria-expanded={isMenuOpen}
+                aria-expanded={isIndustriesDropdownOpen}
                 aria-haspopup="true"
+                onClick={() => setIsIndustriesDropdownOpen(!isIndustriesDropdownOpen)}
               >
                 Industries
               </button>
               <div
-                className="absolute top-full left-0 mt-2 w-48 bg-hub-white text-gray-900 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
+                className={`absolute top-full left-0 mt-2 w-48 bg-hub-white text-gray-900 rounded-lg shadow-lg transition-all duration-200 z-50 ${
+                  isIndustriesDropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                }`}
                 role="menu"
               >
                 {industries.map((industry) => (
@@ -57,8 +70,37 @@ export default function Header() {
                     href={industry.href}
                     className="block px-4 py-2 hover:bg-gray-100 first:rounded-t-lg last:rounded-b-lg"
                     role="menuitem"
+                    onClick={() => setIsIndustriesDropdownOpen(false)}
                   >
                     {industry.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div className="relative group">
+              <button
+                className="hover:text-hub-silver transition-colors"
+                aria-expanded={isServicesDropdownOpen}
+                aria-haspopup="true"
+                onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+              >
+                Services
+              </button>
+              <div
+                className={`absolute top-full left-0 mt-2 w-60 bg-hub-white text-gray-900 rounded-lg shadow-lg transition-all duration-200 z-50 ${
+                  isServicesDropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                }`}
+                role="menu"
+              >
+                {materialServices.map((service) => (
+                  <Link
+                    key={service.href}
+                    href={service.href}
+                    className="block px-4 py-2 hover:bg-gray-100 first:rounded-t-lg last:rounded-b-lg"
+                    role="menuitem"
+                    onClick={() => setIsServicesDropdownOpen(false)}
+                  >
+                    {service.name}
                   </Link>
                 ))}
               </div>
@@ -69,14 +111,11 @@ export default function Header() {
             <Link href="https://www.barrelvinedesigns.com/" className="hover:text-hub-silver transition-colors">
               Breweries Winery
             </Link>
-            <Link href="/services" className="hover:text-hub-silver transition-colors">
-              Services
-            </Link>
             <Link href="/contact" className="hover:text-hub-silver transition-colors">
               Contact
             </Link>
             <a
-              href="tel:"
+              href="tel:+12401234567" // Replace with your actual phone number
               className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors flex items-center space-x-2"
               aria-label="Call us now"
             >
@@ -94,7 +133,7 @@ export default function Header() {
 
           <div className="md:hidden flex items-center space-x-3">
             <a
-              href="tel:"
+              href="tel:+12401234567" // Replace with your actual phone number
               className="bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg font-semibold transition-colors flex items-center space-x-1"
               aria-label="Call us now"
             >
@@ -123,23 +162,63 @@ export default function Header() {
 
         {isMenuOpen && (
           <div className="md:hidden pb-4" role="menu">
-            <Link href="/" className="block py-2 hover:text-hub-silver" role="menuitem">
+            <Link
+              href="/"
+              className="block py-2 hover:text-hub-silver"
+              role="menuitem"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Home
             </Link>
-            {industries.map((industry) => (
-              <Link
-                key={industry.href}
-                href={industry.href}
-                className="block py-2 hover:text-hub-silver"
-                role="menuitem"
-              >
-                {industry.name}
-              </Link>
-            ))}
+            <button
+              className="block w-full text-left py-2 hover:text-hub-silver"
+              onClick={() => setIsIndustriesDropdownOpen(!isIndustriesDropdownOpen)}
+              aria-expanded={isIndustriesDropdownOpen}
+            >
+              Industries
+            </button>
+            {isIndustriesDropdownOpen && (
+              <div className="pl-4">
+                {industries.map((industry) => (
+                  <Link
+                    key={industry.href}
+                    href={industry.href}
+                    className="block py-2 hover:text-hub-silver"
+                    role="menuitem"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {industry.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+            <button
+              className="block w-full text-left py-2 hover:text-hub-silver"
+              onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+              aria-expanded={isServicesDropdownOpen}
+            >
+              Services
+            </button>
+            {isServicesDropdownOpen && (
+              <div className="pl-4">
+                {materialServices.map((service) => (
+                  <Link
+                    key={service.href}
+                    href={service.href}
+                    className="block py-2 hover:text-hub-silver"
+                    role="menuitem"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+            )}
             <Link
               href="https://engraveeverything.us/shop/"
               className="block py-2 hover:text-hub-silver"
               role="menuitem"
+              onClick={() => setIsMenuOpen(false)}
             >
               Gifts
             </Link>
@@ -147,13 +226,16 @@ export default function Header() {
               href="https://www.barrelvinedesigns.com/"
               className="block py-2 hover:text-hub-silver"
               role="menuitem"
+              onClick={() => setIsMenuOpen(false)}
             >
               Breweries Winery
             </Link>
-            <Link href="/services" className="block py-2 hover:text-hub-silver" role="menuitem">
-              Services
-            </Link>
-            <Link href="/contact" className="block py-2 hover:text-hub-silver" role="menuitem">
+            <Link
+              href="/contact"
+              className="block py-2 hover:text-hub-silver"
+              role="menuitem"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Contact
             </Link>
           </div>

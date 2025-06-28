@@ -10,6 +10,7 @@ export default function ContactPage() {
     name: "",
     email: "",
     message: "",
+    usageType: "", // Added for business or personal use
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState("")
@@ -32,7 +33,7 @@ export default function ContactPage() {
 
       if (response.ok) {
         setSubmitMessage(data.message)
-        setFormData({ name: "", email: "", message: "" })
+        setFormData({ name: "", email: "", message: "", usageType: "" })
       } else {
         setSubmitMessage(data.error || "An error occurred")
       }
@@ -62,7 +63,7 @@ export default function ContactPage() {
         <div className="container-max">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold text-hub-blue mb-6">Get Your Free Laser Engraving Quote</h2>
+              <h1 className="text-3xl font-bold text-hub-blue mb-6">Get Your Free Laser Engraving Quote</h1>
               <p className="text-gray-700 mb-6">
                 Contact Engrave Everything for professional laser engraving services in Hagerstown, Maryland. We provide
                 laser cutting and engraving on wood, metal, glass, and all materials for businesses throughout MD, DE,
@@ -71,7 +72,7 @@ export default function ContactPage() {
 
               <div className="mb-8">
                 <a
-                  href="tel:"
+                  href="tel:+12401234567" // Replace with your actual phone number
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-medium text-white bg-hub-blue rounded-lg hover:bg-opacity-90 transition-colors"
                   aria-label="Call us now"
                 >
@@ -130,6 +131,41 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {/* New: Business or Personal Use Checkbox */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Is this for business or personal use? *
+                  </label>
+                  <div className="flex items-center space-x-4">
+                    <label htmlFor="usage-business" className="flex items-center">
+                      <input
+                        type="radio"
+                        id="usage-business"
+                        name="usageType"
+                        value="business"
+                        checked={formData.usageType === "business"}
+                        onChange={handleChange}
+                        required
+                        className="h-4 w-4 text-hub-blue border-gray-300 focus:ring-hub-blue"
+                      />
+                      <span className="ml-2 text-gray-700">Business Use</span>
+                    </label>
+                    <label htmlFor="usage-personal" className="flex items-center">
+                      <input
+                        type="radio"
+                        id="usage-personal"
+                        name="usageType"
+                        value="personal"
+                        checked={formData.usageType === "personal"}
+                        onChange={handleChange}
+                        required
+                        className="h-4 w-4 text-hub-blue border-gray-300 focus:ring-hub-blue"
+                      />
+                      <span className="ml-2 text-gray-700">Personal Use</span>
+                    </label>
+                  </div>
+                </div>
+
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -149,15 +185,19 @@ export default function ContactPage() {
                   </div>
                 )}
               </form>
+              <p className="text-sm text-gray-500 mt-4">
+                *Note: File upload functionality is not available directly through this form. Please mention your file
+                requirements in the message, and we will follow up to arrange file submission.
+              </p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-hub-blue mb-6">Why Choose Engrave Everything Hagerstown MD?</h3>
+              <h2 className="text-2xl font-bold text-hub-blue mb-6">Why Choose Engrave Everything Hagerstown MD?</h2>
               <div className="space-y-6">
                 <div className="flex items-start">
                   <span className="w-3 h-3 bg-hub-blue rounded-full mt-2 mr-4 flex-shrink-0"></span>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Precision Laser Craftsmanship</h4>
+                    <h3 className="font-semibold text-gray-900">Precision Laser Craftsmanship</h3>
                     <p className="text-gray-600">
                       State-of-the-art laser technology ensures perfect results on wood, metal, glass, and all materials
                       every time.
@@ -168,7 +208,7 @@ export default function ContactPage() {
                 <div className="flex items-start">
                   <span className="w-3 h-3 bg-hub-blue rounded-full mt-2 mr-4 flex-shrink-0"></span>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Fast Turnaround Maryland DE VA</h4>
+                    <h3 className="font-semibold text-gray-900">Fast Turnaround Maryland DE VA</h3>
                     <p className="text-gray-600">
                       Quick project completion for businesses throughout Maryland, Delaware, and Virginia without
                       compromising quality.
@@ -179,7 +219,7 @@ export default function ContactPage() {
                 <div className="flex items-start">
                   <span className="w-3 h-3 bg-hub-blue rounded-full mt-2 mr-4 flex-shrink-0"></span>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Competitive Laser Engraving Pricing</h4>
+                    <h3 className="font-semibold text-gray-900">Competitive Laser Engraving Pricing</h3>
                     <p className="text-gray-600">
                       Fair, transparent pricing for laser engraving projects of all sizes in the Hagerstown MD area.
                     </p>
@@ -189,7 +229,7 @@ export default function ContactPage() {
                 <div className="flex items-start">
                   <span className="w-3 h-3 bg-hub-blue rounded-full mt-2 mr-4 flex-shrink-0"></span>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Expert Laser Consultation</h4>
+                    <h3 className="font-semibold text-gray-900">Expert Laser Consultation</h3>
                     <p className="text-gray-600">
                       Professional guidance on materials, design, and laser engraving techniques to bring your vision to
                       life.
@@ -199,7 +239,7 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-                <h4 className="font-semibold text-hub-blue mb-3">Service Areas</h4>
+                <h3 className="font-semibold text-hub-blue mb-3">Service Areas</h3>
                 <ul className="text-gray-700 space-y-1">
                   <li>• Hagerstown, Maryland (Primary Location)</li>
                   <li>• Maryland (MD) - Statewide Service</li>
@@ -211,7 +251,7 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-6 p-6 bg-hub-blue text-hub-white rounded-lg">
-                <h4 className="font-semibold mb-3">Materials We Laser Engrave</h4>
+                <h3 className="font-semibold mb-3">Materials We Laser Engrave</h3>
                 <div className="grid grid-cols-2 gap-2 text-sm">
                   <div>• Wood laser engraving</div>
                   <div>• Metal laser cutting</div>

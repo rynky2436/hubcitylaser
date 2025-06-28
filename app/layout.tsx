@@ -5,35 +5,44 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 
 export const metadata: Metadata = {
-  title: "Professional Laser Engraving in Hagerstown, MD | Engrave Everything",
+  title: "Laser Engraving & Cutting Services | Hagerstown MD | Engrave Everything",
   description:
-    "Precision laser engraving and cutting services on wood, metal, glass for businesses in Maryland, Delaware, Virginia. Custom signs, awards, promotional items, industrial marking.",
+    "Expert laser engraving & cutting in Hagerstown MD—wood, metal, glass, acrylic. Custom signs, awards, industrial marking & personalized gifts. Fast turnaround, top-rated service for MD, DE, VA, DC Metro, Northern VA.",
   keywords:
-    "laser engraving Hagerstown MD, laser cutting Maryland, custom signs Delaware Virginia, wood metal glass engraving, business signage MD, promotional items Hagerstown, industrial laser cutting",
+    "laser engraving Hagerstown MD, laser cutting Maryland, custom signs Washington D.C. Metro, wood metal glass engraving, business signage Northern VA, promotional items Hagerstown, industrial laser cutting, medical device engraving, restaurant signage, personalized gifts, acrylic signs, custom awards",
   openGraph: {
-    title: "Engrave Everything Hagerstown MD | Professional Laser Services",
+    title: "Engrave Everything | Professional Laser Services in Hagerstown, MD & DC Metro",
     description:
-      "Expert laser engraving on wood, metal, glass in Hagerstown MD. Serving Maryland, Delaware, Virginia with custom signs, awards, promotional items.",
+      "Expert laser engraving on wood, metal, glass in Hagerstown MD. Serving Maryland, Delaware, Virginia, Washington D.C. Metro, and Northern Virginia with custom signs, awards, promotional items, and more.",
     type: "website",
     locale: "en_US",
+    url: "https://engraveeverything.com",
     images: [
       {
-        url: "/images/materials-wood-glass.png",
+        url: "https://engraveeverything.com/images/materials-wood-glass.png",
         width: 1200,
         height: 630,
-        alt: "Hub City Laser Engraving Services",
+        alt: "Engrave Everything Laser Engraving Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Professional Laser Engraving in Hagerstown, MD | Engrave Everything",
-    description: "Precision laser engraving and cutting services on wood, metal, glass for businesses in MD, DE, VA.",
-    images: ["/images/materials-wood-glass.png"],
+    title: "Laser Engraving & Cutting Services | Hagerstown MD | Engrave Everything",
+    description:
+      "Precision laser engraving and cutting services on wood, metal, glass for businesses in MD, DE, VA, DC Metro, Northern VA.",
+    images: ["https://engraveeverything.com/images/materials-wood-glass.png"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
   },
   generator: "v0.dev",
 }
@@ -53,31 +62,66 @@ export default function RootLayout({
         <meta name="geo.placename" content="Hagerstown" />
         <meta name="geo.position" content="39.6417;-77.7200" />
         <meta name="ICBM" content="39.6417, -77.7200" />
+        {/* Google Analytics - Replace with your actual GA4 Measurement ID */}
+        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-XXXXXXXXXX');
+            `,
+          }}
+        /> */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              name: "Engrave Everything",
-              image: "/images/materials-wood-glass.png",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "Hagerstown",
-                addressRegion: "MD",
-                addressCountry: "US",
-              },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: 39.6417,
-                longitude: -77.72,
-              },
+              name: "Hub City Laser",
+              image: "https://engraveeverything.com/images/materials-wood-glass.png",
               url: "https://engraveeverything.com",
-              telephone: "",
+              telephone: "+12401234567", // Replace with your actual business phone number
               priceRange: "$$",
               description:
-                "Professional laser engraving and cutting services on wood, metal, glass for businesses in Maryland, Delaware, Virginia.",
-              sameAs: [],
+                "Custom laser engraving and cutting services on wood, metal, glass, and acrylic in Hagerstown, MD.",
+              areaServed: [
+                {
+                  "@type": "City",
+                  name: "Hagerstown",
+                  address: {
+                    "@type": "PostalAddress",
+                    addressRegion: "MD",
+                  },
+                },
+                {
+                  "@type": "State",
+                  name: "Maryland",
+                },
+                {
+                  "@type": "State",
+                  name: "Delaware",
+                },
+                {
+                  "@type": "State",
+                  name: "Virginia",
+                },
+                {
+                  "@type": "City",
+                  name: "Washington D.C.",
+                },
+                {
+                  "@type": "State",
+                  name: "Northern Virginia",
+                },
+              ],
+              sameAs: [
+                // Add your social media links here if available
+                // "https://www.facebook.com/yourhubcitylaser",
+                // "https://www.instagram.com/yourhubcitylaser",
+              ],
               openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
@@ -86,7 +130,6 @@ export default function RootLayout({
                   closes: "17:00",
                 },
               ],
-              servesCuisine: "Laser Engraving Services",
             }),
           }}
         />

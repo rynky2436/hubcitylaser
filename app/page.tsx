@@ -4,14 +4,15 @@ import Image from "next/image"
 import HeroSection from "./components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Laser Engraving Hagerstown MD | Wood Metal Glass Cutting | Engrave Everything",
+  title: "Laser Engraving Hagerstown MD | Custom Wood Metal Glass Cutting | Engrave Everything",
   description:
-    "Professional laser engraving services in Hagerstown, Maryland. Custom laser cutting on wood, metal, glass for businesses in MD, DE, VA. Signs, awards, promotional items, industrial marking.",
+    "Expert laser engraving & cutting in Hagerstown MD—wood, metal, glass, acrylic. Custom signs, awards & more. Fast turnaround, top-rated service for MD, DE, VA, DC Metro, Northern VA.",
   keywords:
-    "laser engraving Hagerstown Maryland, laser cutting wood metal glass, custom signs MD DE VA, business laser engraving, promotional items Hagerstown, industrial laser cutting Maryland, medical device engraving, restaurant signage",
+    "laser engraving Hagerstown Maryland, laser cutting wood metal glass, custom signs MD DE VA, business laser engraving, promotional items Hagerstown, industrial laser cutting Maryland, medical device engraving, restaurant signage, personalized gifts, Washington D.C. Metro laser engraving, Northern VA laser engraving, acrylic signs, custom awards",
   openGraph: {
-    title: "Engrave Everything Hagerstown MD | Professional Services",
-    description: "Expert laser engraving on wood, metal, glass in Hagerstown MD. Serving Maryland, Delaware, Virginia.",
+    title: "Engrave Everything Hagerstown MD | Professional Laser Services",
+    description:
+      "Expert laser engraving on wood, metal, glass in Hagerstown MD. Serving Maryland, Delaware, Virginia, Washington D.C. Metro, and Northern Virginia.",
   },
 }
 
@@ -77,8 +78,8 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <HeroSection
-        title="Professional Laser Engraving Hagerstown MD | Wood Metal Glass Cutting Services"
-        description="Expert laser engraving and cutting on wood, metal, glass serving Maryland, Delaware, Virginia businesses"
+        title="Professional Laser Engraving Hagerstown MD"
+        description="Expert laser engraving & cutting in Hagerstown MD—wood, metal, glass, acrylic. Custom signs, awards & more. Fast turnaround, top-rated service for MD, DE, VA, DC Metro, Northern VA."
         backgroundImage="/images/materials-wood-glass.png"
       />
 
@@ -86,14 +87,15 @@ export default function HomePage() {
       <section className="section-padding bg-gray-50">
         <div className="container-max">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-hub-blue mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-hub-blue mb-4">
               Engrave Everything Laser Engraving Hagerstown Maryland
-            </h2>
+            </h1>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Located in Hagerstown, Maryland, we specialize in precision laser engraving and cutting services on wood,
-              metal, glass, and all materials for businesses throughout Maryland, Delaware, and Virginia. From custom
-              business signage to promotional items, we deliver quality laser craftsmanship that represents your brand
-              professionally.
+              Located in Hagerstown, Maryland, Engrave Everything specializes in precision laser engraving and cutting
+              services on a wide range of materials for businesses and individuals throughout Maryland, Delaware,
+              Virginia, the Washington D.C. Metro area, and Northern Virginia. From custom business signage to
+              industrial marking and personalized gifts, we deliver quality laser craftsmanship that represents your
+              brand professionally and meets your exact specifications.
             </p>
           </div>
 
@@ -102,55 +104,106 @@ export default function HomePage() {
               <div className="aspect-video relative mb-4 rounded-lg overflow-hidden">
                 <Image
                   src="/images/materials-wood-glass.png"
-                  alt="Wood and glass laser engraving materials Hagerstown MD"
+                  alt="Custom laser engraved wood plaque in Hagerstown MD"
                   fill
                   className="object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-hub-blue mb-3">Materials We Laser Engrave</h3>
-              <ul className="text-gray-700 space-y-1">
-                <li>Wood laser engraving</li>
-                <li>Metal laser cutting</li>
-                <li>Glass laser etching</li>
-                <li>Acrylic laser cutting</li>
-                <li>Plastic laser marking</li>
-              </ul>
+              <h2 className="text-xl font-semibold text-hub-blue mb-3">Wood Laser Engraving</h2>
+              <p className="text-gray-700 mb-2">
+                Create stunning custom designs on various wood types, perfect for signs, awards, and personalized gifts.
+              </p>
+              <Link href="/services/wood-engraving" className="text-hub-blue hover:underline text-sm">
+                Learn more about wood engraving
+              </Link>
             </div>
             <div className="text-center">
               <div className="aspect-video relative mb-4 rounded-lg overflow-hidden">
                 <Image
                   src="/images/materials-metal.png"
-                  alt="Metal laser cutting and engraving services Maryland"
+                  alt="Precision metal laser cutting services in Maryland"
                   fill
                   className="object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-hub-blue mb-3">Service Areas</h3>
-              <ul className="text-gray-700 space-y-1">
-                <li>Hagerstown, Maryland</li>
-                <li>Maryland (MD) statewide</li>
-                <li>Delaware (DE) businesses</li>
-                <li>Virginia (VA) companies</li>
-                <li>Washington County MD</li>
-              </ul>
+              <h2 className="text-xl font-semibold text-hub-blue mb-3">Metal Laser Cutting & Marking</h2>
+              <p className="text-gray-700 mb-2">
+                Durable marking and precise cutting on stainless steel, aluminum, and brass for industrial tags, parts,
+                and signage.
+              </p>
+              <Link href="/services/metal-cutting" className="text-hub-blue hover:underline text-sm">
+                Learn more about metal services
+              </Link>
             </div>
             <div className="text-center">
               <div className="aspect-video relative mb-4 rounded-lg overflow-hidden">
                 <Image
                   src="/images/materials-glass-etching.png"
-                  alt="Glass etching and laser engraving services Hagerstown"
+                  alt="Elegant glass laser etching services in Hagerstown"
                   fill
                   className="object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-hub-blue mb-3">Business Solutions</h3>
-              <ul className="text-gray-700 space-y-1">
-                <li>Custom business signs</li>
-                <li>Industrial laser marking</li>
-                <li>Promotional laser items</li>
-                <li>Awards and plaques</li>
-                <li>Equipment identification</li>
-              </ul>
+              <h2 className="text-xl font-semibold text-hub-blue mb-3">Glass Laser Etching</h2>
+              <p className="text-gray-700 mb-2">
+                Personalize glassware, mirrors, and windows with intricate designs for gifts, restaurants, or home
+                decor.
+              </p>
+              <Link href="/services/glass-etching" className="text-hub-blue hover:underline text-sm">
+                Learn more about glass etching
+              </Link>
+            </div>
+            <div className="text-center">
+              <div className="aspect-video relative mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/retail-acrylic-displays.png"
+                  alt="Custom acrylic signs and displays laser cut in Hagerstown MD"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h2 className="text-xl font-semibold text-hub-blue mb-3">Acrylic Laser Cutting & Engraving</h2>
+              <p className="text-gray-700 mb-2">
+                Create vibrant signs, displays, and custom shapes with precision acrylic cutting and engraving.
+              </p>
+              <Link href="/services/acrylic-signs" className="text-hub-blue hover:underline text-sm">
+                Learn more about acrylic services
+              </Link>
+            </div>
+            <div className="text-center">
+              <div className="aspect-video relative mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/materials-restaurant-hospitality.png"
+                  alt="Laser engraved plastic tags and labels for industrial use"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h2 className="text-xl font-semibold text-hub-blue mb-3">Plastic Laser Marking</h2>
+              <p className="text-gray-700 mb-2">
+                Durable and clear marking on various plastics for equipment tags, compliance labels, and product
+                identification.
+              </p>
+              <Link href="/services" className="text-hub-blue hover:underline text-sm">
+                View all materials
+              </Link>
+            </div>
+            <div className="text-center">
+              <div className="aspect-video relative mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/professional-executive-office.png"
+                  alt="Custom leather laser engraving for wallets and accessories"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h2 className="text-xl font-semibold text-hub-blue mb-3">Leather Laser Engraving</h2>
+              <p className="text-gray-700 mb-2">
+                Add personalized touches to leather goods, from wallets to custom patches and promotional items.
+              </p>
+              <Link href="/services" className="text-hub-blue hover:underline text-sm">
+                View all materials
+              </Link>
             </div>
           </div>
         </div>
@@ -280,6 +333,75 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Project Gallery / Portfolio Section */}
+      <section className="section-padding">
+        <div className="container-max text-center">
+          <h2 className="text-3xl font-bold text-hub-blue mb-8">Our Recent Laser Engraving Projects</h2>
+          <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+            Explore our portfolio of custom laser-engraved and cut projects, showcasing our precision craftsmanship on
+            various materials for diverse industries.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Placeholder for project images */}
+            <div className="aspect-video relative rounded-lg overflow-hidden bg-gray-200 flex items-center justify-center text-gray-500">
+              <Image
+                src="/placeholder.svg?height=200&width=300"
+                alt="Placeholder for laser engraved wood sign"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="aspect-video relative rounded-lg overflow-hidden bg-gray-200 flex items-center justify-center text-gray-500">
+              <Image
+                src="/placeholder.svg?height=200&width=300"
+                alt="Placeholder for laser cut metal part"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="aspect-video relative rounded-lg overflow-hidden bg-gray-200 flex items-center justify-center text-gray-500">
+              <Image
+                src="/placeholder.svg?height=200&width=300"
+                alt="Placeholder for laser etched glass award"
+                fill
+                className="object-cover"
+              />
+            </div>
+            {/* Add more project placeholders or actual images here */}
+          </div>
+          <Link href="/contact" className="btn-primary mt-12">
+            Browse Our Work
+          </Link>
+        </div>
+      </section>
+
+      {/* Customer Reviews / Testimonials Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-max text-center">
+          <h2 className="text-3xl font-bold text-hub-blue mb-8">What Our Clients Say</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <p className="italic text-gray-700 mb-4">
+                "Engrave Everything delivered exceptional quality on our custom metal tags. Fast, professional, and
+                exactly what we needed for our industrial equipment."
+              </p>
+              <p className="font-semibold text-hub-blue">- John D., Manufacturing Manager</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <p className="italic text-gray-700 mb-4">
+                "The personalized cutting boards were a huge hit with our real estate clients! The detail was
+                incredible, and the service was fantastic."
+              </p>
+              <p className="font-semibold text-hub-blue">- Sarah P., Real Estate Agent</p>
+            </div>
+            {/* Add more testimonials here */}
+          </div>
+          <Link href="/contact" className="btn-secondary mt-12">
+            Read More Testimonials
+          </Link>
+        </div>
+      </section>
+
       {/* Local SEO Section */}
       <section className="section-padding">
         <div className="container-max">
@@ -306,6 +428,27 @@ export default function HomePage() {
                   <li>• Competitive pricing for MD DE VA region</li>
                 </ul>
               </div>
+            </div>
+            {/* Placeholder for Service Area Map */}
+            <div className="mt-8 text-center">
+              <h3 className="text-xl font-semibold mb-4">Our Service Area</h3>
+              <div className="aspect-video relative rounded-lg overflow-hidden bg-gray-200 flex items-center justify-center text-gray-500">
+                {/* Replace with an actual embedded Google Map showing your service area without a specific address marker */}
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.1540000000003!2d-77.7221999!3d39.6417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c92b1f0f0f0f0f%3A0x0f0f0f0f0f0f0f0f!2sHagerstown%2C%20MD!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus"
+                  width="100%"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Service Area Map for Engrave Everything in Hagerstown, MD"
+                ></iframe>
+              </div>
+              <p className="text-sm text-blue-100 mt-2">
+                Serving Hagerstown, MD, and surrounding areas including Maryland, Delaware, Virginia, Washington D.C.
+                Metro, and Northern Virginia.
+              </p>
             </div>
           </div>
         </div>
