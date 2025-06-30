@@ -4,9 +4,9 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Professional Office Laser Engraving Hagerstown MD | Custom Signs Nameplates Awards",
+  title: "Professional Office Laser Engraving Hagerstown MD | Signs",
   description:
-    "Professional office laser engraving services in Hagerstown Maryland. Custom office signs, nameplates, awards, desk accessories laser engraved on wood, metal, glass. Serving MD, DE, VA law firms, accounting, consulting, corporate offices.",
+    "Elevate your brand with professional office laser engraving in Hagerstown, MD. Custom signs, nameplates, awards for MD, DE, VA. Enhance your image!",
   keywords:
     "professional office laser engraving Hagerstown MD, custom office signs Maryland, nameplates laser cutting, corporate awards MD DE VA, law firm signage, accounting office signs, consulting firm laser engraving",
 }
@@ -101,16 +101,6 @@ export default function ProfessionalPage() {
                 businesses throughout the tri-state area create impressive environments that reflect their expertise and
                 commitment to excellence.
               </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-50 p-4 rounded">
-                  <h4 className="font-semibold text-hub-blue mb-2">Professional Quality</h4>
-                  <p className="text-gray-600 text-sm">Premium materials and finishes</p>
-                </div>
-                <div className="bg-gray-50 p-4 rounded">
-                  <h4 className="font-semibold text-hub-blue mb-2">Corporate Branding</h4>
-                  <p className="text-gray-600 text-sm">Consistent brand representation</p>
-                </div>
-              </div>
             </div>
             <div>
               <div className="aspect-video relative rounded-lg overflow-hidden">

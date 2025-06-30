@@ -4,9 +4,9 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Hospitality Laser Engraving Hagerstown MD | Hotel Signs Guest Amenities Restaurant Materials",
+  title: "Hospitality Laser Engraving Hagerstown MD | Hotel & Restaurant",
   description:
-    "Professional hospitality laser engraving services in Hagerstown Maryland. Hotel room signs, guest amenities, restaurant materials, promotional displays laser engraved on wood, metal, glass. Serving MD, DE, VA hotels, restaurants, bars, event venues.",
+    "Custom hospitality laser engraving in Hagerstown, MD. Hotel signs, restaurant menus, guest amenities for MD, DE, VA. Enhance your brand today!",
   keywords:
     "hospitality laser engraving Hagerstown MD, hotel signs Maryland, guest amenities laser cutting, restaurant materials MD DE VA, event venue signage, bar promotional displays",
 }

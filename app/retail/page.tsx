@@ -4,9 +4,9 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Retail Laser Engraving Hagerstown MD | Store Displays Product Labels Point-of-Sale Signs",
+  title: "Retail Laser Engraving Hagerstown MD | Displays & Labels",
   description:
-    "Professional retail laser engraving services in Hagerstown Maryland. Custom store displays, product labels, point-of-sale signage, promotional materials laser engraved on wood, acrylic, metal. Serving MD, DE, VA retail businesses with attractive display solutions.",
+    "Attract customers with retail laser engraving in Hagerstown, MD. Custom displays, product labels, POS signs for MD, DE, VA. Enhance sales!",
   keywords:
     "retail laser engraving Hagerstown MD, store displays Maryland, product labels laser cutting, point-of-sale signage MD DE VA, retail promotional materials, store branding laser engraved",
 }
@@ -118,16 +118,6 @@ export default function RetailPage() {
                 retail environment, helping businesses create cohesive brand experiences that resonate with customers
                 and support their shopping journey from browsing to purchase.
               </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-50 p-4 rounded">
-                  <h4 className="font-semibold text-hub-blue mb-2">Customer Experience</h4>
-                  <p className="text-gray-600 text-sm">Enhanced shopping journey</p>
-                </div>
-                <div className="bg-gray-50 p-4 rounded">
-                  <h4 className="font-semibold text-hub-blue mb-2">Brand Consistency</h4>
-                  <p className="text-gray-600 text-sm">Professional presentation</p>
-                </div>
-              </div>
             </div>
             <div>
               <div className="aspect-video relative rounded-lg overflow-hidden">

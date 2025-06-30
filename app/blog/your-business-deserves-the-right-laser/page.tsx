@@ -2,9 +2,9 @@ import Image from "next/image"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Your Business Deserves the Right Laser—Here’s Why It Matters | EZ Engrave Everything Blog",
+  title: "Right Laser for Your Business | Fiber, CO2, UV | Hagerstown MD",
   description:
-    "Learn how EZ Engrave Everything's fiber, CO₂, and UV lasers empower diverse industries with precision marking for metals, natural materials, and delicate components. Discover the right laser for your business needs.",
+    "Discover the right laser for your business in Hagerstown, MD. Fiber, CO2, UV lasers for metals, natural materials, delicate components. Precision marking!",
 }
 
 export default function SecondBlogPostPage() {

@@ -3,9 +3,9 @@ import Link from "next/link"
 import ServiceCategoryTemplate from "../../components/ServiceCategoryTemplate"
 
 export const metadata: Metadata = {
-  title: "Custom Business Signage Laser Engraving | Washington DC, Maryland & Virginia",
+  title: "Business Signage Laser Engraving | DC, MD & VA",
   description:
-    "Premium laser-engraved business signs, nameplates & wayfinding solutions. Serving DC, MD & VA with fast turnaround. Expert precision for professional results. Get a quote today!",
+    "Premium laser-engraved business signs & nameplates in DC, MD & VA. Fast turnaround, expert precision for professional results. Get a quote today!",
   keywords:
     "business signage laser engraving, custom office signs Washington DC, nameplate engraving Maryland, directional signage Virginia, wayfinding displays Hagerstown, corporate signage Potomac",
 }

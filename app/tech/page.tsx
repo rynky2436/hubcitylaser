@@ -4,9 +4,9 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Technology Industry Laser Engraving Hagerstown MD | Server Equipment Labels IT Infrastructure",
+  title: "Tech Laser Engraving Hagerstown MD | Server & IT Labels",
   description:
-    "Professional laser engraving for technology companies, data centers, and IT services in Hagerstown Maryland. Server identification, equipment labels, safety warnings, model numbers laser engraved on metal. Serving MD, DE, VA tech businesses.",
+    "Precision tech laser engraving in Hagerstown, MD. Server ID, IT equipment labels, safety marking for MD, DE, VA. Enhance efficiency!",
   keywords:
     "technology laser engraving Hagerstown MD, server identification Maryland, IT equipment labels, data center signage MD DE VA, tech company laser cutting, computer equipment marking",
 }
@@ -157,16 +157,6 @@ export default function TechPage() {
                 technology businesses throughout the tri-state area maintain organized, professional environments that
                 support efficient operations and showcase their commitment to innovation.
               </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-50 p-4 rounded">
-                  <h4 className="font-semibold text-hub-blue mb-2">Technical Precision</h4>
-                  <p className="text-gray-600 text-sm">Accurate identification systems</p>
-                </div>
-                <div className="bg-gray-50 p-4 rounded">
-                  <h4 className="font-semibold text-hub-blue mb-2">Professional Quality</h4>
-                  <p className="text-gray-600 text-sm">Tech industry standards</p>
-                </div>
-              </div>
             </div>
             <div>
               <div className="aspect-video relative rounded-lg overflow-hidden">

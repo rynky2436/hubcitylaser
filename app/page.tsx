@@ -4,9 +4,9 @@ import Image from "next/image"
 import HeroSection from "./components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Laser Engraving Hagerstown MD | Wood Metal Glass Cutting | Engrave Everything",
+  title: "Laser Engraving Hagerstown MD | Wood, Metal, Glass Cutting",
   description:
-    "Professional laser engraving services in Hagerstown, Maryland. Custom laser cutting on wood, metal, glass for businesses in MD, DE, VA. Signs, awards, promotional items, industrial marking.",
+    "Expert laser engraving & cutting in Hagerstown, MD. Custom signs, awards, industrial marking for businesses in MD, DE, VA. Fast turnaround!",
   keywords:
     "laser engraving Hagerstown Maryland, laser cutting wood metal glass, custom signs MD DE VA, business laser engraving, promotional items Hagerstown, industrial laser cutting Maryland, medical device engraving, restaurant signage",
   openGraph: {

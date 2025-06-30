@@ -3,9 +3,9 @@ import Link from "next/link"
 import ServiceCategoryTemplate from "../../components/ServiceCategoryTemplate"
 
 export const metadata: Metadata = {
-  title: "Awards & Recognition Laser Engraving | Washington DC, Maryland & Virginia",
+  title: "Awards & Recognition Laser Engraving | DC, MD & VA",
   description:
-    "Custom laser-engraved awards, trophies & recognition plaques. Serving DC, MD & VA businesses, schools & organizations. Premium materials, fast turnaround. Request a quote today!",
+    "Custom laser-engraved awards & plaques in DC, MD & VA. Premium materials, fast turnaround for businesses & schools. Request a quote today!",
   keywords:
     "awards laser engraving Washington DC, trophy engraving Maryland, corporate plaques Virginia, employee recognition awards Hagerstown, sports trophies Potomac, academic awards Ashburn",
 }

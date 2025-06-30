@@ -4,9 +4,9 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Industrial Laser Engraving Hagerstown MD | Safety Signs Equipment Tags Compliance Labels",
+  title: "Industrial Laser Engraving Hagerstown MD | Safety & Equipment",
   description:
-    "Professional industrial laser engraving services in Hagerstown Maryland. Safety signage, equipment identification, compliance labels, part numbering laser engraved on metal, plastic. Heavy-duty marking for MD, DE, VA manufacturing and industrial facilities.",
+    "Durable industrial laser engraving in Hagerstown, MD. Safety signs, equipment tags, compliance labels for MD, DE, VA. Permanent marking solutions!",
   keywords:
     "industrial laser engraving Hagerstown MD, safety signs Maryland, equipment tags laser cutting, compliance labels MD DE VA, manufacturing laser marking, industrial identification systems",
 }

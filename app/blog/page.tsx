@@ -5,7 +5,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Blog | EZ Engrave Everything",
   description:
-    "Stay updated with the latest news, insights, and solutions from EZ Engrave Everything. Explore articles on laser engraving technologies, industry applications, and B2B best practices.",
+    "Stay updated with laser engraving news & solutions from Engrave Everything. Explore articles on tech, industry applications & B2B best practices. Read our blog!",
 }
 
 const blogPosts = [

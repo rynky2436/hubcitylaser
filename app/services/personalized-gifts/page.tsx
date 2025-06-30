@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
-import Link from "next/link" // Corrected import
+import Link from "next/link"
 import ServiceCategoryTemplate from "../../components/ServiceCategoryTemplate"
 
 export const metadata: Metadata = {
-  title: "Personalized Gifts & Custom Items Laser Engraving | Washington DC, Maryland & Virginia",
+  title: "Personalized Gifts Laser Engraving | DC, MD & VA",
   description:
-    "Custom laser-engraved personalized gifts for all occasions. Serving DC, MD & VA with unique keepsakes, home decor & pet tags. Quality craftsmanship, fast turnaround. Order yours today!",
+    "Custom laser-engraved personalized gifts for all occasions in DC, MD & VA. Unique keepsakes, home decor & pet tags. Fast turnaround. Order yours today!",
   keywords:
     "personalized gifts laser engraving Washington DC, custom keepsakes Maryland, wedding gifts Virginia, home decor Hagerstown, pet tags Potomac, holiday ornaments Ashburn",
 }

@@ -4,9 +4,9 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Real Estate Laser Engraving Hagerstown MD | Property Signs Client Gifts Office Branding",
+  title: "Real Estate Laser Engraving Hagerstown MD | Property & Gifts",
   description:
-    "Professional real estate laser engraving services in Hagerstown Maryland. Custom property signs, client appreciation gifts, office branding, housewarming gifts laser engraved on wood, metal, glass. Serving MD, DE, VA real estate agents, brokers, property management.",
+    "Custom real estate laser engraving in Hagerstown, MD. Property signs, client gifts, office branding for MD, DE, VA. Strengthen client ties!",
   keywords:
     "real estate laser engraving Hagerstown MD, property signs Maryland, real estate client gifts, housewarming gifts laser engraved, real estate office branding MD DE VA, property management signage",
 }
@@ -117,16 +117,6 @@ export default function RealEstatePage() {
                 every aspect of your real estate business, helping you stand out in a competitive market while showing
                 clients that you care about the details that matter.
               </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-50 p-4 rounded">
-                  <h4 className="font-semibold text-hub-blue mb-2">Client Relationships</h4>
-                  <p className="text-gray-600 text-sm">Memorable appreciation gifts</p>
-                </div>
-                <div className="bg-gray-50 p-4 rounded">
-                  <h4 className="font-semibold text-hub-blue mb-2">Professional Image</h4>
-                  <p className="text-gray-600 text-sm">Market-leading presentation</p>
-                </div>
-              </div>
             </div>
             <div>
               <div className="aspect-video relative rounded-lg overflow-hidden">

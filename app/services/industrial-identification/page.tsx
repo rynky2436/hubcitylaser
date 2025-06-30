@@ -3,9 +3,9 @@ import Link from "next/link"
 import ServiceCategoryTemplate from "../../components/ServiceCategoryTemplate"
 
 export const metadata: Metadata = {
-  title: "Industrial Identification & Labels Laser Engraving | Washington DC, Maryland & Virginia",
+  title: "Industrial ID & Labels Laser Engraving | DC, MD & VA",
   description:
-    "Durable laser-engraved industrial identification, equipment tags & compliance labels. Serving DC, MD & VA manufacturers. Permanent marking solutions for harsh environments. Get a quote today!",
+    "Durable laser-engraved industrial ID, equipment tags & compliance labels in DC, MD & VA. Permanent marking for harsh environments. Get a quote!",
   keywords:
     "industrial identification laser engraving Washington DC, equipment tags Maryland, serial number marking Virginia, compliance labels Hagerstown, asset identification Potomac, manufacturing labels Ashburn",
 }

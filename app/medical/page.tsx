@@ -4,9 +4,9 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Medical Device Laser Engraving Hagerstown MD | FDA Compliance Labels & Equipment Tags",
+  title: "Medical Laser Engraving Hagerstown MD | FDA & Equipment Tags",
   description:
-    "Professional medical laser engraving services in Hagerstown Maryland. Medical equipment tags, FDA compliance labels, hospital signage, device marking. Serving MD, DE, VA medical facilities with precision laser engraving on metal, plastic, glass.",
+    "Precision medical laser engraving in Hagerstown, MD. FDA-compliant device marking, equipment tags for MD, DE, VA. Sterilization-safe. Get a quote!",
   keywords:
     "medical laser engraving Hagerstown MD, medical device marking Maryland, hospital equipment tags, FDA compliance labels, medical facility signage MD DE VA, surgical instrument engraving, medical nameplate laser cutting",
 }
@@ -146,16 +146,6 @@ export default function MedicalPage() {
                 your medical devices and equipment are properly identified, traceable, and compliant with healthcare
                 regulations.
               </p>
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div className="bg-gray-50 p-4 rounded">
-                  <h4 className="font-semibold text-hub-blue mb-2">FDA Compliant</h4>
-                  <p className="text-gray-600">UDI marking and regulatory compliance</p>
-                </div>
-                <div className="bg-gray-50 p-4 rounded">
-                  <h4 className="font-semibold text-hub-blue mb-2">Sterilization Safe</h4>
-                  <p className="text-gray-600">Autoclave and chemical resistant</p>
-                </div>
-              </div>
             </div>
             <div>
               <div className="aspect-video relative rounded-lg overflow-hidden">
@@ -394,7 +384,7 @@ export default function MedicalPage() {
               </div>
               <div>
                 <h3 className="font-semibold text-hub-blue mb-2">Do you provide documentation for compliance?</h3>
-                <p className="text-gray-700 text-sm">
+                <p className className="text-gray-700 text-sm">
                   Yes, we provide complete documentation including material certificates, process parameters, and
                   quality control records for regulatory compliance.
                 </p>

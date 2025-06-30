@@ -1,156 +1,105 @@
-import type { Metadata } from "next"
-import Image from "next/image"
 import Link from "next/link"
+import Image from "next/image"
+import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Laser Engraving Services | Washington DC, Maryland & Virginia",
+  title: "All Services | Engrave Everything",
   description:
-    "Professional laser engraving services for businesses and individuals. Custom signs, awards, industrial labels, promotional items, and personalized gifts. Serving DC, MD & VA.",
+    "Explore our comprehensive laser engraving and cutting services for businesses in Maryland, Delaware, and Virginia. Custom signs, awards, industrial marking, and more.",
 }
-
-interface Service {
-  title: string
-  description: string
-  image: string
-  imageAlt: string
-  items: string[]
-  slug: string
-}
-
-const services: Service[] = [
-  {
-    title: "Custom Business Signage Solutions",
-    description: "Professional signage for your business needs",
-    image: "/images/professional.png",
-    imageAlt: "Custom laser engraved business signage and office nameplates",
-    items: [
-      "Office door signs and nameplates",
-      "Reception area and lobby signage",
-      "Directional and wayfinding displays",
-      "ADA-compliant accessibility signage",
-      "Safety and compliance signs",
-    ],
-    slug: "business-signage",
-  },
-  {
-    title: "Recognition & Awards Laser Engraving",
-    description: "Celebrate achievements with custom awards",
-    image: "/images/technology.png",
-    imageAlt: "Custom laser engraved awards and recognition plaques",
-    items: [
-      "Achievement plaques and recognition awards",
-      "Employee service awards",
-      "Sports trophies and athletic awards",
-      "Academic and graduation recognition",
-      "Corporate milestone recognition",
-    ],
-    slug: "awards-recognition",
-  },
-  {
-    title: "Industrial Identification & Labels",
-    description: "Durable marking solutions for industrial applications",
-    image: "/images/industrial.png",
-    imageAlt: "Durable laser engraved industrial identification tags and equipment labels",
-    items: [
-      "Equipment nameplates and asset tags",
-      "Serial number marking and tracking",
-      "Compliance labels and safety marking",
-      "Control panel identification",
-      "Inventory management tags",
-    ],
-    slug: "industrial-identification",
-  },
-  {
-    title: "Promotional Items & Marketing Materials",
-    description: "Branded merchandise for your marketing needs",
-    image: "/images/retail.png",
-    imageAlt: "Custom laser engraved promotional products and branded merchandise",
-    items: [
-      "Branded merchandise and corporate gifts",
-      "Trade show materials and displays",
-      "Marketing displays and signage",
-      "Customer appreciation gifts",
-      "Branded items for promotional campaigns",
-    ],
-    slug: "promotional-items",
-  },
-  {
-    title: "Personalized Gifts & Custom Items",
-    description: "Unique gifts for special occasions",
-    image: "/images/real-estate.png",
-    imageAlt: "Custom laser engraved personalized gifts and keepsakes",
-    items: [
-      "Wedding keepsakes and anniversary gifts",
-      "Retirement and milestone recognition",
-      "Custom home décor and housewares",
-      "Pet accessories and identification tags",
-      "Holiday ornaments and seasonal gifts",
-    ],
-    slug: "personalized-gifts",
-  },
-]
 
 export default function ServicesPage() {
-  return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="mb-12 text-center">
-        <h1 className="mb-4 text-4xl font-bold text-[#002B5C]">Our Laser Engraving Services</h1>
-        <p className="mx-auto max-w-3xl text-lg text-gray-700">
-          Engrave Everything provides premium laser engraving services for businesses and individuals throughout
-          Washington DC, Maryland, and Virginia. Our precision laser technology allows us to create custom solutions for
-          a wide range of applications.
-        </p>
-      </div>
+  const services = [
+    {
+      id: "business-signs",
+      title: "Custom Business Signs",
+      description:
+        "Professional laser engraved signage on wood, metal, glass for MD businesses, ideal for custom logo production and batch signage creation.",
+      image: "/images/professional.png",
+      link: "/services/business-signage",
+    },
+    {
+      id: "awards",
+      title: "Awards & Recognition Plaques",
+      description:
+        "Laser engraved achievement awards and recognition items for corporate programs and employee appreciation in Hagerstown MD.",
+      image: "/images/technology.png",
+      link: "/services/awards-recognition",
+    },
+    {
+      id: "promotional",
+      title: "Promotional Laser Items",
+      description:
+        "Branded merchandise production and marketing materials laser cut on all materials for effective campaign support.",
+      image: "/images/retail.png",
+      link: "/services/promotional-items",
+    },
+    {
+      id: "industrial-identification",
+      title: "Industrial Identification & Labels",
+      description:
+        "Durable laser-engraved industrial identification, equipment tags & compliance labels. Serving MD, DE, VA manufacturers.",
+      image: "/images/industrial.png",
+      link: "/services/industrial-identification",
+    },
+    {
+      id: "personalized-gifts",
+      title: "Personalized Gifts & Custom Items",
+      description: "Custom laser engraved gifts on wood, metal, glass for special occasions and corporate gifting.",
+      image: "/images/real-estate.png",
+      link: "/services/personalized-gifts",
+    },
+  ]
 
-      <div className="space-y-16">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className={`flex flex-col ${index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"} gap-8 items-center`}
-          >
-            <div className="w-full md:w-1/2">
+  return (
+    <main className="container mx-auto px-4 py-8 md:py-12">
+      <h1 className="text-4xl md:text-5xl font-bold text-[#002B5C] mb-8 text-center">Our Services</h1>
+
+      <section className="mb-12">
+        <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-8">
+          Engrave Everything offers a comprehensive range of precision laser engraving and cutting services tailored for
+          businesses and individuals across Maryland, Delaware, and Virginia. From enhancing your brand with custom
+          signage to creating memorable personalized gifts, our state-of-the-art technology ensures exceptional quality
+          and durability on a wide variety of materials.
+        </p>
+      </section>
+
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service) => (
+          <div key={service.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="relative w-full h-48">
               <Image
                 src={service.image || "/placeholder.svg"}
-                alt={service.imageAlt}
-                width={600}
-                height={400}
-                className="rounded-lg shadow-lg"
+                alt={service.title}
+                fill
+                style={{ objectFit: "cover" }}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="rounded-t-lg"
               />
             </div>
-            <div className="w-full md:w-1/2">
-              <h2 className="mb-4 text-3xl font-semibold text-[#002B5C]">{service.title}</h2>
-              <p className="mb-6 text-lg text-gray-700">{service.description}</p>
-              <ul className="mb-6 space-y-2">
-                {service.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="flex items-start">
-                    <span className="mr-2 text-[#002B5C]">✓</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href={`/services/${service.slug}`}
-                className="inline-block rounded bg-[#002B5C] px-6 py-3 text-white transition-colors hover:bg-[#001F42]"
-              >
+            <div className="p-6">
+              <h2 className="text-xl font-semibold text-[#002B5C] mb-2">{service.title}</h2>
+              <p className="text-gray-600 text-sm mb-4">{service.description}</p>
+              <Link href={service.link} className="btn-primary" prefetch={false}>
                 Learn More
               </Link>
             </div>
           </div>
         ))}
-      </div>
+      </section>
 
-      <div className="mt-16 rounded-lg bg-[#002B5C] p-8 text-center text-white">
-        <h2 className="mb-4 text-3xl font-bold">Ready to Get Started?</h2>
-        <p className="mb-6 text-lg">
-          Contact us today to discuss your laser engraving needs and get a personalized quote.
-        </p>
-        <Link
-          href="/contact"
-          className="inline-block rounded bg-white px-8 py-3 text-[#002B5C] transition-colors hover:bg-[#A5ACAF]"
-        >
-          Contact Us Now
-        </Link>
-      </div>
-    </div>
+      <section className="section-padding bg-gray-50 mt-12 rounded-lg">
+        <div className="container-max text-center">
+          <h2 className="text-3xl font-bold text-hub-blue mb-4">Ready to Start Your Laser Engraving Project?</h2>
+          <p className="text-gray-700 mb-8 max-w-3xl mx-auto">
+            Contact Engrave Everything today for a free consultation and quote. Our experts are ready to help you bring
+            your vision to life with precision and quality.
+          </p>
+          <Link href="/contact" className="btn-primary">
+            Get a Free Quote
+          </Link>
+        </div>
+      </section>
+    </main>
   )
 }

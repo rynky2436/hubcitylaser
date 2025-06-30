@@ -3,9 +3,9 @@ import Link from "next/link"
 import ServiceCategoryTemplate from "../../components/ServiceCategoryTemplate"
 
 export const metadata: Metadata = {
-  title: "Promotional Items & Marketing Materials Laser Engraving | Washington DC, Maryland & Virginia",
+  title: "Promotional Items Laser Engraving | DC, MD & VA",
   description:
-    "Custom laser-engraved promotional products & marketing materials for your brand. Serving DC, MD & VA businesses. High-quality, personalized items that make an impact. Get a quote today!",
+    "Custom laser-engraved promotional products & marketing materials in DC, MD & VA. High-quality, personalized items that make an impact. Get a quote!",
   keywords:
     "promotional items laser engraving Washington DC, branded merchandise Maryland, marketing materials Virginia, trade show displays Hagerstown, corporate gifts Potomac, branded products Ashburn",
 }

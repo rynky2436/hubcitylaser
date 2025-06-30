@@ -7,7 +7,7 @@ import Footer from "./components/Footer"
 export const metadata: Metadata = {
   title: "Professional Laser Engraving in Hagerstown, MD | Engrave Everything",
   description:
-    "Precision laser engraving and cutting services on wood, metal, glass for businesses in Maryland, Delaware, Virginia. Custom signs, awards, promotional items, industrial marking.",
+    "Precision laser engraving & cutting in Hagerstown, MD. Custom signs, awards, industrial marking for businesses in MD, DE, VA. Get a free quote!",
   keywords:
     "laser engraving Hagerstown MD, laser cutting Maryland, custom signs Delaware Virginia, wood metal glass engraving, business signage MD, promotional items Hagerstown, industrial laser cutting",
   openGraph: {

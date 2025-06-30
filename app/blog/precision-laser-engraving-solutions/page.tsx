@@ -2,9 +2,9 @@ import Image from "next/image"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Precision Laser Engraving Solutions for B2B: UID Tags, Medical Devices & More | EZ Engrave Everything Blog",
+  title: "B2B Laser Engraving: UID Tags, Medical Devices | Hagerstown MD",
   description:
-    "Discover high-performance laser engraving solutions for B2B clients, including UID tags for medical devices, industrial barcoding, and corporate branding. Learn about our precision, reliability, and compliance.",
+    "High-performance B2B laser engraving in Hagerstown, MD. UID tags, medical devices, industrial barcoding. Precision, reliability, compliance. Get a quote!",
 }
 
 export default function FirstBlogPostPage() {

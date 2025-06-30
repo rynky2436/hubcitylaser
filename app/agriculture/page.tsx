@@ -4,9 +4,9 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Agriculture Laser Engraving Hagerstown MD | Farm Equipment Tags Livestock ID Safety Labels",
+  title: "Agriculture Laser Engraving Hagerstown MD | Farm Tags",
   description:
-    "Professional agriculture laser engraving services in Hagerstown Maryland. Farm equipment identification, livestock tags, safety labeling, tool marking laser engraved on metal, plastic. Weather-resistant marking for MD, DE, VA farms and agribusiness.",
+    "Durable agriculture laser engraving in Hagerstown, MD. Farm equipment tags, livestock ID, safety labels for MD, DE, VA farms. Weather-resistant marking. Get a quote!",
   keywords:
     "agriculture laser engraving Hagerstown MD, farm equipment tags Maryland, livestock identification, agricultural safety labels MD DE VA, farm tool marking, equipment tracking agriculture",
 }

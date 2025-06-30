@@ -4,9 +4,9 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Restaurant Laser Engraving Hagerstown MD | Menu Boards Table Numbers Glassware",
+  title: "Restaurant Laser Engraving Hagerstown MD | Menus & Glassware",
   description:
-    "Professional restaurant laser engraving services in Hagerstown Maryland. Custom menu boards, table numbers, glassware, promotional materials laser engraved on wood, metal, glass. Serving MD, DE, VA restaurants, cafes, bars, food service.",
+    "Enhance your restaurant with laser engraving in Hagerstown, MD. Custom menu boards, table numbers, glassware for MD, DE, VA. Boost ambiance!",
   keywords:
     "restaurant laser engraving Hagerstown MD, menu boards laser cutting Maryland, table numbers laser engraved, restaurant signage MD DE VA, food service laser engraving, bar glassware engraving, cafe promotional materials",
 }
@@ -104,16 +104,6 @@ export default function RestaurantsPage() {
                 restaurants, cafes, bars, and food service businesses throughout the tri-state area create cohesive
                 environments that reflect their unique personality and culinary excellence.
               </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-50 p-4 rounded">
-                  <h4 className="font-semibold text-hub-blue mb-2">Food-Safe Materials</h4>
-                  <p className="text-gray-600 text-sm">Restaurant-grade finishes</p>
-                </div>
-                <div className="bg-gray-50 p-4 rounded">
-                  <h4 className="font-semibold text-hub-blue mb-2">Brand Consistency</h4>
-                  <p className="text-gray-600 text-sm">Cohesive dining experience</p>
-                </div>
-              </div>
             </div>
             <div>
               <div className="aspect-video relative rounded-lg overflow-hidden">
