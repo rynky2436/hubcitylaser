@@ -1,135 +1,68 @@
 import Link from "next/link"
 import Image from "next/image"
-import { FacebookIcon, InstagramIcon, LinkedinIcon } from "lucide-react"
+import { Mail, Phone } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-[#002B5C] text-white py-8 px-6 md:px-12">
+    <footer className="bg-hub-blue text-hub-white py-8 px-4 md:px-6">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div className="flex flex-col items-start">
-          <Link href="/" className="mb-4" prefetch={false}>
+        <div className="flex flex-col items-start gap-4">
+          <Link className="flex items-center gap-2" href="/">
             <Image
-              src="/images/ez-engrave-everything-logo.png"
-              alt="EZ Engrave Everything Logo"
-              width={180}
+              src="/images/hub-city-logo-light.png"
+              alt="Hub City Laser Logo"
+              width={150}
               height={40}
-              className="h-10 w-auto"
-              sizes="(max-width: 768px) 150px, 180px"
+              className="h-auto"
             />
-            <span className="sr-only">EZ Engrave Everything</span>
+            <span className="sr-only">Hub City Laser</span>
           </Link>
-          <p className="text-[#A5ACAF] text-sm">Precision laser engraving solutions for businesses.</p>
+          <p className="text-sm text-hub-silver">Precision laser engraving for businesses.</p>
         </div>
-
-        <div>
-          <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2">
-            <li>
-              <Link href="/" className="hover:text-[#A5ACAF]" prefetch={false}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/services" className="hover:text-[#A5ACAF]" prefetch={false}>
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link href="/gifts" className="hover:text-[#A5ACAF]" prefetch={false}>
-                Gifts
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog" className="hover:text-[#A5ACAF]" prefetch={false}>
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="hover:text-[#A5ACAF]" prefetch={false}>
-                Contact
-              </Link>
-            </li>
-          </ul>
+        <div className="grid gap-2">
+          <h3 className="text-lg font-semibold">Quick Links</h3>
+          <Link className="text-hub-silver hover:underline" href="/">
+            Home
+          </Link>
+          <Link className="text-hub-silver hover:underline" href="/services">
+            Services
+          </Link>
+          <Link className="text-hub-silver hover:underline" href="/industries">
+            Industries
+          </Link>
+          <Link className="text-hub-silver hover:underline" href="/events-occasions">
+            Events & Occasions
+          </Link>
+          <Link className="text-hub-silver hover:underline" href="/gifts">
+            Gifts
+          </Link>
+          <Link className="text-hub-silver hover:underline" href="/blog">
+            Blog
+          </Link>
+          <Link className="text-hub-silver hover:underline" href="/contact">
+            Contact
+          </Link>
         </div>
-
-        <div>
-          <h3 className="text-lg font-semibold mb-4">Industries</h3>
-          <ul className="space-y-2">
-            <li>
-              <Link href="/medical" className="hover:text-[#A5ACAF]" prefetch={false}>
-                Medical
-              </Link>
-            </li>
-            <li>
-              <Link href="/professional" className="hover:text-[#A5ACAF]" prefetch={false}>
-                Professional
-              </Link>
-            </li>
-            <li>
-              <Link href="/restaurants" className="hover:text-[#A5ACAF]" prefetch={false}>
-                Restaurants
-              </Link>
-            </li>
-            <li>
-              <Link href="/real-estate" className="hover:text-[#A5ACAF]" prefetch={false}>
-                Real Estate
-              </Link>
-            </li>
-            <li>
-              <Link href="/agriculture" className="hover:text-[#A5ACAF]" prefetch={false}>
-                Agriculture
-              </Link>
-            </li>
-            <li>
-              <Link href="/retail" className="hover:text-[#A5ACAF]" prefetch={false}>
-                Retail
-              </Link>
-            </li>
-            <li>
-              <Link href="/industrial" className="hover:text-[#A5ACAF]" prefetch={false}>
-                Industrial
-              </Link>
-            </li>
-            <li>
-              <Link href="/tech" className="hover:text-[#A5ACAF]" prefetch={false}>
-                Tech
-              </Link>
-            </li>
-            <li>
-              <Link href="/hospitality" className="hover:text-[#A5ACAF]" prefetch={false}>
-                Hospitality
-              </Link>
-            </li>
-          </ul>
+        <div className="grid gap-2">
+          <h3 className="text-lg font-semibold">Service Areas</h3>
+          <p className="text-hub-silver">Washington DC</p>
+          <p className="text-hub-silver">Maryland</p>
+          <p className="text-hub-silver">Northern VA</p>
         </div>
-
-        <div>
-          <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
-          <div className="flex space-x-4">
-            <Link href="#" className="text-[#A5ACAF] hover:text-white" prefetch={false}>
-              <FacebookIcon className="h-6 w-6" />
-              <span className="sr-only">Facebook</span>
-            </Link>
-            <Link href="#" className="text-[#A5ACAF] hover:text-white" prefetch={false}>
-              <InstagramIcon className="h-6 w-6" />
-              <span className="sr-only">Instagram</span>
-            </Link>
-            <Link href="#" className="text-[#A5ACAF] hover:text-white" prefetch={false}>
-              <LinkedinIcon className="h-6 w-6" />
-              <span className="sr-only">LinkedIn</span>
-            </Link>
-          </div>
-          <p className="text-[#A5ACAF] text-sm mt-4">
-            123 Laser Lane, Engraveville, MD 12345
-            <br />
-            (123) 456-7890
-            <br />
-            info@ezengrave.com
-          </p>
+        <div className="grid gap-2">
+          <h3 className="text-lg font-semibold">Contact Us</h3>
+          <a href="tel:3017488360" className="flex items-center gap-2 text-hub-silver hover:underline">
+            <Phone className="h-5 w-5" />
+            (301) 748-8360
+          </a>
+          <a href="mailto:info@hubcitylaser.com" className="flex items-center gap-2 text-hub-silver hover:underline">
+            <Mail className="h-5 w-5" />
+            info@hubcitylaser.com
+          </a>
         </div>
       </div>
-      <div className="border-t border-[#A5ACAF] mt-8 pt-6 text-center text-sm text-[#A5ACAF]">
-        &copy; {new Date().getFullYear()} EZ Engrave Everything. All rights reserved.
+      <div className="container mx-auto border-t border-hub-silver mt-8 pt-4 text-center text-sm text-hub-silver">
+        &copy; {new Date().getFullYear()} Hub City Laser. All rights reserved.
       </div>
     </footer>
   )

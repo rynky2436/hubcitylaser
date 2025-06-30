@@ -1,0 +1,93 @@
+import Image from "next/image"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import type { Metadata } from "next"
+
+interface EventTemplateProps {
+  title: string
+  description: string
+  keywords: string
+  image: string
+  intro: string
+  sections: {
+    heading: string
+    content: string
+    examples: {
+      name: string
+      description: string
+      image: string
+    }[]
+  }[]
+  ctaText: string
+  ctaLink: string
+}
+
+export const generateMetadata = ({ title, description, keywords }: EventTemplateProps): Metadata => {
+  return {
+    title: title,
+    description: description,
+    keywords: keywords,
+  }
+}
+
+export default function EventTemplate({
+  title,
+  description,
+  keywords,
+  image,
+  intro,
+  sections,
+  ctaText,
+  ctaLink,
+}: EventTemplateProps) {
+  return (
+    <main className="w-full max-w-6xl mx-auto px-4 py-8 md:py-12">
+      <section className="text-center mb-12">
+        <Image
+          src={image || "/placeholder.svg"}
+          alt={title.split("|")[0].trim()}
+          width={1200}
+          height={400}
+          className="w-full h-64 md:h-96 object-cover rounded-lg mb-6 shadow-lg"
+        />
+        <h1 className="text-4xl md:text-5xl font-bold text-hub-blue mb-4">{title.split("|")[0].trim()}</h1>
+        <p className="text-lg text-gray-700 max-w-3xl mx-auto">{intro}</p>
+      </section>
+
+      {sections.map((section, index) => (
+        <section key={index} className="mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-hub-blue mb-6 text-center">{section.heading}</h2>
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center mb-8">{section.content}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {section.examples.map((example, exIndex) => (
+              <Card key={exIndex} className="bg-white shadow-md rounded-lg overflow-hidden">
+                <Image
+                  src={example.image || "/placeholder.svg"}
+                  alt={example.name}
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover"
+                />
+                <CardContent className="p-4">
+                  <h3 className="text-xl font-semibold text-hub-blue mb-2">{example.name}</h3>
+                  <p className="text-gray-700 text-sm">{example.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <section className="text-center mt-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-hub-blue mb-6">Ready to Create Something Special?</h2>
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+          Let Hub City Laser help you make your next event truly memorable with custom laser-engraved products.
+        </p>
+        <Button asChild className="bg-hub-blue text-hub-white hover:bg-hub-blue/90 px-8 py-3 text-lg">
+          <Link href={ctaLink}>{ctaText}</Link>
+        </Button>
+      </section>
+    </main>
+  )
+}

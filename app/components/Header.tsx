@@ -1,200 +1,175 @@
-"use client"
-
-import { useState } from "react"
+import type React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { MenuIcon, ChevronDownIcon, PhoneIcon } from "lucide-react"
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
+import { ChevronDown } from "lucide-react"
 
 export default function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  const industries = [
-    { name: "Medical", href: "/medical" },
-    { name: "Professional", href: "/professional" },
-    { name: "Restaurants", href: "/restaurants" },
-    { name: "Real Estate", href: "/real-estate" },
-    { name: "Agriculture", href: "/agriculture" },
-    { name: "Retail", href: "/retail" },
-    { name: "Industrial", href: "/industrial" },
-    { name: "Tech", href: "/tech" },
-    { name: "Hospitality", href: "/hospitality" },
-  ]
-
-  const services = [
-    { name: "Business Signage", href: "/services/business-signage" },
-    { name: "Awards & Recognition", href: "/services/awards-recognition" },
-    { name: "Industrial Identification", href: "/services/industrial-identification" },
-    { name: "Promotional Items", href: "/services/promotional-items" },
-    { name: "Personalized Gifts", href: "/services/personalized-gifts" },
-  ]
-
   return (
-    <header className="bg-[#002B5C] text-white py-4 px-6 flex items-center justify-between shadow-md">
-      <Link href="/" className="flex items-center gap-2" prefetch={false}>
+    <header className="flex items-center justify-between h-16 px-4 md:px-6 bg-hub-blue text-hub-white">
+      <Link className="flex items-center gap-2" href="/">
         <Image
-          src="/images/ez-engrave-everything-logo.png"
-          alt="EZ Engrave Everything Logo"
-          width={180}
+          src="/images/hub-city-logo-light.png"
+          alt="Hub City Laser Logo"
+          width={150}
           height={40}
-          className="h-10 w-auto"
-          priority
-          sizes="(max-width: 768px) 150px, 180px"
+          className="h-auto"
         />
-        <span className="sr-only">EZ Engrave Everything</span>
+        <span className="sr-only">Hub City Laser</span>
       </Link>
-
-      {/* Desktop Navigation */}
       <nav className="hidden md:flex items-center gap-6">
-        <Link href="/" className="hover:text-[#A5ACAF]" prefetch={false}>
+        <Link className="font-medium hover:underline underline-offset-4" href="/">
           Home
         </Link>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="text-white hover:text-[#A5ACAF] focus:outline-none">
+            <Button variant="ghost" className="font-medium hover:underline underline-offset-4 text-hub-white">
               Industries
-              <ChevronDownIcon className="ml-1 h-4 w-4" />
+              <ChevronDown className="ml-1 h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="bg-white text-[#002B5C] shadow-lg">
-            {industries.map((industry) => (
-              <DropdownMenuItem key={industry.name}>
-                <Link href={industry.href} className="block w-full py-2 px-4 hover:bg-gray-100" prefetch={false}>
-                  {industry.name}
-                </Link>
-              </DropdownMenuItem>
-            ))}
+          <DropdownMenuContent className="bg-hub-blue text-hub-white border-hub-silver">
+            <DropdownMenuItem asChild>
+              <Link href="/medical">Medical</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/professional">Professional</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/restaurants">Restaurants</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/real-estate">Real Estate</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/agriculture">Agriculture</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/retail">Retail</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/industrial">Industrial</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/tech">Tech</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/hospitality">Hospitality</Link>
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="text-white hover:text-[#A5ACAF] focus:outline-none">
+            <Button variant="ghost" className="font-medium hover:underline underline-offset-4 text-hub-white">
               Services
-              <ChevronDownIcon className="ml-1 h-4 w-4" />
+              <ChevronDown className="ml-1 h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="bg-white text-[#002B5C] shadow-lg">
-            {services.map((service) => (
-              <DropdownMenuItem key={service.name}>
-                <Link href={service.href} className="block w-full py-2 px-4 hover:bg-gray-100" prefetch={false}>
-                  {service.name}
-                </Link>
-              </DropdownMenuItem>
-            ))}
+          <DropdownMenuContent className="bg-hub-blue text-hub-white border-hub-silver">
+            <DropdownMenuItem asChild>
+              <Link href="/services/business-signage">Business Signage</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/services/awards-recognition">Awards & Recognition</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/services/industrial-identification">Industrial Identification</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/services/promotional-items">Promotional Items</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/services/personalized-gifts">Personalized Gifts</Link>
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-        <Link href="/gifts" className="hover:text-[#A5ACAF]" prefetch={false}>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" className="font-medium hover:underline underline-offset-4 text-hub-white">
+              Events & Occasions
+              <ChevronDown className="ml-1 h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="bg-hub-blue text-hub-white border-hub-silver">
+            <DropdownMenuItem asChild>
+              <Link href="/events-occasions/weddings">Weddings</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/events-occasions/retirement-parties">Retirement Parties</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/events-occasions/baby-showers-gender-reveals">Baby Showers & Gender Reveals</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/events-occasions/anniversaries">Anniversaries</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/events-occasions/graduations">Graduations</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/events-occasions/corporate-events">Corporate Events</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/events-occasions/trade-shows-conferences">Trade Shows & Conferences</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/events-occasions/religious-ceremonies">Religious Ceremonies</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/events-occasions/quinceaneras-sweet-16s">Quinceañeras & Sweet 16s</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/events-occasions/holiday-gifts-decor">Holiday Gifts & Decor</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/events-occasions/pet-memorials-celebrations">Pet Memorials & Celebrations</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/events-occasions/school-sports-events">School & Sports Events</Link>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+        <Link className="font-medium hover:underline underline-offset-4" href="/gifts">
           Gifts
         </Link>
-        <Link href="/blog" className="hover:text-[#A5ACAF]" prefetch={false}>
+        <Link className="font-medium hover:underline underline-offset-4" href="/blog">
           Blog
         </Link>
-        <Link href="/contact" className="hover:text-[#A5ACAF]" prefetch={false}>
+        <Link className="font-medium hover:underline underline-offset-4" href="/contact">
           Contact
         </Link>
+        <Button className="bg-hub-silver text-hub-blue hover:bg-hub-silver/90" asChild>
+          <a href="tel:3017488360">Call Now: (301) 748-8360</a>
+        </Button>
       </nav>
-
-      <Button className="hidden md:flex bg-[#A5ACAF] text-[#002B5C] hover:bg-white hover:text-[#002B5C] font-bold py-2 px-4 rounded-full transition-colors">
-        <PhoneIcon className="mr-2 h-4 w-4" />
-        Call Now
-      </Button>
-
-      {/* Mobile Navigation */}
-      <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-        <SheetTrigger asChild className="md:hidden">
-          <Button variant="ghost" size="icon" className="text-white">
-            <MenuIcon className="h-6 w-6" />
-            <span className="sr-only">Toggle navigation menu</span>
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="right" className="bg-[#002B5C] text-white w-[250px] sm:w-[300px] p-6">
-          <div className="flex flex-col gap-4">
-            <Link href="/" className="hover:text-[#A5ACAF]" onClick={() => setIsMobileMenuOpen(false)} prefetch={false}>
-              Home
-            </Link>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  className="text-white hover:text-[#A5ACAF] focus:outline-none justify-start pl-0"
-                >
-                  Industries
-                  <ChevronDownIcon className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-white text-[#002B5C] shadow-lg">
-                {industries.map((industry) => (
-                  <DropdownMenuItem key={industry.name}>
-                    <Link
-                      href={industry.href}
-                      className="block w-full py-2 px-4 hover:bg-gray-100"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      prefetch={false}
-                    >
-                      {industry.name}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  className="text-white hover:text-[#A5ACAF] focus:outline-none justify-start pl-0"
-                >
-                  Services
-                  <ChevronDownIcon className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-white text-[#002B5C] shadow-lg">
-                {services.map((service) => (
-                  <DropdownMenuItem key={service.name}>
-                    <Link
-                      href={service.href}
-                      className="block w-full py-2 px-4 hover:bg-gray-100"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      prefetch={false}
-                    >
-                      {service.name}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-            <Link
-              href="/gifts"
-              className="hover:text-[#A5ACAF]"
-              onClick={() => setIsMobileMenuOpen(false)}
-              prefetch={false}
-            >
-              Gifts
-            </Link>
-            <Link
-              href="/blog"
-              className="hover:text-[#A5ACAF]"
-              onClick={() => setIsMobileMenuOpen(false)}
-              prefetch={false}
-            >
-              Blog
-            </Link>
-            <Link
-              href="/contact"
-              className="hover:text-[#A5ACAF]"
-              onClick={() => setIsMobileMenuOpen(false)}
-              prefetch={false}
-            >
-              Contact
-            </Link>
-            <Button className="bg-[#A5ACAF] text-[#002B5C] hover:bg-white hover:text-[#002B5C] font-bold py-2 px-4 rounded-full transition-colors mt-4">
-              <PhoneIcon className="mr-2 h-4 w-4" />
-              Call Now
-            </Button>
-          </div>
-        </SheetContent>
-      </Sheet>
+      <div className="md:hidden">
+        <Button variant="ghost" size="icon">
+          <MenuIcon className="h-6 w-6" />
+          <span className="sr-only">Toggle navigation menu</span>
+        </Button>
+      </div>
     </header>
+  )
+}
+
+function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="4" x2="20" y1="12" y2="12" />
+      <line x1="4" x2="20" y1="6" y2="6" />
+      <line x1="4" x2="20" y1="18" y2="18" />
+    </svg>
   )
 }
