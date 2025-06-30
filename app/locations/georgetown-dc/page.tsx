@@ -27,9 +27,9 @@ export default function GeorgetownDCPage() {
     locationLandmark: "Georgetown University",
     zipCodes: ["20007"],
     nearbyLocations: [
-      { name: "Foggy Bottom, DC", href: "/locations/foggy-bottom-dc" }, // Assuming Foggy Bottom page
-      { name: "Dupont Circle, DC", href: "/locations/dupont-circle-dc" }, // Assuming Dupont Circle page
-      { name: "Rosslyn, VA", href: "/locations/rosslyn-va" }, // Assuming Rosslyn page
+      { name: "Foggy Bottom, DC", href: "/locations/foggy-bottom-dc" },
+      { name: "Dupont Circle, DC", href: "/locations/dupont-circle-dc" },
+      { name: "Rosslyn, VA", href: "/locations/rosslyn-va" },
     ],
     image: "/placeholder.svg?height=1080&width=1920",
   }

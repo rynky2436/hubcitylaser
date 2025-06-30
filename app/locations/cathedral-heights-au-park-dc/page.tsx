@@ -27,9 +27,9 @@ export default function CathedralHeightsAUParkDCPage() {
     locationLandmark: "Washington National Cathedral",
     zipCodes: ["20016"],
     nearbyLocations: [
-      { name: "Tenleytown, DC", href: "/locations/tenleytown-dc" }, // Assuming Tenleytown page
+      { name: "Tenleytown, DC", href: "/locations/tenleytown-dc" },
       { name: "Cleveland Park, DC", href: "/locations/woodley-park-cleveland-park-dc" },
-      { name: "Glover Park, DC", href: "/locations/glover-park-dc" }, // Assuming Glover Park page
+      { name: "Glover Park, DC", href: "/locations/glover-park-dc" },
     ],
     image: "/placeholder.svg?height=1080&width=1920",
   }

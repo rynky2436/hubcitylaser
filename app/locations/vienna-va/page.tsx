@@ -27,9 +27,9 @@ export default function ViennaVAPage() {
     locationLandmark: "Wolf Trap National Park for the Performing Arts",
     zipCodes: ["22180", "22181", "22182"],
     nearbyLocations: [
-      { name: "Oakton, VA", href: "/locations/oakton-va" }, // Assuming Oakton page
-      { name: "Merrifield, VA", href: "/locations/merrifield-va" }, // Assuming Merrifield page
-      { name: "Fairfax, VA", href: "/locations/fairfax-va" }, // Assuming Fairfax page
+      { name: "Oakton, VA", href: "/locations/oakton-va" },
+      { name: "Merrifield, VA", href: "/locations/merrifield-va" },
+      { name: "Fairfax, VA", href: "/locations/fairfax-va" },
     ],
     image: "/placeholder-wchpp.png",
   }

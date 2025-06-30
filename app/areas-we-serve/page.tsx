@@ -24,11 +24,11 @@ export const metadata: Metadata = {
 
 export default function AreasWeServePage() {
   const locations = [
-    { name: "Great Falls, VA", href: "/locations/great-falls-va", image: "/placeholder.svg?height=300&width=400" },
-    { name: "McLean, VA", href: "/locations/mclean-va", image: "/placeholder.svg?height=300&width=400" },
-    { name: "Falls Church, VA", href: "/locations/falls-church-va", image: "/placeholder.svg?height=300&width=400" },
-    { name: "Vienna, VA", href: "/locations/vienna-va", image: "/placeholder.svg?height=300&width=400" },
-    { name: "Tysons Corner, VA", href: "/locations/tysons-corner-va", image: "/placeholder.svg?height=300&width=400" },
+    { name: "Great Falls, VA", href: "/locations/great-falls-va", image: "/great-falls-va.png" },
+    { name: "McLean, VA", href: "/locations/mclean-va", image: "/mclean-landmark.png" },
+    { name: "Falls Church, VA", href: "/locations/falls-church-va", image: "/falls-church-landmark.png" },
+    { name: "Vienna, VA", href: "/locations/vienna-va", image: "/vienna-va-landmark.png" },
+    { name: "Tysons Corner, VA", href: "/locations/tysons-corner-va", image: "/tysons-landmark.png" },
     { name: "Potomac, MD", href: "/locations/potomac-md", image: "/placeholder.svg?height=300&width=400" },
     { name: "Bethesda, MD", href: "/locations/bethesda-md", image: "/placeholder.svg?height=300&width=400" },
     { name: "Chevy Chase, DC", href: "/locations/chevy-chase-dc", image: "/placeholder.svg?height=300&width=400" },

@@ -28,8 +28,8 @@ export default function BethesdaMDPage() {
     zipCodes: ["20814", "20816", "20817"],
     nearbyLocations: [
       { name: "Chevy Chase, DC", href: "/locations/chevy-chase-dc" },
-      { name: "Rockville, MD", href: "/locations/rockville-md" }, // Assuming Rockville page
-      { name: "Silver Spring, MD", href: "/locations/silver-spring-md" }, // Assuming Silver Spring page
+      { name: "Rockville, MD", href: "/locations/rockville-md" },
+      { name: "Silver Spring, MD", href: "/locations/silver-spring-md" },
     ],
     image: "/placeholder.svg?height=1080&width=1920",
   }

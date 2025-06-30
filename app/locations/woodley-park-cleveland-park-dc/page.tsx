@@ -27,9 +27,9 @@ export default function WoodleyParkClevelandParkDCPage() {
     locationLandmark: "Smithsonian National Zoo",
     zipCodes: ["20008"],
     nearbyLocations: [
-      { name: "Adams Morgan, DC", href: "/locations/adams-morgan-dc" }, // Assuming Adams Morgan page
-      { name: "Columbia Heights, DC", href: "/locations/columbia-heights-dc" }, // Assuming Columbia Heights page
-      { name: "Forest Hills, DC", href: "/locations/forest-hills-dc" }, // Assuming Forest Hills page
+      { name: "Adams Morgan, DC", href: "/locations/adams-morgan-dc" },
+      { name: "Columbia Heights, DC", href: "/locations/columbia-heights-dc" },
+      { name: "Forest Hills, DC", href: "/locations/forest-hills-dc" },
     ],
     image: "/placeholder.svg?height=1080&width=1920",
   }

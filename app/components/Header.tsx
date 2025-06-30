@@ -182,10 +182,12 @@ export default function Header() {
           <Link href="/blog" className="hover:text-hub-silver transition-colors">
             Blog
           </Link>
-          {/* Removed the "Contact Us" Link as per user's request for a single prominent button */}
-          <Button className="bg-hub-silver text-hub-blue hover:bg-hub-silver/90" asChild>
-            <a href="tel:2403247110">Call Now: (240) 324-7110</a>
-          </Button>
+          <Link href="/contact" className="hover:text-hub-silver transition-colors">
+            Contact Us
+          </Link>
+          <a href="tel:240-324-7110" className="btn-primary">
+            Call Now: (240) 324-7110
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -410,10 +412,16 @@ export default function Header() {
             >
               Blog
             </Link>
-            {/* Removed the "Contact Us" Link as per user's request for a single prominent button */}
-            <Button className="bg-hub-silver text-hub-blue hover:bg-hub-silver/90 w-full text-center mt-2" asChild>
-              <a href="tel:2403247110">Call Now: (240) 324-7110</a>
-            </Button>
+            <Link
+              href="/contact"
+              className="block py-2 hover:text-hub-silver transition-colors"
+              onClick={toggleMobileMenu}
+            >
+              Contact Us
+            </Link>
+            <a href="tel:240-324-7110" className="btn-primary w-full text-center mt-2">
+              Call Now: (240) 324-7110
+            </a>
           </div>
         </nav>
       )}

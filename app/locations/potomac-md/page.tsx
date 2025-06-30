@@ -27,9 +27,9 @@ export default function PotomacMDPage() {
     locationLandmark: "Great Falls Park (Maryland side)",
     zipCodes: ["20854"],
     nearbyLocations: [
-      { name: "Rockville, MD", href: "/locations/rockville-md" }, // Assuming Rockville page
+      { name: "Rockville, MD", href: "/locations/rockville-md" },
       { name: "Bethesda, MD", href: "/locations/bethesda-md" },
-      { name: "Gaithersburg, MD", href: "/locations/gaithersburg-md" }, // Assuming Gaithersburg page
+      { name: "Gaithersburg, MD", href: "/locations/gaithersburg-md" },
     ],
     image: "/placeholder.svg?height=1080&width=1920",
   }

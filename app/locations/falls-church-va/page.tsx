@@ -27,8 +27,8 @@ export default function FallsChurchVAPage() {
     locationLandmark: "Eden Center",
     zipCodes: ["22040", "22041", "22042", "22043", "22044", "22046"],
     nearbyLocations: [
-      { name: "Arlington, VA", href: "/locations/arlington-va" }, // Assuming Arlington page
-      { name: "Annandale, VA", href: "/locations/annandale-va" }, // Assuming Annandale page
+      { name: "Arlington, VA", href: "/locations/arlington-va" },
+      { name: "Annandale, VA", href: "/locations/annandale-va" },
       { name: "Vienna, VA", href: "/locations/vienna-va" },
     ],
     image: "/laser-engraving-falls-church-va.png",

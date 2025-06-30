@@ -28,8 +28,8 @@ export default function GreatFallsVAPage() {
     zipCodes: ["22066"],
     nearbyLocations: [
       { name: "McLean, VA", href: "/locations/mclean-va" },
-      { name: "Reston, VA", href: "/locations/reston-va" }, // Assuming a Reston page might exist or be added
-      { name: "Sterling, VA", href: "/locations/sterling-va" }, // Assuming a Sterling page might exist or be added
+      { name: "Reston, VA", href: "/locations/reston-va" },
+      { name: "Sterling, VA", href: "/locations/sterling-va" },
     ],
     image: "/laser-engraving-great-falls-va.png",
   }

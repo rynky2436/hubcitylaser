@@ -29,7 +29,7 @@ export default function TysonsCornerVAPage() {
     nearbyLocations: [
       { name: "McLean, VA", href: "/locations/mclean-va" },
       { name: "Vienna, VA", href: "/locations/vienna-va" },
-      { name: "Reston, VA", href: "/locations/reston-va" }, // Assuming Reston page
+      { name: "Reston, VA", href: "/locations/reston-va" },
     ],
     image: "/laser-engraving-tysons-corner-va.png",
   }

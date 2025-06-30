@@ -27,9 +27,9 @@ export default function ChevyChaseDCPage() {
     locationLandmark: "Chevy Chase Circle",
     zipCodes: ["20015"],
     nearbyLocations: [
-      { name: "Friendship Heights, DC", href: "/locations/friendship-heights-dc" }, // Assuming Friendship Heights page
-      { name: "Tenleytown, DC", href: "/locations/tenleytown-dc" }, // Assuming Tenleytown page
-      { name: "Silver Spring, MD", href: "/locations/silver-spring-md" }, // Assuming Silver Spring page
+      { name: "Friendship Heights, DC", href: "/locations/friendship-heights-dc" },
+      { name: "Tenleytown, DC", href: "/locations/tenleytown-dc" },
+      { name: "Silver Spring, MD", href: "/locations/silver-spring-md" },
     ],
     image: "/placeholder.svg?height=1080&width=1920",
   }
