@@ -9,13 +9,13 @@ export default function Footer() {
         <div className="flex flex-col items-start gap-4">
           <Link className="flex items-center gap-2" href="/">
             <Image
-              src="/images/hub-city-logo-light.png"
-              alt="Hub City Laser Logo"
-              width={150}
-              height={40}
+              src="/images/logo-blk.png"
+              alt="Engrave Everything Logo"
+              width={180}
+              height={45}
               className="h-auto"
             />
-            <span className="sr-only">Hub City Laser</span>
+            <span className="sr-only">Engrave Everything</span>
           </Link>
           <p className="text-sm text-hub-silver">Precision laser engraving for businesses.</p>
         </div>
@@ -51,18 +51,21 @@ export default function Footer() {
         </div>
         <div className="grid gap-2">
           <h3 className="text-lg font-semibold">Contact Us</h3>
-          <a href="tel:3017488360" className="flex items-center gap-2 text-hub-silver hover:underline">
+          <a href="tel:2403247110" className="flex items-center gap-2 text-hub-silver hover:underline">
             <Phone className="h-5 w-5" />
-            (301) 748-8360
+            (240) 324-7110
           </a>
-          <a href="mailto:info@hubcitylaser.com" className="flex items-center gap-2 text-hub-silver hover:underline">
+          <a
+            href="mailto:info@engraveeverything.us"
+            className="flex items-center gap-2 text-hub-silver hover:underline"
+          >
             <Mail className="h-5 w-5" />
-            info@hubcitylaser.com
+            info@engraveeverything.us
           </a>
         </div>
       </div>
       <div className="container mx-auto border-t border-hub-silver mt-8 pt-4 text-center text-sm text-hub-silver">
-        &copy; {new Date().getFullYear()} Hub City Laser. All rights reserved.
+        &copy; {new Date().getFullYear()} Engrave Everything. All rights reserved.
       </div>
     </footer>
   )

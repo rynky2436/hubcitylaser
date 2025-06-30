@@ -5,15 +5,14 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 
 export const metadata: Metadata = {
-  title: "Professional Laser Engraving in Hagerstown, MD | Engrave Everything",
+  title: "Professional Laser Engraving & Cutting | Engrave Everything",
   description:
-    "Precision laser engraving & cutting in Hagerstown, MD. Custom signs, awards, industrial marking for businesses in MD, DE, VA. Get a free quote!",
+    "Precision laser engraving & cutting services for businesses and personalized gifts. Custom signs, awards, industrial marking, and more. Get a free quote!",
   keywords:
     "laser engraving Hagerstown MD, laser cutting Maryland, custom signs Delaware Virginia, wood metal glass engraving, business signage MD, promotional items Hagerstown, industrial laser cutting",
   openGraph: {
-    title: "Engrave Everything Hagerstown MD | Professional Laser Services",
-    description:
-      "Expert laser engraving on wood, metal, glass in Hagerstown MD. Serving Maryland, Delaware, Virginia with custom signs, awards, promotional items.",
+    title: "Engrave Everything | Professional Laser Engraving & Cutting",
+    description: "Expert laser engraving and cutting on various materials for businesses and personalized items.",
     type: "website",
     locale: "en_US",
     images: [
@@ -27,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Professional Laser Engraving in Hagerstown, MD | Engrave Everything",
-    description: "Precision laser engraving and cutting services on wood, metal, glass for businesses in MD, DE, VA.",
+    title: "Professional Laser Engraving & Cutting | Engrave Everything",
+    description: "Precision laser engraving and cutting services for businesses and personalized gifts.",
     images: ["/images/materials-wood-glass.png"],
   },
   robots: {
@@ -76,7 +75,7 @@ export default function RootLayout({
               telephone: "",
               priceRange: "$$",
               description:
-                "Professional laser engraving and cutting services on wood, metal, glass for businesses in Maryland, Delaware, Virginia.",
+                "Professional laser engraving and cutting services on wood, metal, glass for businesses and personalized gifts.",
               sameAs: [],
               openingHoursSpecification: [
                 {

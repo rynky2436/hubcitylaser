@@ -9,14 +9,8 @@ export default function Header() {
   return (
     <header className="flex items-center justify-between h-16 px-4 md:px-6 bg-hub-blue text-hub-white">
       <Link className="flex items-center gap-2" href="/">
-        <Image
-          src="/images/hub-city-logo-light.png"
-          alt="Hub City Laser Logo"
-          width={150}
-          height={40}
-          className="h-auto"
-        />
-        <span className="sr-only">Hub City Laser</span>
+        <Image src="/images/logo-blk.png" alt="Engrave Everything Logo" width={90} height={23} className="h-auto" />
+        <span className="sr-only">Engrave Everything</span>
       </Link>
       <nav className="hidden md:flex items-center gap-6">
         <Link className="font-medium hover:underline underline-offset-4" href="/">
@@ -140,7 +134,7 @@ export default function Header() {
           Contact
         </Link>
         <Button className="bg-hub-silver text-hub-blue hover:bg-hub-silver/90" asChild>
-          <a href="tel:3017488360">Call Now: (301) 748-8360</a>
+          <a href="tel:2403247110">Call Now: (240) 324-7110</a>
         </Button>
       </nav>
       <div className="md:hidden">

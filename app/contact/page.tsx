@@ -63,14 +63,14 @@ export default function ContactPage() {
             <CardContent className="space-y-4">
               <div className="flex items-center gap-3">
                 <Phone className="h-6 w-6 text-hub-blue" />
-                <a href="tel:3017488360" className="text-lg text-gray-800 hover:underline">
-                  (301) 748-8360
+                <a href="tel:2403247110" className="text-lg text-gray-800 hover:underline">
+                  (240) 324-7110
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-6 w-6 text-hub-blue" />
-                <a href="mailto:info@hubcitylaser.com" className="text-lg text-gray-800 hover:underline">
-                  info@hubcitylaser.com
+                <a href="mailto:info@engraveeverything.us" className="text-lg text-gray-800 hover:underline">
+                  info@engraveeverything.us
                 </a>
               </div>
               <div className="flex items-start gap-3">
