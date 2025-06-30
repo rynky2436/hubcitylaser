@@ -23,14 +23,15 @@ export default function Header() {
     <header className="bg-hub-blue text-hub-white shadow-lg">
       <nav className="container-max" aria-label="Main Navigation">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="flex items-center space-x-3" aria-label="Engrave Everything - Home">
-            <div className="relative w-20 h-20 md:w-24 md:h-24">
+          <Link href="/" className="flex items-center space-x-3" aria-label="EZ Engrave Everything - Home">
+            <div className="relative w-32 h-20 md:w-40 md:h-24">
               <Image
-                src="/images/engrave-everything-logo.png"
-                alt="Engrave Everything Logo"
+                src="/images/ez-engrave-everything-logo.png"
+                alt="EZ Engrave Everything Logo"
                 fill
                 className="object-contain"
                 priority
+                sizes="(max-width: 768px) 128px, 160px"
               />
             </div>
           </Link>

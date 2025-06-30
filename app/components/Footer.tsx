@@ -8,12 +8,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="relative w-20 h-20">
+              <div className="relative w-32 h-20">
                 <Image
-                  src="/images/engrave-everything-logo.png"
-                  alt="Engrave Everything Logo"
+                  src="/images/ez-engrave-everything-logo.png"
+                  alt="EZ Engrave Everything Logo"
                   fill
                   className="object-contain"
+                  sizes="128px"
                 />
               </div>
             </div>
@@ -98,7 +99,7 @@ export default function Footer() {
         <div className="border-t border-hub-silver mt-8 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="text-hub-silver">
-              <p>&copy; {new Date().getFullYear()} Engrave Everything Hagerstown MD. All rights reserved.</p>
+              <p>&copy; {new Date().getFullYear()} EZ Engrave Everything Hagerstown MD. All rights reserved.</p>
             </div>
             <div className="text-hub-silver md:text-right">
               <p>
