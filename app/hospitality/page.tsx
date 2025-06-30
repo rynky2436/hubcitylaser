@@ -136,6 +136,7 @@ export default function HospitalityPage() {
                   alt="Hospitality menu boards and guest experience materials laser engraved"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <p className="text-sm text-gray-500 mt-2 text-center">
@@ -166,6 +167,7 @@ export default function HospitalityPage() {
                         alt={service.alt}
                         fill
                         className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 33vw"
                       />
                     </div>
                   </div>

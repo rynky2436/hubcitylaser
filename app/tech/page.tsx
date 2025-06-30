@@ -175,6 +175,7 @@ export default function TechPage() {
                   alt="Technology infrastructure labeling including server racks and equipment identification"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <p className="text-sm text-gray-500 mt-2 text-center">
@@ -205,6 +206,7 @@ export default function TechPage() {
                         alt={service.alt}
                         fill
                         className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 33vw"
                       />
                     </div>
                   </div>
@@ -239,6 +241,7 @@ export default function TechPage() {
                     alt={`${tech.type} laser engraving examples`}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
                 <div className="p-6">

@@ -132,9 +132,9 @@ export default function MedicalPage() {
         <div className="container-max">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h1 className="text-3xl font-bold text-hub-blue mb-6">
+              <h2 className="text-3xl font-bold text-hub-blue mb-6">
                 Precision Medical Laser Engraving Services Maryland
-              </h1>
+              </h2>
               <p className="text-gray-700 mb-6">
                 Engrave Everything understands the critical importance of accuracy, compliance, and reliability in
                 medical environments. Located in Hagerstown, Maryland, we provide specialized laser engraving services
@@ -148,11 +148,11 @@ export default function MedicalPage() {
               </p>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="bg-gray-50 p-4 rounded">
-                  <h2 className="font-semibold text-hub-blue mb-2">FDA Compliant</h2>
+                  <h4 className="font-semibold text-hub-blue mb-2">FDA Compliant</h4>
                   <p className="text-gray-600">UDI marking and regulatory compliance</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded">
-                  <h2 className="font-semibold text-hub-blue mb-2">Sterilization Safe</h2>
+                  <h4 className="font-semibold text-hub-blue mb-2">Sterilization Safe</h4>
                   <p className="text-gray-600">Autoclave and chemical resistant</p>
                 </div>
               </div>
@@ -164,6 +164,7 @@ export default function MedicalPage() {
                   alt="Medical equipment laser engraving and compliance labels Hagerstown MD"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <p className="text-sm text-gray-500 mt-2 text-center">
@@ -193,6 +194,7 @@ export default function MedicalPage() {
                         alt={`Medical ${service.title} laser engraving examples`}
                         fill
                         className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 33vw"
                       />
                     </div>
                   </div>

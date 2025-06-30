@@ -2,97 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://engraveeverything.com/</loc>
-        <lastmod>2025-06-28</lastmod>
+        <lastmod><?php echo date('Y-m-d'); ?></lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://engraveeverything.com/services</loc>
-        <lastmod>2025-06-28</lastmod>
+        <lastmod><?php echo date('Y-m-d'); ?></lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://engraveeverything.com/contact</loc>
-        <lastmod>2025-06-28</lastmod>
+        <lastmod><?php echo date('Y-m-d'); ?></lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://engraveeverything.com/medical</loc>
-        <lastmod>2025-06-28</lastmod>
+        <lastmod><?php echo date('Y-m-d'); ?></lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://engraveeverything.com/professional</loc>
-        <lastmod>2025-06-28</lastmod>
+        <lastmod><?php echo date('Y-m-d'); ?></lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://engraveeverything.com/restaurants</loc>
-        <lastmod>2025-06-28</lastmod>
+        <lastmod><?php echo date('Y-m-d'); ?></lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://engraveeverything.com/real-estate</loc>
-        <lastmod>2025-06-28</lastmod>
+        <lastmod><?php echo date('Y-m-d'); ?></lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://engraveeverything.com/agriculture</loc>
-        <lastmod>2025-06-28</lastmod>
+        <lastmod><?php echo date('Y-m-d'); ?></lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://engraveeverything.com/retail</loc>
-        <lastmod>2025-06-28</lastmod>
+        <lastmod><?php echo date('Y-m-d'); ?></lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://engraveeverything.com/industrial</loc>
-        <lastmod>2025-06-28</lastmod>
+        <lastmod><?php echo date('Y-m-d'); ?></lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://engraveeverything.com/tech</loc>
-        <lastmod>2025-06-28</lastmod>
+        <lastmod><?php echo date('Y-m-d'); ?></lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://engraveeverything.com/hospitality</loc>
-        <lastmod>2025-06-28</lastmod>
+        <lastmod><?php echo date('Y-m-d'); ?></lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://engraveeverything.com/gifts</loc>
-        <lastmod>2025-06-28</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://engraveeverything.com/services/wood-engraving</loc>
-        <lastmod>2025-06-28</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://engraveeverything.com/services/metal-cutting</loc>
-        <lastmod>2025-06-28</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://engraveeverything.com/services/acrylic-signs</loc>
-        <lastmod>2025-06-28</lastmod>
+        <lastmod><?php echo date('Y-m-d'); ?></lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

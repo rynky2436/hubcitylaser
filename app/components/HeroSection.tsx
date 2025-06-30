@@ -17,6 +17,7 @@ export default function HeroSection({ title, description, backgroundImage }: Her
           fill
           className="object-cover opacity-20"
           priority
+          sizes="100vw" // Add this line
         />
         <div className="absolute inset-0 bg-hub-blue opacity-80"></div>
       </div>

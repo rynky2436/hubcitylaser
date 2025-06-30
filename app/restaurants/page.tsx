@@ -39,6 +39,8 @@ export default function RestaurantsPage() {
         "Food allergen and dietary information clear signage",
         "Counter service and ordering process guidance signs",
         "Kitchen display and order management systems",
+        "High-resolution engraving for intricate menu designs",
+        "Durable finishes for frequent cleaning and handling",
       ],
       image: "/images/restaurant-menu-board.png",
       alt: "Restaurant menu boards and food service displays laser engraved Maryland",
@@ -120,6 +122,7 @@ export default function RestaurantsPage() {
                   alt="Restaurant complete branding and signage laser engraved"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <p className="text-sm text-gray-500 mt-2 text-center">
@@ -149,6 +152,7 @@ export default function RestaurantsPage() {
                         alt={service.alt}
                         fill
                         className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 33vw"
                       />
                     </div>
                   </div>

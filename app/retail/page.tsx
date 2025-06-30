@@ -136,6 +136,7 @@ export default function RetailPage() {
                   alt="Retail acrylic displays and modern store fixtures laser engraved"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <p className="text-sm text-gray-500 mt-2 text-center">
@@ -165,6 +166,7 @@ export default function RetailPage() {
                         alt={service.alt}
                         fill
                         className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 33vw"
                       />
                     </div>
                   </div>

@@ -12,7 +12,7 @@ if ($_POST) {
     $project_message = trim($_POST['message'] ?? '');
     
     // Validate required fields
-    if (empty($name) || empty($email) || empty($project_message)) {
+    if (empty($name) || empty( $email) || empty($project_message)) {
         $message = "All fields are required.";
         $message_type = "error";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -89,7 +89,7 @@ if ($_POST) {
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="relative bg-cover bg-center bg-no-repeat min-h-[60vh] flex items-center" style="background-image: url('/images/professional.png');">
+        <section class="relative bg-cover bg-center bg-no-repeat min-h-[60vh] flex items-center" style="background-image: url('/images/engrave-everything-blue-logo.png');">
             <div class="absolute inset-0 bg-black bg-opacity-50"></div>
             <div class="relative z-10 container-max text-center text-white">
                 <h1 class="text-4xl md:text-6xl font-bold mb-6"><?php echo $page_title; ?></h1>

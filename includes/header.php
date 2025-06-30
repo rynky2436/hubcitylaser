@@ -3,7 +3,7 @@
         <div class="flex justify-between items-center py-4">
             <a href="/" class="flex items-center space-x-3" aria-label="Engrave Everything - Home">
                 <div class="relative w-20 h-20 md:w-24 md:h-24">
-                    <img src="/images/engrave-everything-logo.png" alt="Engrave Everything Logo" class="w-full h-full object-contain">
+                    <img src="/images/engrave-everything-new-light-logo.png" alt="Engrave Everything Logo" class="w-full h-full object-contain">
                 </div>
             </a>
 

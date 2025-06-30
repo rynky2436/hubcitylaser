@@ -4,7 +4,7 @@
             <div>
                 <div class="flex items-center space-x-3 mb-4">
                     <div class="relative w-20 h-20">
-                        <img src="/images/engrave-everything-logo.png" alt="Engrave Everything Logo" class="w-full h-full object-contain">
+                        <img src="/images/engrave-everything-new-light-logo.png" alt="Engrave Everything Logo" class="w-full h-full object-contain">
                     </div>
                 </div>
                 <p class="text-hub-silver mb-4">

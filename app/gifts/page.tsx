@@ -59,6 +59,7 @@ export default function GiftsPage() {
                     alt={`${category.title} laser engraved gifts examples`}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <div className="p-6">
@@ -86,6 +87,7 @@ export default function GiftsPage() {
                     alt="Custom cutting boards laser engraved"
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
                 <h4 className="font-semibold mb-2">Cutting Boards</h4>
@@ -98,6 +100,7 @@ export default function GiftsPage() {
                     alt="Personalized tumblers and drinkware laser engraved"
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
                 <h4 className="font-semibold mb-2">Tumblers</h4>
@@ -110,6 +113,7 @@ export default function GiftsPage() {
                     alt="Custom pet tags laser engraved"
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
                 <h4 className="font-semibold mb-2">Pet Tags</h4>

@@ -21,8 +21,8 @@ export default function RealEstatePage() {
         "Real estate office reception signs with agent photos and specialties",
         "Agent desk nameplates with contact information and credentials",
         "Property listing displays and market showcase materials",
-        "Client consultation room professional signage and branding",
-        "Real estate team recognition and achievement displays",
+        "Client meeting room professional signage",
+        "Real estate achievement and sales recognition awards",
         "Open house and property showing professional materials",
       ],
       image: "/images/real-estate-professional-branding.png",
@@ -135,6 +135,7 @@ export default function RealEstatePage() {
                   alt="Professional real estate branding and client relationship materials laser engraved"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <p className="text-sm text-gray-500 mt-2 text-center">
@@ -165,6 +166,7 @@ export default function RealEstatePage() {
                         alt={service.alt}
                         fill
                         className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 33vw"
                       />
                     </div>
                   </div>
