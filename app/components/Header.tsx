@@ -1,11 +1,15 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { MenuIcon, ChevronDownIcon, PhoneIcon } from "lucide-react"
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const industries = [
     { name: "Medical", href: "/medical" },
@@ -15,143 +19,143 @@ export default function Header() {
     { name: "Agriculture", href: "/agriculture" },
     { name: "Retail", href: "/retail" },
     { name: "Industrial", href: "/industrial" },
-    { name: "Technology", href: "/tech" },
+    { name: "Tech", href: "/tech" },
     { name: "Hospitality", href: "/hospitality" },
   ]
 
   return (
-    <header className="bg-hub-blue text-hub-white shadow-lg">
-      <nav className="container-max" aria-label="Main Navigation">
-        <div className="flex justify-between items-center py-4">
-          <Link href="/" className="flex items-center space-x-3" aria-label="EZ Engrave Everything - Home">
-            <div className="relative w-32 h-20 md:w-40 md:h-24">
-              <Image
-                src="/images/ez-engrave-everything-logo.png"
-                alt="EZ Engrave Everything Logo"
-                fill
-                className="object-contain"
-                priority
-                sizes="(max-width: 768px) 128px, 160px"
-              />
-            </div>
-          </Link>
+    <header className="bg-[#002B5C] text-white py-4 px-6 flex items-center justify-between shadow-md">
+      <Link href="/" className="flex items-center gap-2" prefetch={false}>
+        <Image
+          src="/images/ez-engrave-everything-logo.png"
+          alt="EZ Engrave Everything Logo"
+          width={180}
+          height={40}
+          className="h-10 w-auto"
+          priority
+          sizes="(max-width: 768px) 150px, 180px"
+        />
+        <span className="sr-only">EZ Engrave Everything</span>
+      </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="hover:text-hub-silver transition-colors">
-              Home
-            </Link>
-            <div className="relative group">
-              <button
-                className="hover:text-hub-silver transition-colors"
-                aria-expanded={isMenuOpen}
-                aria-haspopup="true"
-              >
-                Industries
-              </button>
-              <div
-                className="absolute top-full left-0 mt-2 w-48 bg-hub-white text-gray-900 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
-                role="menu"
-              >
-                {industries.map((industry) => (
-                  <Link
-                    key={industry.href}
-                    href={industry.href}
-                    className="block px-4 py-2 hover:bg-gray-100 first:rounded-t-lg last:rounded-b-lg"
-                    role="menuitem"
-                  >
-                    {industry.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <Link href="/gifts" className="hover:text-hub-silver transition-colors">
-              Gifts
-            </Link>
-            <Link href="/services" className="hover:text-hub-silver transition-colors">
-              Services
-            </Link>
-            <Link href="/blog" className="hover:text-hub-silver transition-colors">
-              Blog
-            </Link>
-            <Link href="/contact" className="hover:text-hub-silver transition-colors">
-              Contact
-            </Link>
-            <a
-              href="tel:"
-              className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors flex items-center space-x-2"
-              aria-label="Call us now"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                />
-              </svg>
-              <span>Call Now</span>
-            </a>
-          </div>
-
-          <div className="md:hidden flex items-center space-x-3">
-            <a
-              href="tel:"
-              className="bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg font-semibold transition-colors flex items-center space-x-1"
-              aria-label="Call us now"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                />
-              </svg>
-              <span className="text-sm">Call</span>
-            </a>
-            <button
-              className="md:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-expanded={isMenuOpen}
-              aria-label="Toggle navigation menu"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        {isMenuOpen && (
-          <div className="md:hidden pb-4" role="menu">
-            <Link href="/" className="block py-2 hover:text-hub-silver" role="menuitem">
-              Home
-            </Link>
+      {/* Desktop Navigation */}
+      <nav className="hidden md:flex items-center gap-6">
+        <Link href="/" className="hover:text-[#A5ACAF]" prefetch={false}>
+          Home
+        </Link>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" className="text-white hover:text-[#A5ACAF] focus:outline-none">
+              Industries
+              <ChevronDownIcon className="ml-1 h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="bg-white text-[#002B5C] shadow-lg">
             {industries.map((industry) => (
-              <Link
-                key={industry.href}
-                href={industry.href}
-                className="block py-2 hover:text-hub-silver"
-                role="menuitem"
-              >
-                {industry.name}
-              </Link>
+              <DropdownMenuItem key={industry.name}>
+                <Link href={industry.href} className="block w-full py-2 px-4 hover:bg-gray-100" prefetch={false}>
+                  {industry.name}
+                </Link>
+              </DropdownMenuItem>
             ))}
-            <Link href="/gifts" className="block py-2 hover:text-hub-silver" role="menuitem">
+          </DropdownMenuContent>
+        </DropdownMenu>
+        <Link href="/gifts" className="hover:text-[#A5ACAF]" prefetch={false}>
+          Gifts
+        </Link>
+        <Link href="/services" className="hover:text-[#A5ACAF]" prefetch={false}>
+          Services
+        </Link>
+        <Link href="/blog" className="hover:text-[#A5ACAF]" prefetch={false}>
+          Blog
+        </Link>
+        <Link href="/contact" className="hover:text-[#A5ACAF]" prefetch={false}>
+          Contact
+        </Link>
+      </nav>
+
+      <Button className="hidden md:flex bg-[#A5ACAF] text-[#002B5C] hover:bg-white hover:text-[#002B5C] font-bold py-2 px-4 rounded-full transition-colors">
+        <PhoneIcon className="mr-2 h-4 w-4" />
+        Call Now
+      </Button>
+
+      {/* Mobile Navigation */}
+      <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+        <SheetTrigger asChild className="md:hidden">
+          <Button variant="ghost" size="icon" className="text-white">
+            <MenuIcon className="h-6 w-6" />
+            <span className="sr-only">Toggle navigation menu</span>
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="right" className="bg-[#002B5C] text-white w-[250px] sm:w-[300px] p-6">
+          <div className="flex flex-col gap-4">
+            <Link href="/" className="hover:text-[#A5ACAF]" onClick={() => setIsMobileMenuOpen(false)} prefetch={false}>
+              Home
+            </Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="ghost"
+                  className="text-white hover:text-[#A5ACAF] focus:outline-none justify-start pl-0"
+                >
+                  Industries
+                  <ChevronDownIcon className="ml-1 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-white text-[#002B5C] shadow-lg">
+                {industries.map((industry) => (
+                  <DropdownMenuItem key={industry.name}>
+                    <Link
+                      href={industry.href}
+                      className="block w-full py-2 px-4 hover:bg-gray-100"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      prefetch={false}
+                    >
+                      {industry.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <Link
+              href="/gifts"
+              className="hover:text-[#A5ACAF]"
+              onClick={() => setIsMobileMenuOpen(false)}
+              prefetch={false}
+            >
               Gifts
             </Link>
-            <Link href="/services" className="block py-2 hover:text-hub-silver" role="menuitem">
+            <Link
+              href="/services"
+              className="hover:text-[#A5ACAF]"
+              onClick={() => setIsMobileMenuOpen(false)}
+              prefetch={false}
+            >
               Services
             </Link>
-            <Link href="/blog" className="block py-2 hover:text-hub-silver" role="menuitem">
+            <Link
+              href="/blog"
+              className="hover:text-[#A5ACAF]"
+              onClick={() => setIsMobileMenuOpen(false)}
+              prefetch={false}
+            >
               Blog
             </Link>
-            <Link href="/contact" className="block py-2 hover:text-hub-silver" role="menuitem">
+            <Link
+              href="/contact"
+              className="hover:text-[#A5ACAF]"
+              onClick={() => setIsMobileMenuOpen(false)}
+              prefetch={false}
+            >
               Contact
             </Link>
+            <Button className="bg-[#A5ACAF] text-[#002B5C] hover:bg-white hover:text-[#002B5C] font-bold py-2 px-4 rounded-full transition-colors mt-4">
+              <PhoneIcon className="mr-2 h-4 w-4" />
+              Call Now
+            </Button>
           </div>
-        )}
-      </nav>
+        </SheetContent>
+      </Sheet>
     </header>
   )
 }
