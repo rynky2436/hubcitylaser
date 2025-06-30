@@ -162,7 +162,7 @@ export default function Header() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="font-medium hover:underline underline-offset-4 text-hub-white">
-                Locations
+                Where We Serve
                 <ChevronDown className="ml-1 h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
@@ -384,7 +384,7 @@ export default function Header() {
                   variant="ghost"
                   className="font-medium hover:underline underline-offset-4 text-hub-white w-full justify-between"
                 >
-                  Locations
+                  Where We Serve
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
