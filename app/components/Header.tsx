@@ -23,6 +23,14 @@ export default function Header() {
     { name: "Hospitality", href: "/hospitality" },
   ]
 
+  const services = [
+    { name: "Business Signage", href: "/services/business-signage" },
+    { name: "Awards & Recognition", href: "/services/awards-recognition" },
+    { name: "Industrial Identification", href: "/services/industrial-identification" },
+    { name: "Promotional Items", href: "/services/promotional-items" },
+    { name: "Personalized Gifts", href: "/services/personalized-gifts" },
+  ]
+
   return (
     <header className="bg-[#002B5C] text-white py-4 px-6 flex items-center justify-between shadow-md">
       <Link href="/" className="flex items-center gap-2" prefetch={false}>
@@ -60,11 +68,25 @@ export default function Header() {
             ))}
           </DropdownMenuContent>
         </DropdownMenu>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" className="text-white hover:text-[#A5ACAF] focus:outline-none">
+              Services
+              <ChevronDownIcon className="ml-1 h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="bg-white text-[#002B5C] shadow-lg">
+            {services.map((service) => (
+              <DropdownMenuItem key={service.name}>
+                <Link href={service.href} className="block w-full py-2 px-4 hover:bg-gray-100" prefetch={false}>
+                  {service.name}
+                </Link>
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
         <Link href="/gifts" className="hover:text-[#A5ACAF]" prefetch={false}>
           Gifts
-        </Link>
-        <Link href="/services" className="hover:text-[#A5ACAF]" prefetch={false}>
-          Services
         </Link>
         <Link href="/blog" className="hover:text-[#A5ACAF]" prefetch={false}>
           Blog
@@ -117,6 +139,31 @@ export default function Header() {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="ghost"
+                  className="text-white hover:text-[#A5ACAF] focus:outline-none justify-start pl-0"
+                >
+                  Services
+                  <ChevronDownIcon className="ml-1 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-white text-[#002B5C] shadow-lg">
+                {services.map((service) => (
+                  <DropdownMenuItem key={service.name}>
+                    <Link
+                      href={service.href}
+                      className="block w-full py-2 px-4 hover:bg-gray-100"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      prefetch={false}
+                    >
+                      {service.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Link
               href="/gifts"
               className="hover:text-[#A5ACAF]"
@@ -124,14 +171,6 @@ export default function Header() {
               prefetch={false}
             >
               Gifts
-            </Link>
-            <Link
-              href="/services"
-              className="hover:text-[#A5ACAF]"
-              onClick={() => setIsMobileMenuOpen(false)}
-              prefetch={false}
-            >
-              Services
             </Link>
             <Link
               href="/blog"
