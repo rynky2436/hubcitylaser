@@ -70,6 +70,9 @@ export default function Header() {
             <Link href="/services" className="hover:text-hub-silver transition-colors">
               Services
             </Link>
+            <Link href="/blog" className="hover:text-hub-silver transition-colors">
+              Blog
+            </Link>
             <Link href="/contact" className="hover:text-hub-silver transition-colors">
               Contact
             </Link>
@@ -139,6 +142,9 @@ export default function Header() {
             </Link>
             <Link href="/services" className="block py-2 hover:text-hub-silver" role="menuitem">
               Services
+            </Link>
+            <Link href="/blog" className="block py-2 hover:text-hub-silver" role="menuitem">
+              Blog
             </Link>
             <Link href="/contact" className="block py-2 hover:text-hub-silver" role="menuitem">
               Contact

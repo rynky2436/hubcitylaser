@@ -3,114 +3,66 @@ import Image from "next/image"
 
 export default function Footer() {
   return (
-    <footer className="bg-hub-blue text-hub-white">
-      <div className="container-max section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="relative w-32 h-20">
-                <Image
-                  src="/images/ez-engrave-everything-logo.png"
-                  alt="EZ Engrave Everything Logo"
-                  fill
-                  className="object-contain"
-                  sizes="128px"
-                />
-              </div>
-            </div>
-            <p className="text-hub-silver mb-4">
-              Professional laser engraving and cutting services on wood, metal, glass, and all materials. Located in
-              Hagerstown, Maryland serving MD, DE, VA businesses.
-            </p>
-            <div className="text-hub-silver">
-              <p>Hagerstown, Maryland</p>
-              <p>Serving MD, DE, VA</p>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Laser Services</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/services#wood-engraving"
-                  className="text-hub-silver hover:text-hub-white transition-colors"
-                >
-                  Wood Laser Engraving
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#metal-cutting" className="text-hub-silver hover:text-hub-white transition-colors">
-                  Metal Laser Cutting
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#glass-etching" className="text-hub-silver hover:text-hub-white transition-colors">
-                  Glass Laser Etching
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-hub-silver hover:text-hub-white transition-colors">
-                  Custom Laser Projects
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Industries Served</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/medical" className="text-hub-silver hover:text-hub-white transition-colors">
-                  Medical Device Engraving
-                </Link>
-              </li>
-              <li>
-                <Link href="/industrial" className="text-hub-silver hover:text-hub-white transition-colors">
-                  Industrial Laser Marking
-                </Link>
-              </li>
-              <li>
-                <Link href="/professional" className="text-hub-silver hover:text-hub-white transition-colors">
-                  Professional Office Signs
-                </Link>
-              </li>
-              <li>
-                <Link href="/restaurants" className="text-hub-silver hover:text-hub-white transition-colors">
-                  Restaurant Laser Engraving
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Service Areas</h4>
-            <ul className="space-y-2 text-hub-silver">
-              <li>Hagerstown, Maryland</li>
-              <li>Maryland (MD) Statewide</li>
-              <li>Delaware (DE) All Counties</li>
-              <li>Virginia (VA) Northern Region</li>
-              <li>Washington County MD</li>
-              <li>Frederick County MD</li>
-            </ul>
-          </div>
+    <footer className="bg-[#002B5C] text-white py-8 px-6 md:px-12">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex flex-col items-start">
+          <Link href="/" className="mb-4" prefetch={false}>
+            <Image
+              src="/images/ez-engrave-everything-logo.png"
+              alt="EZ Engrave Everything Logo"
+              width={180}
+              height={40}
+              className="h-10 w-auto"
+              sizes="(max-width: 768px) 150px, 180px"
+            />
+          </Link>
+          <p className="text-[#A5ACAF] text-sm">Precision laser engraving solutions for B2B clients.</p>
         </div>
-
-        <div className="border-t border-hub-silver mt-8 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="text-hub-silver">
-              <p>&copy; {new Date().getFullYear()} EZ Engrave Everything Hagerstown MD. All rights reserved.</p>
-            </div>
-            <div className="text-hub-silver md:text-right">
-              <p>
-                Professional Laser Engraving Services |{" "}
-                <Link href="/sitemap.xml" className="hover:text-hub-white transition-colors">
-                  Sitemap
-                </Link>
-              </p>
-            </div>
+        <nav className="grid grid-cols-2 gap-4">
+          <div className="flex flex-col gap-2">
+            <Link href="/medical" className="hover:text-[#A5ACAF]" prefetch={false}>
+              Medical
+            </Link>
+            <Link href="/professional" className="hover:text-[#A5ACAF]" prefetch={false}>
+              Professional
+            </Link>
+            <Link href="/restaurants" className="hover:text-[#A5ACAF]" prefetch={false}>
+              Restaurants
+            </Link>
+            <Link href="/real-estate" className="hover:text-[#A5ACAF]" prefetch={false}>
+              Real Estate
+            </Link>
+            <Link href="/agriculture" className="hover:text-[#A5ACAF]" prefetch={false}>
+              Agriculture
+            </Link>
           </div>
+          <div className="flex flex-col gap-2">
+            <Link href="/retail" className="hover:text-[#A5ACAF]" prefetch={false}>
+              Retail
+            </Link>
+            <Link href="/industrial" className="hover:text-[#A5ACAF]" prefetch={false}>
+              Industrial
+            </Link>
+            <Link href="/tech" className="hover:text-[#A5ACAF]" prefetch={false}>
+              Tech
+            </Link>
+            <Link href="/hospitality" className="hover:text-[#A5ACAF]" prefetch={false}>
+              Hospitality
+            </Link>
+            <Link href="/gifts" className="hover:text-[#A5ACAF]" prefetch={false}>
+              Gifts
+            </Link>
+          </div>
+        </nav>
+        <div className="flex flex-col items-start md:items-end">
+          <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
+          <p className="text-[#A5ACAF] text-sm">123 Laser Lane, Engraveville, MD 12345</p>
+          <p className="text-[#A5ACAF] text-sm">info@ezengrave.com</p>
+          <p className="text-[#A5ACAF] text-sm">(123) 456-7890</p>
         </div>
+      </div>
+      <div className="container mx-auto border-t border-[#A5ACAF] mt-8 pt-4 text-center text-sm text-[#A5ACAF]">
+        &copy; {new Date().getFullYear()} EZ Engrave Everything. All rights reserved.
       </div>
     </footer>
   )
