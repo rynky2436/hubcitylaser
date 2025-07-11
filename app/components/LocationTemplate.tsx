@@ -2,6 +2,7 @@ import React from "react"
 import type { ReactElement } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import type { Metadata } from "next"
 
 interface LocationTemplateProps {
   title: string
@@ -12,6 +13,29 @@ interface LocationTemplateProps {
   zipCodes: string[]
   nearbyLocations: { name: string; href: string }[]
   image: string
+}
+
+export function generateMetadata(data: {
+  name: string
+  title: string
+  description: string
+  keywords: string
+}): Metadata {
+  return {
+    title: data.title,
+    description: data.description,
+    keywords: data.keywords,
+    openGraph: {
+      title: data.title,
+      description: data.description,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: data.title,
+      description: data.description,
+    },
+  }
 }
 
 export default function LocationTemplate({
@@ -27,7 +51,7 @@ export default function LocationTemplate({
   return (
     <div className="bg-hub-white text-gray-900 dark:bg-slate-900 dark:text-gray-100">
       <section className="section-padding bg-hub-blue text-hub-white text-center">
-        <div className="container-max">
+        <div className="container mx-auto px-4 max-w-6xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">{`Laser Engraving Services in ${locationName}`}</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto">
             Hub City Laser Engraving delivers custom laser engraving in {locationName}—signs, awards, and gifts with
@@ -38,7 +62,7 @@ export default function LocationTemplate({
       </section>
 
       <section className="section-padding">
-        <div className="container-max grid md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-4 max-w-6xl grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-hub-blue dark:text-hub-white mb-6">
               Your Premier Laser Engraving Partner in {locationName}
@@ -74,7 +98,7 @@ export default function LocationTemplate({
       </section>
 
       <section className="section-padding bg-gray-50 dark:bg-slate-800">
-        <div className="container-max">
+        <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-hub-blue dark:text-hub-white text-center mb-10">
             Comprehensive Laser Engraving Capabilities
           </h2>
@@ -123,7 +147,7 @@ export default function LocationTemplate({
       </section>
 
       <section className="section-padding">
-        <div className="container-max text-center">
+        <div className="container mx-auto px-4 max-w-6xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-hub-blue dark:text-hub-white mb-6">
             Why Choose Hub City Laser Engraving in {locationName}?
           </h2>

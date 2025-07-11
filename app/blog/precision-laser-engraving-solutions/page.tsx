@@ -28,7 +28,7 @@ export default function FirstBlogPostPage() {
         <div className="prose prose-lg text-gray-700 leading-relaxed">
           <p className="mb-4">
             In the world of business-to-business manufacturing and logistics, precision and traceability are not
-            optional—they are essential. At Hub City Laser Engraving, we specialize in high-performance laser engraving
+            optional—they are essential. At EZ Engrave Everything, we specialize in high-performance laser engraving
             solutions designed for B2B clients with demanding standards. From UID-compliant tags for medical devices to
             durable industrial barcoding and corporate branding, our services are built for accuracy, reliability, and
             compliance.
@@ -90,7 +90,7 @@ export default function FirstBlogPostPage() {
 
           <h3 className="text-2xl font-medium text-[#002B5C] mb-2">Local Reliability, National Standards</h3>
           <p className="mb-6">
-            Based in Maryland, Hub City Laser Engraving serves B2B clients who demand professional, timely service with
+            Based in Maryland, EZ Engrave Everything serves B2B clients who demand professional, timely service with
             enterprise-level precision. From one-off prototyping to recurring production batches, we deliver results
             that meet both your deadlines and industry specifications.
           </p>

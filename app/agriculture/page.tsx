@@ -4,9 +4,9 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Agriculture Laser Engraving Hagerstown Maryland | Hub City Laser Engraving",
+  title: "Agriculture Laser Engraving Hagerstown MD | Farm Tags",
   description:
-    "Durable, weather-resistant laser engraving solutions for farms, agricultural equipment manufacturers, and agribusiness in Hagerstown, MD. From farm signage to equipment identification tags, Hub City Laser Engraving provides precision laser marking on metal, wood, and plastic materials built to withstand outdoor conditions while maintaining clarity and professionalism. Serving Maryland, Delaware, and Virginia agricultural operations with reliable identification and tracking solutions.",
+    "Durable agriculture laser engraving in Hagerstown, MD. Farm equipment tags, livestock ID, safety labels for MD, DE, VA farms. Weather-resistant marking. Get a quote!",
   keywords:
     "agriculture laser engraving Hagerstown MD, farm equipment tags Maryland, livestock identification, agricultural safety labels MD DE VA, farm tool marking, equipment tracking agriculture",
 }
@@ -93,8 +93,8 @@ export default function AgriculturePage() {
   return (
     <>
       <HeroSection
-        title="Agriculture Laser Engraving Hagerstown Maryland | Hub City Laser Engraving"
-        description="Durable, weather-resistant laser engraving solutions for farms, agricultural equipment manufacturers, and agribusiness in Hagerstown, MD. From farm signage to equipment identification tags, Hub City Laser Engraving provides precision laser marking on metal, wood, and plastic materials built to withstand outdoor conditions while maintaining clarity and professionalism. Serving Maryland, Delaware, and Virginia agricultural operations with reliable identification and tracking solutions."
+        title="Agriculture Laser Engraving Hagerstown Maryland"
+        description="Durable, weather-resistant laser engraving solutions for farms, agricultural equipment manufacturers, and agribusiness in Hagerstown, MD. From farm signage to equipment identification tags, we provide precision laser marking on metal, wood, and plastic materials built to withstand outdoor conditions while maintaining clarity and professionalism. Serving Maryland, Delaware, and Virginia agricultural operations with reliable identification and tracking solutions."
         backgroundImage="/images/agriculture.png"
       />
 
@@ -104,12 +104,12 @@ export default function AgriculturePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-3xl font-bold text-hub-blue mb-6">
-                Professional Agriculture Laser Engraving Services Maryland by Hub City Laser Engraving
+                Professional Agriculture Laser Engraving Services Maryland
               </h2>
               <p className="text-gray-700 mb-6">
-                Hub City Laser Engraving understands the demanding conditions of agricultural operations and the need
-                for durable, weather-resistant identification solutions. Located in Hagerstown, Maryland, we specialize
-                in creating laser-engraved materials that withstand outdoor environments while providing clear,
+                Engrave Everything understands the demanding conditions of agricultural operations and the need for
+                durable, weather-resistant identification solutions. Located in Hagerstown, Maryland, we specialize in
+                creating laser-engraved materials that withstand outdoor environments while providing clear,
                 professional identification for farms, equipment, and agricultural businesses throughout the tri-state
                 area.
               </p>
@@ -196,7 +196,7 @@ export default function AgriculturePage() {
             Ready to Enhance Your Agricultural Operation with Durable Laser Engraving?
           </h2>
           <p className="text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact Hub City Laser Engraving today to discuss how we can help create weather-resistant equipment
+            Contact Engrave Everything today to discuss how we can help create weather-resistant equipment
             identification, farm signage, and safety marking that supports your agricultural operations and regulatory
             compliance in Hagerstown, Maryland.
           </p>

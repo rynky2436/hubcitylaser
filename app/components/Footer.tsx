@@ -9,13 +9,13 @@ export default function Footer() {
         <div className="flex flex-col items-start gap-4">
           <Link className="flex items-center gap-2" href="/">
             <Image
-              src="/images/hub-city-logo.png"
+              src="/images/hub_city_logo_transparent.png"
               alt="Hub City Laser Engraving Logo"
               width={180}
               height={45}
               className="h-auto"
             />
-            <span className="sr-only">Engrave Everything</span>
+            <span className="sr-only">Hub City Laser Engraving</span>
           </Link>
           <p className="text-sm text-hub-silver">Precision laser engraving for businesses.</p>
         </div>

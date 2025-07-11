@@ -3,7 +3,7 @@ import Image from "next/image"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Blog | Hub City Laser Engraving",
+  title: "Blog | EZ Engrave Everything",
   description:
     "Stay updated with laser engraving news & solutions from Engrave Everything. Explore articles on tech, industry applications & B2B best practices. Read our blog!",
 }

@@ -4,9 +4,9 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Professional Office Laser Engraving Hagerstown Maryland | Hub City Laser Engraving",
+  title: "Professional Office Laser Engraving Hagerstown MD | Signs",
   description:
-    "Elevate your professional image with custom laser-engraved office signage, awards, and accessories in Hagerstown, MD. Hub City Laser Engraving serves law firms, accounting practices, consulting firms, and corporate offices throughout Maryland, Delaware, and Virginia with precision laser engraving on wood, metal, glass, and premium materials.",
+    "Elevate your brand with professional office laser engraving in Hagerstown, MD. Custom signs, nameplates, awards for MD, DE, VA. Enhance your image!",
   keywords:
     "professional office laser engraving Hagerstown MD, custom office signs Maryland, nameplates laser cutting, corporate awards MD DE VA, law firm signage, accounting office signs, consulting firm laser engraving",
 }
@@ -77,8 +77,8 @@ export default function ProfessionalPage() {
   return (
     <>
       <HeroSection
-        title="Professional Office Laser Engraving Hagerstown Maryland | Hub City Laser Engraving"
-        description="Elevate your professional image with custom laser-engraved office signage, awards, and accessories in Hagerstown, MD. Hub City Laser Engraving serves law firms, accounting practices, consulting firms, and corporate offices throughout Maryland, Delaware, and Virginia with precision laser engraving on wood, metal, glass, and premium materials."
+        title="Professional Office Laser Engraving Hagerstown Maryland"
+        description="Elevate your professional image with custom laser-engraved office signage, awards, and accessories in Hagerstown, MD. Serving law firms, accounting practices, consulting firms, and corporate offices throughout Maryland, Delaware, and Virginia with precision laser engraving on wood, metal, glass, and premium materials."
         backgroundImage="/images/professional.png"
       />
 
@@ -88,13 +88,13 @@ export default function ProfessionalPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-3xl font-bold text-hub-blue mb-6">
-                Professional Office Laser Engraving Services Maryland by Hub City Laser Engraving
+                Professional Office Laser Engraving Services Maryland
               </h2>
               <p className="text-gray-700 mb-6">
-                Hub City Laser Engraving specializes in creating sophisticated professional office materials that
-                enhance your corporate image and support your business operations. Located in Hagerstown, Maryland, we
-                understand the importance of professional presentation in building client confidence and maintaining a
-                polished business environment.
+                Engrave Everything specializes in creating sophisticated professional office materials that enhance your
+                corporate image and support your business operations. Located in Hagerstown, Maryland, we understand the
+                importance of professional presentation in building client confidence and maintaining a polished
+                business environment.
               </p>
               <p className="text-gray-700 mb-6">
                 From executive office signage to corporate awards, our laser engraving services help professional
@@ -169,9 +169,9 @@ export default function ProfessionalPage() {
             Ready to Enhance Your Professional Image with Custom Office Signage?
           </h2>
           <p className="text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact Hub City Laser Engraving today to discuss how we can help create professional office signage,
-            awards, and accessories that reflect your business excellence and enhance your corporate environment in
-            Hagerstown, Maryland.
+            Contact Engrave Everything today to discuss how we can help create professional office signage, awards, and
+            accessories that reflect your business excellence and enhance your corporate environment in Hagerstown,
+            Maryland.
           </p>
           <div className="space-x-4">
             <Link href="/contact" className="btn-secondary">

@@ -137,8 +137,8 @@ export default function IndustrialPage() {
   return (
     <>
       <HeroSection
-        title="Industrial Laser Engraving Hagerstown Maryland | Hub City Laser Engraving"
-        description="Heavy-duty laser engraving solutions for manufacturing, industrial facilities, and equipment manufacturers in Hagerstown, MD. From safety signage to equipment identification tags, Hub City Laser Engraving provides durable marking that meets industry standards and regulatory requirements. Serving Maryland, Delaware, and Virginia industrial operations with precision laser engraving on metal, plastic, and specialty materials built for demanding industrial environments."
+        title="Industrial Laser Engraving Hagerstown Maryland"
+        description="Heavy-duty laser engraving solutions for manufacturing, industrial facilities, and equipment manufacturers in Hagerstown, MD. From safety signage to equipment identification tags, we provide durable marking that meets industry standards and regulatory requirements. Serving Maryland, Delaware, and Virginia industrial operations with precision laser engraving on metal, plastic, and specialty materials built for demanding industrial environments."
         backgroundImage="/images/industrial.png"
       />
 
@@ -148,13 +148,13 @@ export default function IndustrialPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-3xl font-bold text-hub-blue mb-6">
-                Professional Industrial Laser Engraving Services Maryland by Hub City Laser Engraving
+                Professional Industrial Laser Engraving Services Maryland
               </h2>
               <p className="text-gray-700 mb-6">
-                Hub City Laser Engraving understands the demanding requirements of industrial environments and the
-                critical importance of durable, compliant marking systems. Located in Hagerstown, Maryland, we
-                specialize in creating laser-engraved solutions that withstand harsh industrial conditions while meeting
-                safety standards and regulatory requirements for manufacturing facilities throughout the tri-state area.
+                Engrave Everything understands the demanding requirements of industrial environments and the critical
+                importance of durable, compliant marking systems. Located in Hagerstown, Maryland, we specialize in
+                creating laser-engraved solutions that withstand harsh industrial conditions while meeting safety
+                standards and regulatory requirements for manufacturing facilities throughout the tri-state area.
               </p>
               <p className="text-gray-700 mb-6">
                 From safety compliance to equipment tracking, our industrial laser engraving services support
@@ -239,7 +239,7 @@ export default function IndustrialPage() {
             Ready to Enhance Your Industrial Operations with Professional Laser Engraving?
           </h2>
           <p className="text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact Hub City Laser Engraving today to discuss how we can help create durable safety signage, equipment
+            Contact Engrave Everything today to discuss how we can help create durable safety signage, equipment
             identification, and compliance marking that supports your industrial operations and regulatory requirements
             in Hagerstown, Maryland.
           </p>

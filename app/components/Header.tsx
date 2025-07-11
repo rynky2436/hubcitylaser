@@ -30,10 +30,10 @@ export default function Header() {
 
   return (
     <header className="bg-hub-blue text-hub-white py-4 shadow-md sticky top-0 z-50">
-      <div className="container-max flex justify-between items-center">
+      <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center" aria-label="Hub City Laser Engraving Home">
           <Image
-            src="/images/hub-city-logo.png"
+            src="/images/hub_city_logo_transparent.png"
             alt="Hub City Laser Engraving Logo"
             width={90}
             height={23}

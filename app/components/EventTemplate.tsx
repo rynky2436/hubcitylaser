@@ -96,8 +96,7 @@ export default function EventTemplate({
           Ready to Create Something Special?
         </h2>
         <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-8">
-          Let Hub City Laser Engraving help you make your next event truly memorable with custom laser-engraved
-          products.
+          Let Hub City Laser help you make your next event truly memorable with custom laser-engraved products.
         </p>
         <Button asChild className="bg-hub-blue text-hub-white hover:bg-hub-blue/90 px-8 py-3 text-lg">
           <Link href={ctaLink}>{ctaText}</Link>

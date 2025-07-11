@@ -4,9 +4,9 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Medical Laser Engraving Hagerstown Maryland | Hub City Laser Engraving",
+  title: "Medical Laser Engraving Hagerstown MD | FDA & Equipment Tags",
   description:
-    "Precision medical laser engraving in Hagerstown, MD. Specializing in FDA-compliant medical device marking, hospital equipment identification, and healthcare facility signage for Maryland, Delaware, and Virginia medical institutions. Hub City Laser Engraving provides precision laser engraving on medical-grade materials with sterilization-resistant solutions.",
+    "Precision medical laser engraving in Hagerstown, MD. FDA-compliant device marking, equipment tags for MD, DE, VA. Sterilization-safe. Get a quote!",
   keywords:
     "medical laser engraving Hagerstown MD, medical device marking Maryland, hospital equipment tags, FDA compliance labels, medical facility signage MD DE VA, surgical instrument engraving, medical nameplate laser cutting",
 }
@@ -122,8 +122,8 @@ export default function MedicalPage() {
     <>
       {/* Hero Section */}
       <HeroSection
-        title="Medical Device Laser Engraving Hagerstown Maryland | Hub City Laser Engraving"
-        description="Professional medical laser engraving and marking services in Hagerstown, MD. Specializing in FDA-compliant medical device marking, hospital equipment identification, and healthcare facility signage for Maryland, Delaware, and Virginia medical institutions. Hub City Laser Engraving provides precision laser engraving on medical-grade materials with sterilization-resistant solutions."
+        title="Medical Device Laser Engraving Hagerstown Maryland"
+        description="Professional medical laser engraving and marking services in Hagerstown, MD. Specializing in FDA-compliant medical device marking, hospital equipment identification, and healthcare facility signage for Maryland, Delaware, and Virginia medical institutions. Precision laser engraving on medical-grade materials with sterilization-resistant solutions."
         backgroundImage="/images/medical.png"
       />
 
@@ -133,10 +133,10 @@ export default function MedicalPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-3xl font-bold text-hub-blue mb-6">
-                Precision Medical Laser Engraving Services Maryland by Hub City Laser Engraving
+                Precision Medical Laser Engraving Services Maryland
               </h2>
               <p className="text-gray-700 mb-6">
-                Hub City Laser Engraving understands the critical importance of accuracy, compliance, and reliability in
+                Engrave Everything understands the critical importance of accuracy, compliance, and reliability in
                 medical environments. Located in Hagerstown, Maryland, we provide specialized laser engraving services
                 for medical device manufacturers, hospitals, clinics, and healthcare facilities throughout the tri-state
                 area.
@@ -236,7 +236,7 @@ export default function MedicalPage() {
       <section className="section-padding bg-gray-50">
         <div className="container-max">
           <h2 className="text-3xl font-bold text-hub-blue text-center mb-12">
-            Why Choose Hub City Laser Engraving for Medical Device Marking?
+            Why Choose Engrave Everything for Medical Device Marking?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
@@ -302,7 +302,7 @@ export default function MedicalPage() {
               Serving Medical Facilities Throughout Maryland, Delaware, Virginia
             </h2>
             <p className="text-blue-100 max-w-3xl mx-auto">
-              Hub City Laser Engraving provides medical laser engraving services to hospitals, clinics, medical device
+              Engrave Everything provides medical laser engraving services to hospitals, clinics, medical device
               manufacturers, and healthcare facilities throughout the tri-state area from our Hagerstown, Maryland
               location.
             </p>
@@ -408,9 +408,8 @@ export default function MedicalPage() {
             Ready for FDA-Compliant Medical Device Laser Marking?
           </h2>
           <p className="text-gray-700 mb-8 max-w-3xl mx-auto">
-            Contact Hub City Laser Engraving today to discuss your medical laser engraving needs. Our experts will help
-            ensure your medical devices meet all regulatory requirements while maintaining the highest quality
-            standards.
+            Contact Engrave Everything today to discuss your medical laser engraving needs. Our experts will help ensure
+            your medical devices meet all regulatory requirements while maintaining the highest quality standards.
           </p>
           <div className="space-x-4">
             <Link href="/contact" className="btn-primary">
