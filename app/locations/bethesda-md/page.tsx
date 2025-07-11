@@ -1,45 +1,39 @@
+import LocationTemplate, { generateMetadata as generateLocationMetadata } from "../../components/LocationTemplate"
 import type { Metadata } from "next"
-import LocationTemplate from "../../components/LocationTemplate"
 
-export const metadata: Metadata = {
-  title: "Engrave Everything — Laser Engraving Bethesda MD",
+const locationData = {
+  name: "Bethesda, MD",
+  title: "Laser Engraving Services in Bethesda, MD | Hub City Laser",
   description:
-    "Engrave Everything delivers custom laser engraving in Bethesda MD—signs, awards, gifts. Request your quote today!",
+    "Hub City Laser is the go-to provider for laser engraving in Bethesda, MD. We offer a wide range of services, including medical device marking, corporate branding, and custom gifts.",
   keywords:
-    "laser engraving Bethesda MD, custom laser signs Bethesda, awards Bethesda, personalized gifts Bethesda, Bethesda laser cutting",
-  openGraph: {
-    title: "Engrave Everything — Laser Engraving Bethesda MD",
-    description:
-      "Engrave Everything delivers custom laser engraving in Bethesda MD—signs, awards, gifts. Request your quote today!",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Engrave Everything — Laser Engraving Bethesda MD",
-    description:
-      "Engrave Everything delivers custom laser engraving in Bethesda MD—signs, awards, gifts. Request your quote today!",
-  },
+    "laser engraving Bethesda MD, medical device marking Bethesda, corporate branding Bethesda MD, Bethesda laser cutting",
+  mainImage: "",
+  intro:
+    "In the bustling heart of Bethesda, MD, Hub City Laser delivers precision laser engraving services tailored to the diverse needs of this dynamic community. From the National Institutes of Health to the vibrant downtown business district, we support Bethesda with unparalleled quality.",
+  services: [
+    {
+      name: "Medical & Lab Equipment Marking",
+      description: "Precision marking for medical and research equipment, serving Bethesda's thriving biotech sector.",
+      image: "/images/uid-laser-marking.png",
+    },
+    {
+      name: "Restaurant & Retail Signage",
+      description: "Stylish and durable signage for the many restaurants and boutiques in downtown Bethesda.",
+      image: "/images/restaurant-menu-board.png",
+    },
+    {
+      name: "Corporate Branding",
+      description: "Professional branding solutions for the numerous corporate headquarters located in Bethesda.",
+      image: "/images/corporate-event-signage.png",
+    },
+  ],
+  ctaText: "Get a Quote for Your Bethesda Project",
+  ctaLink: "/contact",
 }
 
-export default function BethesdaMDPage() {
-  const locationData = {
-    locationName: "Bethesda, MD",
-    locationLandmark: "Bethesda Row",
-    zipCodes: ["20814", "20816", "20817"],
-    nearbyLocations: [
-      { name: "Chevy Chase, DC", href: "/locations/chevy-chase-dc" },
-      { name: "Rockville, MD", href: "/locations/rockville-md" },
-      { name: "Silver Spring, MD", href: "/locations/silver-spring-md" },
-    ],
-    image: "/placeholder.svg?height=1080&width=1920",
-  }
+export const metadata: Metadata = generateLocationMetadata(locationData)
 
-  return (
-    <LocationTemplate
-      title={metadata.title as string}
-      description={metadata.description as string}
-      keywords={metadata.keywords as string}
-      {...locationData}
-    />
-  )
+export default function BethesdaPage() {
+  return <LocationTemplate {...locationData} />
 }

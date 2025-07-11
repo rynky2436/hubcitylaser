@@ -4,7 +4,7 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Personalized Gifts & Home Items | Engrave Everything",
+  title: "Personalized Gifts & Home Items | Hub City Laser Engraving",
   description:
     "Custom laser-engraved gifts for weddings, retirements, and special occasions. Cutting boards, tumblers, home décor, pet tags, and personalized items.",
 }

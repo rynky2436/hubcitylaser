@@ -1,45 +1,39 @@
+import LocationTemplate, { generateMetadata as generateLocationMetadata } from "../../components/LocationTemplate"
 import type { Metadata } from "next"
-import LocationTemplate from "../../components/LocationTemplate"
 
-export const metadata: Metadata = {
-  title: "Engrave Everything — Laser Engraving Georgetown DC",
+const locationData = {
+  name: "Georgetown, DC",
+  title: "Laser Engraving Services in Georgetown, DC | Hub City Laser",
   description:
-    "Engrave Everything delivers custom laser engraving in Georgetown DC—signs, awards, gifts. Request your quote today!",
+    "Hub City Laser brings historic craftsmanship and modern precision to Georgetown, DC. We offer laser engraving for university merchandise, boutique retail, and historic preservation projects.",
   keywords:
-    "laser engraving Georgetown DC, custom laser signs Georgetown, awards Georgetown, personalized gifts Georgetown, Georgetown laser cutting",
-  openGraph: {
-    title: "Engrave Everything — Laser Engraving Georgetown DC",
-    description:
-      "Engrave Everything delivers custom laser engraving in Georgetown DC—signs, awards, gifts. Request your quote today!",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Engrave Everything — Laser Engraving Georgetown DC",
-    description:
-      "Engrave Everything delivers custom laser engraving in Georgetown DC—signs, awards, gifts. Request your quote today!",
-  },
+    "laser engraving Georgetown DC, Georgetown University merchandise, boutique retail Georgetown, Georgetown laser cutting",
+  mainImage: "",
+  intro:
+    "In historic Georgetown, DC, Hub City Laser provides laser engraving services that blend modern technology with timeless craftsmanship. We serve the students and faculty of Georgetown University, the chic boutiques on M Street, and the area's historic homes.",
+  services: [
+    {
+      name: "University & Alumni Gifts",
+      description: "Custom engraved merchandise and gifts for Georgetown University students, faculty, and alumni.",
+      image: "/images/graduation-class-gift.png",
+    },
+    {
+      name: "Boutique Retail Branding",
+      description: "Unique branding and product customization for the exclusive boutiques of Georgetown.",
+      image: "/images/retail-premium-displays.png",
+    },
+    {
+      name: "Historic Plaques & Markers",
+      description: "Durable and elegant plaques for historic homes and landmarks in Georgetown.",
+      image: "/images/corporate-recognition-plaque.png",
+    },
+  ],
+  ctaText: "Get a Quote for Your Georgetown Project",
+  ctaLink: "/contact",
 }
 
-export default function GeorgetownDCPage() {
-  const locationData = {
-    locationName: "Georgetown, DC",
-    locationLandmark: "Georgetown University",
-    zipCodes: ["20007"],
-    nearbyLocations: [
-      { name: "Foggy Bottom, DC", href: "/locations/foggy-bottom-dc" },
-      { name: "Dupont Circle, DC", href: "/locations/dupont-circle-dc" },
-      { name: "Rosslyn, VA", href: "/locations/rosslyn-va" },
-    ],
-    image: "/placeholder.svg?height=1080&width=1920",
-  }
+export const metadata: Metadata = generateLocationMetadata(locationData)
 
-  return (
-    <LocationTemplate
-      title={metadata.title as string}
-      description={metadata.description as string}
-      keywords={metadata.keywords as string}
-      {...locationData}
-    />
-  )
+export default function GeorgetownPage() {
+  return <LocationTemplate {...locationData} />
 }

@@ -4,7 +4,7 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Tech Laser Engraving Hagerstown MD | Server & IT Labels",
+  title: "Technology Industry Laser Engraving Hagerstown Maryland | Hub City Laser Engraving",
   description:
     "Precision tech laser engraving in Hagerstown, MD. Server ID, IT equipment labels, safety marking for MD, DE, VA. Enhance efficiency!",
   keywords:
@@ -133,8 +133,8 @@ export default function TechPage() {
     <>
       {/* Hero Section */}
       <HeroSection
-        title="Technology Industry Laser Engraving Hagerstown Maryland"
-        description="Precision laser engraving solutions for technology companies, data centers, and IT services in Hagerstown, MD. From server identification to corporate awards, we help Maryland, Delaware, and Virginia technology businesses create professional identification systems, safety compliance marking, and corporate recognition materials with precision laser engraving on metal and specialty materials that match your innovation and technical excellence."
+        title="Technology Industry Laser Engraving Hagerstown Maryland | Hub City Laser Engraving"
+        description="Precision laser engraving solutions for technology companies, data centers, and IT services in Hagerstown, MD. From server identification to corporate awards, Hub City Laser Engraving helps Maryland, Delaware, and Virginia technology businesses create professional identification systems, safety compliance marking, and corporate recognition materials with precision laser engraving on metal and specialty materials that match your innovation and technical excellence."
         backgroundImage="/images/technology.png"
       />
 
@@ -144,10 +144,10 @@ export default function TechPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-3xl font-bold text-hub-blue mb-6">
-                Professional Technology Laser Engraving Services Maryland
+                Professional Technology Laser Engraving Services Maryland by Hub City Laser Engraving
               </h2>
               <p className="text-gray-700 mb-6">
-                Engrave Everything specializes in creating precision laser-engraved materials for the technology
+                Hub City Laser Engraving specializes in creating precision laser-engraved materials for the technology
                 industry. Located in Hagerstown, Maryland, we understand the unique needs of tech companies, data
                 centers, and IT services that require professional identification systems, safety compliance, and
                 corporate branding that reflects their technical expertise.
@@ -304,7 +304,7 @@ export default function TechPage() {
       <section className="section-padding">
         <div className="container-max">
           <h2 className="text-3xl font-bold text-hub-blue text-center mb-12">
-            Why Choose Engrave Everything for Technology Engraving?
+            Why Choose Hub City Laser Engraving for Technology Engraving?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 p-6 rounded-lg">
@@ -405,9 +405,9 @@ export default function TechPage() {
             Ready to Enhance Your Technology Business with Professional Laser Engraving?
           </h2>
           <p className="text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact Engrave Everything today to discuss how we can help create professional equipment identification,
-            safety compliance marking, and corporate recognition materials that support your technology operations and
-            reflect your commitment to innovation in Hagerstown, Maryland.
+            Contact Hub City Laser Engraving today to discuss how we can help create professional equipment
+            identification, safety compliance marking, and corporate recognition materials that support your technology
+            operations and reflect your commitment to innovation in Hagerstown, Maryland.
           </p>
           <div className="space-x-4">
             <Link href="/contact" className="btn-secondary">

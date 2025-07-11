@@ -4,9 +4,9 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Retail Laser Engraving Hagerstown MD | Displays & Labels",
+  title: "Retail Laser Engraving Hagerstown Maryland | Hub City Laser Engraving",
   description:
-    "Attract customers with retail laser engraving in Hagerstown, MD. Custom displays, product labels, POS signs for MD, DE, VA. Enhance sales!",
+    "Attract customers and enhance your retail environment with custom laser-engraved displays, signage, and promotional materials in Hagerstown, MD. From point-of-sale signage to product showcases, Hub City Laser Engraving helps Maryland, Delaware, and Virginia retail businesses create compelling shopping experiences with precision laser engraving on wood, acrylic, metal, and specialty materials that showcase your products and brand professionally.",
   keywords:
     "retail laser engraving Hagerstown MD, store displays Maryland, product labels laser cutting, point-of-sale signage MD DE VA, retail promotional materials, store branding laser engraved",
 }
@@ -93,8 +93,8 @@ export default function RetailPage() {
   return (
     <>
       <HeroSection
-        title="Retail Laser Engraving Hagerstown Maryland"
-        description="Attract customers and enhance your retail environment with custom laser-engraved displays, signage, and promotional materials in Hagerstown, MD. From point-of-sale signage to product showcases, we help Maryland, Delaware, and Virginia retail businesses create compelling shopping experiences with precision laser engraving on wood, acrylic, metal, and specialty materials that showcase your products and brand professionally."
+        title="Retail Laser Engraving Hagerstown Maryland | Hub City Laser Engraving"
+        description="Attract customers and enhance your retail environment with custom laser-engraved displays, signage, and promotional materials in Hagerstown, MD. From point-of-sale signage to product showcases, Hub City Laser Engraving helps Maryland, Delaware, and Virginia retail businesses create compelling shopping experiences with precision laser engraving on wood, acrylic, metal, and specialty materials that showcase your products and brand professionally."
         backgroundImage="/images/retail.png"
       />
 
@@ -104,14 +104,14 @@ export default function RetailPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-3xl font-bold text-hub-blue mb-6">
-                Professional Retail Laser Engraving Services Maryland
+                Professional Retail Laser Engraving Services Maryland by Hub City Laser Engraving
               </h2>
               <p className="text-gray-700 mb-6">
-                Engrave Everything understands that retail success depends on creating compelling shopping experiences
-                that attract customers and showcase products effectively. Located in Hagerstown, Maryland, we specialize
-                in custom laser engraving solutions that help retail businesses throughout the tri-state area create
-                professional displays, clear signage, and attractive promotional materials that drive sales and enhance
-                brand recognition.
+                Hub City Laser Engraving understands that retail success depends on creating compelling shopping
+                experiences that attract customers and showcase products effectively. Located in Hagerstown, Maryland,
+                we specialize in custom laser engraving solutions that help retail businesses throughout the tri-state
+                area create professional displays, clear signage, and attractive promotional materials that drive sales
+                and enhance brand recognition.
               </p>
               <p className="text-gray-700 mb-6">
                 From modern acrylic displays to traditional wooden fixtures, our laser engraving services support every
@@ -185,7 +185,7 @@ export default function RetailPage() {
             Ready to Enhance Your Retail Environment with Custom Laser Engraving?
           </h2>
           <p className="text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact Engrave Everything today to discuss how we can help create attractive displays, professional
+            Contact Hub City Laser Engraving today to discuss how we can help create attractive displays, professional
             signage, and promotional materials that enhance your retail environment and support your sales objectives in
             Hagerstown, Maryland.
           </p>

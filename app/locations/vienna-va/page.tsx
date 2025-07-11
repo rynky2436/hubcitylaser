@@ -1,45 +1,38 @@
+import LocationTemplate, { generateMetadata as generateLocationMetadata } from "../../components/LocationTemplate"
 import type { Metadata } from "next"
-import LocationTemplate from "../../components/LocationTemplate"
 
-export const metadata: Metadata = {
-  title: "Engrave Everything — Laser Engraving Vienna VA",
+const locationData = {
+  name: "Vienna, VA",
+  title: "Laser Engraving Services in Vienna, VA | Hub City Laser",
   description:
-    "Engrave Everything delivers custom laser engraving in Vienna VA—signs, awards, gifts. Request your quote today!",
-  keywords:
-    "laser engraving Vienna VA, custom laser signs Vienna, awards Vienna, personalized gifts Vienna, Vienna laser cutting",
-  openGraph: {
-    title: "Engrave Everything — Laser Engraving Vienna VA",
-    description:
-      "Engrave Everything delivers custom laser engraving in Vienna VA—signs, awards, gifts. Request your quote today!",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Engrave Everything — Laser Engraving Vienna VA",
-    description:
-      "Engrave Everything delivers custom laser engraving in Vienna VA—signs, awards, gifts. Request your quote today!",
-  },
+    "Hub City Laser provides top-quality laser engraving services for businesses and residents in Vienna, VA. From corporate awards to custom gifts, we deliver precision and excellence.",
+  keywords: "laser engraving Vienna VA, custom gifts Vienna, corporate awards Vienna VA, Vienna laser cutting",
+  mainImage: "/images/vienna-va-landmark.png",
+  intro:
+    "For residents and businesses in Vienna, VA, Hub City Laser offers premier laser engraving services that combine artistry with precision. We are dedicated to providing our Vienna clients with exceptional custom products for any occasion.",
+  services: [
+    {
+      name: "Corporate Awards",
+      description: "Recognize excellence with beautifully engraved awards for your Vienna-based business.",
+      image: "/images/corporate-award.png",
+    },
+    {
+      name: "Personalized Gifts",
+      description: "Create unique, personalized gifts for birthdays, anniversaries, and holidays in Vienna.",
+      image: "/images/valentines-day-gift.png",
+    },
+    {
+      name: "Custom Signage",
+      description: "Enhance your Vienna storefront or office with professional, custom-engraved signage.",
+      image: "/images/trade-show-booth-sign.png",
+    },
+  ],
+  ctaText: "Get a Quote for Your Vienna Project",
+  ctaLink: "/contact",
 }
 
-export default function ViennaVAPage() {
-  const locationData = {
-    locationName: "Vienna, VA",
-    locationLandmark: "Wolf Trap National Park for the Performing Arts",
-    zipCodes: ["22180", "22181", "22182"],
-    nearbyLocations: [
-      { name: "Oakton, VA", href: "/locations/oakton-va" },
-      { name: "Merrifield, VA", href: "/locations/merrifield-va" },
-      { name: "Fairfax, VA", href: "/locations/fairfax-va" },
-    ],
-    image: "/placeholder-wchpp.png",
-  }
+export const metadata: Metadata = generateLocationMetadata(locationData)
 
-  return (
-    <LocationTemplate
-      title={metadata.title as string}
-      description={metadata.description as string}
-      keywords={metadata.keywords as string}
-      {...locationData}
-    />
-  )
+export default function ViennaPage() {
+  return <LocationTemplate {...locationData} />
 }

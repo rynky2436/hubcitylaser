@@ -4,9 +4,9 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Real Estate Laser Engraving Hagerstown MD | Property & Gifts",
+  title: "Real Estate Laser Engraving Hagerstown Maryland | Hub City Laser Engraving",
   description:
-    "Custom real estate laser engraving in Hagerstown, MD. Property signs, client gifts, office branding for MD, DE, VA. Strengthen client ties!",
+    "Professional laser engraving services for real estate agents, brokers, and property management companies in Hagerstown, MD. From custom property signage to client appreciation gifts, Hub City Laser Engraving helps Maryland, Delaware, and Virginia real estate professionals make lasting impressions with precision laser-engraved solutions on wood, glass, and all materials that strengthen client relationships and enhance your professional brand.",
   keywords:
     "real estate laser engraving Hagerstown MD, property signs Maryland, real estate client gifts, housewarming gifts laser engraved, real estate office branding MD DE VA, property management signage",
 }
@@ -92,8 +92,8 @@ export default function RealEstatePage() {
   return (
     <>
       <HeroSection
-        title="Real Estate Laser Engraving Hagerstown Maryland"
-        description="Professional laser engraving services for real estate agents, brokers, and property management companies in Hagerstown, MD. From custom property signage to client appreciation gifts, we help Maryland, Delaware, and Virginia real estate professionals make lasting impressions with precision laser-engraved solutions on wood, glass, and all materials that strengthen client relationships and enhance your professional brand."
+        title="Real Estate Laser Engraving Hagerstown Maryland | Hub City Laser Engraving"
+        description="Professional laser engraving services for real estate agents, brokers, and property management companies in Hagerstown, MD. From custom property signage to client appreciation gifts, Hub City Laser Engraving helps Maryland, Delaware, and Virginia real estate professionals make lasting impressions with precision laser-engraved solutions on wood, glass, and all materials that strengthen client relationships and enhance your professional brand."
         backgroundImage="/images/real-estate.png"
       />
 
@@ -103,14 +103,14 @@ export default function RealEstatePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-3xl font-bold text-hub-blue mb-6">
-                Professional Real Estate Laser Engraving Services Maryland
+                Professional Real Estate Laser Engraving Services Maryland by Hub City Laser Engraving
               </h2>
               <p className="text-gray-700 mb-6">
-                Engrave Everything understands that real estate success is built on relationships, trust, and memorable
-                experiences. Located in Hagerstown, Maryland, we specialize in creating custom laser-engraved materials
-                that help real estate professionals throughout the tri-state area strengthen client relationships,
-                enhance their professional image, and create lasting impressions that generate referrals and repeat
-                business.
+                Hub City Laser Engraving understands that real estate success is built on relationships, trust, and
+                memorable experiences. Located in Hagerstown, Maryland, we specialize in creating custom laser-engraved
+                materials that help real estate professionals throughout the tri-state area strengthen client
+                relationships, enhance their professional image, and create lasting impressions that generate referrals
+                and repeat business.
               </p>
               <p className="text-gray-700 mb-6">
                 From personalized closing gifts to professional office branding, our laser engraving services support
@@ -185,9 +185,9 @@ export default function RealEstatePage() {
             Ready to Strengthen Your Real Estate Business with Custom Laser Engraving?
           </h2>
           <p className="text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact Engrave Everything today to discuss how we can help create client appreciation gifts, professional
-            office materials, and property signage that enhance your real estate business and strengthen client
-            relationships in Hagerstown, Maryland.
+            Contact Hub City Laser Engraving today to discuss how we can help create client appreciation gifts,
+            professional office materials, and property signage that enhance your real estate business and strengthen
+            client relationships in Hagerstown, Maryland.
           </p>
           <div className="space-x-4">
             <Link href="/contact" className="btn-secondary">

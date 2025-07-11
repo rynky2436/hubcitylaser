@@ -9,8 +9,8 @@ export default function Footer() {
         <div className="flex flex-col items-start gap-4">
           <Link className="flex items-center gap-2" href="/">
             <Image
-              src="/images/logo-blk.png"
-              alt="Engrave Everything Logo"
+              src="/images/hub-city-logo.png"
+              alt="Hub City Laser Engraving Logo"
               width={180}
               height={45}
               className="h-auto"
@@ -65,7 +65,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="container mx-auto border-t border-hub-silver mt-8 pt-4 text-center text-sm text-hub-silver">
-        &copy; {new Date().getFullYear()} Engrave Everything. All rights reserved.
+        &copy; {new Date().getFullYear()} Hub City Laser Engraving. All rights reserved.
       </div>
     </footer>
   )

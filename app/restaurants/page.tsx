@@ -4,9 +4,9 @@ import Image from "next/image"
 import HeroSection from "../components/HeroSection"
 
 export const metadata: Metadata = {
-  title: "Restaurant Laser Engraving Hagerstown MD | Menus & Glassware",
+  title: "Restaurant Laser Engraving Hagerstown Maryland | Hub City Laser Engraving",
   description:
-    "Enhance your restaurant with laser engraving in Hagerstown, MD. Custom menu boards, table numbers, glassware for MD, DE, VA. Boost ambiance!",
+    "Enhance your restaurant's atmosphere and functionality with custom laser-engraved menu boards, table numbers, glassware, and promotional materials in Hagerstown, MD. Hub City Laser Engraving serves restaurants, cafes, bars, and food service businesses throughout Maryland, Delaware, and Virginia with precision laser engraving on wood, glass, metal, and all materials that reflect your brand's personality and improve customer experience.",
   keywords:
     "restaurant laser engraving Hagerstown MD, menu boards laser cutting Maryland, table numbers laser engraved, restaurant signage MD DE VA, food service laser engraving, bar glassware engraving, cafe promotional materials",
 }
@@ -168,7 +168,7 @@ export default function RestaurantsPage() {
       <section className="section-padding bg-hub-blue text-white">
         <div className="container-max text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Enhance Your Restaurant with Custom Laser Engraving?</h2>
-          <p className="text-blue-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-blue-100 mb-8 max-w3xl mx-auto">
             Contact Engrave Everything today to discuss how we can help create menu boards, signage, and promotional
             materials that enhance your restaurant's atmosphere and support your food service operations in Hagerstown,
             Maryland.

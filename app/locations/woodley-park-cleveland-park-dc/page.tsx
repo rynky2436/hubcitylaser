@@ -1,45 +1,38 @@
+import LocationTemplate, { generateMetadata as generateLocationMetadata } from "../../components/LocationTemplate"
 import type { Metadata } from "next"
-import LocationTemplate from "../../components/LocationTemplate"
 
-export const metadata: Metadata = {
-  title: "Engrave Everything — Laser Engraving Woodley Park/Cleveland Park DC",
+const locationData = {
+  name: "Woodley Park & Cleveland Park, DC",
+  title: "Laser Engraving in Woodley Park & Cleveland Park, DC | Hub City Laser",
   description:
-    "Engrave Everything delivers custom laser engraving in Woodley Park/Cleveland Park DC—signs, awards, gifts. Request your quote today!",
-  keywords:
-    "laser engraving Woodley Park DC, laser engraving Cleveland Park DC, custom laser signs Woodley Park, awards Cleveland Park, personalized gifts Woodley Park, Cleveland Park laser cutting",
-  openGraph: {
-    title: "Engrave Everything — Laser Engraving Woodley Park/Cleveland Park DC",
-    description:
-      "Engrave Everything delivers custom laser engraving in Woodley Park/Cleveland Park DC—signs, awards, gifts. Request your quote today!",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Engrave Everything — Laser Engraving Woodley Park/Cleveland Park DC",
-    description:
-      "Engrave Everything delivers custom laser engraving in Woodley Park/Cleveland Park DC—signs, awards, gifts. Request your quote today!",
-  },
+    "Hub City Laser offers expert laser engraving services to the historic Woodley Park and Cleveland Park neighborhoods. We specialize in custom signage, home decor, and unique gifts.",
+  keywords: "laser engraving Woodley Park, Cleveland Park laser cutting, custom gifts DC, historic home plaques DC",
+  mainImage: "",
+  intro:
+    "In the historic and vibrant neighborhoods of Woodley Park and Cleveland Park, Hub City Laser provides bespoke laser engraving services. We cater to the area's unique blend of residential charm and bustling commercial corridors, including the National Zoo.",
+  services: [
+    {
+      name: "Historic Home Plaques",
+      description: "Elegant, custom-made plaques for the many historic homes in Woodley and Cleveland Park.",
+      image: "/images/corporate-recognition-plaque.png",
+    },
+    {
+      name: "Restaurant & Cafe Branding",
+      description: "Unique branding solutions for the popular restaurants and cafes along Connecticut Avenue.",
+      image: "/images/restaurant-menu-board.png",
+    },
+    {
+      name: "Zoo & Event Signage",
+      description: "Durable and creative signage for events and exhibits at the nearby National Zoo.",
+      image: "/images/school-event-signage.png",
+    },
+  ],
+  ctaText: "Get a Quote for Your Project",
+  ctaLink: "/contact",
 }
 
-export default function WoodleyParkClevelandParkDCPage() {
-  const locationData = {
-    locationName: "Woodley Park/Cleveland Park, DC",
-    locationLandmark: "Smithsonian National Zoo",
-    zipCodes: ["20008"],
-    nearbyLocations: [
-      { name: "Adams Morgan, DC", href: "/locations/adams-morgan-dc" },
-      { name: "Columbia Heights, DC", href: "/locations/columbia-heights-dc" },
-      { name: "Forest Hills, DC", href: "/locations/forest-hills-dc" },
-    ],
-    image: "/placeholder.svg?height=1080&width=1920",
-  }
+export const metadata: Metadata = generateLocationMetadata(locationData)
 
-  return (
-    <LocationTemplate
-      title={metadata.title as string}
-      description={metadata.description as string}
-      keywords={metadata.keywords as string}
-      {...locationData}
-    />
-  )
+export default function WoodleyParkPage() {
+  return <LocationTemplate {...locationData} />
 }

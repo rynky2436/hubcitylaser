@@ -55,6 +55,7 @@ export default function HolidayGiftsDecorPage() {
           width={1200}
           height={400}
           className="w-full h-64 md:h-96 object-cover rounded-lg mb-6 shadow-lg"
+          sizes="100vw" // Added sizes prop
         />
         <h1 className="text-4xl md:text-5xl font-bold text-hub-blue mb-4">Holiday Gifts & Decor</h1>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto">
@@ -71,11 +72,14 @@ export default function HolidayGiftsDecorPage() {
             <Link key={index} href={category.link}>
               <Card className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
                 <Image
-                  src={category.image || "/placeholder.svg"}
+                  src={
+                    category.image || `/placeholder.svg?height=250&width=400&query=${encodeURIComponent(category.name)}`
+                  }
                   alt={category.name}
                   width={400}
                   height={250}
                   className="w-full h-48 object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" // Added sizes prop
                 />
                 <CardContent className="p-4">
                   <h3 className="text-xl font-semibold text-hub-blue mb-2">{category.name}</h3>

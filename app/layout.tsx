@@ -5,13 +5,13 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 
 export const metadata: Metadata = {
-  title: "Professional Laser Engraving & Cutting | Engrave Everything",
+  title: "Professional Laser Engraving & Cutting | Hub City Laser Engraving",
   description:
-    "Precision laser engraving & cutting services for businesses and personalized gifts. Custom signs, awards, industrial marking, and more. Get a free quote!",
+    "Precision laser engraving & cutting services for businesses and personalized gifts. Custom signs, awards, industrial marking, and more. Get a free quote from Hub City Laser Engraving!",
   keywords:
     "laser engraving Hagerstown MD, laser cutting Maryland, custom signs Delaware Virginia, wood metal glass engraving, business signage MD, promotional items Hagerstown, industrial laser cutting",
   openGraph: {
-    title: "Engrave Everything | Professional Laser Engraving & Cutting",
+    title: "Hub City Laser Engraving | Professional Laser Engraving & Cutting",
     description: "Expert laser engraving and cutting on various materials for businesses and personalized items.",
     type: "website",
     locale: "en_US",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Professional Laser Engraving & Cutting | Engrave Everything",
+    title: "Professional Laser Engraving & Cutting | Hub City Laser Engraving",
     description: "Precision laser engraving and cutting services for businesses and personalized gifts.",
     images: ["/images/materials-wood-glass.png"],
   },
@@ -58,7 +58,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              name: "Engrave Everything",
+              name: "Hub City Laser Engraving",
               image: "/images/materials-wood-glass.png",
               address: {
                 "@type": "PostalAddress",
@@ -71,11 +71,11 @@ export default function RootLayout({
                 latitude: 39.6417,
                 longitude: -77.72,
               },
-              url: "https://engraveeverything.com",
+              url: "https://hubcitylaserengraving.com",
               telephone: "",
               priceRange: "$$",
               description:
-                "Professional laser engraving and cutting services on wood, metal, glass for businesses and personalized gifts.",
+                "Professional laser engraving and cutting services on wood, metal, glass for businesses and personalized gifts by Hub City Laser Engraving.",
               sameAs: [],
               openingHoursSpecification: [
                 {
