@@ -1,8 +1,8 @@
-import Image from "next/image"
+import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import type { Metadata } from "next"
 
 interface EventTemplateProps {
   title: string
@@ -99,7 +99,9 @@ export default function EventTemplate({
           Let Hub City Laser help you make your next event truly memorable with custom laser-engraved products.
         </p>
         <Button asChild className="bg-hub-blue text-hub-white hover:bg-hub-blue/90 px-8 py-3 text-lg">
-          <Link href={ctaLink}>{ctaText}</Link>
+          <Link href={ctaLink} target="_blank" rel="noopener noreferrer">
+            {ctaText}
+          </Link>
         </Button>
       </section>
     </main>

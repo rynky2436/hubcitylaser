@@ -10,15 +10,15 @@ export const metadata: Metadata = {
     "personalized gifts laser engraving Washington DC, custom keepsakes Maryland, wedding gifts Virginia, home decor Hagerstown, pet tags Potomac, holiday ornaments Ashburn",
 }
 
-const serviceItems = [
-  "Wedding keepsakes laser engraved on wood and metal with custom designs",
-  "Retirement gifts and milestone recognition, tailored to individual achievements",
-  "Custom home décor laser cut and engraved, including intricate patterns",
-  "Pet accessories and identification tags, durable and personalized",
-  "Holiday ornaments and seasonal gifts, available for batch production for corporate gifting",
-]
-
 export default function PersonalizedGiftsPage() {
+  const serviceItems = [
+    "Wedding keepsakes laser engraved on wood and metal with custom designs",
+    "Retirement gifts and milestone recognition, tailored to individual achievements",
+    "Custom home décor laser cut and engraved, including intricate patterns",
+    "Pet accessories and identification tags, durable and personalized",
+    "Holiday ornaments and seasonal gifts, available for batch production for corporate gifting",
+  ]
+
   const expertiseContent = (
     <div className="space-y-6">
       <p className="text-lg">
@@ -175,16 +175,81 @@ export default function PersonalizedGiftsPage() {
     <ServiceCategoryTemplate
       title="Personalized Gifts & Custom Items"
       description="Create unique and memorable gifts with our custom laser engraving services. Perfect for weddings, retirements, home decor, and special occasions, adding a personal touch to every item."
-      heroImage="/images/real-estate.png"
-      imageAlt="Custom laser engraved personalized gifts and keepsakes for Washington DC, Maryland and Virginia customers"
-      serviceItems={serviceItems}
-      ctaText="Order Personalized Gifts"
-      ctaLink="/contact"
+      keywords={metadata.keywords as string}
+      heroDescription="Create unique and memorable gifts with our custom laser engraving services. Perfect for weddings, retirements, home decor, and special occasions, adding a personal touch to every item."
+      backgroundImage="/images/events-holiday.png"
+      overviewTitle="Personalized Gifts - Engrave Everything's Expertise"
+      overviewParagraph1="Finding the perfect gift that truly expresses your sentiments can be a challenge. Engrave Everything specializes in transforming ordinary items into extraordinary personalized gifts through our precision laser engraving services."
+      overviewParagraph2="We help you create meaningful keepsakes and custom items that celebrate special moments, relationships, and milestones. From custom cutting boards to engraved photo frames, our personalized gifts are designed to be cherished for years to come."
+      overviewImage="/images/anniversary-cutting-board.png"
+      overviewImageAlt="Laser engraved personalized cutting board"
+      overviewFeature1Title="Unique Customization"
+      overviewFeature1Description="Transform your ideas, photos, and designs into one-of-a-kind engraved gifts."
+      overviewFeature2Title="Wide Material Range"
+      overviewFeature2Description="Personalize items made from wood, glass, metal, leather, and more."
+      detailedServicesTitle="Specific Applications for Personalized Gifts"
+      detailedServices={[
+        {
+          title: "Wedding & Anniversary Gifts",
+          description: "Celebrate love and commitment with custom laser-engraved wedding and anniversary gifts.",
+          applications: [
+            "Custom cutting boards with names and dates",
+            "Personalized wine boxes and glasses",
+            "Wedding photo frames with custom engraving",
+            "Custom signage for wedding venues",
+            "Bridal party gifts and favors",
+          ],
+          image: "/images/wedding-favors.png",
+          alt: "Laser engraved wedding favors",
+        },
+        {
+          title: "Home Décor & Housewares",
+          description:
+            "Transform living spaces with custom laser-engraved home décor items and personalized housewares.",
+          applications: [
+            "Family name signs and established date plaques",
+            "Custom coasters and serving boards",
+            "Decorative wall art with personalized designs",
+            "Kitchen accessories with custom engraving",
+            "Photo frames with names and special dates",
+          ],
+          image: "/images/christmas-decor.png",
+          alt: "Laser engraved home decor item",
+        },
+        {
+          title: "Pet Accessories & Identification",
+          description: "Keep your furry friends safe and stylish with custom laser-engraved pet tags and accessories.",
+          applications: [
+            "Personalized pet ID tags",
+            "Engraved pet food bowls",
+            "Custom pet memorial stones",
+            "Pet keepsake boxes",
+            "Pet birthday accessories",
+          ],
+          image: "/images/pet-tag.png",
+          alt: "Laser engraved pet tag",
+        },
+        {
+          title: "Holiday & Seasonal Gifts",
+          description:
+            "Create festive and memorable gifts for any holiday or special season with custom laser engraving.",
+          applications: [
+            "Christmas ornaments with custom designs",
+            "Valentine's Day gifts with personalized messages",
+            "Mother's/Father's Day gifts",
+            "Thanksgiving host gifts",
+            "Easter basket tags and decor",
+          ],
+          image: "/images/events-holiday.png",
+          alt: "Laser engraved holiday gift",
+        },
+      ]}
+      ctaTitle="Ready to Create a Truly Unique Gift?"
+      ctaDescription="Contact Hub City Laser today for a personalized consultation and quote on your custom gift ideas. Let us help you make every occasion special."
+      ctaButtonText="Order Personalized Gifts"
+      ctaLink="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
       secondaryCtaText="View All Services"
       secondaryCtaLink="/services"
-      expertiseContent={expertiseContent}
-      locationContent={locationContent}
-      additionalContent={additionalContent}
     />
   )
 }

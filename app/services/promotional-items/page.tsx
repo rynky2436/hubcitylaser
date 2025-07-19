@@ -10,15 +10,15 @@ export const metadata: Metadata = {
     "promotional items laser engraving Washington DC, branded merchandise Maryland, marketing materials Virginia, trade show displays Hagerstown, corporate gifts Potomac, branded products Ashburn",
 }
 
-const serviceItems = [
-  "Branded merchandise laser engraved with company logos for consistent brand representation",
-  "Trade show materials and promotional displays, designed for impact and reusability",
-  "Marketing displays laser cut on various materials, including custom shapes and sizes",
-  "Customer gifts and corporate promotional products, available for bulk orders",
-  "Branded items laser engraved for Maryland businesses, supporting large-scale campaigns",
-]
-
 export default function PromotionalItemsPage() {
+  const serviceItems = [
+    "Branded merchandise laser engraved with company logos for consistent brand representation",
+    "Trade show materials and promotional displays, designed for impact and reusability",
+    "Marketing displays laser cut on various materials, including custom shapes and sizes",
+    "Customer gifts and corporate promotional products, available for bulk orders",
+    "Branded items laser engraved for Maryland businesses, supporting large-scale campaigns",
+  ]
+
   const expertiseContent = (
     <div className="space-y-6">
       <p className="text-lg">
@@ -178,16 +178,82 @@ export default function PromotionalItemsPage() {
     <ServiceCategoryTemplate
       title="Promotional Items & Marketing Materials"
       description="Boost your brand visibility with custom laser-engraved promotional items and marketing materials. From branded merchandise to trade show displays, we help you make a lasting impression."
-      heroImage="/images/retail.png"
-      imageAlt="Custom laser engraved promotional products and branded merchandise for Washington DC and Maryland businesses"
-      serviceItems={serviceItems}
-      ctaText="Get Promotional Items Quote"
-      ctaLink="/contact"
+      keywords={metadata.keywords as string}
+      heroDescription="Boost your brand visibility with custom laser-engraved promotional items and marketing materials. From branded merchandise to trade show displays, we help you make a lasting impression."
+      backgroundImage="/images/events-trade-shows.png"
+      overviewTitle="Promotional Items - Engrave Everything's Expertise"
+      overviewParagraph1="In today's competitive market, effective promotional items are key to enhancing brand visibility and leaving a lasting impression. Engrave Everything specializes in creating custom laser-engraved promotional products and marketing materials that elevate your brand."
+      overviewParagraph2="Our precision laser technology ensures your logo and message are perfectly reproduced on a wide array of materials, from corporate gifts to trade show giveaways. We help you craft high-quality, memorable items that resonate with your audience and reinforce your brand's value."
+      overviewImage="/images/trade-show-promotional-product.png"
+      overviewImageAlt="Laser engraved promotional product for a trade show"
+      overviewFeature1Title="Brand Enhancement"
+      overviewFeature1Description="Elevate your brand's image with premium, custom-engraved promotional items."
+      overviewFeature2Title="Versatile Options"
+      overviewFeature2Description="Wide range of materials and products to suit any marketing campaign or event."
+      detailedServicesTitle="Specific Applications for Promotional Items"
+      detailedServices={[
+        {
+          title: "Corporate Gifts & Client Appreciation",
+          description:
+            "Make a lasting impression with premium laser-engraved gifts for clients, partners, and employees.",
+          applications: [
+            "Executive pen sets",
+            "Custom drinkware (tumblers, mugs, glassware)",
+            "Leather portfolios and journals",
+            "Wooden desk accessories",
+            "Tech accessories with your logo",
+          ],
+          image: "/images/corporate-executive-gift.png",
+          alt: "Laser engraved corporate executive gift",
+        },
+        {
+          title: "Trade Show & Event Giveaways",
+          description: "Stand out at industry events with custom laser-engraved promotional items and displays.",
+          applications: [
+            "Custom booth signage and displays",
+            "Branded giveaways and swag",
+            "Interactive display elements",
+            "Product demonstration aids",
+            "Business card holders and lead collection tools",
+          ],
+          image: "/images/trade-show-giveaway.png",
+          alt: "Laser engraved trade show giveaway",
+        },
+        {
+          title: "Branded Merchandise",
+          description:
+            "Reinforce your brand identity with high-quality, custom-engraved merchandise for internal use or resale.",
+          applications: [
+            "Branded water bottles and coffee mugs",
+            "Custom keychains",
+            "Engraved notebooks and pens",
+            "Apparel with engraved patches",
+            "Custom awards and plaques for internal recognition",
+          ],
+          image: "/images/corporate-branded-gift.png",
+          alt: "Laser engraved branded merchandise",
+        },
+        {
+          title: "Marketing Displays & Signage",
+          description:
+            "Attract attention and convey your message effectively with custom laser-cut and engraved marketing displays.",
+          applications: [
+            "Point-of-sale displays",
+            "Retail product stands",
+            "Informational plaques",
+            "Custom menu boards",
+            "Promotional signs for events",
+          ],
+          image: "/images/retail-premium-displays.png",
+          alt: "Laser cut marketing display",
+        },
+      ]}
+      ctaTitle="Ready to Boost Your Brand with Custom Promotional Items?"
+      ctaDescription="Contact Hub City Laser today for a personalized consultation and quote on your promotional item and marketing material needs. Let us help you make a lasting impression."
+      ctaButtonText="Schedule a Consultation"
+      ctaLink="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
       secondaryCtaText="View All Services"
       secondaryCtaLink="/services"
-      expertiseContent={expertiseContent}
-      locationContent={locationContent}
-      additionalContent={additionalContent}
     />
   )
 }

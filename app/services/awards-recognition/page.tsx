@@ -10,15 +10,15 @@ export const metadata: Metadata = {
     "awards laser engraving Washington DC, trophy engraving Maryland, corporate plaques Virginia, employee recognition awards Hagerstown, sports trophies Potomac, academic awards Ashburn",
 }
 
-const serviceItems = [
-  "Achievement plaques laser engraved on premium materials (wood, acrylic, metal) with intricate designs",
-  "Employee recognition awards for MD, DC, VA companies, available for batch production",
-  "Sports trophies and athletic awards laser cutting with custom shapes and sizes",
-  "Academic awards and graduation recognition with personalized details",
-  "Corporate milestone recognition laser engraved plaques for high-volume orders",
-]
-
 export default function AwardsRecognitionPage() {
+  const serviceItems = [
+    "Achievement plaques laser engraved on premium materials (wood, acrylic, metal) with intricate designs",
+    "Employee recognition awards for MD, DC, VA companies, available for batch production",
+    "Sports trophies and athletic awards laser cutting with custom shapes and sizes",
+    "Academic awards and graduation recognition with personalized details",
+    "Corporate milestone recognition laser engraved plaques for high-volume orders",
+  ]
+
   const expertiseContent = (
     <div className="space-y-6">
       <p className="text-lg">
@@ -180,16 +180,82 @@ export default function AwardsRecognitionPage() {
     <ServiceCategoryTemplate
       title="Recognition & Awards Laser Engraving"
       description="Celebrate achievements and milestones with custom laser-engraved awards and recognition plaques. We craft high-quality pieces that honor success and inspire excellence."
-      heroImage="/images/technology.png"
-      imageAlt="Custom laser engraved awards and trophies for Washington DC, Maryland and Virginia organizations"
-      serviceItems={serviceItems}
-      ctaText="Get Awards & Plaques Quote"
-      ctaLink="/contact"
+      keywords={metadata.keywords as string}
+      heroDescription="Celebrate achievements and milestones with custom laser-engraved awards and recognition plaques. We craft high-quality pieces that honor success and inspire excellence."
+      backgroundImage="/images/events-corporate.png"
+      overviewTitle="Awards & Recognition - Engrave Everything's Expertise"
+      overviewParagraph1="Recognizing achievements, milestones, and contributions is vital for fostering a positive environment, whether in a corporate setting, an academic institution, or a sports team. Engrave Everything specializes in creating custom laser-engraved awards and recognition pieces that truly stand out."
+      overviewParagraph2="Our precision laser technology allows for intricate designs, personalized messages, and high-quality finishes on a wide range of materials, ensuring each award is a cherished keepsake. From elegant plaques to custom trophies, we help you honor success in a memorable way."
+      overviewImage="/images/corporate-award.png"
+      overviewImageAlt="Custom laser engraved corporate award"
+      overviewFeature1Title="Personalized Designs"
+      overviewFeature1Description="Tailored designs to perfectly capture the essence of the achievement and recipient."
+      overviewFeature2Title="Premium Materials"
+      overviewFeature2Description="Choose from a variety of high-quality materials for a distinguished look and feel."
+      detailedServicesTitle="Specific Applications for Awards & Recognition"
+      detailedServices={[
+        {
+          title: "Corporate Recognition Awards",
+          description:
+            "Boost employee morale and acknowledge outstanding performance with custom laser-engraved corporate awards.",
+          applications: [
+            "Employee of the Month plaques",
+            "Sales achievement awards",
+            "Years of service recognition",
+            "Leadership awards",
+            "Retirement gifts",
+          ],
+          image: "/images/corporate-recognition-plaque.png",
+          alt: "Laser engraved corporate recognition plaque",
+        },
+        {
+          title: "Sports Trophies & Medals",
+          description:
+            "Celebrate athletic victories and team spirit with custom laser-engraved sports trophies and medals.",
+          applications: [
+            "Tournament trophies",
+            "MVP awards",
+            "Team recognition plaques",
+            "Coach appreciation gifts",
+            "Championship commemoratives",
+          ],
+          image: "/images/sports-trophy.png",
+          alt: "Laser engraved sports trophy",
+        },
+        {
+          title: "Academic & Educational Awards",
+          description: "Honor academic excellence and educational milestones with personalized laser-engraved awards.",
+          applications: [
+            "Graduation plaques",
+            "Dean's List awards",
+            "Teacher appreciation gifts",
+            "Student achievement awards",
+            "School event recognition",
+          ],
+          image: "/images/school-award-plaque.png",
+          alt: "Laser engraved academic award plaque",
+        },
+        {
+          title: "Custom Plaques & Engraved Gifts",
+          description:
+            "Create unique and lasting memories with custom engraved plaques and gifts for any special occasion.",
+          applications: [
+            "Commemorative plaques",
+            "Personalized keepsakes",
+            "Donor recognition walls",
+            "Event mementos",
+            "Special occasion gifts",
+          ],
+          image: "/images/engraved-retirement-plaque.png",
+          alt: "Custom engraved commemorative plaque",
+        },
+      ]}
+      ctaTitle="Ready to Create Your Custom Awards?"
+      ctaDescription="Contact Hub City Laser today for a personalized consultation and quote on your awards and recognition needs. Let us help you celebrate success."
+      ctaButtonText="Schedule a Consultation"
+      ctaLink="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
       secondaryCtaText="View All Services"
       secondaryCtaLink="/services"
-      expertiseContent={expertiseContent}
-      locationContent={locationContent}
-      additionalContent={additionalContent}
     />
   )
 }

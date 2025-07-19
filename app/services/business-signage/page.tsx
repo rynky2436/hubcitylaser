@@ -1,195 +1,90 @@
+import ServiceCategoryTemplate from "@/app/components/ServiceCategoryTemplate"
 import type { Metadata } from "next"
-import Link from "next/link"
-import ServiceCategoryTemplate from "../../components/ServiceCategoryTemplate"
 
 export const metadata: Metadata = {
-  title: "Business Signage Laser Engraving | DC, MD & VA",
+  title: "Business Signage & Displays | Hub City Laser",
   description:
-    "Premium laser-engraved business signs & nameplates in DC, MD & VA. Fast turnaround, expert precision for professional results. Get a quote today!",
+    "Custom laser-engraved business signs, displays, and promotional items for businesses in Washington DC, Maryland, and Northern Virginia. Enhance your brand with professional signage.",
   keywords:
-    "business signage laser engraving, custom office signs Washington DC, nameplate engraving Maryland, directional signage Virginia, wayfinding displays Hagerstown, corporate signage Potomac",
+    "business signage, custom signs, laser engraved signs, office signs, retail displays, promotional items, corporate branding, Washington DC, Maryland, Northern Virginia",
 }
 
-const serviceItems = [
-  "Custom business signs laser engraved on wood, metal, glass with high-resolution logo integration",
-  "Office door signs and professional nameplates with various finishes (matte, polished)",
-  "Directional signage and wayfinding displays for large commercial properties",
-  "Safety and compliance signs for Maryland businesses, meeting industry standards",
-  "Wayfinding displays laser cut for commercial properties, including large format options",
-]
-
 export default function BusinessSignagePage() {
-  const expertiseContent = (
-    <div className="space-y-6">
-      <p className="text-lg">
-        At Engrave Everything, we specialize in creating premium business signage solutions that elevate your brand's
-        professional image. Our state-of-the-art laser engraving technology allows us to produce signage with unmatched
-        precision and detail that traditional methods simply cannot achieve.
-      </p>
-
-      <div className="grid gap-6 md:grid-cols-2">
-        <div className="rounded-lg bg-white p-6 shadow-md">
-          <h3 className="mb-3 text-xl font-semibold text-[#002B5C]">Precision Laser Technology</h3>
-          <p>
-            Our advanced laser systems can engrave on virtually any material with microscopic precision, creating crisp,
-            clear text and intricate logos that maintain their quality even at small sizes—perfect for office nameplates
-            and directional signage.
-          </p>
-        </div>
-
-        <div className="rounded-lg bg-white p-6 shadow-md">
-          <h3 className="mb-3 text-xl font-semibold text-[#002B5C]">Custom Design Services</h3>
-          <p>
-            Work with our experienced design team to create signage that perfectly matches your brand guidelines. We can
-            work from your existing designs or help develop new concepts that enhance your corporate identity.
-          </p>
-        </div>
-
-        <div className="rounded-lg bg-white p-6 shadow-md">
-          <h3 className="mb-3 text-xl font-semibold text-[#002B5C]">Premium Materials</h3>
-          <p>
-            Choose from a wide selection of high-quality materials including solid wood, brushed metal, acrylic, glass,
-            and more. Each material is carefully selected for durability and aesthetic appeal in professional
-            environments.
-          </p>
-        </div>
-
-        <div className="rounded-lg bg-white p-6 shadow-md">
-          <h3 className="mb-3 text-xl font-semibold text-[#002B5C]">Quick Turnaround</h3>
-          <p>
-            We understand that business needs are often time-sensitive. Our efficient production process allows us to
-            deliver most standard signage orders within 5-7 business days, with rush options available when you need it
-            even faster.
-          </p>
-        </div>
-      </div>
-    </div>
-  )
-
-  const locationContent = (
-    <div className="space-y-4">
-      <p className="text-lg">
-        Engrave Everything is proud to be the premier provider of laser-engraved business signage throughout the
-        Washington DC metropolitan area, Maryland, and Northern Virginia. Our centrally located facility in Hagerstown
-        allows us to provide quick service to businesses in:
-      </p>
-
-      <div className="grid gap-4 md:grid-cols-3">
-        <ul className="space-y-2">
-          <li className="font-semibold">Washington DC</li>
-          <li>Georgetown</li>
-          <li>Dupont Circle</li>
-          <li>Capitol Hill</li>
-          <li>Downtown Business District</li>
-        </ul>
-
-        <ul className="space-y-2">
-          <li className="font-semibold">Maryland</li>
-          <li>Hagerstown</li>
-          <li>Frederick</li>
-          <li>Rockville</li>
-          <li>Bethesda</li>
-          <li>Potomac</li>
-          <li>Silver Spring</li>
-        </ul>
-
-        <ul className="space-y-2">
-          <li className="font-semibold">Virginia</li>
-          <li>Arlington</li>
-          <li>Alexandria</li>
-          <li>Fairfax</li>
-          <li>Ashburn</li>
-          <li>Tysons Corner</li>
-          <li>Reston</li>
-        </ul>
-      </div>
-
-      <p className="mt-4">
-        Whether you're a small business in downtown Hagerstown or a large corporation in Washington DC, we deliver the
-        same exceptional quality and service. Our local presence means we understand the unique business environment of
-        the DMV area and can provide personalized recommendations for your signage needs.
-      </p>
-
-      <p className="font-semibold">
-        Need installation services? We offer professional installation for larger signage projects throughout the
-        region.
-      </p>
-    </div>
-  )
-
-  const additionalContent = (
-    <div>
-      <h2 className="mb-6 text-3xl font-bold text-[#002B5C]">Business Signage Applications</h2>
-
-      <div className="mb-8 grid gap-8 md:grid-cols-2">
-        <div>
-          <h3 className="mb-3 text-xl font-semibold text-[#002B5C]">Corporate Office Environments</h3>
-          <p className="mb-4">
-            Create a cohesive and professional look throughout your office with custom laser-engraved signage. From
-            reception area logos to conference room nameplates, our signage solutions help establish your brand identity
-            while providing essential wayfinding for employees and visitors.
-          </p>
-          <p>Popular options include:</p>
-          <ul className="mt-2 list-inside list-disc">
-            <li>Reception desk logos and signage</li>
-            <li>Office door nameplates with interchangeable inserts</li>
-            <li>Conference room identification</li>
-            <li>Directional signage systems</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="mb-3 text-xl font-semibold text-[#002B5C]">Retail & Commercial Spaces</h3>
-          <p className="mb-4">
-            Enhance customer experience and reinforce your brand with custom retail signage. Our laser engraving
-            capabilities allow for intricate designs and consistent branding across all customer touchpoints.
-          </p>
-          <p>Retail applications include:</p>
-          <ul className="mt-2 list-inside list-disc">
-            <li>Store entrance signage</li>
-            <li>Department identifiers</li>
-            <li>Product display information</li>
-            <li>ADA-compliant accessibility signage</li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="rounded-lg bg-gray-50 p-6">
-        <h3 className="mb-4 text-xl font-semibold text-[#002B5C]">ADA-Compliant Signage</h3>
-        <p className="mb-4">
-          Ensure your business meets accessibility requirements with our ADA-compliant signage solutions. We create
-          tactile signs with raised text and braille that meet all federal regulations while maintaining your brand's
-          aesthetic.
-        </p>
-        <p>
-          Learn more about our{" "}
-          <Link href="/services" className="font-medium text-[#002B5C] underline">
-            compliance signage options
-          </Link>{" "}
-          or{" "}
-          <Link href="/contact" className="font-medium text-[#002B5C] underline">
-            contact us
-          </Link>{" "}
-          to discuss your specific ADA signage needs.
-        </p>
-      </div>
-    </div>
-  )
-
   return (
     <ServiceCategoryTemplate
-      title="Custom Business Signage Solutions"
-      description="Elevate your brand with precision laser-engraved business signs, nameplates, and wayfinding solutions. We create professional signage that reflects your corporate image and guides your clients effectively."
-      heroImage="/images/professional.png"
-      imageAlt="Custom laser engraved business signage and office nameplates for Washington DC and Maryland businesses"
-      serviceItems={serviceItems}
-      ctaText="Get Business Signage Quote"
-      ctaLink="/contact"
+      title="Business Signage & Displays"
+      description="Elevate your brand presence with custom laser-engraved business signage and displays from Hub City Laser. We create professional, durable, and eye-catching solutions tailored to your business needs."
+      keywords={metadata.keywords as string}
+      heroDescription="Make a lasting impression with custom business signage and displays."
+      backgroundImage="/images/retail-traditional-signage.png"
+      overviewTitle="Business Signage - Engrave Everything's Expertise"
+      overviewParagraph1="In the competitive business landscape, effective signage is crucial for brand recognition and customer engagement. Hub City Laser specializes in crafting high-quality, custom laser-engraved signs and displays that reflect your brand's professionalism and unique identity."
+      overviewParagraph2="From elegant lobby signs to informative directional signage and captivating retail displays, our precision laser technology ensures every detail is perfect. We work with a variety of materials to match your aesthetic and functional requirements."
+      overviewImage="/images/retail-traditional-signage.png"
+      overviewImageAlt="Custom laser-engraved business sign in a modern office lobby"
+      overviewFeature1Title="Custom Design"
+      overviewFeature1Description="Tailored designs to perfectly match your brand's aesthetic and messaging."
+      overviewFeature2Title="Durable Materials"
+      overviewFeature2Description="High-quality materials ensure longevity and a premium look for your signage."
+      detailedServicesTitle="Specific Applications for Business Signage"
+      detailedServices={[
+        {
+          title: "Lobby & Reception Signs",
+          description:
+            "Create a professional first impression with custom laser-engraved lobby and reception signs featuring your company logo and branding.",
+          applications: [
+            "Company logos on acrylic, wood, or metal",
+            "Dimensional lettering",
+            "Backlit signs",
+            "Welcome signs",
+          ],
+          image: "/images/professional-executive-office.png",
+          alt: "Laser engraved company logo sign in a reception area",
+        },
+        {
+          title: "Directional & Wayfinding Signs",
+          description:
+            "Guide your clients and visitors with clear, elegant directional and wayfinding signage for offices, clinics, and commercial spaces.",
+          applications: ["Room number plaques", "Restroom signs", "Exit signs", "Floor directories"],
+          image: "/images/industrial-safety-labeling.png",
+          alt: "Laser engraved directional sign in an office hallway",
+        },
+        {
+          title: "Retail & Product Displays",
+          description:
+            "Showcase your products effectively with custom laser-cut and engraved retail displays, stands, and point-of-sale materials.",
+          applications: [
+            "Acrylic product risers",
+            "Wooden display stands",
+            "Engraved price tags",
+            "Promotional signage",
+          ],
+          image: "/images/retail-acrylic-displays.png",
+          alt: "Laser cut acrylic retail product display",
+        },
+        {
+          title: "Compliance & Safety Labels",
+          description:
+            "Ensure your business meets regulatory requirements with durable, precise laser-engraved compliance and safety labels for equipment and facilities.",
+          applications: ["Equipment tags", "Warning labels", "Asset tags", "Serial number plates"],
+          image: "/images/industrial-compliance-marking.png",
+          alt: "Laser engraved compliance label on industrial equipment",
+        },
+        {
+          title: "Promotional & Event Signage",
+          description:
+            "Attract attention at events, trade shows, and promotions with custom laser-engraved promotional signs and branded items.",
+          applications: ["Trade show booth signs", "Event welcome signs", "Branded giveaways", "Tabletop displays"],
+          image: "/images/trade-show-booth-sign.png",
+          alt: "Laser engraved promotional sign for a trade show booth",
+        },
+      ]}
+      ctaTitle="Ready to Enhance Your Business with Custom Signage?"
+      ctaDescription="Contact Hub City Laser today for a personalized consultation and quote on your business signage and display needs. Let us help you make a lasting impression."
+      ctaButtonText="Schedule a Consultation"
+      ctaLink="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
       secondaryCtaText="View All Services"
       secondaryCtaLink="/services"
-      expertiseContent={expertiseContent}
-      locationContent={locationContent}
-      additionalContent={additionalContent}
     />
   )
 }

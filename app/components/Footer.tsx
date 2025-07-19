@@ -39,7 +39,12 @@ export default function Footer() {
           <Link className="text-hub-silver hover:underline" href="/blog">
             Blog
           </Link>
-          <Link className="text-hub-silver hover:underline" href="/contact">
+          <Link
+            className="text-hub-silver hover:underline"
+            href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Contact
           </Link>
         </div>

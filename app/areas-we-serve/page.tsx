@@ -43,6 +43,7 @@ export default function AreasWeServePage() {
       href: "/locations/woodley-park-cleveland-park-dc",
       image: "/images/woodley-park-cleveland-park-dc-scenic.png",
     },
+    { name: "Frederick, MD", href: "/locations/frederick-md", image: "/images/frederick-md-scenic.png" },
   ]
 
   return (
@@ -98,7 +99,12 @@ export default function AreasWeServePage() {
             Even if your specific city isn't listed, we frequently serve surrounding areas. Contact us today to discuss
             your project and see how we can assist you.
           </p>
-          <Link href="/contact" className="btn-primary">
+          <Link
+            href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
+            className="btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Contact Us for a Custom Quote
           </Link>
         </div>

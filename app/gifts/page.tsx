@@ -120,7 +120,12 @@ export default function GiftsPage() {
                 <p className="text-blue-100">Durable custom pet identification tags</p>
               </div>
             </div>
-            <Link href="/contact" className="btn-secondary">
+            <Link
+              href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
+              className="btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Order Custom Gifts
             </Link>
           </div>

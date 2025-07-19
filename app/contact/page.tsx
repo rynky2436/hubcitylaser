@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Mail, Phone, MapPin } from "lucide-react"
 import type { Metadata } from "next"
+import Link from "next/link" // Import Link component
 
 export const metadata: Metadata = {
   title: "Contact Hub City Laser | Get a Custom Engraving Quote",
@@ -52,6 +53,17 @@ export default function ContactPage() {
                 Send Message
               </Button>
             </form>
+            <div className="mt-6 text-center">
+              <p className="text-gray-700 mb-4">Prefer to schedule a direct consultation?</p>
+              <Link
+                href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
+                className="btn-primary w-full md:w-auto"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Schedule a Consultation
+              </Link>
+            </div>
           </CardContent>
         </Card>
 

@@ -182,11 +182,21 @@ export default function Header() {
           <Link href="/blog" className="hover:text-hub-silver transition-colors">
             Blog
           </Link>
-          <Link href="/contact" className="hover:text-hub-silver transition-colors">
+          <Link
+            href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
+            className="hover:text-hub-silver transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Contact Us
           </Link>
-          <a href="tel:240-324-7110" className="btn-primary">
-            Call Now: (240) 324-7110
+          <a
+            href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
+            className="btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Schedule a Consultation
           </a>
         </nav>
 
@@ -413,14 +423,21 @@ export default function Header() {
               Blog
             </Link>
             <Link
-              href="/contact"
+              href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
               className="block py-2 hover:text-hub-silver transition-colors"
               onClick={toggleMobileMenu}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Contact Us
             </Link>
-            <a href="tel:240-324-7110" className="btn-primary w-full text-center mt-2">
-              Call Now: (240) 324-7110
+            <a
+              href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
+              className="btn-primary w-full text-center mt-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Schedule a Consultation
             </a>
           </div>
         </nav>

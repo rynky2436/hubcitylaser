@@ -201,7 +201,12 @@ export default function HospitalityPage() {
             Hagerstown, Maryland.
           </p>
           <div className="space-x-4">
-            <Link href="/contact" className="btn-secondary">
+            <Link
+              href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
+              className="btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Get Hospitality Laser Quote
             </Link>
             <Link href="/services" className="btn-primary bg-white text-hub-blue hover:bg-gray-100">

@@ -338,7 +338,12 @@ export default function HomePage() {
             Contact Engrave Everything today for a free quote on laser engraving services for your Maryland, Delaware,
             or Virginia business. We handle bulk orders and custom projects with efficiency.
           </p>
-          <Link href="/contact" className="btn-secondary">
+          <Link
+            href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
+            className="btn-secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Get a Bulk or Custom Project Quote
           </Link>
         </div>

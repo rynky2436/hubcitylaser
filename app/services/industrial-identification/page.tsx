@@ -10,15 +10,15 @@ export const metadata: Metadata = {
     "industrial identification laser engraving Washington DC, equipment tags Maryland, serial number marking Virginia, compliance labels Hagerstown, asset identification Potomac, manufacturing labels Ashburn",
 }
 
-const serviceItems = [
-  "Equipment nameplates laser engraved on metal and plastic for extreme durability",
-  "Asset identification tags for industrial applications with precise serial numbering",
-  "Serial number laser engraving for manufacturers, ensuring traceability and compliance",
-  "Compliance labels and safety marking, resistant to chemicals and abrasion",
-  "Inventory management tags laser cut for durability and seamless integration into existing systems",
-]
-
 export default function IndustrialIdentificationPage() {
+  const serviceItems = [
+    "Equipment nameplates laser engraved on metal and plastic for extreme durability",
+    "Asset identification tags for industrial applications with precise serial numbering",
+    "Serial number laser engraving for manufacturers, ensuring traceability and compliance",
+    "Compliance labels and safety marking, resistant to chemicals and abrasion",
+    "Inventory management tags laser cut for durability and seamless integration into existing systems",
+  ]
+
   const expertiseContent = (
     <div className="space-y-6">
       <p className="text-lg">
@@ -178,16 +178,82 @@ export default function IndustrialIdentificationPage() {
     <ServiceCategoryTemplate
       title="Industrial Identification & Labels"
       description="Ensure traceability and safety with robust industrial identification and labels. Our laser-engraved solutions withstand harsh environments and meet stringent compliance standards."
-      heroImage="/images/industrial.png"
-      imageAlt="Durable laser engraved industrial identification tags and equipment labels for Washington DC and Maryland manufacturers"
-      serviceItems={serviceItems}
-      ctaText="Get Industrial Labels Quote"
-      ctaLink="/contact"
+      keywords={metadata.keywords as string}
+      heroDescription="Ensure traceability and safety with robust industrial identification and labels. Our laser-engraved solutions withstand harsh environments and meet stringent compliance standards."
+      backgroundImage="/images/industrial.png"
+      overviewTitle="Industrial Identification - Engrave Everything's Expertise"
+      overviewParagraph1="In industrial environments, clear, durable, and compliant identification is paramount for safety, efficiency, and regulatory adherence. Engrave Everything specializes in providing robust laser-engraved solutions for industrial identification and labeling that withstand the toughest conditions."
+      overviewParagraph2="Our precision laser technology creates permanent markings on a wide range of industrial materials, ensuring legibility and durability even when exposed to chemicals, extreme temperatures, or abrasion. From equipment nameplates to safety labels, we deliver solutions that meet your stringent requirements."
+      overviewImage="/images/industrial-equipment-tracking.png"
+      overviewImageAlt="Laser engraved industrial equipment tag"
+      overviewFeature1Title="Extreme Durability"
+      overviewFeature1Description="Markings that withstand harsh industrial environments, chemicals, and abrasion."
+      overviewFeature2Title="Compliance Focused"
+      overviewFeature2Description="Solutions designed to meet industry-specific regulatory and safety standards."
+      detailedServicesTitle="Specific Applications for Industrial Identification"
+      detailedServices={[
+        {
+          title: "Equipment Nameplates & Tags",
+          description:
+            "Permanently identify and track valuable machinery and assets with durable laser-engraved nameplates and tags.",
+          applications: [
+            "Machine model and serial number plates",
+            "Asset tracking tags with barcodes/QR codes",
+            "Equipment specification plates",
+            "Ownership identification",
+            "Calibration and maintenance tracking",
+          ],
+          image: "/images/industrial-part-numbering.png",
+          alt: "Laser engraved industrial nameplate",
+        },
+        {
+          title: "Safety & Warning Labels",
+          description:
+            "Ensure workplace safety and regulatory compliance with permanent laser-engraved safety and warning labels.",
+          applications: [
+            "OSHA-compliant warning labels",
+            "Electrical panel identification",
+            "Lockout/tagout information",
+            "Hazardous material identification",
+            "Emergency procedure information",
+          ],
+          image: "/images/industrial-safety-components.png",
+          alt: "Laser engraved safety warning label",
+        },
+        {
+          title: "Control Panel & Switch Plates",
+          description: "Create clear and durable labels for control panels, switchboards, and electrical components.",
+          applications: [
+            "Engraved switch plates",
+            "Control panel overlays",
+            "Circuit breaker labels",
+            "Push-button legends",
+            "Custom industrial signage",
+          ],
+          image: "/images/industrial-control-panels.png",
+          alt: "Laser engraved control panel label",
+        },
+        {
+          title: "Component & Part Marking",
+          description:
+            "Ensure traceability and authenticity with direct part marking on components, even the smallest ones.",
+          applications: [
+            "Serial number marking",
+            "Lot code engraving",
+            "Date code marking",
+            "Brand logos on parts",
+            "UID (Unique Identification) marking",
+          ],
+          image: "/images/industrial-precision-components.png",
+          alt: "Laser marked small industrial component",
+        },
+      ]}
+      ctaTitle="Need Durable Industrial Identification?"
+      ctaDescription="Contact Hub City Laser today for a personalized consultation and quote on your industrial labeling and identification needs. We ensure precision and longevity."
+      ctaButtonText="Schedule a Consultation"
+      ctaLink="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
       secondaryCtaText="View All Services"
       secondaryCtaLink="/services"
-      expertiseContent={expertiseContent}
-      locationContent={locationContent}
-      additionalContent={additionalContent}
     />
   )
 }
