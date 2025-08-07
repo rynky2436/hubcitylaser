@@ -55,12 +55,12 @@ export default function HolidayGiftsDecorPage() {
           width={1200}
           height={400}
           className="w-full h-64 md:h-96 object-cover rounded-lg mb-6 shadow-lg"
-          sizes="100vw" // Added sizes prop
+          sizes="100vw"
         />
         <h1 className="text-4xl md:text-5xl font-bold text-hub-blue mb-4">Holiday Gifts & Decor</h1>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto">
           Make every holiday season extra special with custom laser-engraved gifts and festive decor. From personalized
-          ornaments to unique presents for loved ones, Hub City Laser helps you add a touch of magic and personalization
+          ornaments to unique presents for loved ones, Engrave Everything helps you add a touch of magic and personalization
           to your celebrations.
         </p>
       </section>
@@ -72,14 +72,12 @@ export default function HolidayGiftsDecorPage() {
             <Link key={index} href={category.link}>
               <Card className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
                 <Image
-                  src={
-                    category.image || `/placeholder.svg?height=250&width=400&query=${encodeURIComponent(category.name)}`
-                  }
+                  src={category.image || "/placeholder.svg"}
                   alt={category.name}
                   width={400}
                   height={250}
                   className="w-full h-48 object-cover"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" // Added sizes prop
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <CardContent className="p-4">
                   <h3 className="text-xl font-semibold text-hub-blue mb-2">{category.name}</h3>
@@ -95,10 +93,16 @@ export default function HolidayGiftsDecorPage() {
         <h2 className="text-3xl md:text-4xl font-bold text-hub-blue mb-6">Personalize Your Holiday Season</h2>
         <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
           Whether it's a festive gathering or a heartfelt gift, our custom laser engraving services add a unique touch.
-          Contact us to create your perfect holiday items.
+          Book a consultation to create your perfect holiday items.
         </p>
         <Button asChild className="bg-hub-blue text-hub-white hover:bg-hub-blue/90 px-8 py-3 text-lg">
-          <Link href="/contact">Get a Custom Quote</Link>
+          <Link
+            href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book Consultation
+          </Link>
         </Button>
       </section>
     </main>

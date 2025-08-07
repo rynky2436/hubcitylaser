@@ -393,7 +393,7 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Request UV Laser Quote
+                  Book Consultation
                 </Link>
               </div>
             </div>
@@ -490,7 +490,7 @@ export default function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Get a Bulk or Custom Project Quote
+            Book Consultation
           </Link>
         </div>
       </section>

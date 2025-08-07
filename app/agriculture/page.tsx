@@ -6,7 +6,7 @@ import HeroSection from "../components/HeroSection"
 export const metadata: Metadata = {
   title: "Agriculture Laser Engraving Hagerstown MD | Farm Tags",
   description:
-    "Durable agriculture laser engraving in Hagerstown, MD. Farm equipment tags, livestock ID, safety labels for MD, DE, VA farms. Weather-resistant marking. Get a quote!",
+    "Durable agriculture laser engraving in Hagerstown, MD. Farm equipment tags, livestock ID, safety labels for MD, DE, VA farms. Weather-resistant marking. Book a consultation.",
   keywords:
     "agriculture laser engraving Hagerstown MD, farm equipment tags Maryland, livestock identification, agricultural safety labels MD DE VA, farm tool marking, equipment tracking agriculture",
 }
@@ -207,7 +207,7 @@ export default function AgriculturePage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Get Agriculture Laser Quote
+              Book Consultation
             </Link>
             <Link href="/services" className="btn-primary bg-white text-hub-blue hover:bg-gray-100">
               View All Services

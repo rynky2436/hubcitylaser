@@ -3,22 +3,22 @@ import Link from "next/link"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "Areas We Serve | Hub City Laser Engraving",
+  title: "Areas We Serve | Engrave Everything",
   description:
-    "Hub City Laser Engraving provides professional laser engraving and cutting services across Maryland, Virginia, and Washington D.C. Find a location near you!",
+    "Engrave Everything provides professional laser engraving and cutting services across Maryland, Virginia, and Washington D.C. Find a location near you.",
   keywords:
     "laser engraving Maryland, laser engraving Virginia, laser engraving Washington DC, areas we serve, custom laser services",
   openGraph: {
-    title: "Areas We Serve | Hub City Laser Engraving",
+    title: "Areas We Serve | Engrave Everything",
     description:
-      "Hub City Laser Engraving provides professional laser engraving and cutting services across Maryland, Virginia, and Washington D.C. Find a location near you!",
+      "Engrave Everything provides professional laser engraving and cutting services across Maryland, Virginia, and Washington D.C. Find a location near you!",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Areas We Serve | Hub City Laser Engraving",
+    title: "Areas We Serve | Engrave Everything",
     description:
-      "Hub City Laser Engraving provides professional laser engraving and cutting services across Maryland, Virginia, and Washington D.C. Find a location near you!",
+      "Engrave Everything provides professional laser engraving and cutting services across Maryland, Virginia, and Washington D.C. Find a location near you!",
   },
 }
 
@@ -52,7 +52,7 @@ export default function AreasWeServePage() {
         <div className="container mx-auto px-4 max-w-6xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Areas We Serve</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-            Hub City Laser Engraving proudly extends its professional laser engraving and cutting services across a wide
+            Engrave Everything proudly extends its professional laser engraving and cutting services across a wide
             range of communities in Maryland, Virginia, and Washington D.C. Find a location near you to discover how we
             can bring your custom projects to life.
           </p>
@@ -105,7 +105,7 @@ export default function AreasWeServePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Contact Us for a Custom Quote
+            Book Consultation
           </Link>
         </div>
       </section>

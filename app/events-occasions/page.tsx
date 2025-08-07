@@ -97,12 +97,12 @@ export default function EventsOccasionsPage() {
           width={1200}
           height={400}
           className="w-full h-64 md:h-96 object-cover rounded-lg mb-6 shadow-lg"
-          sizes="100vw" // Added sizes prop
+          sizes="100vw"
         />
         <h1 className="text-4xl md:text-5xl font-bold text-hub-blue mb-4">Events & Occasions</h1>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-          At Hub City Laser, we understand that life is full of meaningful moments, both personal and professional. We
-          specialized in providing custom laser-engraved signage, gifts, awards, and décor tailored to make these events
+          At Engrave Everything, we understand that life is full of meaningful moments, both personal and professional. We
+          specialize in providing custom laser-engraved signage, gifts, awards, and décor tailored to make these events
           truly unforgettable. With a wide variety of customizable options, quality craftsmanship, and fast turnaround,
           we help you add that perfect personalized touch.
         </p>
@@ -115,14 +115,12 @@ export default function EventsOccasionsPage() {
             <Link key={index} href={category.link}>
               <Card className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
                 <Image
-                  src={
-                    category.image || `/placeholder.svg?height=250&width=400&query=${encodeURIComponent(category.name)}`
-                  }
+                  src={category.image || "/placeholder.svg"}
                   alt={category.name}
                   width={400}
                   height={250}
                   className="w-full h-48 object-cover"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" // Added sizes prop
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <CardContent className="p-4">
                   <h3 className="text-xl font-semibold text-hub-blue mb-2">{category.name}</h3>
@@ -138,10 +136,16 @@ export default function EventsOccasionsPage() {
         <h2 className="text-3xl md:text-4xl font-bold text-hub-blue mb-6">Make Every Moment Memorable</h2>
         <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
           Whether it's a grand celebration or an intimate gathering, our custom laser engraving services ensure your
-          event stands out. Contact us today to discuss your unique needs.
+          event stands out.
         </p>
         <Button asChild className="bg-hub-blue text-hub-white hover:bg-hub-blue/90 px-8 py-3 text-lg">
-          <Link href="/contact">Get a Custom Quote</Link>
+          <Link
+            href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book Consultation
+          </Link>
         </Button>
       </section>
     </main>
