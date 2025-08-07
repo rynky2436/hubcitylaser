@@ -1,112 +1,111 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Button } from "@/components/ui/button"
-import { Mail, Phone, MapPin } from "lucide-react"
-import type { Metadata } from "next"
-import Link from "next/link" // Import Link component
+import type { Metadata } from 'next'
+import { SITE_CONFIG } from '@/lib/site-config'
+import ContactForm from './contact-form'
+import { Phone, Mail, Calendar } from 'lucide-react'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "Contact Hub City Laser | Get a Custom Engraving Quote",
+  title: 'Contact | Engrave Everything',
   description:
-    "Contact Hub City Laser for custom laser engraving services in Washington DC, Maryland, and Northern VA. Request a quote for your business signage, awards, gifts, and more.",
-  keywords:
-    "contact laser engraving, custom engraving quote, laser engraving services DC, laser engraving Maryland, laser engraving Northern VA, business engraving, custom signs, awards, personalized gifts",
+    'Contact Engrave Everything for laser engraving services. Call 240-324-7110 or email info@engraveeverything.us. Book a consultation or request a quote.',
 }
 
 export default function ContactPage() {
   return (
-    <main className="w-full max-w-6xl mx-auto px-4 py-8 md:py-12">
-      <section className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-hub-blue mb-4">Contact Us</h1>
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-          Have a project in mind or need a custom quote? Reach out to us! We're here to help with all your laser
-          engraving needs in Washington DC, Maryland, and Northern VA.
-        </p>
+    <main className="min-h-[60vh] bg-white">
+      <section className="bg-[#002B5C] text-white">
+        <div className="mx-auto max-w-7xl px-4 py-10">
+          <h1 className="text-3xl md:text-4xl font-semibold">{'Contact'}</h1>
+          <p className="mt-2 text-white/85">
+            {'We respond quickly. Call, email, or book a consultation—we’ll help you plan your engraving project.'}
+          </p>
+          <div className="mt-4 flex flex-wrap items-center gap-6 text-sm">
+            <a
+              href={`tel:${SITE_CONFIG.phoneHref}`}
+              className="inline-flex items-center gap-2 rounded bg-white/10 px-3 py-2 hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-white"
+              aria-label={`Call ${SITE_CONFIG.phoneDisplay}`}
+            >
+              <Phone className="h-4 w-4" aria-hidden />
+              <span>{SITE_CONFIG.phoneDisplay}</span>
+            </a>
+            <a
+              href={`mailto:${SITE_CONFIG.email}`}
+              className="inline-flex items-center gap-2 rounded bg-white/10 px-3 py-2 hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-white"
+              aria-label={`Email ${SITE_CONFIG.email}`}
+            >
+              <Mail className="h-4 w-4" aria-hidden />
+              <span>{SITE_CONFIG.email}</span>
+            </a>
+            <a
+              href={SITE_CONFIG.calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded bg-white text-[#002B5C] px-3 py-2 hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white"
+              aria-label="Book consultation on Calendly"
+            >
+              <Calendar className="h-4 w-4" aria-hidden />
+              <span>Book Consultation</span>
+            </a>
+          </div>
+        </div>
       </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <Card className="bg-white shadow-lg rounded-lg">
-          <CardHeader>
-            <CardTitle className="text-2xl text-hub-blue">Send Us a Message</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <form className="space-y-4">
-              <div className="grid gap-2">
-                <Label htmlFor="name">Name</Label>
-                <Input id="name" placeholder="Your Name" required type="text" />
-              </div>
-              <div className="grid gap-2">
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" placeholder="your@example.com" required type="email" />
-              </div>
-              <div className="grid gap-2">
-                <Label htmlFor="subject">Subject</Label>
-                <Input id="subject" placeholder="Project Inquiry" required type="text" />
-              </div>
-              <div className="grid gap-2">
-                <Label htmlFor="message">Message</Label>
-                <Textarea className="min-h-[120px]" id="message" placeholder="Tell us about your project..." required />
-              </div>
-              <Button className="w-full bg-hub-blue text-hub-white hover:bg-hub-blue/90" type="submit">
-                Send Message
-              </Button>
-            </form>
-            <div className="mt-6 text-center">
-              <p className="text-gray-700 mb-4">Prefer to schedule a direct consultation?</p>
-              <Link
-                href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
-                className="btn-primary w-full md:w-auto"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Schedule a Consultation
-              </Link>
+      <section className="mx-auto max-w-7xl px-4 py-10">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+          <div>
+            <h2 className="text-xl font-semibold text-[#002B5C]">{'Send us a message'}</h2>
+            <p className="mt-2 text-gray-600">
+              {'Share a few details about your use case, materials, and quantity. We’ll reply with options and a quote.'}
+            </p>
+            <div className="mt-6">
+              <ContactForm />
             </div>
-          </CardContent>
-        </Card>
+            <p className="mt-4 text-sm text-gray-600">
+              {'Prefer email? '}
+              <a
+                href={`mailto:${SITE_CONFIG.email}`}
+                className="text-[#002B5C] underline-offset-2 hover:underline"
+              >
+                {SITE_CONFIG.email}
+              </a>
+            </p>
+          </div>
 
-        <div className="flex flex-col gap-8">
-          <Card className="bg-white shadow-lg rounded-lg">
-            <CardHeader>
-              <CardTitle className="text-2xl text-hub-blue">Contact Information</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex items-center gap-3">
-                <Phone className="h-6 w-6 text-hub-blue" />
-                <a href="tel:2403247110" className="text-lg text-gray-800 hover:underline">
-                  (240) 324-7110
+          <aside className="rounded-lg border border-[#A5ACAF]/40 p-6">
+            <h3 className="text-lg font-semibold text-[#002B5C]">{'Quick actions'}</h3>
+            <ul className="mt-3 space-y-3 text-sm text-gray-700">
+              <li>
+                <a href={SITE_CONFIG.calendlyUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#002B5C] hover:underline">
+                  <Calendar className="h-4 w-4" aria-hidden />
+                  Book Consultation
                 </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="h-6 w-6 text-hub-blue" />
-                <a href="mailto:info@engraveeverything.us" className="text-lg text-gray-800 hover:underline">
-                  info@engraveeverything.us
+              </li>
+              <li>
+                <a href={`tel:${SITE_CONFIG.phoneHref}`} className="inline-flex items-center gap-2 text-[#002B5C] hover:underline">
+                  <Phone className="h-4 w-4" aria-hidden />
+                  {SITE_CONFIG.phoneDisplay}
                 </a>
-              </div>
-              <div className="flex items-start gap-3">
-                <MapPin className="h-6 w-6 text-hub-blue mt-1" />
-                <p className="text-lg text-gray-800">Serving Washington DC, Maryland & Northern VA</p>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-white shadow-lg rounded-lg">
-            <CardHeader>
-              <CardTitle className="text-2xl text-hub-blue">Our Process</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4 text-gray-700">
-              <p>1. **Consultation:** Share your ideas and requirements with our team.</p>
-              <p>2. **Design & Quote:** We'll create a custom design and provide a detailed quote.</p>
-              <p>
-                3. **Production:** Our skilled technicians bring your vision to life with precision laser engraving.
-              </p>
-              <p>4. **Delivery:** Receive your high-quality, custom-engraved products.</p>
-            </CardContent>
-          </Card>
+              </li>
+              <li>
+                <a href={`mailto:${SITE_CONFIG.email}`} className="inline-flex items-center gap-2 text-[#002B5C] hover:underline break-all">
+                  <Mail className="h-4 w-4" aria-hidden />
+                  {SITE_CONFIG.email}
+                </a>
+              </li>
+            </ul>
+            <div className="mt-6 rounded-md bg-[#002B5C]/5 p-4 text-sm text-gray-700">
+              We work with metals, plastics, acrylics, glass, wood, and coated items. Typical turnaround is 3–7 business days depending on scope.
+            </div>
+          </aside>
         </div>
-      </div>
+
+        <div className="mt-10 text-center text-sm text-gray-600">
+          Looking for pricing now?{' '}
+          <Link href="/services" className="text-[#002B5C] underline-offset-2 hover:underline">
+            Explore all services
+          </Link>
+        </div>
+      </section>
     </main>
   )
 }

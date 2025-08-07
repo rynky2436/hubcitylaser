@@ -1,31 +1,35 @@
-import { type NextRequest, NextResponse } from "next/server"
+import { NextRequest } from 'next/server'
+import { SITE_CONFIG } from '@/lib/site-config'
 
-export async function POST(request: NextRequest) {
+export async function POST(req: NextRequest) {
   try {
-    const body = await request.json()
-    const { name, email, message } = body
+    const body = await req.json().catch(() => ({}))
+    const name = typeof body?.name === 'string' ? body.name.trim() : ''
+    const email = typeof body?.email === 'string' ? body.email.trim() : ''
+    const message = typeof body?.message === 'string' ? body.message.trim() : ''
 
-    // Validate required fields
     if (!name || !email || !message) {
-      return NextResponse.json({ error: "All fields are required" }, { status: 400 })
+      return Response.json({ error: 'Missing required fields.' }, { status: 400 })
     }
 
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!emailRegex.test(email)) {
-      return NextResponse.json({ error: "Invalid email format" }, { status: 400 })
+    // No environment variables available: we are not sending a real email here.
+    // In production, integrate your SMTP or transactional email service here,
+    // using SITE_CONFIG.email as the business inbox.
+    const payloadForDelivery = {
+      to: SITE_CONFIG.email, // info@engraveeverything.us
+      from: email,
+      subject: `New inquiry from ${name}`,
+      text: message,
     }
 
-    // In a real application, you would:
-    // 1. Save to database
-    // 2. Send email notification
-    // 3. Integrate with CRM
+    console.log('Contact submission:', payloadForDelivery)
 
-    console.log("Contact form submission:", { name, email, message })
-
-    return NextResponse.json({ message: "Thank you for your message. We will contact you soon!" }, { status: 200 })
-  } catch (error) {
-    console.error("Contact form error:", error)
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 })
+    return Response.json({
+      ok: true,
+      message: 'Thanks! Your message has been received.',
+      to: SITE_CONFIG.email,
+    })
+  } catch (err) {
+    return Response.json({ error: 'Unexpected error.' }, { status: 500 })
   }
 }

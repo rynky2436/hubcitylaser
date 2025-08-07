@@ -1,173 +1,88 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
+import { Phone, Mail } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { SITE_CONFIG } from '@/lib/site-config'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#002B5C] text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
+    <footer className="mt-16 border-t border-gray-200 bg-white">
+      <div className="mx-auto max-w-7xl px-4 py-10">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
+          {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="inline-block">
+            <Link href="/" className="flex items-center gap-3">
               <Image
                 src="/images/ez-engrave-everything-logo-new.png"
-                alt="EZ Engrave Everything Logo"
-                width={200}
-                height={100}
-                className="h-16 w-auto"
+                alt={`${SITE_CONFIG.brandName} logo`}
+                width={150}
+                height={48}
+                className="h-10 w-auto"
               />
+              <span className="sr-only">{SITE_CONFIG.brandName}</span>
             </Link>
-            <p className="text-[#A5ACAF] text-sm leading-relaxed">
-              Professional laser engraving services for businesses, organizations, and individuals. 
-              Specializing in precision engraving, custom signage, awards, and personalized gifts.
+            <p className="text-sm text-gray-600">
+              Precision laser engraving for businesses and individuals across the DC, MD, and Northern VA region.
             </p>
-            <div className="flex space-x-4">
-              <Link href="#" className="text-[#A5ACAF] hover:text-white transition-colors">
-                <Facebook className="w-5 h-5" />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="#" className="text-[#A5ACAF] hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="text-[#A5ACAF] hover:text-white transition-colors">
-                <Instagram className="w-5 h-5" />
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="#" className="text-[#A5ACAF] hover:text-white transition-colors">
-                <Linkedin className="w-5 h-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
+            <div className="flex gap-2">
+              <Button asChild className="bg-[#002B5C] text-white hover:bg-[#002B5C]/90">
+                <a href={SITE_CONFIG.calendlyUrl} target="_blank" rel="noopener noreferrer">
+                  Book Consultation
+                </a>
+              </Button>
+              <Button asChild variant="outline" className="border-[#A5ACAF] text-[#002B5C] hover:bg-[#A5ACAF]/10">
+                <Link href="/contact">Contact</Link>
+              </Button>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/services/business-signage" className="text-[#A5ACAF] hover:text-white transition-colors">
-                  Business Signage
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/awards-recognition" className="text-[#A5ACAF] hover:text-white transition-colors">
-                  Awards & Recognition
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/industrial-identification" className="text-[#A5ACAF] hover:text-white transition-colors">
-                  Industrial Identification
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/promotional-items" className="text-[#A5ACAF] hover:text-white transition-colors">
-                  Promotional Items
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/personalized-gifts" className="text-[#A5ACAF] hover:text-white transition-colors">
-                  Personalized Gifts
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/tri-layer-acrylic-engraving" className="text-[#A5ACAF] hover:text-white transition-colors">
-                  Tri-Layer Acrylic Engraving
-                </Link>
-              </li>
+            <h2 className="mb-3 text-sm font-semibold tracking-wide text-[#002B5C]">Services</h2>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li><Link href="/services/business-signage" className="hover:underline">Business Signage & Displays</Link></li>
+              <li><Link href="/services/industrial-identification" className="hover:underline">Industrial Identification</Link></li>
+              <li><Link href="/services/awards-recognition" className="hover:underline">Awards & Recognition</Link></li>
+              <li><Link href="/services/promotional-items" className="hover:underline">Promotional Items</Link></li>
+              <li><Link href="/services/personalized-gifts" className="hover:underline">Personalized Gifts</Link></li>
+              <li><Link href="/services/tri-layer-acrylic-engraving" className="hover:underline">Tri-Layer Acrylic</Link></li>
             </ul>
           </div>
 
           {/* Industries */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Industries</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/medical" className="text-[#A5ACAF] hover:text-white transition-colors">
-                  Medical & Healthcare
-                </Link>
-              </li>
-              <li>
-                <Link href="/professional" className="text-[#A5ACAF] hover:text-white transition-colors">
-                  Professional Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/restaurants" className="text-[#A5ACAF] hover:text-white transition-colors">
-                  Restaurants
-                </Link>
-              </li>
-              <li>
-                <Link href="/real-estate" className="text-[#A5ACAF] hover:text-white transition-colors">
-                  Real Estate
-                </Link>
-              </li>
-              <li>
-                <Link href="/industrial" className="text-[#A5ACAF] hover:text-white transition-colors">
-                  Industrial
-                </Link>
-              </li>
-              <li>
-                <Link href="/retail" className="text-[#A5ACAF] hover:text-white transition-colors">
-                  Retail
-                </Link>
-              </li>
+            <h2 className="mb-3 text-sm font-semibold tracking-wide text-[#002B5C]">Industries</h2>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li><Link href="/medical" className="hover:underline">Medical & Healthcare</Link></li>
+              <li><Link href="/professional" className="hover:underline">Professional Services</Link></li>
+              <li><Link href="/restaurants" className="hover:underline">Restaurants</Link></li>
+              <li><Link href="/real-estate" className="hover:underline">Real Estate</Link></li>
+              <li><Link href="/industrial" className="hover:underline">Industrial</Link></li>
+              <li><Link href="/retail" className="hover:underline">Retail</Link></li>
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
-            <div className="space-y-3 text-sm">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-[#A5ACAF] flex-shrink-0" />
-                <Link href="tel:+1234567890" className="text-[#A5ACAF] hover:text-white transition-colors">
-                  (123) 456-7890
-                </Link>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-[#A5ACAF] flex-shrink-0" />
-                <Link href="mailto:info@ezengrave.com" className="text-[#A5ACAF] hover:text-white transition-colors">
-                  info@ezengrave.com
-                </Link>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 text-[#A5ACAF] flex-shrink-0 mt-0.5" />
-                <div className="text-[#A5ACAF]">
-                  <div>Washington DC Metro Area</div>
-                  <div>Maryland & Virginia</div>
-                </div>
-              </div>
-            </div>
-            <div className="mt-4">
-              <Link
-                href="/contact"
-                className="inline-block bg-[#A5ACAF] text-[#002B5C] px-4 py-2 rounded hover:bg-white transition-colors text-sm font-medium"
-              >
-                Get Quote
-              </Link>
-            </div>
+            <h2 className="mb-3 text-sm font-semibold tracking-wide text-[#002B5C]">Contact</h2>
+            <ul className="space-y-3 text-sm text-gray-700">
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-[#002B5C]" aria-hidden />
+                <a href={`tel:${SITE_CONFIG.phoneHref}`} className="hover:underline">{SITE_CONFIG.phoneDisplay}</a>
+              </li>
+              <li className="flex items-center gap-2 break-all">
+                <Mail className="h-4 w-4 text-[#002B5C]" aria-hidden />
+                <a href={`mailto:${SITE_CONFIG.email}`} className="hover:underline">{SITE_CONFIG.email}</a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-[#A5ACAF]/20 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm text-[#A5ACAF]">
-              © 2024 EZ Engrave Everything. All rights reserved.
-            </div>
-            <div className="flex space-x-6 text-sm">
-              <Link href="/privacy" className="text-[#A5ACAF] hover:text-white transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-[#A5ACAF] hover:text-white transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="/areas-we-serve" className="text-[#A5ACAF] hover:text-white transition-colors">
-                Service Areas
-              </Link>
-            </div>
+        <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-gray-200 pt-6 text-xs text-gray-500 md:flex-row">
+          <p>© {new Date().getFullYear()} {SITE_CONFIG.brandName}. All rights reserved.</p>
+          <div className="flex gap-4">
+            <Link href="/privacy" className="hover:underline">Privacy</Link>
+            <Link href="/terms" className="hover:underline">Terms</Link>
           </div>
         </div>
       </div>
