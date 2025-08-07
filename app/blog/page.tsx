@@ -10,20 +10,31 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "tri-layer-acrylic-engraving-challenges-benefits",
+    title: "Tri-Layer Acrylic Engraving: Why Most Engravers Won't Touch It & Why You Should Care",
+    description:
+      "Discover why tri-layer acrylic engraving is one of the most challenging laser engraving processes, its applications for signs and patches, and why finding the right specialist matters for your business.",
+    image: "/images/tri-layer-acrylic-hero.png",
+    alt: "Tri-layer acrylic engraving samples showing precision work",
+    date: "January 8, 2025"
+  },
+  {
     slug: "precision-laser-engraving-solutions",
     title: "Precision Laser Engraving Solutions for B2B: UID Tags, Medical Devices & More",
     description:
       "Discover high-performance laser engraving solutions for B2B clients, including UID tags for medical devices, industrial barcoding, and corporate branding.",
     image: "/images/uid-laser-marking.png",
     alt: "Precision UID Corporate Laser Marking Solutions",
+    date: "December 15, 2024"
   },
   {
     slug: "your-business-deserves-the-right-laser",
-    title: "Your Business Deserves the Right Laser—Here’s Why It Matters",
+    title: "Your Business Deserves the Right Laser—Here's Why It Matters",
     description:
       "Learn how EZ Engrave Everything's fiber, CO₂, and UV lasers empower diverse industries with precision marking for metals, natural materials, and delicate components.",
     image: "/images/industrial-lasers-benefit-business.png",
     alt: "Why Our Industrial Lasers Benefit Your Business",
+    date: "November 28, 2024"
   },
 ]
 
@@ -46,6 +57,7 @@ export default function BlogIndexPage() {
                 />
               </div>
               <div className="p-6">
+                <div className="text-sm text-[#A5ACAF] mb-2">{post.date}</div>
                 <h2 className="text-xl font-semibold text-[#002B5C] mb-2 group-hover:underline">{post.title}</h2>
                 <p className="text-gray-600 text-sm">{post.description}</p>
               </div>

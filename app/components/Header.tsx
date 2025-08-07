@@ -1,447 +1,298 @@
-"use client"
+'use client'
 
-import Link from "next/link"
-import Image from "next/image"
-import { Menu, X, ChevronDown } from "lucide-react"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
+import { useState, useRef } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { Menu, X, ChevronDown } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 export default function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
+  const handleMouseEnter = (dropdown: string) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
+    }
+    setOpenDropdown(dropdown)
   }
 
-  const locations = [
-    { name: "Great Falls, VA", href: "/locations/great-falls-va" },
-    { name: "McLean, VA", href: "/locations/mclean-va" },
-    { name: "Falls Church, VA", href: "/locations/falls-church-va" },
-    { name: "Vienna, VA", href: "/locations/vienna-va" },
-    { name: "Tysons Corner, VA", href: "/locations/tysons-corner-va" },
-    { name: "Potomac, MD", href: "/locations/potomac-md" },
-    { name: "Bethesda, MD", href: "/locations/bethesda-md" },
-    { name: "Chevy Chase, DC", href: "/locations/chevy-chase-dc" },
-    { name: "Georgetown, DC", href: "/locations/georgetown-dc" },
-    { name: "Cathedral Heights/AU Park, DC", href: "/locations/cathedral-heights-au-park-dc" },
-    { name: "Woodley Park/Cleveland Park, DC", href: "/locations/woodley-park-cleveland-park-dc" },
-  ]
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setOpenDropdown(null)
+    }, 150)
+  }
+
+  const handleDropdownMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
+    }
+  }
+
+  const handleDropdownMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setOpenDropdown(null)
+    }, 150)
+  }
 
   return (
-    <header className="bg-hub-blue text-hub-white py-4 shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center" aria-label="Hub City Laser Engraving Home">
-          <Image
-            src="/images/hub_city_logo_transparent.png"
-            alt="Hub City Laser Engraving Logo"
-            width={90}
-            height={23}
-            className="h-auto"
-            priority
-          />
-        </Link>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
-          <Link href="/" className="hover:text-hub-silver transition-colors">
-            Home
+    <header className="bg-white shadow-md sticky top-0 z-50">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <Image
+              src="/images/ez-engrave-everything-logo-new.png"
+              alt="EZ Engrave Everything Logo"
+              width={180}
+              height={60}
+              className="h-12 w-auto"
+            />
           </Link>
 
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="font-medium hover:underline underline-offset-4 text-hub-white">
-                Industries
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-hub-blue text-hub-white border-hub-silver">
-              <DropdownMenuItem asChild>
-                <Link href="/medical">Medical</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/professional">Professional</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/restaurants">Restaurants</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/real-estate">Real Estate</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/agriculture">Agriculture</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/retail">Retail</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/industrial">Industrial</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/tech">Tech</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/hospitality">Hospitality</Link>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="font-medium hover:underline underline-offset-4 text-hub-white">
-                Services
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-hub-blue text-hub-white border-hub-silver">
-              <DropdownMenuItem asChild>
-                <Link href="/services/business-signage">Business Signage</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/services/awards-recognition">Awards & Recognition</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/services/industrial-identification">Industrial Identification</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/services/promotional-items">Promotional Items</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/services/personalized-gifts">Personalized Gifts</Link>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="font-medium hover:underline underline-offset-4 text-hub-white">
-                Events & Occasions
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-hub-blue text-hub-white border-hub-silver">
-              <DropdownMenuItem asChild>
-                <Link href="/events-occasions/weddings">Weddings</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/events-occasions/retirement-parties">Retirement Parties</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/events-occasions/baby-showers-gender-reveals">Baby Showers & Gender Reveals</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/events-occasions/anniversaries">Anniversaries</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/events-occasions/graduations">Graduations</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/events-occasions/corporate-events">Corporate Events</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/events-occasions/trade-shows-conferences">Trade Shows & Conferences</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/events-occasions/religious-ceremonies">Religious Ceremonies</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/events-occasions/quinceaneras-sweet-16s">Quinceañeras & Sweet 16s</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/events-occasions/holiday-gifts-decor">Holiday Gifts & Decor</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/events-occasions/pet-memorials-celebrations">Pet Memorials & Celebrations</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/events-occasions/school-sports-events">School & Sports Events</Link>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="font-medium hover:underline underline-offset-4 text-hub-white">
-                Where We Serve
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-hub-blue text-hub-white border-hub-silver">
-              <DropdownMenuItem asChild>
-                <Link href="/areas-we-serve">All Areas</Link>
-              </DropdownMenuItem>
-              <div className="border-t border-hub-silver my-1" />
-              {locations.map((loc) => (
-                <DropdownMenuItem key={loc.href} asChild>
-                  <Link href={loc.href}>{loc.name}</Link>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <Link href="/blog" className="hover:text-hub-silver transition-colors">
-            Blog
-          </Link>
-          <Link
-            href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
-            className="hover:text-hub-silver transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Contact Us
-          </Link>
-          <a
-            href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
-            className="btn-primary"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Schedule a Consultation
-          </a>
-        </nav>
-
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
-          <button onClick={toggleMobileMenu} className="text-hub-white focus:outline-none" aria-label="Open menu">
-            {isMobileMenuOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Navigation */}
-      {isMobileMenuOpen && (
-        <nav className="md:hidden bg-hub-blue px-4 pb-4 pt-2">
-          <div className="flex flex-col space-y-2">
-            <Link href="/" className="block py-2 hover:text-hub-silver transition-colors" onClick={toggleMobileMenu}>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            <Link href="/" className="text-[#002B5C] hover:text-[#A5ACAF] transition-colors">
               Home
             </Link>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  className="font-medium hover:underline underline-offset-4 text-hub-white w-full justify-between"
+            {/* Industries Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => handleMouseEnter('industries')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button className="flex items-center text-[#002B5C] hover:text-[#A5ACAF] transition-colors">
+                Industries <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              {openDropdown === 'industries' && (
+                <div 
+                  className="absolute top-full left-0 mt-0 w-56 bg-white border border-gray-200 rounded-md shadow-lg z-50"
+                  onMouseEnter={handleDropdownMouseEnter}
+                  onMouseLeave={handleDropdownMouseLeave}
                 >
-                  Industries
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-hub-blue text-hub-white border-hub-silver w-[calc(100%-2rem)] ml-4">
-                <DropdownMenuItem asChild>
-                  <Link href="/medical" onClick={toggleMobileMenu}>
-                    Medical
+                  <Link href="/medical" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Medical & Healthcare
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/professional" onClick={toggleMobileMenu}>
-                    Professional
+                  <Link href="/professional" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Professional Services
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/restaurants" onClick={toggleMobileMenu}>
-                    Restaurants
+                  <Link href="/restaurants" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Restaurants & Food Service
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/real-estate" onClick={toggleMobileMenu}>
+                  <Link href="/real-estate" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
                     Real Estate
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/agriculture" onClick={toggleMobileMenu}>
-                    Agriculture
+                  <Link href="/agriculture" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Agriculture & Farming
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/retail" onClick={toggleMobileMenu}>
-                    Retail
+                  <Link href="/retail" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Retail & Commerce
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/industrial" onClick={toggleMobileMenu}>
-                    Industrial
+                  <Link href="/industrial" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Industrial & Manufacturing
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/tech" onClick={toggleMobileMenu}>
-                    Tech
+                  <Link href="/tech" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Technology & IT
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/hospitality" onClick={toggleMobileMenu}>
-                    Hospitality
+                  <Link href="/hospitality" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Hospitality & Tourism
                   </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+                </div>
+              )}
+            </div>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  className="font-medium hover:underline underline-offset-4 text-hub-white w-full justify-between"
+            {/* Services Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => handleMouseEnter('services')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button className="flex items-center text-[#002B5C] hover:text-[#A5ACAF] transition-colors">
+                Services <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              {openDropdown === 'services' && (
+                <div 
+                  className="absolute top-full left-0 mt-0 w-64 bg-white border border-gray-200 rounded-md shadow-lg z-50"
+                  onMouseEnter={handleDropdownMouseEnter}
+                  onMouseLeave={handleDropdownMouseLeave}
                 >
-                  Services
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-hub-blue text-hub-white border-hub-silver w-[calc(100%-2rem)] ml-4">
-                <DropdownMenuItem asChild>
-                  <Link href="/services/business-signage" onClick={toggleMobileMenu}>
-                    Business Signage
+                  <Link href="/services" className="block px-4 py-3 text-sm font-medium text-[#002B5C] hover:bg-gray-50 border-b border-gray-100">
+                    All Services
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/services/awards-recognition" onClick={toggleMobileMenu}>
-                    Awards & Recognition
+                  <Link href="/services/business-signage" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Business Signage & Displays
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/services/industrial-identification" onClick={toggleMobileMenu}>
+                  <Link href="/services/industrial-identification" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
                     Industrial Identification
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/services/promotional-items" onClick={toggleMobileMenu}>
+                  <Link href="/services/awards-recognition" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Awards & Recognition
+                  </Link>
+                  <Link href="/services/promotional-items" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
                     Promotional Items
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/services/personalized-gifts" onClick={toggleMobileMenu}>
+                  <Link href="/services/personalized-gifts" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
                     Personalized Gifts
                   </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+                  <Link href="/services/tri-layer-acrylic-engraving" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Tri-Layer Acrylic Engraving
+                  </Link>
+                </div>
+              )}
+            </div>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  className="font-medium hover:underline underline-offset-4 text-hub-white w-full justify-between"
+            {/* Events & Occasions Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => handleMouseEnter('events')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button className="flex items-center text-[#002B5C] hover:text-[#A5ACAF] transition-colors">
+                Events & Occasions <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              {openDropdown === 'events' && (
+                <div 
+                  className="absolute top-full left-0 mt-0 w-64 bg-white border border-gray-200 rounded-md shadow-lg z-50"
+                  onMouseEnter={handleDropdownMouseEnter}
+                  onMouseLeave={handleDropdownMouseLeave}
                 >
-                  Events & Occasions
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-hub-blue text-hub-white border-hub-silver w-[calc(100%-2rem)] ml-4">
-                <DropdownMenuItem asChild>
-                  <Link href="/events-occasions/weddings" onClick={toggleMobileMenu}>
+                  <Link href="/events-occasions" className="block px-4 py-3 text-sm font-medium text-[#002B5C] hover:bg-gray-50 border-b border-gray-100">
+                    All Events & Occasions
+                  </Link>
+                  <Link href="/events-occasions/weddings" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
                     Weddings
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/events-occasions/retirement-parties" onClick={toggleMobileMenu}>
-                    Retirement Parties
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/events-occasions/baby-showers-gender-reveals" onClick={toggleMobileMenu}>
-                    Baby Showers & Gender Reveals
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/events-occasions/anniversaries" onClick={toggleMobileMenu}>
-                    Anniversaries
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/events-occasions/graduations" onClick={toggleMobileMenu}>
-                    Graduations
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/events-occasions/corporate-events" onClick={toggleMobileMenu}>
+                  <Link href="/events-occasions/corporate-events" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
                     Corporate Events
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/events-occasions/trade-shows-conferences" onClick={toggleMobileMenu}>
-                    Trade Shows & Conferences
+                  <Link href="/events-occasions/graduations" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Graduations
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/events-occasions/religious-ceremonies" onClick={toggleMobileMenu}>
-                    Religious Ceremonies
+                  <Link href="/events-occasions/anniversaries" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Anniversaries
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/events-occasions/quinceaneras-sweet-16s" onClick={toggleMobileMenu}>
-                    Quinceañeras & Sweet 16s
+                  <Link href="/events-occasions/retirement-parties" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Retirement Parties
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/events-occasions/holiday-gifts-decor" onClick={toggleMobileMenu}>
+                  <Link href="/events-occasions/holiday-gifts-decor" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
                     Holiday Gifts & Decor
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/events-occasions/pet-memorials-celebrations" onClick={toggleMobileMenu}>
-                    Pet Memorials & Celebrations
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/events-occasions/school-sports-events" onClick={toggleMobileMenu}>
+                  <Link href="/events-occasions/school-sports-events" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
                     School & Sports Events
                   </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  className="font-medium hover:underline underline-offset-4 text-hub-white w-full justify-between"
-                >
-                  Where We Serve
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-hub-blue text-hub-white border-hub-silver w-[calc(100%-2rem)] ml-4">
-                <DropdownMenuItem asChild>
-                  <Link href="/areas-we-serve" onClick={toggleMobileMenu}>
-                    All Areas
+                  <Link href="/events-occasions/trade-shows-conferences" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Trade Shows & Conferences
                   </Link>
-                </DropdownMenuItem>
-                <div className="border-t border-hub-silver my-1" />
-                {locations.map((loc) => (
-                  <DropdownMenuItem key={loc.href} asChild>
-                    <Link href={loc.href} onClick={toggleMobileMenu}>
-                      {loc.name}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+                </div>
+              )}
+            </div>
 
-            <Link
-              href="/blog"
-              className="block py-2 hover:text-hub-silver transition-colors"
-              onClick={toggleMobileMenu}
+            {/* Locations Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => handleMouseEnter('locations')}
+              onMouseLeave={handleMouseLeave}
             >
+              <button className="flex items-center text-[#002B5C] hover:text-[#A5ACAF] transition-colors">
+                Locations <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              {openDropdown === 'locations' && (
+                <div 
+                  className="absolute top-full left-0 mt-0 w-64 bg-white border border-gray-200 rounded-md shadow-lg z-50"
+                  onMouseEnter={handleDropdownMouseEnter}
+                  onMouseLeave={handleDropdownMouseLeave}
+                >
+                  <Link href="/areas-we-serve" className="block px-4 py-3 text-sm font-medium text-[#002B5C] hover:bg-gray-50 border-b border-gray-100">
+                    Areas We Serve
+                  </Link>
+                  <Link href="/locations/bethesda-md" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Bethesda, MD
+                  </Link>
+                  <Link href="/locations/potomac-md" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Potomac, MD
+                  </Link>
+                  <Link href="/locations/frederick-md" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Frederick, MD
+                  </Link>
+                  <Link href="/locations/mclean-va" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    McLean, VA
+                  </Link>
+                  <Link href="/locations/great-falls-va" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Great Falls, VA
+                  </Link>
+                  <Link href="/locations/tysons-corner-va" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Tysons Corner, VA
+                  </Link>
+                  <Link href="/locations/falls-church-va" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Falls Church, VA
+                  </Link>
+                  <Link href="/locations/vienna-va" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Vienna, VA
+                  </Link>
+                  <Link href="/locations/georgetown-dc" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Georgetown, DC
+                  </Link>
+                  <Link href="/locations/chevy-chase-dc" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                    Chevy Chase, DC
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <Link href="/blog" className="text-[#002B5C] hover:text-[#A5ACAF] transition-colors">
               Blog
             </Link>
-            <Link
-              href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
-              className="block py-2 hover:text-hub-silver transition-colors"
-              onClick={toggleMobileMenu}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Contact Us
+
+            <Link href="/contact" className="text-[#002B5C] hover:text-[#A5ACAF] transition-colors">
+              Contact
             </Link>
-            <a
-              href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
-              className="btn-primary w-full text-center mt-2"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Schedule a Consultation
-            </a>
+
+            <Button asChild className="bg-[#002B5C] hover:bg-[#A5ACAF] text-white">
+              <Link href="/contact">Get Quote</Link>
+            </Button>
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="lg:hidden py-4 border-t border-gray-200">
+            <nav className="flex flex-col space-y-4">
+              <Link href="/" className="text-[#002B5C] hover:text-[#A5ACAF] transition-colors">
+                Home
+              </Link>
+              <Link href="/services" className="text-[#002B5C] hover:text-[#A5ACAF] transition-colors">
+                Services
+              </Link>
+              <Link href="/events-occasions" className="text-[#002B5C] hover:text-[#A5ACAF] transition-colors">
+                Events & Occasions
+              </Link>
+              <Link href="/areas-we-serve" className="text-[#002B5C] hover:text-[#A5ACAF] transition-colors">
+                Locations
+              </Link>
+              <Link href="/blog" className="text-[#002B5C] hover:text-[#A5ACAF] transition-colors">
+                Blog
+              </Link>
+              <Link href="/contact" className="text-[#002B5C] hover:text-[#A5ACAF] transition-colors">
+                Contact
+              </Link>
+              <Button asChild className="bg-[#002B5C] hover:bg-[#A5ACAF] text-white w-fit">
+                <Link href="/contact">Get Quote</Link>
+              </Button>
+            </nav>
           </div>
-        </nav>
-      )}
+        )}
+      </div>
     </header>
   )
 }
