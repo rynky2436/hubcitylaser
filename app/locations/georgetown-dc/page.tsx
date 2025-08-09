@@ -11,22 +11,18 @@ const locationData = {
     { name: "Rosslyn, VA", href: "/locations/rosslyn-va" },
   ],
   image: "/images/georgetown-dc-scenic.png",
-  title: "Hub City Laser Engraving Services in Georgetown, DC | Hub City Laser Engraving",
+  title: "Laser Engraving in Georgetown, DC | Engrave Everything",
   description:
-    "Hub City Laser Engraving brings historic craftsmanship and modern precision to Georgetown, DC. We offer laser engraving for university merchandise, boutique retail, and historic preservation projects.",
-  keywords:
-    "laser engraving Georgetown DC, Georgetown University merchandise, boutique retail Georgetown, Georgetown laser cutting",
+    "Boutique‑quality laser engraving for university merchandise, retail, and historic homes in Georgetown. We travel for on‑site needs and ship citywide.",
+  keywords: "laser engraving Georgetown DC, university merchandise, boutique retail engraving DC",
+  areaServed: "Washington, D.C.",
+  serviceAreaBusiness: true,
+  serviceAreaNote:
+    "Servicing Washington, D.C. — on‑site service and shipping available. No physical storefront in D.C.",
 }
 
 export const metadata: Metadata = generateLocationMetadata(locationData)
 
 export default function GeorgetownPage() {
-  return (
-    <LocationTemplate
-      title={locationData.title}
-      description={locationData.description}
-      keywords={locationData.keywords}
-      {...locationData}
-    />
-  )
+  return <LocationTemplate {...locationData} />
 }

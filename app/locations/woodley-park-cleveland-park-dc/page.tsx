@@ -11,21 +11,17 @@ const locationData = {
     { name: "Columbia Heights, DC", href: "/locations/columbia-heights-dc" },
   ],
   image: "/images/woodley-park-cleveland-park-dc-scenic.png",
-  title: "Hub City Laser Engraving in Woodley Park & Cleveland Park, DC | Hub City Laser Engraving",
+  title: "Laser Engraving in Woodley Park & Cleveland Park, DC | Engrave Everything",
   description:
-    "Hub City Laser Engraving offers expert laser engraving services to the historic Woodley Park and Cleveland Park neighborhoods. We specialize in custom signage, home decor, and unique gifts.",
-  keywords: "laser engraving Woodley Park, Cleveland Park laser cutting, custom gifts DC, historic home plaques DC",
+    "Custom signage, home décor, and unique gifts for Woodley Park & Cleveland Park. We come to you when needed and ship throughout the District.",
+  keywords: "laser engraving Woodley Park, Cleveland Park laser cutting, DC personalized gifts",
+  areaServed: "Washington, D.C.",
+  serviceAreaBusiness: true,
+  serviceAreaNote: "Servicing Washington, D.C. — mobile service and shipping. No D.C. street address listed.",
 }
 
 export const metadata: Metadata = generateLocationMetadata(locationData)
 
 export default function WoodleyParkPage() {
-  return (
-    <LocationTemplate
-      title={locationData.title}
-      description={locationData.description}
-      keywords={locationData.keywords}
-      {...locationData}
-    />
-  )
+  return <LocationTemplate {...locationData} />
 }

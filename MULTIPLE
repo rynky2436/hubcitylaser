@@ -1,0 +1,35 @@
+// lib/site-config.ts
+export const SITE_CONFIG = {
+  brandName: "Engrave Everything",
+  siteUrl: "https://engraveeverything.us",
+  email: "info@engraveeverything.us",
+  phoneDisplay: "240-324-7110",
+  phoneHref: "+12403247110",
+  calendlyUrl: "https://calendly.com/ryan-mangan/custom-laser-engraving-consultation",
+  colors: {
+    primary: "#002B5C",   // Deep blue
+    secondary: "#A5ACAF", // Silver
+    white: "#FFFFFF"
+  },
+  cta: {
+    label: "Book Consultation"
+  }
+} as const;
+
+// app/components/Header.tsx
+import React from 'react';
+import { SITE_CONFIG } from '../../lib/site-config';
+
+const Header: React.FC = () => {
+  const COLORS = SITE_CONFIG?.colors ?? { primary: "#002B5C", secondary: "#A5ACAF", white: "#FFFFFF" };
+
+  return (
+    <div className="w-full" style={{ backgroundColor: COLORS.primary, color: COLORS.white }}>
+      <nav className="hidden lg:flex items-center gap-8" style={{ color: COLORS.primary }}>
+        {/* Navigation links here */}
+      </nav>
+    </div>
+  );
+};
+
+export default Header;

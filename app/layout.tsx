@@ -3,16 +3,18 @@ import type { Metadata } from "next"
 import "./globals.css"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import { SITE_CONFIG } from "@/lib/site-config"
 
 export const metadata: Metadata = {
-  title: "Professional Laser Engraving & Cutting | Engrave Everything",
+  title: "Engrave Everything | Professional Laser Engraving & Cutting",
   description:
-    "Precision laser engraving & cutting services for businesses and personalized gifts across Maryland, Virginia, and Washington D.C., including Hagerstown, Frederick, Bethesda, McLean, and Great Falls. Custom signs, awards, industrial marking, and more. Get a free quote!",
+    "Precision laser engraving & cutting for businesses and personalized gifts. We serve Maryland, Virginia, and Washington, D.C. with on-site service and fast shipping.",
   keywords:
-    "laser engraving Hagerstown MD, laser cutting Maryland, custom signs Delaware Virginia, wood metal glass engraving, business signage MD, promotional items Hagerstown, industrial laser cutting, laser engraving Bethesda MD, Potomac MD, Chevy Chase DC, McLean VA, Great Falls VA, Arlington VA, Falls Church VA, Vienna VA, Oakton VA, North Potomac MD, Frederick MD, DC laser engraving, Northern Virginia laser services",
+    "laser engraving Maryland, laser cutting Virginia, laser engraving Washington DC, custom signs, awards, industrial marking, promotional items, personalized gifts",
   openGraph: {
     title: "Engrave Everything | Professional Laser Engraving & Cutting",
-    description: "Expert laser engraving and cutting on various materials for businesses and personalized items.",
+    description:
+      "Expert laser engraving and cutting on wood, metal, glass, acrylic, and more. Serving MD, VA, and Washington, D.C.",
     type: "website",
     locale: "en_US",
     images: [
@@ -20,77 +22,53 @@ export const metadata: Metadata = {
         url: "/images/materials-wood-glass.png",
         width: 1200,
         height: 630,
-        alt: "Hub City Laser Engraving Services",
+        alt: "Engrave Everything — Laser Engraving Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Professional Laser Engraving & Cutting | Engrave Everything",
-    description: "Precision laser engraving and cutting services for businesses and personalized gifts.",
+    title: "Engrave Everything | Professional Laser Engraving & Cutting",
+    description: "Precision laser engraving and cutting services serving MD, VA, and Washington, D.C.",
     images: ["/images/materials-wood-glass.png"],
   },
   robots: {
     index: true,
     follow: true,
   },
-  generator: "v0.dev",
+    generator: 'v0.dev'
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const orgLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE_CONFIG.brandName,
+    url: "https://engraveeverything.us",
+    email: SITE_CONFIG.email,
+    telephone: SITE_CONFIG.phoneHref,
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Maryland" },
+      { "@type": "AdministrativeArea", name: "Virginia" },
+      { "@type": "AdministrativeArea", name: "Washington, D.C." },
+    ],
+    logo: "/images/engrave-everything-logo.png",
+  }
+
   return (
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
-        <meta name="geo.region" content="US-MD" />
-        <meta name="geo.placename" content="Hagerstown" />
-        <meta name="geo.position" content="39.6417;-77.7200" />
-        <meta name="ICBM" content="39.6417, -77.7200" />
+        {/* Organization-level JSON-LD without a storefront address to avoid misleading NAP for service areas */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              name: "Engrave Everything",
-              image: "/images/materials-wood-glass.png",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "Hagerstown",
-                addressRegion: "MD",
-                addressCountry: "US",
-              },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: 39.6417,
-                longitude: -77.72,
-              },
-              url: "https://engraveeverything.com",
-              telephone: "",
-              priceRange: "$$",
-              description:
-                "Professional laser engraving and cutting services on wood, metal, glass for businesses and personalized gifts.",
-              sameAs: [],
-              openingHoursSpecification: [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                  opens: "09:00",
-                  closes: "17:00",
-                },
-              ],
-              servesCuisine: "Laser Engraving Services",
-            }),
-          }}
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgLd) }}
         />
       </head>
-      <body className="bg-hub-white text-gray-900">
+      <body className="bg-white text-gray-900">
         <Header />
         <main>{children}</main>
         <Footer />

@@ -11,22 +11,18 @@ const locationData = {
     { name: "Bethesda, MD", href: "/locations/bethesda-md" },
   ],
   image: "/images/chevy-chase-dc-scenic.png",
-  title: "Hub City Laser Engraving Services in Chevy Chase, DC | Hub City Laser Engraving",
+  title: "Laser Engraving in Chevy Chase, DC | Engrave Everything",
   description:
-    "Hub City Laser Engraving provides elegant laser engraving services for the upscale Chevy Chase, DC area. We specialize in luxury retail branding, personalized gifts, and custom home decor.",
-  keywords:
-    "laser engraving Chevy Chase DC, luxury retail Chevy Chase, personalized gifts Chevy Chase DC, Chevy Chase laser cutting",
+    "Luxury‑grade laser engraving for gifts, signage, and branding in Chevy Chase, DC. On‑site service available; we also ship throughout D.C.",
+  keywords: "laser engraving Chevy Chase DC, custom gifts Chevy Chase, signage DC",
+  areaServed: "Washington, D.C.",
+  serviceAreaBusiness: true,
+  serviceAreaNote:
+    "Servicing Washington, D.C. — mobile service and shipping available. We do not list a D.C. street address.",
 }
 
 export const metadata: Metadata = generateLocationMetadata(locationData)
 
 export default function ChevyChasePage() {
-  return (
-    <LocationTemplate
-      title={locationData.title}
-      description={locationData.description}
-      keywords={locationData.keywords}
-      {...locationData}
-    />
-  )
+  return <LocationTemplate {...locationData} />
 }

@@ -1,26 +1,36 @@
-import React from "react"
-import type { ReactElement } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import type { Metadata } from "next"
+import Image from "next/image"
+import { SITE_CONFIG } from "@/lib/site-config"
+import { cn } from "@/lib/utils"
+import { defaultLocationImage } from "@/lib/location-images"
 
-interface LocationTemplateProps {
+type Nearby = { name: string; href: string }
+
+export type LocationTemplateProps = {
   title: string
   description: string
-  keywords: string
+  keywords?: string
+  image?: string
   locationName: string
-  locationLandmark: string
-  zipCodes: string[]
-  nearbyLocations: { name: string; href: string }[]
-  image: string
+  locationLandmark?: string
+  zipCodes?: string[]
+  nearbyLocations?: Nearby[]
+  // Service-area controls
+  areaServed?: string // e.g., "Washington, D.C."
+  serviceAreaBusiness?: boolean // when true, render ServiceAreaBusiness JSON-LD (no address)
+  serviceAreaNote?: string // visible content note like "Servicing Washington, D.C."
 }
 
 export function generateMetadata(data: {
-  name: string
   title: string
   description: string
-  keywords: string
+  keywords?: string
+  image?: string
+  locationName?: string
 }): Metadata {
+  const ogImage =
+    data.image || (data.locationName ? defaultLocationImage(data.locationName) : "/images/brand-default-og.png")
   return {
     title: data.title,
     description: data.description,
@@ -28,165 +38,117 @@ export function generateMetadata(data: {
     openGraph: {
       title: data.title,
       description: data.description,
+      images: [{ url: ogImage }],
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title: data.title,
       description: data.description,
+      images: [ogImage],
     },
   }
 }
 
-export default function LocationTemplate({
-  title,
-  description,
-  keywords,
-  locationName,
-  locationLandmark,
-  zipCodes,
-  nearbyLocations,
-  image,
-}: LocationTemplateProps): ReactElement {
+export default function LocationTemplate(props: LocationTemplateProps) {
+  const {
+    title,
+    description,
+    image,
+    locationName,
+    locationLandmark,
+    zipCodes = [],
+    nearbyLocations = [],
+    areaServed,
+    serviceAreaBusiness,
+    serviceAreaNote,
+  } = props
+
+  const imgPath = image ?? defaultLocationImage(locationName)
+
+  const jsonLd = serviceAreaBusiness
+    ? {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        additionalType: "https://schema.org/ServiceAreaBusiness",
+        name: SITE_CONFIG.brandName,
+        url: "https://engraveeverything.us",
+        telephone: SITE_CONFIG.phoneHref,
+        email: SITE_CONFIG.email,
+        areaServed: areaServed ? { "@type": "AdministrativeArea", name: areaServed } : undefined,
+      }
+    : null
+
   return (
-    <div className="bg-hub-white text-gray-900 dark:bg-slate-900 dark:text-gray-100">
-      <section className="section-padding bg-hub-blue text-hub-white text-center">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">{`Laser Engraving Services in ${locationName}`}</h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-            Hub City Laser Engraving delivers custom laser engraving in {locationName}—signs, awards, and gifts with
-            unmatched quality, precision, and dedicated service. We are proud to serve businesses and individuals near{" "}
-            {locationLandmark}.
-          </p>
-        </div>
-      </section>
+    <div className="mx-auto max-w-6xl px-4 py-10">
+      {/* Page-level JSON-LD for service-area pages */}
+      {jsonLd && (
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
 
-      <section className="section-padding">
-        <div className="container mx-auto px-4 max-w-6xl grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-hub-blue dark:text-hub-white mb-6">
-              Your Premier Laser Engraving Partner in {locationName}
-            </h2>
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-              At Hub City Laser Engraving, we combine state-of-the-art laser technology with meticulous craftsmanship to
-              produce exceptional results for all your engraving and cutting needs. Whether you're looking for corporate
-              awards, personalized gifts, or industrial markings, our team in {locationName} is dedicated to bringing
-              your vision to life with precision and speed.
-            </p>
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-              We specialize in a wide array of materials and techniques, ensuring versatility for any project. Our
-              commitment to quality and customer satisfaction makes us the trusted choice for laser engraving services
-              in the {locationName} area.
-            </p>
-            <Link href="/contact" className="btn-primary">
-              Get Your Free Quote Today!
-            </Link>
-          </div>
-          <div className="relative h-64 md:h-96 rounded-lg overflow-hidden shadow-lg">
-            <Image
-              src={
-                image ||
-                `/placeholder.svg?height=1080&width=1920&query=scenic view of ${encodeURIComponent(locationName) || "/placeholder.svg"}`
-              }
-              alt={`Laser Engraving in ${locationName}`}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
-        </div>
-      </section>
+      <header className="mb-8">
+        <h1 className="text-3xl font-bold tracking-tight">Laser Engraving Services — {locationName}</h1>
+        {serviceAreaNote && <p className="mt-2 text-sm text-gray-600">{serviceAreaNote}</p>}
+      </header>
 
-      <section className="section-padding bg-gray-50 dark:bg-slate-800">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-hub-blue dark:text-hub-white text-center mb-10">
-            Comprehensive Laser Engraving Capabilities
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-hub-white dark:bg-slate-700 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-hub-blue dark:text-hub-white mb-3">
-                Material Engraving & Cutting
-              </h3>
-              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-                <li>Wood, Metal (stainless steel, aluminum), Acrylic</li>
-                <li>Glass, Leather, Stone, Rubber</li>
-                <li>Fabric, Paper, Cardboard</li>
-              </ul>
-            </div>
-            <div className="bg-hub-white dark:bg-slate-700 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-hub-blue dark:text-hub-white mb-3">Laser Types & Techniques</h3>
-              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-                <li>CO₂ engraving/cutting (non-metals)</li>
-                <li>Fiber laser (deep metal marking, annealing, coloration)</li>
-                <li>Diode engraving (versatile applications)</li>
-                <li>Deep/durable engraving (adjustable depth)</li>
-                <li>Surface etching (dye, coatings)</li>
-                <li>Rotary engraving for cylindrical items (glassware, tumblers)</li>
-              </ul>
-            </div>
-            <div className="bg-hub-white dark:bg-slate-700 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-hub-blue dark:text-hub-white mb-3">Popular Applications</h3>
-              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-                <li>Corporate awards, executive plaques, trophies</li>
-                <li>Personalized gifts (glassware, jewelry, leather goods)</li>
-                <li>Custom signs & nameplates (indoor/outdoor)</li>
-                <li>Event signage (weddings, galas, business functions)</li>
-                <li>Industrial/branding uses (barcodes, serial plates, part markings)</li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-8 text-center">
-            <h3 className="text-xl font-semibold text-hub-blue dark:text-hub-white mb-3">Custom Design Services</h3>
-            <p className="text-lg text-gray-700 dark:text-gray-300">
-              We offer comprehensive design support, including vector/illustration preparation and working with various
-              file formats like AI, DXF, and SVG, to ensure your designs are perfectly translated into the final
-              product.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-padding">
-        <div className="container mx-auto px-4 max-w-6xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-hub-blue dark:text-hub-white mb-6">
-            Why Choose Hub City Laser Engraving in {locationName}?
-          </h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-            Our dedication to superior craftsmanship, use of high-quality materials, and commitment to precision set us
-            apart. We pride ourselves on fast turnaround times and offer convenient local delivery to ZIP codes
-            including {zipCodes.join(", ")}. Experience the difference of working with a local partner who understands
-            your needs.
-          </p>
-          <Link href="/contact" className="btn-primary">
-            Get your free Hub City Laser Engraving quote for {locationName} today!
-          </Link>
-          {nearbyLocations.length > 0 && (
-            <p className="text-md text-gray-600 dark:text-gray-400 mt-8">
-              We also serve{" "}
-              {nearbyLocations.map((loc, index) => (
-                <React.Fragment key={loc.href}>
-                  <Link href={loc.href} className="text-hub-blue dark:text-hub-silver hover:underline">
-                    {loc.name}
-                  </Link>
-                  {index < nearbyLocations.length - 1 && ", "}
-                </React.Fragment>
-              ))}
-              .
-            </p>
+      <section className="grid gap-8 md:grid-cols-2 md:items-start">
+        <div>
+          <p className="text-gray-800">{description}</p>
+          {locationLandmark && <p className="mt-3 text-gray-600">Landmark: {locationLandmark}</p>}
+          {zipCodes.length > 0 && !serviceAreaBusiness && (
+            <p className="mt-2 text-gray-600">ZIP codes served: {zipCodes.join(", ")}</p>
           )}
-          <p className="text-md text-gray-600 dark:text-gray-400 mt-4">
-            Looking for more? Visit our{" "}
-            <Link href="/areas-we-serve" className="text-hub-blue dark:text-hub-silver hover:underline">
-              Areas We Serve
-            </Link>{" "}
-            page or return to the{" "}
-            <Link href="/" className="text-hub-blue dark:text-hub-silver hover:underline">
-              Hub City Laser Engraving homepage
+
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <Link
+              href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
+              className={cn(
+                "inline-flex items-center rounded-md px-4 py-2 text-white",
+                "bg-[#002B5C] hover:opacity-90",
+              )}
+              aria-label="Book a laser engraving consultation"
+            >
+              Book Consultation
             </Link>
-            .
-          </p>
+            <a
+              href={`tel:${SITE_CONFIG.phoneHref}`}
+              className="inline-flex items-center rounded-md border border-[#002B5C] px-4 py-2 text-[#002B5C] hover:bg-[#002B5C]/5"
+              aria-label={`Call ${SITE_CONFIG.phoneDisplay}`}
+            >
+              Call {SITE_CONFIG.phoneDisplay}
+            </a>
+          </div>
+        </div>
+
+        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-md border border-gray-200">
+          <Image
+            src={imgPath || "/placeholder.svg"}
+            alt={`Engraving services in ${locationName}`}
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            style={{ objectFit: "cover" }}
+          />
         </div>
       </section>
+
+      {nearbyLocations.length > 0 && (
+        <section className="mt-10">
+          <h2 className="text-xl font-semibold">Nearby areas</h2>
+          <ul className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
+            {nearbyLocations.map((loc) => (
+              <li key={loc.href}>
+                <Link className="text-[#002B5C] underline underline-offset-2 hover:no-underline" href={loc.href}>
+                  {loc.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </div>
   )
 }

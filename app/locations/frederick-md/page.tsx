@@ -11,22 +11,18 @@ const locationData = {
     { name: "Hagerstown, MD", href: "/locations/hagerstown-md" },
   ],
   image: "/images/frederick-md-scenic.png",
-  title: "Hub City Laser Engraving Services in Frederick, MD | Hub City Laser Engraving",
+  title: "Laser Engraving in Frederick, MD | Engrave Everything",
   description:
-    "Hub City Laser Engraving offers comprehensive laser engraving services in Frederick, MD. From custom awards to industrial marking, we provide precision and quality.",
-  keywords:
-    "laser engraving Frederick MD, custom awards Frederick, industrial marking Frederick, Frederick laser cutting",
+    "Premium laser engraving for awards, signage, gifts, and industrial marking in Frederick, Maryland. Mobile service available and we ship across the region.",
+  keywords: "laser engraving Frederick MD, custom awards Frederick, signage Frederick, industrial marking Frederick",
+  // Service-area settings
+  areaServed: "Frederick, Maryland",
+  serviceAreaBusiness: true,
+  serviceAreaNote: "Serving Frederick, MD — mobile service and shipping available.",
 }
 
 export const metadata: Metadata = generateLocationMetadata(locationData)
 
 export default function FrederickMDPage() {
-  return (
-    <LocationTemplate
-      title={locationData.title}
-      description={locationData.description}
-      keywords={locationData.keywords}
-      {...locationData}
-    />
-  )
+  return <LocationTemplate {...locationData} />
 }

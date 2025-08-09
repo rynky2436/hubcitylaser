@@ -11,22 +11,19 @@ const locationData = {
     { name: "Friendship Heights, DC", href: "/locations/friendship-heights-dc" },
   ],
   image: "/images/cathedral-heights-au-park-dc-scenic.png",
-  title: "Hub City Laser Engraving in Cathedral Heights & AU Park, DC | Hub City Laser Engraving",
+  title: "Laser Engraving in Cathedral Heights & AU Park, DC | Engrave Everything",
   description:
-    "Hub City Laser Engraving serves the Cathedral Heights and AU Park neighborhoods with professional laser engraving. We offer services for academic institutions, local businesses, and residents.",
-  keywords:
-    "laser engraving Cathedral Heights, American University merchandise, AU Park laser cutting, laser engraving DC",
+    "Professional laser engraving for homes, schools, and local businesses in Cathedral Heights & AU Park. We come to you for on-site needs and ship finished work anywhere in D.C.",
+  keywords: "laser engraving Cathedral Heights, AU Park engraving, DC laser cutting, university gifts DC",
+  // Service-area SEO
+  areaServed: "Washington, D.C.",
+  serviceAreaBusiness: true,
+  serviceAreaNote:
+    "Servicing Washington, D.C. — we travel for projects and ship to all D.C. neighborhoods. No storefront in D.C.",
 }
 
 export const metadata: Metadata = generateLocationMetadata(locationData)
 
 export default function CathedralHeightsPage() {
-  return (
-    <LocationTemplate
-      title={locationData.title}
-      description={locationData.description}
-      keywords={locationData.keywords}
-      {...locationData}
-    />
-  )
+  return <LocationTemplate {...locationData} />
 }

@@ -1,11 +1,11 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { Menu, X, ChevronDown, Phone, Mail } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { SITE_CONFIG } from '@/lib/site-config'
+import { useState } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { Menu, X, ChevronDown, Phone, Mail } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { SITE_CONFIG } from "@/lib/site-config"
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -13,10 +13,15 @@ export default function Header() {
 
   const toggleMobile = () => setMobileOpen((v) => !v)
 
+  // Defensive fallbacks to prevent runtime crashes if config is partial
+  const PRIMARY = SITE_CONFIG.colors?.primary ?? "#002B5C"
+  const SECONDARY = SITE_CONFIG.colors?.secondary ?? "#A5ACAF"
+  const WHITE = SITE_CONFIG.colors?.white ?? "#FFFFFF"
+
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       {/* Top contact bar */}
-      <div className="w-full" style={{ backgroundColor: SITE_CONFIG.colors.primary, color: SITE_CONFIG.colors.white }}>
+      <div className="w-full" style={{ backgroundColor: PRIMARY, color: WHITE }}>
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-sm">
           <div className="flex items-center gap-6">
             <a
@@ -37,8 +42,12 @@ export default function Header() {
             </a>
           </div>
           <nav className="hidden md:flex items-center gap-4">
-            <Link className="hover:underline" href="/services">Services</Link>
-            <Link className="hover:underline" href="/contact">Contact</Link>
+            <Link className="hover:underline" href="/services">
+              Services
+            </Link>
+            <Link className="hover:underline" href="/contact">
+              Contact
+            </Link>
           </nav>
         </div>
       </div>
@@ -47,7 +56,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
         <Link href="/" className="flex items-center gap-3" aria-label={`${SITE_CONFIG.brandName} home`}>
           <Image
-            src="/images/ez-engrave-everything-logo-new.png"
+            src={SITE_CONFIG.assets?.logo ?? "/placeholder.svg?height=56&width=180&query=brand%20logo%20fallback"}
             alt={`${SITE_CONFIG.brandName} logo`}
             width={180}
             height={56}
@@ -58,51 +67,80 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8" style={{ color: SITE_CONFIG.colors.primary }}>
-          <Link href="/" className="hover:text-[#A5ACAF] transition-colors">Home</Link>
+        <nav className="hidden lg:flex items-center gap-8" style={{ color: PRIMARY }}>
+          <Link href="/" className="transition-colors" style={{ color: PRIMARY }}>
+            Home
+          </Link>
 
           {/* Industries */}
           <div className="relative">
             <button
-              className="flex items-center hover:text-[#A5ACAF] transition-colors"
-              onMouseEnter={() => setOpenDropdown('industries')}
-              onMouseLeave={() => setOpenDropdown((cur) => (cur === 'industries' ? null : cur))}
+              className="flex items-center transition-colors"
+              onMouseEnter={() => setOpenDropdown("industries")}
+              onMouseLeave={() => setOpenDropdown((cur) => (cur === "industries" ? null : cur))}
               aria-haspopup="true"
-              aria-expanded={openDropdown === 'industries'}
+              aria-expanded={openDropdown === "industries"}
             >
               Industries <ChevronDown className="ml-1 h-4 w-4" />
             </button>
-            {openDropdown === 'industries' && (
+            {openDropdown === "industries" && (
               <div
                 className="absolute top-full left-0 mt-1 w-64 bg-white border border-gray-200 rounded-md shadow-lg z-50"
-                onMouseEnter={() => setOpenDropdown('industries')}
+                onMouseEnter={() => setOpenDropdown("industries")}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
-                <Link href="/medical" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                <Link
+                  href="/medical"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
                   Medical & Healthcare
                 </Link>
-                <Link href="/professional" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                <Link
+                  href="/professional"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
                   Professional Services
                 </Link>
-                <Link href="/restaurants" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                <Link
+                  href="/restaurants"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
                   Restaurants
                 </Link>
-                <Link href="/real-estate" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                <Link
+                  href="/real-estate"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
                   Real Estate
                 </Link>
-                <Link href="/agriculture" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                <Link
+                  href="/agriculture"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
                   Agriculture
                 </Link>
-                <Link href="/retail" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                <Link
+                  href="/retail"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
                   Retail
                 </Link>
-                <Link href="/industrial" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                <Link
+                  href="/industrial"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
                   Industrial
                 </Link>
-                <Link href="/tech" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                <Link
+                  href="/tech"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
                   Technology
                 </Link>
-                <Link href="/hospitality" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                <Link
+                  href="/hospitality"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
                   Hospitality
                 </Link>
               </div>
@@ -112,69 +150,99 @@ export default function Header() {
           {/* Services */}
           <div className="relative">
             <button
-              className="flex items-center hover:text-[#A5ACAF] transition-colors"
-              onMouseEnter={() => setOpenDropdown('services')}
-              onMouseLeave={() => setOpenDropdown((cur) => (cur === 'services' ? null : cur))}
+              className="flex items-center transition-colors"
+              onMouseEnter={() => setOpenDropdown("services")}
+              onMouseLeave={() => setOpenDropdown((cur) => (cur === "services" ? null : cur))}
               aria-haspopup="true"
-              aria-expanded={openDropdown === 'services'}
+              aria-expanded={openDropdown === "services"}
             >
               Services <ChevronDown className="ml-1 h-4 w-4" />
             </button>
-            {openDropdown === 'services' && (
+            {openDropdown === "services" && (
               <div
                 className="absolute top-full left-0 mt-1 w-72 bg-white border border-gray-200 rounded-md shadow-lg z-50"
-                onMouseEnter={() => setOpenDropdown('services')}
+                onMouseEnter={() => setOpenDropdown("services")}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
-                <Link href="/services" className="block px-4 py-3 text-sm font-medium text-[#002B5C] hover:bg-gray-50 border-b border-gray-100">
+                <Link
+                  href="/services"
+                  className="block px-4 py-3 text-sm font-medium text-[#002B5C] hover:bg-gray-50 border-b border-gray-100"
+                >
                   All Services
                 </Link>
-                <Link href="/services/business-signage" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                <Link
+                  href="/services/business-signage"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
                   Business Signage & Displays
                 </Link>
-                <Link href="/services/industrial-identification" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                <Link
+                  href="/services/industrial-identification"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
                   Industrial Identification
                 </Link>
-                <Link href="/services/awards-recognition" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                <Link
+                  href="/services/awards-recognition"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
                   Awards & Recognition
                 </Link>
-                <Link href="/services/promotional-items" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                <Link
+                  href="/services/promotional-items"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
                   Promotional Items
                 </Link>
-                <Link href="/services/personalized-gifts" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                <Link
+                  href="/services/personalized-gifts"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
                   Personalized Gifts
                 </Link>
-                <Link href="/services/tri-layer-acrylic-engraving" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]">
+                <Link
+                  href="/services/tri-layer-acrylic-engraving"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
                   Tri-Layer Acrylic Engraving
                 </Link>
               </div>
             )}
           </div>
 
-          <Link href="/events-occasions" className="hover:text-[#A5ACAF] transition-colors">Events &amp; Occasions</Link>
-          <Link href="/areas-we-serve" className="hover:text-[#A5ACAF] transition-colors">Locations</Link>
-          <Link href="/blog" className="hover:text-[#A5ACAF] transition-colors">Blog</Link>
-          <Link href="/contact" className="hover:text-[#A5ACAF] transition-colors">Contact</Link>
+          <Link href="/events-occasions" className="transition-colors">
+            Events &amp; Occasions
+          </Link>
+          <Link href="/areas-we-serve" className="transition-colors">
+            Locations
+          </Link>
+          <Link href="/blog" className="transition-colors">
+            Blog
+          </Link>
+          <Link href="/contact" className="transition-colors">
+            Contact
+          </Link>
         </nav>
 
         {/* Desktop CTAs */}
         <div className="hidden lg:flex items-center gap-2">
-          <Button asChild className="bg-[#002B5C] text-white hover:bg-[#002B5C]/90">
+          <Button asChild className="text-white" style={{ backgroundColor: PRIMARY }}>
             <a href={`tel:${SITE_CONFIG.phoneHref}`} aria-label={`Tap to call ${SITE_CONFIG.phoneDisplay}`}>
               <Phone className="mr-2 h-4 w-4" aria-hidden />
               {SITE_CONFIG.phoneDisplay}
             </a>
           </Button>
-          <Button asChild className="bg-[#A5ACAF] text-[#002B5C] hover:bg-[#A5ACAF]/80">
+          <Button asChild style={{ backgroundColor: SECONDARY, color: PRIMARY }}>
             <a href={SITE_CONFIG.calendlyUrl} target="_blank" rel="noopener noreferrer">
-              Book Consultation
+              {SITE_CONFIG.cta?.label ?? "Book Consultation"}
             </a>
           </Button>
         </div>
 
         {/* Mobile menu button */}
         <button
-          className="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-[#002B5C] hover:bg-gray-100"
+          className="lg:hidden inline-flex items-center justify-center p-2 rounded-md"
+          style={{ color: PRIMARY }}
           onClick={toggleMobile}
           aria-expanded={mobileOpen}
           aria-label="Toggle menu"
@@ -186,29 +254,41 @@ export default function Header() {
       {/* Mobile Nav */}
       {mobileOpen && (
         <div className="lg:hidden border-t border-gray-200">
-          <nav className="px-4 py-4 space-y-3 text-[#002B5C]">
-            <Link href="/" className="block hover:text-[#A5ACAF]">Home</Link>
-            <Link href="/services" className="block hover:text-[#A5ACAF]">Services</Link>
-            <Link href="/events-occasions" className="block hover:text-[#A5ACAF]">Events &amp; Occasions</Link>
-            <Link href="/areas-we-serve" className="block hover:text-[#A5ACAF]">Locations</Link>
-            <Link href="/blog" className="block hover:text-[#A5ACAF]">Blog</Link>
-            <Link href="/contact" className="block hover:text-[#A5ACAF]">Contact</Link>
+          <nav className="px-4 py-4 space-y-3" style={{ color: PRIMARY }}>
+            <Link href="/" className="block hover:opacity-80">
+              Home
+            </Link>
+            <Link href="/services" className="block hover:opacity-80">
+              Services
+            </Link>
+            <Link href="/events-occasions" className="block hover:opacity-80">
+              Events &amp; Occasions
+            </Link>
+            <Link href="/areas-we-serve" className="block hover:opacity-80">
+              Locations
+            </Link>
+            <Link href="/blog" className="block hover:opacity-80">
+              Blog
+            </Link>
+            <Link href="/contact" className="block hover:opacity-80">
+              Contact
+            </Link>
 
             <div className="mt-4 flex flex-wrap gap-2">
-              <Button asChild className="bg-[#002B5C] text-white hover:bg-[#002B5C]/90">
+              <Button asChild className="text-white" style={{ backgroundColor: PRIMARY }}>
                 <a href={`tel:${SITE_CONFIG.phoneHref}`} aria-label={`Tap to call ${SITE_CONFIG.phoneDisplay}`}>
                   <Phone className="mr-2 h-4 w-4" aria-hidden />
                   {SITE_CONFIG.phoneDisplay}
                 </a>
               </Button>
-              <Button asChild className="bg-[#A5ACAF] text-[#002B5C] hover:bg-[#A5ACAF]/80">
+              <Button asChild style={{ backgroundColor: SECONDARY, color: PRIMARY }}>
                 <a href={SITE_CONFIG.calendlyUrl} target="_blank" rel="noopener noreferrer">
-                  Book Consultation
+                  {SITE_CONFIG.cta?.label ?? "Book Consultation"}
                 </a>
               </Button>
             </div>
 
-            <div className="mt-3 text-sm text-[#002B5C]/80">
+            <div className="mt-3 text-sm opacity-80">
               <a href={`mailto:${SITE_CONFIG.email}`} className="hover:underline">
                 {SITE_CONFIG.email}
               </a>
