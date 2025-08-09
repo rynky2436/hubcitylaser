@@ -6,9 +6,8 @@ import Footer from "./components/Footer"
 import { SITE_CONFIG } from "@/lib/site-config"
 
 export const metadata: Metadata = {
-  title: "Engrave Everything | Professional Laser Engraving & Cutting",
-  description:
-    "Precision laser engraving & cutting for businesses and personalized gifts. We serve Maryland, Virginia, and Washington, D.C. with on-site service and fast shipping.",
+  title: "Engrave Everything",
+  description: "Precision laser engraving for individuals and businesses.",
   keywords:
     "laser engraving Maryland, laser cutting Virginia, laser engraving Washington DC, custom signs, awards, industrial marking, promotional items, personalized gifts",
   openGraph: {
@@ -70,7 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-white text-gray-900">
         <Header />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>
