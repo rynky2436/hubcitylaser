@@ -1,28 +1,19 @@
-import LocationTemplate, { generateMetadata as generateLocationMetadata } from "../../components/LocationTemplate"
 import type { Metadata } from "next"
+import LongFormLocationPage, { generateLocationMetadata } from "@/app/components/location-long-form"
 
-const locationData = {
+export const metadata: Metadata = generateLocationMetadata({
   locationName: "Frederick, MD",
-  locationLandmark: "Carroll Creek Park",
-  zipCodes: ["21701", "21702", "21703", "21704"],
-  nearbyLocations: [
-    { name: "Gaithersburg, MD", href: "/locations/gaithersburg-md" },
-    { name: "Germantown, MD", href: "/locations/germantown-md" },
-    { name: "Hagerstown, MD", href: "/locations/hagerstown-md" },
-  ],
-  image: "/images/frederick-md-scenic.png",
-  title: "Laser Engraving in Frederick, MD | Engrave Everything",
-  description:
-    "Premium laser engraving for awards, signage, gifts, and industrial marking in Frederick, Maryland. Mobile service available and we ship across the region.",
-  keywords: "laser engraving Frederick MD, custom awards Frederick, signage Frederick, industrial marking Frederick",
-  // Service-area settings
-  areaServed: "Frederick, Maryland",
-  serviceAreaBusiness: true,
-  serviceAreaNote: "Serving Frederick, MD — mobile service and shipping available.",
-}
-
-export const metadata: Metadata = generateLocationMetadata(locationData)
+  heroImage: "/images/frederick-md-scenic.png",
+})
 
 export default function FrederickMDPage() {
-  return <LocationTemplate {...locationData} />
+  return (
+    <LongFormLocationPage
+      locationName="Frederick, MD"
+      heroImage="/images/frederick-md-scenic.png"
+      neighborhoods={["Downtown Frederick", "Baker Park", "Worman’s Mill", "Ballenger Creek"]}
+      landmarks={["Carroll Creek Park", "Hood College", "Frederick Fairgrounds"]}
+      localContextNote="From artisan markets along Carroll Creek to university milestones at Hood College, we personalize gifts and produce branded items for Frederick’s vibrant downtown businesses."
+    />
+  )
 }

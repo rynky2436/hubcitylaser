@@ -1,32 +1,19 @@
 import type { Metadata } from "next"
-import LocationTemplate, { generateMetadata as generateLocationMetadata } from "../../components/LocationTemplate"
+import LongFormLocationPage, { generateLocationMetadata } from "@/app/components/location-long-form"
 
-const locationData = {
+export const metadata: Metadata = generateLocationMetadata({
   locationName: "Falls Church, VA",
-  locationLandmark: "Eden Center",
-  zipCodes: ["22040", "22041", "22042", "22043", "22044", "22046"],
-  nearbyLocations: [
-    { name: "Arlington, VA", href: "/locations/arlington-va" },
-    { name: "Annandale, VA", href: "/locations/annandale-va" },
-    { name: "Vienna, VA", href: "/locations/vienna-va" },
-  ],
-  image: "/images/falls-church-va-scenic.png",
-  title: "Hub City Laser Engraving — Laser Engraving Falls Church VA",
-  description:
-    "Hub City Laser Engraving delivers custom laser engraving in Falls Church VA—signs, awards, gifts. Request your quote today!",
-  keywords:
-    "laser engraving Falls Church VA, custom laser signs Falls Church, awards Falls Church, personalized gifts Falls Church, Falls Church laser cutting",
-}
-
-export const metadata: Metadata = generateLocationMetadata(locationData)
+  heroImage: "/images/falls-church-va-scenic.png",
+})
 
 export default function FallsChurchVAPage() {
   return (
-    <LocationTemplate
-      title={locationData.title}
-      description={locationData.description}
-      keywords={locationData.keywords}
-      {...locationData}
+    <LongFormLocationPage
+      locationName="Falls Church, VA"
+      heroImage="/images/falls-church-va-scenic.png"
+      neighborhoods={["The Little City", "Pimmit Hills", "West Falls Church", "Seven Corners"]}
+      landmarks={["Eden Center", "Cherry Hill Park", "State Theatre"]}
+      localContextNote="We support small businesses near the State Theatre and create custom gifts for families across The Little City. The Eden Center’s dynamic retail scene is ideal for pop‑up activations and live personalization."
     />
   )
 }

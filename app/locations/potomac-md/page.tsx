@@ -1,31 +1,19 @@
-import LocationTemplate, { generateMetadata as generateLocationMetadata } from "../../components/LocationTemplate"
 import type { Metadata } from "next"
+import LongFormLocationPage, { generateLocationMetadata } from "@/app/components/location-long-form"
 
-const locationData = {
+export const metadata: Metadata = generateLocationMetadata({
   locationName: "Potomac, MD",
-  locationLandmark: "Great Falls Park (Maryland Side)",
-  zipCodes: ["20854"],
-  nearbyLocations: [
-    { name: "Rockville, MD", href: "/locations/rockville-md" },
-    { name: "Gaithersburg, MD", href: "/locations/gaithersburg-md" },
-    { name: "Bethesda, MD", href: "/locations/bethesda-md" },
-  ],
-  image: "/images/potomac-md-scenic.png",
-  title: "Hub City Laser Engraving Services in Potomac, MD | Hub City Laser Engraving",
-  description:
-    "Hub City Laser Engraving offers premium laser engraving services to the Potomac, MD community. We specialize in custom gifts, corporate awards, and personalized home decor.",
-  keywords: "laser engraving Potomac MD, custom gifts Potomac, corporate awards Potomac MD, Potomac laser cutting",
-}
-
-export const metadata: Metadata = generateLocationMetadata(locationData)
+  heroImage: "/images/potomac-md-scenic.png",
+})
 
 export default function PotomacPage() {
   return (
-    <LocationTemplate
-      title={locationData.title}
-      description={locationData.description}
-      keywords={locationData.keywords}
-      {...locationData}
+    <LongFormLocationPage
+      locationName="Potomac, MD"
+      heroImage="/images/potomac-md-scenic.png"
+      neighborhoods={["Potomac Village", "Avenel", "River Road corridor"]}
+      landmarks={["Great Falls (Maryland side)", "Glenstone Museum"]}
+      localContextNote="Homeowners and event planners in Potomac rely on our personalized gifts, tasteful signage, and on‑site engraving for weddings and private gatherings."
     />
   )
 }

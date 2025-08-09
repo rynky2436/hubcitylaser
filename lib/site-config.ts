@@ -1,5 +1,6 @@
 export const SITE_CONFIG = {
   brandName: "Engrave Everything",
+  siteUrl: "https://engraveeverything.us",
   email: "info@engraveeverything.us",
   phoneDisplay: "240-324-7110",
   phoneHref: "+12403247110",
