@@ -1,18 +1,19 @@
+import type { Metadata } from "next"
 import LongFormLocationPage, { generateLocationMetadata } from "@/app/components/location-long-form"
 
-export const metadata = generateLocationMetadata({
+export const metadata: Metadata = generateLocationMetadata({
   locationName: "Potomac, MD",
-  heroImage: "/images/locations/potomac-md.png",
+  heroImage: "/images/potomac-md-scenic.png",
 })
 
-export default function Page() {
+export default function PotomacPage() {
   return (
     <LongFormLocationPage
       locationName="Potomac, MD"
-      heroImage="/images/locations/potomac-md.png"
-      neighborhoods={["Avenel", "Falls Road Corridor", "Potomac Village"]}
-      landmarks={["C&O Canal—Great Falls Tavern", "Glenstone Museum vicinity"]}
-      localContextNote="Popular for housewarming gifts, community events, and private celebrations."
+      heroImage="/images/potomac-md-scenic.png"
+      neighborhoods={["Potomac Village", "Avenel", "River Road corridor"]}
+      landmarks={["Great Falls (Maryland side)", "Glenstone Museum"]}
+      localContextNote="Homeowners and event planners in Potomac rely on our personalized gifts, tasteful signage, and on‑site engraving for weddings and private gatherings."
     />
   )
 }

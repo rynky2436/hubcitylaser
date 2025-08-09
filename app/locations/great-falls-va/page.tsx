@@ -1,18 +1,19 @@
+import type { Metadata } from "next"
 import LongFormLocationPage, { generateLocationMetadata } from "@/app/components/location-long-form"
 
-export const metadata = generateLocationMetadata({
+export const metadata: Metadata = generateLocationMetadata({
   locationName: "Great Falls, VA",
-  heroImage: "/images/locations/great-falls-va.png",
+  heroImage: "/images/great-falls-va-scenic.png",
 })
 
-export default function Page() {
+export default function GreatFallsVAPage() {
   return (
     <LongFormLocationPage
       locationName="Great Falls, VA"
-      heroImage="/images/locations/great-falls-va.png"
-      neighborhoods={["Great Falls Village", "Seneca", "Colvin Run"]}
+      heroImage="/images/great-falls-va-scenic.png"
+      neighborhoods={["Great Falls", "Riverbend", "Seneca"]}
       landmarks={["Great Falls Park", "Riverbend Park"]}
-      localContextNote="Popular for personalized gifts and private event engraving near Great Falls Park."
+      localContextNote="Residents choose us for refined gifts and estate signage that suit Great Falls’ natural setting. Event venues near the park make elegant backdrops for on‑site engraving."
     />
   )
 }

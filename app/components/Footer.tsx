@@ -1,120 +1,90 @@
-import Link from "next/link"
-import Image from "next/image"
-import { SITE_CONFIG, telHref, mailtoHref } from "@/lib/site-config"
+import Link from 'next/link'
+import Image from 'next/image'
+import { Phone, Mail } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { SITE_CONFIG } from '@/lib/site-config'
 
 export default function Footer() {
-  const colors = SITE_CONFIG?.colors ?? {
-    primary: "#002B5C",
-    secondary: "#A5ACAF",
-    background: "#FFFFFF",
-  }
-
   return (
-    <footer className="mt-16 border-t bg-white" style={{ borderColor: colors.secondary }}>
-      <div className="mx-auto w-full max-w-7xl px-4 py-10 grid grid-cols-1 gap-8 md:grid-cols-4">
-        <div className="col-span-1 flex flex-col gap-3">
-          <Link href="/" className="flex items-center gap-3">
-            <Image
-              src={SITE_CONFIG.brand.logo || "/placeholder.svg"}
-              alt={SITE_CONFIG.brand.alt}
-              width={48}
-              height={48}
-              className="h-12 w-12 object-contain"
-            />
-            <span className="text-lg font-semibold" style={{ color: colors.primary }}>
-              {SITE_CONFIG.brand.name}
-            </span>
-          </Link>
-          <p className="text-sm text-gray-600">
-            Precision laser engraving for individuals and businesses across the region.
-          </p>
-          <div className="text-sm">
-            <a href={telHref(SITE_CONFIG.contact.phone)} className="block hover:underline">
-              {SITE_CONFIG.contact.phone}
-            </a>
-            <a href={mailtoHref(SITE_CONFIG.contact.email)} className="block hover:underline">
-              {SITE_CONFIG.contact.email}
-            </a>
+    <footer className="mt-16 border-t border-gray-200 bg-white">
+      <div className="mx-auto max-w-7xl px-4 py-10">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
+          {/* Brand */}
+          <div className="space-y-4">
+            <Link href="/" className="flex items-center gap-3">
+              <Image
+                src="/images/ez-engrave-everything-logo-new.png"
+                alt={`${SITE_CONFIG.brandName} logo`}
+                width={150}
+                height={48}
+                className="h-10 w-auto"
+              />
+              <span className="sr-only">{SITE_CONFIG.brandName}</span>
+            </Link>
+            <p className="text-sm text-gray-600">
+              Precision laser engraving for businesses and individuals across the DC, MD, and Northern VA region.
+            </p>
+            <div className="flex gap-2">
+              <Button asChild className="bg-[#002B5C] text-white hover:bg-[#002B5C]/90">
+                <a href={SITE_CONFIG.calendlyUrl} target="_blank" rel="noopener noreferrer">
+                  Book Consultation
+                </a>
+              </Button>
+              <Button asChild variant="outline" className="border-[#A5ACAF] text-[#002B5C] hover:bg-[#A5ACAF]/10">
+                <Link href="/contact">Contact</Link>
+              </Button>
+            </div>
           </div>
-        </div>
 
-        <div>
-          <h3 className="text-sm font-semibold tracking-wide" style={{ color: colors.primary }}>
-            Navigation
-          </h3>
-          <ul className="mt-3 space-y-2 text-sm">
-            {SITE_CONFIG.nav.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} className="hover:underline">
-                  {item.label}
-                </Link>
+          {/* Services */}
+          <div>
+            <h2 className="mb-3 text-sm font-semibold tracking-wide text-[#002B5C]">Services</h2>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li><Link href="/services/business-signage" className="hover:underline">Business Signage & Displays</Link></li>
+              <li><Link href="/services/industrial-identification" className="hover:underline">Industrial Identification</Link></li>
+              <li><Link href="/services/awards-recognition" className="hover:underline">Awards & Recognition</Link></li>
+              <li><Link href="/services/promotional-items" className="hover:underline">Promotional Items</Link></li>
+              <li><Link href="/services/personalized-gifts" className="hover:underline">Personalized Gifts</Link></li>
+              <li><Link href="/services/tri-layer-acrylic-engraving" className="hover:underline">Tri-Layer Acrylic</Link></li>
+            </ul>
+          </div>
+
+          {/* Industries */}
+          <div>
+            <h2 className="mb-3 text-sm font-semibold tracking-wide text-[#002B5C]">Industries</h2>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li><Link href="/medical" className="hover:underline">Medical & Healthcare</Link></li>
+              <li><Link href="/professional" className="hover:underline">Professional Services</Link></li>
+              <li><Link href="/restaurants" className="hover:underline">Restaurants</Link></li>
+              <li><Link href="/real-estate" className="hover:underline">Real Estate</Link></li>
+              <li><Link href="/industrial" className="hover:underline">Industrial</Link></li>
+              <li><Link href="/retail" className="hover:underline">Retail</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h2 className="mb-3 text-sm font-semibold tracking-wide text-[#002B5C]">Contact</h2>
+            <ul className="space-y-3 text-sm text-gray-700">
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-[#002B5C]" aria-hidden />
+                <a href={`tel:${SITE_CONFIG.phoneHref}`} className="hover:underline">{SITE_CONFIG.phoneDisplay}</a>
               </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="text-sm font-semibold tracking-wide" style={{ color: colors.primary }}>
-            Services
-          </h3>
-          <ul className="mt-3 space-y-2 text-sm">
-            <li>
-              <Link href="/services/business-signage" className="hover:underline">
-                Business Signage & Displays
-              </Link>
-            </li>
-            <li>
-              <Link href="/services/awards-recognition" className="hover:underline">
-                Awards & Recognition
-              </Link>
-            </li>
-            <li>
-              <Link href="/services/industrial-identification" className="hover:underline">
-                Industrial Identification
-              </Link>
-            </li>
-            <li>
-              <Link href="/services/personalized-gifts" className="hover:underline">
-                Personalized Gifts
-              </Link>
-            </li>
-            <li>
-              <Link href="/services/promotional-items" className="hover:underline">
-                Promotional Items
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="text-sm font-semibold tracking-wide" style={{ color: colors.primary }}>
-            Get in touch
-          </h3>
-          <p className="mt-3 text-sm text-gray-600">
-            Questions about an order or event? We offer mobile/on‑site engraving and ship completed items throughout our
-            service area.
-          </p>
-          <div className="mt-4 flex flex-col gap-2">
-            <a
-              href={SITE_CONFIG.cta.bookConsultationUrl}
-              className="inline-block rounded-md px-4 py-2 text-center text-sm font-medium text-white"
-              style={{ backgroundColor: colors.primary }}
-            >
-              {SITE_CONFIG.cta.bookConsultationText}
-            </a>
-            <a
-              href={mailtoHref(SITE_CONFIG.contact.email)}
-              className="inline-block rounded-md border px-4 py-2 text-center text-sm font-medium"
-              style={{ borderColor: colors.secondary }}
-            >
-              Email Us
-            </a>
+              <li className="flex items-center gap-2 break-all">
+                <Mail className="h-4 w-4 text-[#002B5C]" aria-hidden />
+                <a href={`mailto:${SITE_CONFIG.email}`} className="hover:underline">{SITE_CONFIG.email}</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
 
-      <div className="border-t py-4 text-center text-xs text-gray-500" style={{ borderColor: colors.secondary }}>
-        © {new Date().getFullYear()} {SITE_CONFIG.brand.name}. All rights reserved.
+        <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-gray-200 pt-6 text-xs text-gray-500 md:flex-row">
+          <p>© {new Date().getFullYear()} {SITE_CONFIG.brandName}. All rights reserved.</p>
+          <div className="flex gap-4">
+            <Link href="/privacy" className="hover:underline">Privacy</Link>
+            <Link href="/terms" className="hover:underline">Terms</Link>
+          </div>
+        </div>
       </div>
     </footer>
   )

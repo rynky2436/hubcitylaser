@@ -1,268 +1,299 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { useMemo, useState } from "react"
-import { Phone, Mail, MenuIcon, X } from "lucide-react"
+import { Menu, X, ChevronDown, Phone, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
-import { SITE_CONFIG, telHref, mailtoHref, NAV_EXPANDED } from "@/lib/site-config"
-
-type NavChild = { label: string; href: string }
-type NavItem = { label: string; href: string } | { label: string; children: NavChild[] }
+import { SITE_CONFIG } from "@/lib/site-config"
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false)
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
 
-  const colors = SITE_CONFIG?.colors ?? {
-    primary: "#002B5C",
-    secondary: "#A5ACAF",
-    background: "#FFFFFF",
-    textOnPrimary: "#FFFFFF",
-  }
+  const toggleMobile = () => setMobileOpen((v) => !v)
 
-  const phone = SITE_CONFIG?.contact?.phone ?? ""
-  const email = SITE_CONFIG?.contact?.email ?? ""
-  const logo = SITE_CONFIG?.brand?.logo ?? (SITE_CONFIG as any)?.assets?.logo ?? "/placeholder.svg"
-  const brandName = SITE_CONFIG?.brand?.name ?? "Hub City Laser"
-  const brandAlt = SITE_CONFIG?.brand?.alt ?? "Company logo"
-
-  const nav: NavItem[] = useMemo(() => {
-    if (Array.isArray(NAV_EXPANDED) && NAV_EXPANDED.length > 0) {
-      return NAV_EXPANDED as unknown as NavItem[]
-    }
-    return [
-      { label: "Home", href: "/" },
-      { label: "Services", href: "/services" },
-      { label: "Contact", href: "/contact" },
-    ]
-  }, [])
+  // Defensive fallbacks to prevent runtime crashes if config is partial
+  const PRIMARY = SITE_CONFIG.colors?.primary ?? "#002B5C"
+  const SECONDARY = SITE_CONFIG.colors?.secondary ?? "#A5ACAF"
+  const WHITE = SITE_CONFIG.colors?.white ?? "#FFFFFF"
 
   return (
-    // Ensure the header sits above the page so dropdowns overlay content
-    <header className="relative z-50 w-full border-b" style={{ borderColor: colors.secondary }}>
+    <header className="bg-white shadow-md sticky top-0 z-50">
       {/* Top contact bar */}
-      <div className="hidden md:block" style={{ backgroundColor: colors.primary, color: "#FFFFFF" }}>
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8 py-2 text-sm">
+      <div className="w-full" style={{ backgroundColor: PRIMARY, color: WHITE }}>
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-sm">
           <div className="flex items-center gap-6">
-            {phone && (
-              <a href={telHref(phone)} className="flex items-center gap-2 hover:underline" aria-label={`Call ${phone}`}>
-                <Phone size={16} aria-hidden="true" />
-                <span className="font-semibold">{phone}</span>
-              </a>
-            )}
-            {email && (
-              <a
-                href={mailtoHref(email)}
-                className="hidden sm:flex items-center gap-2 hover:underline"
-                aria-label={`Email ${email}`}
-              >
-                <Mail size={16} aria-hidden="true" />
-                <span>{email}</span>
-              </a>
-            )}
-          </div>
-          <div className="flex items-center gap-3">
-            {phone && (
-              <a href={telHref(phone)} className="hidden lg:block" aria-label="Call us">
-                <Button variant="secondary" className="bg-white text-black hover:bg-gray-100">
-                  <Phone className="mr-2 h-4 w-4" />
-                  {phone}
-                </Button>
-              </a>
-            )}
             <a
-              href={SITE_CONFIG?.cta?.bookConsultationUrl ?? "#"}
-              aria-label={SITE_CONFIG?.cta?.bookConsultationText ?? "Book Consultation"}
+              href={`tel:${SITE_CONFIG.phoneHref}`}
+              className="flex items-center gap-2 hover:underline focus:outline-none focus:ring-2 focus:ring-white/70 rounded-sm"
+              aria-label={`Call ${SITE_CONFIG.brandName} at ${SITE_CONFIG.phoneDisplay}`}
             >
-              <Button className="bg-white/10 border border-white text-white hover:bg-white/20" variant="outline">
-                {SITE_CONFIG?.cta?.bookConsultationText ?? "Book Consultation"}
-              </Button>
+              <Phone className="h-4 w-4" aria-hidden="true" />
+              <strong>{SITE_CONFIG.phoneDisplay}</strong>
+            </a>
+            <a
+              href={`mailto:${SITE_CONFIG.email}`}
+              className="hidden sm:flex items-center gap-2 text-white/90 hover:text-white hover:underline focus:outline-none focus:ring-2 focus:ring-white/70 rounded-sm"
+              aria-label={`Email ${SITE_CONFIG.email}`}
+            >
+              <Mail className="h-4 w-4" aria-hidden="true" />
+              {SITE_CONFIG.email}
             </a>
           </div>
+          <nav className="hidden md:flex items-center gap-4">
+            <Link className="hover:underline" href="/services">
+              Services
+            </Link>
+            <Link className="hover:underline" href="/contact">
+              Contact
+            </Link>
+          </nav>
         </div>
       </div>
 
       {/* Main bar */}
-      <div className="bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8 py-3">
-          {/* Brand */}
-          <Link href="/" className="flex items-center gap-3" aria-label="Go to homepage">
-            <Image
-              src={logo || "/placeholder.svg"}
-              alt={brandAlt}
-              width={44}
-              height={44}
-              className="h-11 w-11 object-contain"
-              priority
-            />
-            <span className="text-lg font-semibold tracking-wide" style={{ color: colors.primary }}>
-              {brandName}
-            </span>
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+        <Link href="/" className="flex items-center gap-3" aria-label={`${SITE_CONFIG.brandName} home`}>
+          <Image
+            src={SITE_CONFIG.assets?.logo ?? "/placeholder.svg?height=56&width=180&query=brand%20logo%20fallback"}
+            alt={`${SITE_CONFIG.brandName} logo`}
+            width={180}
+            height={56}
+            className="h-12 w-auto"
+            priority
+          />
+          <span className="sr-only">{SITE_CONFIG.brandName}</span>
+        </Link>
+
+        {/* Desktop Nav */}
+        <nav className="hidden lg:flex items-center gap-8" style={{ color: PRIMARY }}>
+          <Link href="/" className="transition-colors" style={{ color: PRIMARY }}>
+            Home
           </Link>
 
-          {/* Desktop navigation */}
-          <nav className="hidden md:flex items-center" aria-label="Primary">
-            <NavigationMenu>
-              <NavigationMenuList className="gap-10 xl:gap-14">
-                {nav.map((item) => {
-                  const isDropdown = (item as any).children
-                  if (!isDropdown) {
-                    const link = item as { label: string; href: string }
-                    return (
-                      <NavigationMenuItem key={link.label}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href={link.href}
-                            className="inline-flex items-center rounded-md px-3 py-2 text-base font-normal tracking-wide"
-                            style={{ color: colors.primary }}
-                          >
-                            {link.label}
-                          </Link>
-                        </NavigationMenuLink>
-                      </NavigationMenuItem>
-                    )
-                  }
+          {/* Industries */}
+          <div className="relative">
+            <button
+              className="flex items-center transition-colors"
+              onMouseEnter={() => setOpenDropdown("industries")}
+              onMouseLeave={() => setOpenDropdown((cur) => (cur === "industries" ? null : cur))}
+              aria-haspopup="true"
+              aria-expanded={openDropdown === "industries"}
+            >
+              Industries <ChevronDown className="ml-1 h-4 w-4" />
+            </button>
+            {openDropdown === "industries" && (
+              <div
+                className="absolute top-full left-0 mt-1 w-64 bg-white border border-gray-200 rounded-md shadow-lg z-50"
+                onMouseEnter={() => setOpenDropdown("industries")}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
+                <Link
+                  href="/medical"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
+                  Medical & Healthcare
+                </Link>
+                <Link
+                  href="/professional"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
+                  Professional Services
+                </Link>
+                <Link
+                  href="/restaurants"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
+                  Restaurants
+                </Link>
+                <Link
+                  href="/real-estate"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
+                  Real Estate
+                </Link>
+                <Link
+                  href="/agriculture"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
+                  Agriculture
+                </Link>
+                <Link
+                  href="/retail"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
+                  Retail
+                </Link>
+                <Link
+                  href="/industrial"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
+                  Industrial
+                </Link>
+                <Link
+                  href="/tech"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
+                  Technology
+                </Link>
+                <Link
+                  href="/hospitality"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
+                  Hospitality
+                </Link>
+              </div>
+            )}
+          </div>
 
-                  const dd = item as { label: string; children: NavChild[] }
-                  return (
-                    <NavigationMenuItem key={dd.label}>
-                      <NavigationMenuTrigger
-                        className="rounded-md px-3 py-2 text-base font-medium tracking-wide"
-                        style={{ color: colors.primary, backgroundColor: "transparent" }}
-                      >
-                        {dd.label}
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <ul className="grid w-[560px] p-4 grid-cols-2 gap-2">
-                          {dd.children.map((child) => (
-                            <li key={child.href}>
-                              <NavigationMenuLink asChild>
-                                <Link
-                                  href={child.href}
-                                  className="block rounded-md px-3 py-2 text-sm hover:bg-gray-50 text-gray-900"
-                                >
-                                  {child.label}
-                                </Link>
-                              </NavigationMenuLink>
-                            </li>
-                          ))}
-                        </ul>
-                      </NavigationMenuContent>
-                    </NavigationMenuItem>
-                  )
-                })}
-              </NavigationMenuList>
-            </NavigationMenu>
-          </nav>
+          {/* Services */}
+          <div className="relative">
+            <button
+              className="flex items-center transition-colors"
+              onMouseEnter={() => setOpenDropdown("services")}
+              onMouseLeave={() => setOpenDropdown((cur) => (cur === "services" ? null : cur))}
+              aria-haspopup="true"
+              aria-expanded={openDropdown === "services"}
+            >
+              Services <ChevronDown className="ml-1 h-4 w-4" />
+            </button>
+            {openDropdown === "services" && (
+              <div
+                className="absolute top-full left-0 mt-1 w-72 bg-white border border-gray-200 rounded-md shadow-lg z-50"
+                onMouseEnter={() => setOpenDropdown("services")}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
+                <Link
+                  href="/services"
+                  className="block px-4 py-3 text-sm font-medium text-[#002B5C] hover:bg-gray-50 border-b border-gray-100"
+                >
+                  All Services
+                </Link>
+                <Link
+                  href="/services/business-signage"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
+                  Business Signage & Displays
+                </Link>
+                <Link
+                  href="/services/industrial-identification"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
+                  Industrial Identification
+                </Link>
+                <Link
+                  href="/services/awards-recognition"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
+                  Awards & Recognition
+                </Link>
+                <Link
+                  href="/services/promotional-items"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
+                  Promotional Items
+                </Link>
+                <Link
+                  href="/services/personalized-gifts"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
+                  Personalized Gifts
+                </Link>
+                <Link
+                  href="/services/tri-layer-acrylic-engraving"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#002B5C]"
+                >
+                  Tri-Layer Acrylic Engraving
+                </Link>
+              </div>
+            )}
+          </div>
 
-          {/* Mobile toggle */}
-          <button
-            className="md:hidden inline-flex items-center justify-center rounded-md border px-3 py-2 text-sm"
-            onClick={() => setMobileOpen((v) => !v)}
-            aria-expanded={mobileOpen}
-            aria-controls="mobile-nav"
-            aria-label="Toggle navigation menu"
-            style={{ borderColor: "#E5E7EB", color: colors.primary }}
-          >
-            {mobileOpen ? <X className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
-            <span className="sr-only">{mobileOpen ? "Close menu" : "Open menu"}</span>
-          </button>
+          <Link href="/events-occasions" className="transition-colors">
+            Events &amp; Occasions
+          </Link>
+          <Link href="/areas-we-serve" className="transition-colors">
+            Locations
+          </Link>
+          <Link href="/blog" className="transition-colors">
+            Blog
+          </Link>
+          <Link href="/contact" className="transition-colors">
+            Contact
+          </Link>
+        </nav>
+
+        {/* Desktop CTAs */}
+        <div className="hidden lg:flex items-center gap-2">
+          <Button asChild className="text-white" style={{ backgroundColor: PRIMARY }}>
+            <a href={`tel:${SITE_CONFIG.phoneHref}`} aria-label={`Tap to call ${SITE_CONFIG.phoneDisplay}`}>
+              <Phone className="mr-2 h-4 w-4" aria-hidden />
+              {SITE_CONFIG.phoneDisplay}
+            </a>
+          </Button>
+          <Button asChild style={{ backgroundColor: SECONDARY, color: PRIMARY }}>
+            <a href={SITE_CONFIG.calendlyUrl} target="_blank" rel="noopener noreferrer">
+              {SITE_CONFIG.cta?.label ?? "Book Consultation"}
+            </a>
+          </Button>
         </div>
+
+        {/* Mobile menu button */}
+        <button
+          className="lg:hidden inline-flex items-center justify-center p-2 rounded-md"
+          style={{ color: PRIMARY }}
+          onClick={toggleMobile}
+          aria-expanded={mobileOpen}
+          aria-label="Toggle menu"
+        >
+          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
       </div>
 
-      {/* Mobile drawer */}
+      {/* Mobile Nav */}
       {mobileOpen && (
-        <div id="mobile-nav" className="md:hidden border-t bg-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 py-3">
-            <div className="flex flex-col">
-              {nav.map((item) => {
-                const isDropdown = (item as any).children
-                if (!isDropdown) {
-                  const link = item as { label: string; href: string }
-                  return (
-                    <Link
-                      key={link.label}
-                      href={link.href}
-                      className="py-2 text-base"
-                      onClick={() => setMobileOpen(false)}
-                      style={{ color: colors.primary }}
-                    >
-                      {link.label}
-                    </Link>
-                  )
-                }
+        <div className="lg:hidden border-t border-gray-200">
+          <nav className="px-4 py-4 space-y-3" style={{ color: PRIMARY }}>
+            <Link href="/" className="block hover:opacity-80">
+              Home
+            </Link>
+            <Link href="/services" className="block hover:opacity-80">
+              Services
+            </Link>
+            <Link href="/events-occasions" className="block hover:opacity-80">
+              Events &amp; Occasions
+            </Link>
+            <Link href="/areas-we-serve" className="block hover:opacity-80">
+              Locations
+            </Link>
+            <Link href="/blog" className="block hover:opacity-80">
+              Blog
+            </Link>
+            <Link href="/contact" className="block hover:opacity-80">
+              Contact
+            </Link>
 
-                const dd = item as { label: string; children: NavChild[] }
-                const isIndustries = dd.label === "Industries"
-                const isServices = dd.label === "Services"
-                const open = isIndustries ? mobileIndustriesOpen : isServices ? mobileServicesOpen : false
-                const setOpen = isIndustries ? setMobileIndustriesOpen : isServices ? setMobileServicesOpen : () => {}
-
-                return (
-                  <div key={dd.label} className="py-2">
-                    <button
-                      className="w-full text-left text-base font-medium flex items-center justify-between"
-                      onClick={() => setOpen((v: boolean) => !v)}
-                      aria-expanded={open}
-                      aria-controls={`mobile-${dd.label.toLowerCase()}`}
-                      style={{ color: colors.primary }}
-                    >
-                      {dd.label}
-                      <span className="ml-2 text-gray-500">{open ? "−" : "+"}</span>
-                    </button>
-                    {open && (
-                      <div id={`mobile-${dd.label.toLowerCase()}`} className="mt-2 pl-3 flex flex-col gap-1">
-                        {dd.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className="py-1.5 text-sm text-gray-700"
-                            onClick={() => {
-                              setMobileOpen(false)
-                              setOpen(false as any)
-                            }}
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                )
-              })}
+            <div className="mt-4 flex flex-wrap gap-2">
+              <Button asChild className="text-white" style={{ backgroundColor: PRIMARY }}>
+                <a href={`tel:${SITE_CONFIG.phoneHref}`} aria-label={`Tap to call ${SITE_CONFIG.phoneDisplay}`}>
+                  <Phone className="mr-2 h-4 w-4" aria-hidden />
+                  {SITE_CONFIG.phoneDisplay}
+                </a>
+              </Button>
+              <Button asChild style={{ backgroundColor: SECONDARY, color: PRIMARY }}>
+                <a href={SITE_CONFIG.calendlyUrl} target="_blank" rel="noopener noreferrer">
+                  {SITE_CONFIG.cta?.label ?? "Book Consultation"}
+                </a>
+              </Button>
             </div>
 
-            <div className="mt-3 flex flex-col gap-2">
-              {phone && (
-                <a href={telHref(phone)} className="w-full">
-                  <Button className="w-full" style={{ backgroundColor: colors.primary, color: "#FFFFFF" }}>
-                    <Phone className="mr-2 h-4 w-4" />
-                    Call {phone}
-                  </Button>
-                </a>
-              )}
-              <a href={SITE_CONFIG?.cta?.bookConsultationUrl ?? "#"} className="w-full">
-                <Button className="w-full bg-transparent" variant="outline">
-                  {SITE_CONFIG?.cta?.bookConsultationText ?? "Book Consultation"}
-                </Button>
+            <div className="mt-3 text-sm opacity-80">
+              <a href={`mailto:${SITE_CONFIG.email}`} className="hover:underline">
+                {SITE_CONFIG.email}
               </a>
-              {email && (
-                <a href={mailtoHref(email)} className="text-center text-sm underline">
-                  {email}
-                </a>
-              )}
             </div>
-          </div>
+          </nav>
         </div>
       )}
     </header>

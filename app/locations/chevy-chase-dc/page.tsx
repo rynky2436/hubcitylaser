@@ -1,18 +1,19 @@
+import type { Metadata } from "next"
 import LongFormLocationPage, { generateLocationMetadata } from "@/app/components/location-long-form"
 
-export const metadata = generateLocationMetadata({
+export const metadata: Metadata = generateLocationMetadata({
   locationName: "Chevy Chase, Washington, D.C.",
-  heroImage: "/images/locations/chevy-chase-dc.png",
+  heroImage: "/images/chevy-chase-dc-scenic.png",
 })
 
-export default function Page() {
+export default function ChevyChaseDCPage() {
   return (
     <LongFormLocationPage
       locationName="Chevy Chase, Washington, D.C."
-      heroImage="/images/locations/chevy-chase-dc.png"
-      neighborhoods={["Chevy Chase DC", "Friendship Heights"]}
-      landmarks={["Connecticut Avenue Corridor", "Chevy Chase Circle"]}
-      localContextNote="We support boutique retail activations and neighborhood gatherings throughout Chevy Chase DC."
+      heroImage="/images/chevy-chase-dc-scenic.png"
+      neighborhoods={["Chevy Chase DC", "Barnaby Woods", "Hawthorne", "Friendship Heights"]}
+      landmarks={["Chevy Chase Circle", "Connecticut Avenue retail", "Lafayette Elementary School"]}
+      localContextNote="We support neighborhood events along Connecticut Avenue and create thoughtful gifts for teachers, new homeowners, and community celebrations near Chevy Chase Circle."
     />
   )
 }

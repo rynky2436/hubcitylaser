@@ -1,18 +1,19 @@
+import type { Metadata } from "next"
 import LongFormLocationPage, { generateLocationMetadata } from "@/app/components/location-long-form"
 
-export const metadata = generateLocationMetadata({
+export const metadata: Metadata = generateLocationMetadata({
   locationName: "Woodley Park & Cleveland Park, Washington, D.C.",
-  heroImage: "/images/locations/woodley-park-cleveland-park-dc.png",
+  heroImage: "/images/woodley-park-cleveland-park-dc-scenic.png",
 })
 
-export default function Page() {
+export default function WoodleyParkPage() {
   return (
     <LongFormLocationPage
       locationName="Woodley Park & Cleveland Park, Washington, D.C."
-      heroImage="/images/locations/woodley-park-cleveland-park-dc.png"
-      neighborhoods={["Woodley Park", "Cleveland Park", "Kalorama vicinity"]}
-      landmarks={["Smithsonian’s National Zoo", "Rock Creek Park"]}
-      localContextNote="Popular for local family gifts and neighborhood retail pop‑ups near the Zoo and Rock Creek Park."
+      heroImage="/images/woodley-park-cleveland-park-dc-scenic.png"
+      neighborhoods={["Woodley Park", "Cleveland Park", "Forest Hills", "Kalorama Triangle"]}
+      landmarks={["Smithsonian’s National Zoo", "Uptown Theater area", "Connecticut Avenue corridor"]}
+      localContextNote="Families and embassies in the Connecticut Avenue corridor choose us for tasteful gifts, nameplates, and event personalization—especially popular near the National Zoo and neighborhood markets."
     />
   )
 }

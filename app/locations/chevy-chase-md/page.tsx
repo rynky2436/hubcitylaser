@@ -1,18 +1,19 @@
+import type { Metadata } from "next"
 import LongFormLocationPage, { generateLocationMetadata } from "@/app/components/location-long-form"
 
-export const metadata = generateLocationMetadata({
+export const metadata: Metadata = generateLocationMetadata({
   locationName: "Chevy Chase, MD",
-  heroImage: "/images/locations/chevy-chase-md.png",
+  heroImage: "/images/chevy-chase-md-scenic.png",
 })
 
-export default function Page() {
+export default function ChevyChaseMDPage() {
   return (
     <LongFormLocationPage
       locationName="Chevy Chase, MD"
-      heroImage="/images/locations/chevy-chase-md.png"
-      neighborhoods={["Village of Chevy Chase", "Somerset", "Chevy Chase Section 3", "Friendship Village"]}
-      landmarks={["The Collection at Chevy Chase", "Capital Crescent Trail access"]}
-      localContextNote="Great for housewarming gifts, local school events, and retail pop‑ups."
+      heroImage="/images/chevy-chase-md-scenic.png"
+      neighborhoods={["Chevy Chase Village", "Section 3", "Section 5", "Friendship Heights", "Rollingwood"]}
+      landmarks={["Chevy Chase Club", "Capital Crescent Trail", "Friendship Heights shops"]}
+      localContextNote="Homeowners and boutiques in Chevy Chase, Maryland trust us for wedding and milestone gifts, tasteful home signage, and corporate gifts headed to nearby offices and embassies."
     />
   )
 }
