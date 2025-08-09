@@ -1,19 +1,18 @@
-import type { Metadata } from "next"
 import LongFormLocationPage, { generateLocationMetadata } from "@/app/components/location-long-form"
 
-export const metadata: Metadata = generateLocationMetadata({
+export const metadata = generateLocationMetadata({
   locationName: "Tysons Corner, VA",
-  heroImage: "/images/tysons-corner-va-scenic.png",
+  heroImage: "/images/locations/tysons-corner-va.png",
 })
 
-export default function TysonsCornerVAPage() {
+export default function Page() {
   return (
     <LongFormLocationPage
       locationName="Tysons Corner, VA"
-      heroImage="/images/tysons-corner-va-scenic.png"
-      neighborhoods={["Tysons", "Scotts Run", "Boro District"]}
-      landmarks={["Tysons Galleria", "Tysons Corner Center", "Boro Park"]}
-      localContextNote="We support tech, consulting, and retail teams at Tysons with polished executive gifts, branded event giveaways, and on‑site activations in offices and shopping districts."
+      heroImage="/images/locations/tysons-corner-va.png"
+      neighborhoods={["Tysons", "Scotts Run", "Lerner Town Center"]}
+      landmarks={["Tysons Corner Center", "Tysons Galleria"]}
+      localContextNote="We handle corporate recognition, office signage, and on‑site activations in Tysons."
     />
   )
 }

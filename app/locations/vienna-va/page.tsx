@@ -1,19 +1,18 @@
-import type { Metadata } from "next"
 import LongFormLocationPage, { generateLocationMetadata } from "@/app/components/location-long-form"
 
-export const metadata: Metadata = generateLocationMetadata({
+export const metadata = generateLocationMetadata({
   locationName: "Vienna, VA",
-  heroImage: "/images/vienna-va-scenic.png",
+  heroImage: "/images/locations/vienna-va.png",
 })
 
-export default function ViennaPage() {
+export default function Page() {
   return (
     <LongFormLocationPage
       locationName="Vienna, VA"
-      heroImage="/images/vienna-va-scenic.png"
-      neighborhoods={["Vienna Woods", "Merry Oaks", "Nottoway Park area"]}
-      landmarks={["Vienna Town Green", "W&OD Trail", "Jammin Java"]}
-      localContextNote="Vienna’s community calendar and Town Green concerts are perfect opportunities for personalized gifts and on‑site event engraving. We also ship finished orders across Fairfax County."
+      heroImage="/images/locations/vienna-va.png"
+      neighborhoods={["Town of Vienna", "Wolf Trap", "Maple Avenue Corridor"]}
+      landmarks={["Wolf Trap National Park for the Performing Arts"]}
+      localContextNote="Great for event gifts and market pop‑ups along Maple Avenue and Wolf Trap events."
     />
   )
 }
