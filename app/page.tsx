@@ -341,44 +341,62 @@ export default function HomePage() {
                 Revolutionary UV Laser Tri-Layer Acrylic Engraving
               </h2>
               <p className="text-xl text-blue-100 mb-6">
-                We're one of the only engravers in the USA using advanced UV laser technology for tri-layer acrylic engraving, 
-                delivering ultra-fine details impossible with traditional CO2 lasers.
+                We're one of the only engravers in the USA using advanced UV laser technology for tri-layer acrylic
+                engraving, delivering ultra-fine details impossible with traditional CO2 lasers.
               </p>
-              
+
               <div className="space-y-4 mb-8">
                 <div className="flex items-start space-x-3">
                   <div className="w-6 h-6 bg-blue-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <svg className="w-3 h-3 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Ultra-Fine Detail Resolution</h3>
-                    <p className="text-blue-200">UV laser wavelength (355nm) creates microscopic precision impossible with CO2 lasers (10,600nm)</p>
+                    <p className="text-blue-200">
+                      UV laser wavelength (355nm) creates microscopic precision impossible with CO2 lasers (10,600nm)
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-3">
                   <div className="w-6 h-6 bg-blue-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <svg className="w-3 h-3 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">No Heat-Affected Zone</h3>
-                    <p className="text-blue-200">Cold ablation process eliminates melting and edge distortion common with CO2 thermal cutting</p>
+                    <p className="text-blue-200">
+                      Cold ablation process eliminates melting and edge distortion common with CO2 thermal cutting
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-3">
                   <div className="w-6 h-6 bg-blue-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <svg className="w-3 h-3 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Perfect Layer Contrast</h3>
-                    <p className="text-blue-200">Precise power control reveals each layer cleanly without over-penetration or color bleeding</p>
+                    <p className="text-blue-200">
+                      Precise power control reveals each layer cleanly without over-penetration or color bleeding
+                    </p>
                   </div>
                 </div>
               </div>
@@ -387,7 +405,7 @@ export default function HomePage() {
                 <Link href="/services/tri-layer-acrylic-engraving" className="btn-secondary">
                   Learn About Our Process
                 </Link>
-                <Link 
+                <Link
                   href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
                   className="border-2 border-blue-300 text-blue-100 px-6 py-3 rounded-lg font-semibold hover:bg-blue-300 hover:text-blue-900 transition-colors duration-200 text-center"
                   target="_blank"
@@ -408,7 +426,7 @@ export default function HomePage() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
-              
+
               {/* Technical Specs Overlay */}
               <div className="absolute -bottom-6 -right-6 bg-hub-white text-hub-blue p-6 rounded-xl shadow-xl max-w-xs">
                 <h4 className="font-bold text-lg mb-2">UV vs CO2 Comparison</h4>
@@ -432,7 +450,9 @@ export default function HomePage() {
 
           {/* Why UV Over CO2 Technical Details */}
           <div className="mt-16 pt-12 border-t border-blue-600">
-            <h3 className="text-2xl font-bold text-center mb-8">Why We Choose UV Laser Over CO2 for Tri-Layer Acrylic</h3>
+            <h3 className="text-2xl font-bold text-center mb-8">
+              Why We Choose UV Laser Over CO2 for Tri-Layer Acrylic
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -442,31 +462,44 @@ export default function HomePage() {
                 </div>
                 <h4 className="text-xl font-semibold mb-3">Photonic Ablation</h4>
                 <p className="text-blue-200">
-                  UV photons break molecular bonds directly without heat, preventing layer delamination and maintaining crisp edges that CO2's thermal process destroys.
+                  UV photons break molecular bonds directly without heat, preventing layer delamination and maintaining
+                  crisp edges that CO2's thermal process destroys.
                 </p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+                    />
                   </svg>
                 </div>
                 <h4 className="text-xl font-semibold mb-3">Microscopic Precision</h4>
                 <p className="text-blue-200">
-                  355nm wavelength allows for feature sizes down to 10 microns, enabling intricate text, logos, and patterns impossible with CO2's 100+ micron limitations.
+                  355nm wavelength allows for feature sizes down to 10 microns, enabling intricate text, logos, and
+                  patterns impossible with CO2's 100+ micron limitations.
                 </p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
                 </div>
                 <h4 className="text-xl font-semibold mb-3">Material Integrity</h4>
                 <p className="text-blue-200">
-                  No thermal stress means zero warping, perfect layer adhesion, and consistent results across large production runs that CO2 lasers cannot achieve.
+                  No thermal stress means zero warping, perfect layer adhesion, and consistent results across large
+                  production runs that CO2 lasers cannot achieve.
                 </p>
               </div>
             </div>
@@ -492,6 +525,77 @@ export default function HomePage() {
           >
             Book Consultation
           </Link>
+        </div>
+      </section>
+
+      {/* Personalized Gifts & Everyday Engraving - New Consumer Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-max">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-hub-blue">
+              Personalized Gifts &amp; Everyday Engraving
+            </h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto mt-4">
+              In addition to our business and industrial services, Engrave Everything engraves one-off items for
+              individuals and ships completed orders. Send us your item or choose from popular gift options—perfect for
+              birthdays, weddings, retirements, and everyday personalization.
+            </p>
+          </div>
+
+          <div className="mb-10">
+            <h3 className="text-2xl font-semibold text-hub-blue mb-4">Popular Items We Engrave</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                <li>Insulated tumblers (YETI‑style cups) and cups</li>
+                <li>Jewelry, charms and lockets</li>
+                <li>Watches and watch backs</li>
+                <li>Knives, multi‑tools and EDC gear</li>
+                <li>Perfume and cologne bottles</li>
+              </ul>
+              <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                <li>Makeup and compact cases</li>
+                <li>Cocktail shakers and barware</li>
+                <li>Water bottles and sports bottles</li>
+                <li>Wallets, passport covers and keychains</li>
+                <li>Pet tags, keepsake boxes and other personal gifts</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mb-10">
+            <h3 className="text-2xl font-semibold text-hub-blue mb-2">On‑Site &amp; Pop‑Up Services</h3>
+            <p className="text-gray-700">
+              We offer live engraving for weddings, markets, company parties, and other events across the region. Bring
+              a single item to our pop‑ups for immediate engraving and a memorable, custom experience.
+            </p>
+          </div>
+
+          <div className="mb-10">
+            <h3 className="text-2xl font-semibold text-hub-blue mb-2">Why Choose Us</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 list-disc pl-6 text-gray-700">
+              <li>Family‑owned, friendly service</li>
+              <li>High‑quality marks on wood, metal, glass, acrylic, and plastic</li>
+              <li>Quick turnaround times</li>
+              <li>One‑off gifts or bulk orders available</li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="/contact" className="btn-primary">
+              Request a Quote
+            </a>
+            <a href="/gifts" className="btn-secondary">
+              Shop Personalized Gifts
+            </a>
+            <a
+              href="https://calendly.com/ryan-mangan/custom-laser-engraving-consultation"
+              className="border-2 border-hub-silver text-hub-blue px-6 py-3 rounded-lg font-semibold hover:bg-hub-blue hover:text-white transition-colors duration-200 text-center"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book a Consultation
+            </a>
+          </div>
         </div>
       </section>
     </>
